@@ -9,11 +9,29 @@
             </head>
             
     
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Luis Ernesto - Geek Page</title></head><body>
     <h1 style="text-align: center;">Luis Ernesto Gonzalez Gonzalez -&nbsp;
     Geek Page</h1>
 
 
+    <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/" class="navbar-brand">Python Flask</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="{{ url_for('home') }}">Home</a></li>
+                        <li><a href="{{ url_for('about') }}">About</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -31,10 +49,10 @@
 
 
  
-<script src="/static/scripts/jquery-1.10.2.js"></script>
-<script src="/static/scripts/bootstrap.js"></script>
-<script src="/static/scripts/respond.js"></script>
-  
+    <script src="/static/scripts/jquery-1.10.2.js"></script>
+    <script src="/static/scripts/bootstrap.js"></script>
+    <script src="/static/scripts/respond.js"></script>
+    
 </body>
 
 </html>

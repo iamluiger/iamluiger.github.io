@@ -43,10 +43,14 @@
       <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Acerca de mi</h3>
 
       <p>
-        Asesor en transformación digital y tecnologías disruptivas que ayudan a nuestros clientes a generar capacidades para una
-        nueva economía. Con más de 20 años de experiencia en la industria de tecnología e internet, ayudando en este tiempo
-        a muchos bancos, empresas públicas y telcos a crecer y convertir sus retos en oportunidades de reinvención. Con una
-        sólida experiencia desarrollando y manteniendo soluciones innovadoras en una gran variedad de geografías en latinoamerica.
+        Asesor en transformación digital y tecnologías disruptivas que ayudan a nuestros clientes a generar capacidades
+        para una
+        nueva economía. Con más de 20 años de experiencia en la industria de tecnología e internet, ayudando en este
+        tiempo
+        a muchos bancos, empresas públicas y telcos a crecer y convertir sus retos en oportunidades de reinvención. Con
+        una
+        sólida experiencia desarrollando y manteniendo soluciones innovadoras en una gran variedad de geografías en
+        latinoamerica.
       </p>
       <p>
         Mis opiniones no necesariamente corresponden a los de mi empleador y son de mi entera responsabilidad
@@ -62,12 +66,12 @@
 
       <a href="https://www.linkedin.com/in/luiger/" <b>Mi perfil en Linked In </b>
       </a>
-      <br/>
+      <br />
 
 
       <a href="https://www.linkedin.com/in/luiger/" <b>Mi blog personal </b>
       </a>
-      <br/>
+      <br />
 
       <a href="https://twitter.com/gonzalezlu" <b>Mi twitter </b>
       </a>
@@ -110,7 +114,28 @@
     <!-- End page content -->
   </div>
 
+  <div id="disqus_thread"></div>
+  <script>
 
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function () { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://luiger-github-com.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
 
   <!-- Footer -->
   <footer class="w3-center w3-black w3-padding-16">
@@ -120,28 +145,10 @@
     </p>
   </footer>
 
-  <!-- Add Google Maps -->
-  <script>
-    function myMap() {
-      myCenter = new google.maps.LatLng(41.878114, -87.629798);
-      var mapOptions = {
-        center: myCenter,
-        zoom: 12, scrollwheel: false, draggable: false,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      };
-      var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
 
-      var marker = new google.maps.Marker({
-        position: myCenter,
-      });
-      marker.setMap(map);
-    }
-  </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-  <!--
-To use this code on your website, get a free API key from Google.
-Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
--->
+  To use this code on your website, get a free API key from Google.
+  Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+  -->
 
 </body>
 

@@ -1,0 +1,6 @@
+site_name: Luiger Pages
+nav:
+    - Inicio: index.md
+    - Acerca de: about.md
+    
+theme: material

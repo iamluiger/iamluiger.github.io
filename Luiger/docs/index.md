@@ -1,8 +1,21 @@
+# **Todo cambio y el software cambio**
 
-# Quien soy
+La evolución del mundo del software es vertiginosa, desde que inicie usando GW-BASIC hasta ahora el mundo a cambiado tanto que si te pierdes una semana sin estar pendiente de los cambios o la evolución de tus tecnologías favoritas es muy probable que pierdas tracción sobre el estado de arte de la industria.
 
-Asesor en transformación digital y tecnologías disruptivas que ayudan a nuestros clientes a generar capacidades para una nueva economía. Con más de 20 años de experiencia en la industria de tecnología e internet, ayudando en este tiempo a muchos bancos, empresas públicas y telcos a crecer y convertir sus retos en oportunidades de reinvención.
+Este espacio no es mas que una oportunidad que yo me doy para anotar lo que voy aprendiendo, sin mas pretensiones que eso.
 
-Con una sólida experiencia desarrollando y manteniendo soluciones innovadoras en una gran variedad de geografías en latinoamerica.
+# **No solo es software**
 
-Mis opiniones no necesariamente corresponden a los de mi empleador y son de mi entera responsabilidad.
+Pero como todo en la vida no es trabajo (la verdad yo no veo esto como trabajo :) ) aquí tomo mi derecho de propiedad y voy a escribir un poco de lo que me de le gana aunque no sea necesariamente sobre la industria. 
+
+
+# **Mi ultimos articulos**
+
+## [Microservicios, la palabra de moda](../articulos/2019/MicroSOA/micro2soa)
+
+[*En nuestro mundo cada semana tenemos una palabra de **moda** y definitivamente en los últimos 4 años las palabras de moda pasaron por: DevOps, Transformación Digital, Contenedores, Microservicios entre otras. De las tendencias que anteriormente enumeramos me atrevería a decir que una de las que mas ha generado interés en los equipos de desarrollo es el de microservicios.*](../articulos/2019/MicroSOA/micro2soa)
+
+
+[*Y cuando uno comienza a investigar el por que el  súbito interés por este tema, muchos de mis colegas me manifiestan  que en sus organizaciones grandes iniciativas de SOA vienen fracasando unas tras otras.....*](../articulos/2019/MicroSOA/micro2soa)
+
+

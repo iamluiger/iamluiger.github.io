@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for historialOrdenesTrabajo.properties</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="21667888">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_SIGRU_ear.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_SIGRU_ear.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="tattletale_SIGRU_ear.html">
+                        <i class="glyphicon tattletale-nav-logo"></i>
+                      Tattletale
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsSIGRU_ear.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_SIGRU_ear.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Red Hat Application Migration Toolkit found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="21667888">
+                            SIGRU.ear/SIGRU.war/WEB-INF/classes/com/Dinissan/historialOrdenesTrabajo/view/msg/historialOrdenesTrabajo.properties
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Properties</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+headerLabelConsultaHistorialesServicio= Consulta Historiales de Servicio
+headerLabelConsultaInformacionOT= Consulta Informaci�n Orden de Trabajo
+
+leyendaLabelConsultaHistorialesServicio= Consultar informaci�n de los trabajos realizados a un veh�culo en los talleres, HISTORIAL DE SERVICIO, dependiendo del perfil del usuario podr� ver informaci�n, adicional se podr� generar un documento claro para ser entregado a cliente que requieran el historial de un veh�culo o de consulta interna.
+leyendaLabelConsultarInformacionPQRF= Informaci�n completa, avances y comentarios de la PQRF seleccionada.
+leyendaLabelConsultaInformacionOT= Por esta opci�n el usuario puede consultar documentos cargados y relacionados con la orden de trabajo en consulta, tambi�n podr� ver informaci�n si la OT en consulta fue anulada.
+leyendaLabelConsultarInformacionCompletaPruebasRuta= Informaci�n de pruebas de ruta y salida definitiva de una orden en consulta, informaci�n activada para historial &quot;Detallado Controlado&quot;
+leyendaLabelConsultarPruebaRuta= La orden en consulta no tiene pruebas grabadas en el  sistema
+
+panelConsultaHistorialVeh�culo= Consulta Historial por Veh�culo
+panelInformacionVehiculo= Informaci�n del Veh�culo
+panelResultadosBusqueda= Resultados de la B�squeda
+panelInformacionOrdenTrabajo= Informaci�n Orden de Trabajo
+panelDocumentoOrdenTrabajo= Documentos por Orden de Trabajo
+panelInformacionAnulacionOT= Informaci�n Anulaci�n OT
+panelInformacionPruebaRutaSalidaDefinitiva= Informaci�n Prueba de Ruta y Salida Definitiva 
+panelDetalleOT = Informaci�n mano de obra, repuestos y materiales 
+panelInformacionFactura = Informaci�n Factura
+
+fieldsetParametrosConsulta= Par�metros de consulta
+
+dataTableInformacionPQRF= Informaci�n PQRF
+dataTableInformacionOrdenesTrabajo= Informaci�n Ordenes de Trabajo
+dataTableAvancePQRF= Avance PQRF
+dataTableDetalleGarantia= Detalle Garant�a
+
+columnTiempo=Tiempo (A�os)
+columnFechaFinGarantia=Fecha fin Garant�a
+
+columnCompannia= Compa��a
+columnNoPQRF= No. PQRF
+columnTipoCaso= Tipo Caso
+columnDerechoPeticion= Derecho/Petici�n
+columnFechaCierre= Fecha Cierre
+columnCentroCosto= Centro de Costo	
+
+columnNoOT= No. OT
+columnConcepto= Concepto
+columnBodega= Bodega
+columnFechaApertura= Fecha de Apertura
+columnFechaFactura= Fecha de Factura
+columnKilometraje= Kilometraje (KM)
+columnKilometrajeGarantia= Kilometraje (KM) fin Garant�a
+columnDiasGtiaSuspendida= D�as Gt�a Suspendida
+
+columnItem= �tem
+columnAvance= Avance
+columnObservacion= Observaci�n
+
+columnGrupo= Grupo
+columnSintoma= Sintoma
+columnReportadoCliente= Reportado por Cliente
+
+columnFecha= Fecha
+columnTipo= Tipo
+columnParteVehiculo= Parte del Veh�culo
+columnDescripcion= Descripci�n
+
+columnNoBoleta= No. Boleta
+columnFechaHoraSalida= Fecha / Hora Salida
+columnTipoBoleta= Tipo de Boleta
+columnTipoRuta=Tipo de Ruta
+columnKMSalida= Km Salida
+columnQuienHacePrueba= Quien Hace la Prueba
+columnUsuarioGrabaBoleta= Usuario Graba Boleta
+
+columnTipoEvidencia= Tipo Evidencia
+columnNombreArchivo= Nombre Archivo
+
+columnUsuario= Usuario
+columnFechaGrabacion= Fecha Grabaci�n
+columnEncargado= Encargado
+columnEstado= Estado
+columnOpciones= Opciones
+
+commandButtonConsulta= Consulta
+commandButtonDescargarHistorialEstandar= Descargar Historial Estandar
+commandButtonDescargarHistorialDetallado= Descargar Historial Detallado
+commandButtonDetalle= Detalles
+commandButtonDescargarDocumentos= Descargar Documentos
+commandButtonVolver= Volver
+commandButtonBusquedaAvanzada = Busqueda Avanzada
+commandButtonDocumentos = Documentos
+
+labelBuscarPor= Buscar por:
+labelIngreseNo= Ingrese No:
+
+labelNoPlaca= No. Placa:
+labelNoChasis= No. Chasis:
+labelNoMotor= No. Motor:
+labelNoInventario= No Inventario:
+labelModVehiculo= Mod. Veh�culo:
+labelGtiaExtendida= Gt�a Extendida:
+labelMarca= Marca:
+labelAnnoModelo= A�o Modelo:
+labelColor= Color:
+labelNoDescripcionModComercial= No. y Descripci�n Mod. Comercial:
+labelParamentrosGarantia= Parametros Garant�a:
+labelPedido= No Pedido:
+labelEntregadoHace= Entregado Hace:
+labelFechaEntrega= Fecha Entrega:
+labelVitrinaVenta= Vitrina de Venta:
+labelUbicacionEntrega= Ubicaci�n Entrega:
+labelSinietroPerdidaTotal= � Siniestro Perdida Total ?:
+labelVehiculoGasNatural= � Veh�culo con Gas Natural ?:
+labelAcumuladoDiasSuspensionGtia= Acumulado D�as Suspensi�n Gt�a:
+
+labelNoPQRF= N�mero PQRF:
+labelTipoCaso= Tipo de Caso:
+labelNitCedulaCliente= NIT / C�dula Cliente:
+labelNombre= Nombre
+labelDireccion= Direcci�n:
+labelEmail= E-mail:
+labelTelefonoUno= Tel�fono 1:
+labelTelefonoDos= Tel�fono 2:
+labelCelular= Celular:
+labelPlacaVehiculo= Placa Veh�culo:
+labelEncargadoPQRF= Encargado PQRF:
+labelMedioRecepcionPQRF= Medio Recepci�n PQRF
+labelContacto= Contacto
+labelDerechoPeticion= Derecho / Petici�n:
+
+labelTipo= Tipo:
+labelManoObra= Mano de Obra:
+labelRepuestos= Repuestos:
+labelMateriales= Materiales:
+labelExternos= Externos:
+labelNumeroFactura= Numero de Factura:
+labelNombreAseguradora= Nombre Aseguradora:
+labelCliente: Cliente:
+labelIdentifiacionCliente= Identificaci�n Cliente:
+labelAsesorServicio= Asesor de Servicio:
+labelSupervisorServicio= Supervisor de Servicio:
+
+labelSistemaProbar= Sistema a Probar:
+labelTecnico= Tecnico:
+labelEspecialidadTecnica= Especialidad Tecnica:
+labelPasoPrueba= �Paso la Prueba?
+labelObservaciones= Observaciones:
+labelCausaReingreso = Causa Reingreso:
+
+labelFechaHoraReingreso= Fecha / Hora Reingreso:
+labelKmReingreso= KM Reingreso:
+labelUsuarioGrabaBoleta = Usuario Graba Boleta:
+
+labelNoOT = No. OT:
+labelConceptoOT = Concepto OT:
+labelBodegaOT = Bodega OT:
+labelOTAsociada = OT Asociada:
+labelEstadoOT = Estado OT:
+labelEstadoFactura = Estado Factura:
+
+msgBuscarPor= Seleccione una opci�n de busqueda
+msgIngreseNo= Campo &quot;Ingrese No&quot; es obligatorio
+msgSinFallaSintoma= Orden de trabajo no tienen asociado grupo sintoma, ni la queja del cliente
+
+labelSeleccione= Seleccione...
+
+dialogConsultarInformacionPQRF= Consultar Informaci�n PQRF
+dialogConsultarInformacionCompletaPruebasRuta= Informacion Completa Pruebas de Ruta
+dialogDetalleGarantia= Detalle Garant�a
+dialogParametrosGarantia= Parametros de Garant�a
+dialogBusquedaOrdenesEspecialidad= Busqueda de ordenes seg�n especialidad
+dialogDocumentosGenerales= Documentos Generales
+
+labelEspecialidad = Especialidad
+labelReferencia = Referencia
+labelDescripcion = Descripcion
+labelCantidad = Cantidad
+labelValorUnitario = Valor Unitario
+labelValorTotal = Valor Total
+
+labelTotalManoObra = Total Mano de Obra
+labelTotalManoObraPintura = Total Pintura
+labelTotalRepuesto = Total Repuestos
+labelTotalMateriales = Total Materiales
+labelTotalManoObraExterna = Total Mano de Obra Externa
+labelTotalCompraExterna = Total Compra Externa
+
+labelFactura = Factura
+labelFecha = Fecha
+labelFacturaSinIVA = Factura sin IVA
+labelFacturaConIVA = Factura con IVA
+labelIdentificacion = Identificac�on
+labelFacturaAsumidaPor = Factura asumida por
+
+labelSubTotalOT = Sub-total OT
+labelDescuento = Descuento
+labelDeducible = Deducible
+labelSubTotal = Sub-total
+labelIVA = IVA
+lableTOTAL = TOTAL
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: 18/09/2019, 6:17:01 p.m.</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("properties",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            $(window).load(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 21667888;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

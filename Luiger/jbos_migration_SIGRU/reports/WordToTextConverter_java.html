@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for WordToTextConverter.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="21667888">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_SIGRU_ear.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_SIGRU_ear.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="tattletale_SIGRU_ear.html">
+                        <i class="glyphicon tattletale-nav-logo"></i>
+                      Tattletale
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsSIGRU_ear.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_SIGRU_ear.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Red Hat Application Migration Toolkit found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="21667888">
+                            SIGRU.ear/SIGRU.war/WEB-INF/lib/zpoi-1.0.0.jar/org/zkoss/poi/hwpf/converter/WordToTextConverter.java
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                                        <span class="label label-info" title="classloader">classloader</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.zkoss.poi.hwpf.converter;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.StringWriter;
+import java.lang.reflect.Method;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.zkoss.poi.hpsf.SummaryInformation;
+import org.zkoss.poi.hwpf.HWPFDocument;
+import org.zkoss.poi.hwpf.HWPFDocumentCore;
+import org.zkoss.poi.hwpf.usermodel.Bookmark;
+import org.zkoss.poi.hwpf.usermodel.CharacterRun;
+import org.zkoss.poi.hwpf.usermodel.OfficeDrawing;
+import org.zkoss.poi.hwpf.usermodel.Paragraph;
+import org.zkoss.poi.hwpf.usermodel.Picture;
+import org.zkoss.poi.hwpf.usermodel.Range;
+import org.zkoss.poi.hwpf.usermodel.Section;
+import org.zkoss.poi.hwpf.usermodel.Table;
+import org.zkoss.poi.hwpf.usermodel.TableCell;
+import org.zkoss.poi.hwpf.usermodel.TableRow;
+import org.zkoss.poi.poifs.filesystem.DirectoryNode;
+import org.zkoss.poi.poifs.filesystem.Entry;
+import org.zkoss.poi.util.POILogFactory;
+import org.zkoss.poi.util.POILogger;
+
+public class WordToTextConverter extends AbstractWordConverter {
+   private static final POILogger logger = POILogFactory.getLogger(WordToTextConverter.class);
+   private AtomicInteger noteCounters = new AtomicInteger(1);
+   private Element notes = null;
+   private boolean outputSummaryInformation = false;
+   private final TextDocumentFacade textDocumentFacade;
+
+   public static String getText(DirectoryNode root) throws Exception {
+      HWPFDocumentCore wordDocument = AbstractWordUtils.loadDoc(root);
+      return getText(wordDocument);
+   }
+
+   public static String getText(File docFile) throws Exception {
+      HWPFDocumentCore wordDocument = AbstractWordUtils.loadDoc(docFile);
+      return getText(wordDocument);
+   }
+
+   public static String getText(HWPFDocumentCore wordDocument) throws Exception {
+      WordToTextConverter wordToTextConverter = new WordToTextConverter(DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument());
+      wordToTextConverter.processDocument(wordDocument);
+      return wordToTextConverter.getText();
+   }
+
+   public static void main(String[] args) {
+      if (args.length &lt; 2) {
+         System.err.println(&quot;Usage: WordToTextConverter &lt;inputFile.doc&gt; &lt;saveTo.txt&gt;&quot;);
+      } else {
+         System.out.println(&quot;Converting &quot; + args[0]);
+         System.out.println(&quot;Saving output to &quot; + args[1]);
+
+         try {
+            Document doc = process(new File(args[0]));
+            FileWriter out = new FileWriter(args[1]);
+            DOMSource domSource = new DOMSource(doc);
+            StreamResult streamResult = new StreamResult(out);
+            TransformerFactory tf = TransformerFactory.newInstance();
+            Transformer serializer = tf.newTransformer();
+            serializer.setOutputProperty(&quot;encoding&quot;, &quot;UTF-8&quot;);
+            serializer.setOutputProperty(&quot;indent&quot;, &quot;no&quot;);
+            serializer.setOutputProperty(&quot;method&quot;, &quot;text&quot;);
+            serializer.transform(domSource, streamResult);
+            out.close();
+         } catch (Exception var7) {
+            var7.printStackTrace();
+         }
+
+      }
+   }
+
+   static Document process(File docFile) throws Exception {
+      HWPFDocumentCore wordDocument = AbstractWordUtils.loadDoc(docFile);
+      WordToTextConverter wordToTextConverter = new WordToTextConverter(DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument());
+      wordToTextConverter.processDocument(wordDocument);
+      return wordToTextConverter.getDocument();
+   }
+
+   public WordToTextConverter() throws ParserConfigurationException {
+      this.textDocumentFacade = new TextDocumentFacade(DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument());
+   }
+
+   public WordToTextConverter(Document document) {
+      this.textDocumentFacade = new TextDocumentFacade(document);
+   }
+
+   public WordToTextConverter(TextDocumentFacade textDocumentFacade) {
+      this.textDocumentFacade = textDocumentFacade;
+   }
+
+   protected void afterProcess() {
+      if (this.notes != null) {
+         this.textDocumentFacade.getBody().appendChild(this.notes);
+      }
+
+   }
+
+   public Document getDocument() {
+      return this.textDocumentFacade.getDocument();
+   }
+
+   public String getText() throws Exception {
+      StringWriter stringWriter = new StringWriter();
+      DOMSource domSource = new DOMSource(this.getDocument());
+      StreamResult streamResult = new StreamResult(stringWriter);
+      TransformerFactory tf = TransformerFactory.newInstance();
+      Transformer serializer = tf.newTransformer();
+      serializer.setOutputProperty(&quot;encoding&quot;, &quot;UTF-8&quot;);
+      serializer.setOutputProperty(&quot;indent&quot;, &quot;no&quot;);
+      serializer.setOutputProperty(&quot;method&quot;, &quot;text&quot;);
+      serializer.transform(domSource, streamResult);
+      return stringWriter.toString();
+   }
+
+   public boolean isOutputSummaryInformation() {
+      return this.outputSummaryInformation;
+   }
+
+   protected void outputCharacters(Element block, CharacterRun characterRun, String text) {
+      block.appendChild(this.textDocumentFacade.createText(text));
+   }
+
+   protected void processBookmarks(HWPFDocumentCore wordDocument, Element currentBlock, Range range, int currentTableLevel, List&lt;Bookmark&gt; rangeBookmarks) {
+      this.processCharacters(wordDocument, currentTableLevel, range, currentBlock);
+   }
+
+   protected void processDocumentInformation(SummaryInformation summaryInformation) {
+      if (this.isOutputSummaryInformation()) {
+         if (AbstractWordUtils.isNotEmpty(summaryInformation.getTitle())) {
+            this.textDocumentFacade.setTitle(summaryInformation.getTitle());
+         }
+
+         if (AbstractWordUtils.isNotEmpty(summaryInformation.getAuthor())) {
+            this.textDocumentFacade.addAuthor(summaryInformation.getAuthor());
+         }
+
+         if (AbstractWordUtils.isNotEmpty(summaryInformation.getComments())) {
+            this.textDocumentFacade.addDescription(summaryInformation.getComments());
+         }
+
+         if (AbstractWordUtils.isNotEmpty(summaryInformation.getKeywords())) {
+            this.textDocumentFacade.addKeywords(summaryInformation.getKeywords());
+         }
+      }
+
+   }
+
+   public void processDocumentPart(HWPFDocumentCore wordDocument, Range range) {
+      super.processDocumentPart(wordDocument, range);
+      this.afterProcess();
+   }
+
+   protected void processDrawnObject(HWPFDocument doc, CharacterRun characterRun, OfficeDrawing officeDrawing, String path, Element block) {
+   }
+
+   protected void processEndnoteAutonumbered(HWPFDocument wordDocument, int noteIndex, Element block, Range endnoteTextRange) {
+      this.processNote(wordDocument, block, endnoteTextRange);
+   }
+
+   protected void processFootnoteAutonumbered(HWPFDocument wordDocument, int noteIndex, Element block, Range footnoteTextRange) {
+      this.processNote(wordDocument, block, footnoteTextRange);
+   }
+
+   protected void processHyperlink(HWPFDocumentCore wordDocument, Element currentBlock, Range textRange, int currentTableLevel, String hyperlink) {
+      this.processCharacters(wordDocument, currentTableLevel, textRange, currentBlock);
+      currentBlock.appendChild(this.textDocumentFacade.createText(&quot; (\u200b&quot; + hyperlink.replaceAll(&quot;\\/&quot;, &quot;\u200b\\/\u200b&quot;) + &#39;\u200b&#39; + &quot;)&quot;));
+   }
+
+   protected void processImage(Element currentBlock, boolean inlined, Picture picture) {
+   }
+
+   protected void processImage(Element currentBlock, boolean inlined, Picture picture, String url) {
+   }
+
+   protected void processImageWithoutPicturesManager(Element currentBlock, boolean inlined, Picture picture) {
+   }
+
+   protected void processLineBreak(Element block, CharacterRun characterRun) {
+      block.appendChild(this.textDocumentFacade.createText(&quot;\n&quot;));
+   }
+
+   protected void processNote(HWPFDocument wordDocument, Element block, Range noteTextRange) {
+      int noteIndex = this.noteCounters.getAndIncrement();
+      block.appendChild(this.textDocumentFacade.createText(&quot;\u200b[&quot; + noteIndex + &quot;]&quot; + &#39;\u200b&#39;));
+      if (this.notes == null) {
+         this.notes = this.textDocumentFacade.createBlock();
+      }
+
+      Element note = this.textDocumentFacade.createBlock();
+      this.notes.appendChild(note);
+      note.appendChild(this.textDocumentFacade.createText(&quot;^&quot; + noteIndex + &quot;\t &quot;));
+      this.processCharacters(wordDocument, Integer.MIN_VALUE, noteTextRange, note);
+      note.appendChild(this.textDocumentFacade.createText(&quot;\n&quot;));
+   }
+
+   protected boolean processOle2(HWPFDocument wordDocument, Element block, Entry entry) throws Exception {
+      if (!(entry instanceof DirectoryNode)) {
+         return false;
+      } else {
+         DirectoryNode directoryNode = (DirectoryNode)entry;
+         if (directoryNode.hasEntry(&quot;WordDocument&quot;)) {
+            String text = getText((DirectoryNode)entry);
+            block.appendChild(this.textDocumentFacade.createText(&#39;\u200b&#39; + text + &#39;\u200b&#39;));
+            return true;
+         } else {
+            Object extractor;
+            try {
+               Class&lt;?&gt; cls = Class.forName(&quot;org.zkoss.poi.extractor.ExtractorFactory&quot;);
+               Method createExtractor = cls.getMethod(&quot;createExtractor&quot;, DirectoryNode.class);
+               extractor = createExtractor.invoke((Object)null, directoryNode);
+            } catch (Error var9) {
+               logger.log(POILogger.WARN, &quot;There is an OLE object entry &#39;&quot;, entry.getName(), &quot;&#39;, but there is no text extractor for this object type &quot;, &quot;or text extractor factory is not available: &quot;, &quot;&quot; + var9);
+               return false;
+            }
+
+            try {
+               Method getText = extractor.getClass().getMethod(&quot;getText&quot;);
+               String text = (String)getText.invoke(extractor);
+               block.appendChild(this.textDocumentFacade.createText(&#39;\u200b&#39; + text + &#39;\u200b&#39;));
+               return true;
+            } catch (Exception var8) {
+               logger.log(POILogger.ERROR, &quot;Unable to extract text from OLE entry &#39;&quot;, entry.getName(), &quot;&#39;: &quot;, var8, var8);
+               return false;
+            }
+         }
+      }
+   }
+
+   protected void processPageBreak(HWPFDocumentCore wordDocument, Element flow) {
+      Element block = this.textDocumentFacade.createBlock();
+      block.appendChild(this.textDocumentFacade.createText(&quot;\n&quot;));
+      flow.appendChild(block);
+   }
+
+   protected void processPageref(HWPFDocumentCore wordDocument, Element currentBlock, Range textRange, int currentTableLevel, String pageref) {
+      this.processCharacters(wordDocument, currentTableLevel, textRange, currentBlock);
+   }
+
+   protected void processParagraph(HWPFDocumentCore wordDocument, Element parentElement, int currentTableLevel, Paragraph paragraph, String bulletText) {
+      Element pElement = this.textDocumentFacade.createParagraph();
+      pElement.appendChild(this.textDocumentFacade.createText(bulletText));
+      this.processCharacters(wordDocument, currentTableLevel, paragraph, pElement);
+      pElement.appendChild(this.textDocumentFacade.createText(&quot;\n&quot;));
+      parentElement.appendChild(pElement);
+   }
+
+   protected void processSection(HWPFDocumentCore wordDocument, Section section, int s) {
+      Element sectionElement = this.textDocumentFacade.createBlock();
+      this.processParagraphes(wordDocument, sectionElement, section, Integer.MIN_VALUE);
+      sectionElement.appendChild(this.textDocumentFacade.createText(&quot;\n&quot;));
+      this.textDocumentFacade.body.appendChild(sectionElement);
+   }
+
+   protected void processTable(HWPFDocumentCore wordDocument, Element flow, Table table) {
+      int tableRows = table.numRows();
+
+      for(int r = 0; r &lt; tableRows; ++r) {
+         TableRow tableRow = table.getRow(r);
+         Element tableRowElement = this.textDocumentFacade.createTableRow();
+         int rowCells = tableRow.numCells();
+
+         for(int c = 0; c &lt; rowCells; ++c) {
+            TableCell tableCell = tableRow.getCell(c);
+            Element tableCellElement = this.textDocumentFacade.createTableCell();
+            if (c != 0) {
+               tableCellElement.appendChild(this.textDocumentFacade.createText(&quot;\t&quot;));
+            }
+
+            this.processCharacters(wordDocument, table.getTableLevel(), tableCell, tableCellElement);
+            tableRowElement.appendChild(tableCellElement);
+         }
+
+         tableRowElement.appendChild(this.textDocumentFacade.createText(&quot;\n&quot;));
+         flow.appendChild(tableRowElement);
+      }
+
+   }
+
+   public void setOutputSummaryInformation(boolean outputDocumentInformation) {
+      this.outputSummaryInformation = outputDocumentInformation;
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: 18/09/2019, 6:17:02 p.m.</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "220" });
+
+            $("<div id='220-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(220)');
+
+
+$("<a name='49447000' class='windup-file-location'></a><div class='inline-source-comment green tag-classloader'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>Dynamic class instantiation</strong><a title='View Rule: environment-dependent-calls-01000' href='windup_ruleproviders.html#environment-dependent-calls-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The class is dynamically loaded within application. During the migration, multiple classes that are provided on classpath by a different server may not be present anymore.<\/p><p>Please review the class-loading mechanisms and ensure that the dynamically loaded class is available in JBoss EAP.<\/p><ul><li><a href='https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.0/html-single/development_guide/#class_loading_and_modules' target='_blank'>Class Loading and Modules in JBoss EAP 7</a></li><li><a href='https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.4/html-single/Development_Guide/index.html#chap-Class_Loading_and_Modules' target='_blank'>Class Loading and Modules in JBoss EAP 6</a></li><li><a href='https://access.redhat.com/solutions/361343' target='_blank'>Article about Classloading in JBoss EAP 6</a></li></ul></div></div></div>").appendTo('#220-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            $(window).load(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 21667888;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

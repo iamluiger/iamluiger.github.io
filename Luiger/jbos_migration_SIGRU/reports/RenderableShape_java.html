@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for RenderableShape.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="21667888">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_SIGRU_ear.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_SIGRU_ear.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="tattletale_SIGRU_ear.html">
+                        <i class="glyphicon tattletale-nav-logo"></i>
+                      Tattletale
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsSIGRU_ear.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_SIGRU_ear.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Red Hat Application Migration Toolkit found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="21667888">
+                            SIGRU.ear/SIGRU.war/WEB-INF/lib/zpoi-1.0.0.jar/org/zkoss/poi/xslf/usermodel/RenderableShape.java
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                                        <span class="label label-info" title="classloader">classloader</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.zkoss.poi.xslf.usermodel;
+
+import java.awt.AlphaComposite;
+import java.awt.BasicStroke;
+import java.awt.Color;
+import java.awt.GradientPaint;
+import java.awt.Graphics2D;
+import java.awt.Paint;
+import java.awt.Shape;
+import java.awt.Stroke;
+import java.awt.TexturePaint;
+import java.awt.geom.AffineTransform;
+import java.awt.geom.Point2D;
+import java.awt.geom.Rectangle2D;
+import java.awt.geom.Rectangle2D.Double;
+import java.awt.image.BufferedImage;
+import java.lang.reflect.Constructor;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.Iterator;
+import org.apache.xmlbeans.XmlObject;
+import org.openxmlformats.schemas.drawingml.x2006.main.CTBlip;
+import org.openxmlformats.schemas.drawingml.x2006.main.CTBlipFillProperties;
+import org.openxmlformats.schemas.drawingml.x2006.main.CTGeomGuide;
+import org.openxmlformats.schemas.drawingml.x2006.main.CTGradientFillProperties;
+import org.openxmlformats.schemas.drawingml.x2006.main.CTGradientStop;
+import org.openxmlformats.schemas.drawingml.x2006.main.CTLineProperties;
+import org.openxmlformats.schemas.drawingml.x2006.main.CTNoFillProperties;
+import org.openxmlformats.schemas.drawingml.x2006.main.CTPathShadeProperties;
+import org.openxmlformats.schemas.drawingml.x2006.main.CTPresetGeometry2D;
+import org.openxmlformats.schemas.drawingml.x2006.main.CTSchemeColor;
+import org.openxmlformats.schemas.drawingml.x2006.main.CTShapeProperties;
+import org.openxmlformats.schemas.drawingml.x2006.main.CTShapeStyle;
+import org.openxmlformats.schemas.drawingml.x2006.main.CTSolidColorFillProperties;
+import org.openxmlformats.schemas.drawingml.x2006.main.CTStyleMatrixReference;
+import org.openxmlformats.schemas.drawingml.x2006.main.STPathShadeType;
+import org.openxmlformats.schemas.drawingml.x2006.main.CTGradientFillProperties.Factory;
+import org.zkoss.poi.openxml4j.opc.PackagePart;
+import org.zkoss.poi.openxml4j.opc.PackageRelationship;
+import org.zkoss.poi.util.Internal;
+import org.zkoss.poi.xslf.model.PropertyFetcher;
+import org.zkoss.poi.xslf.model.geom.Context;
+import org.zkoss.poi.xslf.model.geom.CustomGeometry;
+import org.zkoss.poi.xslf.model.geom.Guide;
+import org.zkoss.poi.xslf.model.geom.IAdjustableShape;
+import org.zkoss.poi.xslf.model.geom.Outline;
+import org.zkoss.poi.xslf.model.geom.Path;
+
+@Internal
+class RenderableShape {
+   public static final Color NO_PAINT = new Color(255, 255, 255, 0);
+   private XSLFSimpleShape _shape;
+
+   public RenderableShape(XSLFSimpleShape shape) {
+      this._shape = shape;
+   }
+
+   public Paint selectPaint(Graphics2D graphics, XmlObject obj, CTSchemeColor phClr, PackagePart parentPart) {
+      XSLFTheme theme = this._shape.getSheet().getTheme();
+      Paint paint = null;
+      if (obj instanceof CTNoFillProperties) {
+         paint = NO_PAINT;
+      } else if (obj instanceof CTSolidColorFillProperties) {
+         CTSolidColorFillProperties solidFill = (CTSolidColorFillProperties)obj;
+         XSLFColor c = new XSLFColor(solidFill, theme, phClr);
+         paint = c.getColor();
+      } else if (obj instanceof CTBlipFillProperties) {
+         CTBlipFillProperties blipFill = (CTBlipFillProperties)obj;
+         paint = this.createTexturePaint(blipFill, graphics, parentPart);
+      } else if (obj instanceof CTGradientFillProperties) {
+         Rectangle2D anchor = this.getAnchor(graphics);
+         CTGradientFillProperties gradFill = (CTGradientFillProperties)obj;
+         if (gradFill.isSetLin()) {
+            paint = this.createLinearGradientPaint(graphics, gradFill, anchor, theme, phClr);
+         } else if (gradFill.isSetPath()) {
+            CTPathShadeProperties ps = gradFill.getPath();
+            if (ps.getPath() == STPathShadeType.CIRCLE) {
+               paint = createRadialGradientPaint(gradFill, anchor, theme, phClr);
+            } else if (ps.getPath() == STPathShadeType.SHAPE) {
+               paint = toRadialGradientPaint(gradFill, anchor, theme, phClr);
+            }
+         }
+      }
+
+      return (Paint)paint;
+   }
+
+   private Paint createTexturePaint(CTBlipFillProperties blipFill, Graphics2D graphics, PackagePart parentPart) {
+      Paint paint = null;
+      CTBlip blip = blipFill.getBlip();
+      String blipId = blip.getEmbed();
+      PackageRelationship rel = parentPart.getRelationship(blipId);
+      if (rel != null) {
+         XSLFImageRenderer renderer = null;
+         if (graphics != null) {
+            renderer = (XSLFImageRenderer)graphics.getRenderingHint(XSLFRenderingHint.IMAGE_RENDERER);
+         }
+
+         if (renderer == null) {
+            renderer = new XSLFImageRenderer();
+         }
+
+         try {
+            BufferedImage img = renderer.readImage(parentPart.getRelatedPart(rel));
+            if (blip.sizeOfAlphaModFixArray() &gt; 0) {
+               float alpha = (float)blip.getAlphaModFixArray(0).getAmt() / 100000.0F;
+               AlphaComposite ac = AlphaComposite.getInstance(3, alpha);
+               if (graphics != null) {
+                  graphics.setComposite(ac);
+               }
+            }
+
+            if (img != null) {
+               paint = new TexturePaint(img, new Double(0.0D, 0.0D, (double)img.getWidth(), (double)img.getHeight()));
+            }
+         } catch (Exception var12) {
+            var12.printStackTrace();
+         }
+      }
+
+      return paint;
+   }
+
+   private Paint createLinearGradientPaint(Graphics2D graphics, CTGradientFillProperties gradFill, Rectangle2D anchor, XSLFTheme theme, CTSchemeColor phClr) {
+      double angle = (double)(gradFill.getLin().getAng() / &#39;\uea60&#39;);
+      CTGradientStop[] gs = gradFill.getGsLst().getGsArray();
+      Arrays.sort(gs, new Comparator&lt;CTGradientStop&gt;() {
+         public int compare(CTGradientStop o1, CTGradientStop o2) {
+            Integer pos1 = o1.getPos();
+            Integer pos2 = o2.getPos();
+            return pos1.compareTo(pos2);
+         }
+      });
+      Color[] colors = new Color[gs.length];
+      float[] fractions = new float[gs.length];
+      AffineTransform at = AffineTransform.getRotateInstance(Math.toRadians(angle), anchor.getX() + anchor.getWidth() / 2.0D, anchor.getY() + anchor.getHeight() / 2.0D);
+      double diagonal = Math.sqrt(anchor.getHeight() * anchor.getHeight() + anchor.getWidth() * anchor.getWidth());
+      Point2D p1 = new java.awt.geom.Point2D.Double(anchor.getX() + anchor.getWidth() / 2.0D - diagonal / 2.0D, anchor.getY() + anchor.getHeight() / 2.0D);
+      Point2D p1 = at.transform(p1, (Point2D)null);
+      Point2D p2 = new java.awt.geom.Point2D.Double(anchor.getX() + anchor.getWidth(), anchor.getY() + anchor.getHeight() / 2.0D);
+      Point2D p2 = at.transform(p2, (Point2D)null);
+      snapToAnchor(p1, anchor);
+      snapToAnchor(p2, anchor);
+
+      for(int i = 0; i &lt; gs.length; ++i) {
+         CTGradientStop stop = gs[i];
+         colors[i] = (new XSLFColor(stop, theme, phClr)).getColor();
+         fractions[i] = (float)stop.getPos() / 100000.0F;
+      }
+
+      AffineTransform grAt = new AffineTransform();
+      if (gradFill.isSetRotWithShape() || !gradFill.getRotWithShape()) {
+         double rotation = this._shape.getRotation();
+         if (rotation != 0.0D) {
+            double centerX = anchor.getX() + anchor.getWidth() / 2.0D;
+            double centerY = anchor.getY() + anchor.getHeight() / 2.0D;
+            grAt.translate(centerX, centerY);
+            grAt.rotate(Math.toRadians(-rotation));
+            grAt.translate(-centerX, -centerY);
+         }
+      }
+
+      Object paint;
+      try {
+         Class clz = Class.forName(&quot;java.awt.LinearGradientPaint&quot;);
+         Class clzCycleMethod = Class.forName(&quot;java.awt.MultipleGradientPaint$CycleMethod&quot;);
+         Class clzColorSpaceType = Class.forName(&quot;java.awt.MultipleGradientPaint$ColorSpaceType&quot;);
+         Constructor c = clz.getConstructor(Point2D.class, Point2D.class, float[].class, Color[].class, clzCycleMethod, clzColorSpaceType, AffineTransform.class);
+         paint = (Paint)c.newInstance(p1, p2, fractions, colors, Enum.valueOf(clzCycleMethod, &quot;NO_CYCLE&quot;), Enum.valueOf(clzColorSpaceType, &quot;SRGB&quot;), grAt);
+      } catch (ClassNotFoundException var23) {
+         paint = new GradientPaint(p1, colors[0], p2, colors[colors.length - 1]);
+      } catch (Exception var24) {
+         throw new RuntimeException(var24);
+      }
+
+      return (Paint)paint;
+   }
+
+   private static Paint toRadialGradientPaint(CTGradientFillProperties gradFill, Rectangle2D anchor, XSLFTheme theme, CTSchemeColor phClr) {
+      CTGradientStop[] gs = gradFill.getGsLst().getGsArray();
+      Arrays.sort(gs, new Comparator&lt;CTGradientStop&gt;() {
+         public int compare(CTGradientStop o1, CTGradientStop o2) {
+            Integer pos1 = o1.getPos();
+            Integer pos2 = o2.getPos();
+            return pos1.compareTo(pos2);
+         }
+      });
+      gs[1].setPos(50000);
+      CTGradientFillProperties g = Factory.newInstance();
+      g.set(gradFill);
+      g.getGsLst().setGsArray(new CTGradientStop[]{gs[0], gs[1]});
+      return createRadialGradientPaint(g, anchor, theme, phClr);
+   }
+
+   private static Paint createRadialGradientPaint(CTGradientFillProperties gradFill, Rectangle2D anchor, XSLFTheme theme, CTSchemeColor phClr) {
+      CTGradientStop[] gs = gradFill.getGsLst().getGsArray();
+      Point2D pCenter = new java.awt.geom.Point2D.Double(anchor.getX() + anchor.getWidth() / 2.0D, anchor.getY() + anchor.getHeight() / 2.0D);
+      float radius = (float)Math.max(anchor.getWidth(), anchor.getHeight());
+      Arrays.sort(gs, new Comparator&lt;CTGradientStop&gt;() {
+         public int compare(CTGradientStop o1, CTGradientStop o2) {
+            Integer pos1 = o1.getPos();
+            Integer pos2 = o2.getPos();
+            return pos1.compareTo(pos2);
+         }
+      });
+      Color[] colors = new Color[gs.length];
+      float[] fractions = new float[gs.length];
+
+      for(int i = 0; i &lt; gs.length; ++i) {
+         CTGradientStop stop = gs[i];
+         colors[i] = (new XSLFColor(stop, theme, phClr)).getColor();
+         fractions[i] = (float)stop.getPos() / 100000.0F;
+      }
+
+      Object paint;
+      try {
+         Class clz = Class.forName(&quot;java.awt.RadialGradientPaint&quot;);
+         Constructor c = clz.getConstructor(Point2D.class, Float.TYPE, float[].class, Color[].class);
+         paint = (Paint)c.newInstance(pCenter, radius, fractions, colors);
+      } catch (ClassNotFoundException var12) {
+         paint = new GradientPaint(new java.awt.geom.Point2D.Double(anchor.getX(), anchor.getY()), colors[0], pCenter, colors[colors.length - 1]);
+      } catch (Exception var13) {
+         throw new RuntimeException(var13);
+      }
+
+      return (Paint)paint;
+   }
+
+   private static void snapToAnchor(Point2D p, Rectangle2D anchor) {
+      if (p.getX() &lt; anchor.getX()) {
+         p.setLocation(anchor.getX(), p.getY());
+      } else if (p.getX() &gt; anchor.getX() + anchor.getWidth()) {
+         p.setLocation(anchor.getX() + anchor.getWidth(), p.getY());
+      }
+
+      if (p.getY() &lt; anchor.getY()) {
+         p.setLocation(p.getX(), anchor.getY());
+      } else if (p.getY() &gt; anchor.getY() + anchor.getHeight()) {
+         p.setLocation(p.getX(), anchor.getY() + anchor.getHeight());
+      }
+
+   }
+
+   Paint getPaint(Graphics2D graphics, XmlObject spPr, CTSchemeColor phClr) {
+      Paint paint = null;
+      XmlObject[] arr$ = spPr.selectPath(&quot;*&quot;);
+      int len$ = arr$.length;
+
+      for(int i$ = 0; i$ &lt; len$; ++i$) {
+         XmlObject obj = arr$[i$];
+         paint = this.selectPaint(graphics, obj, phClr, this._shape.getSheet().getPackagePart());
+         if (paint != null) {
+            break;
+         }
+      }
+
+      return paint == NO_PAINT ? null : paint;
+   }
+
+   Paint getFillPaint(final Graphics2D graphics) {
+      PropertyFetcher&lt;Paint&gt; fetcher = new PropertyFetcher&lt;Paint&gt;() {
+         public boolean fetch(XSLFSimpleShape shape) {
+            CTShapeProperties spPr = shape.getSpPr();
+            if (spPr.isSetNoFill()) {
+               this.setValue(RenderableShape.NO_PAINT);
+               return true;
+            } else {
+               Paint paint = RenderableShape.this.getPaint(graphics, spPr, (CTSchemeColor)null);
+               if (paint != null) {
+                  this.setValue(paint);
+                  return true;
+               } else {
+                  return false;
+               }
+            }
+         }
+      };
+      this._shape.fetchShapeProperty(fetcher);
+      Paint paint = (Paint)fetcher.getValue();
+      if (paint == null) {
+         CTShapeStyle style = this._shape.getSpStyle();
+         if (style != null) {
+            CTStyleMatrixReference fillRef = style.getFillRef();
+            int idx = (int)fillRef.getIdx();
+            CTSchemeColor phClr = fillRef.getSchemeClr();
+            XSLFSheet sheet = this._shape.getSheet();
+            XSLFTheme theme = sheet.getTheme();
+            XmlObject fillProps = null;
+            if (idx &gt;= 1 &amp;&amp; idx &lt;= 999) {
+               fillProps = theme.getXmlObject().getThemeElements().getFmtScheme().getFillStyleLst().selectPath(&quot;*&quot;)[idx - 1];
+            } else if (idx &gt;= 1001) {
+               fillProps = theme.getXmlObject().getThemeElements().getFmtScheme().getBgFillStyleLst().selectPath(&quot;*&quot;)[idx - 1001];
+            }
+
+            if (fillProps != null) {
+               paint = this.selectPaint(graphics, fillProps, phClr, sheet.getPackagePart());
+            }
+         }
+      }
+
+      return paint == NO_PAINT ? null : paint;
+   }
+
+   public Paint getLinePaint(final Graphics2D graphics) {
+      PropertyFetcher&lt;Paint&gt; fetcher = new PropertyFetcher&lt;Paint&gt;() {
+         public boolean fetch(XSLFSimpleShape shape) {
+            CTLineProperties spPr = shape.getSpPr().getLn();
+            if (spPr != null) {
+               if (spPr.isSetNoFill()) {
+                  this.setValue(RenderableShape.NO_PAINT);
+                  return true;
+               }
+
+               Paint paint = RenderableShape.this.getPaint(graphics, spPr, (CTSchemeColor)null);
+               if (paint != null) {
+                  this.setValue(paint);
+                  return true;
+               }
+            }
+
+            return false;
+         }
+      };
+      this._shape.fetchShapeProperty(fetcher);
+      Paint paint = (Paint)fetcher.getValue();
+      if (paint == null) {
+         CTShapeStyle style = this._shape.getSpStyle();
+         if (style != null) {
+            CTStyleMatrixReference lnRef = style.getLnRef();
+            int idx = (int)lnRef.getIdx();
+            CTSchemeColor phClr = lnRef.getSchemeClr();
+            if (idx &gt; 0) {
+               XSLFTheme theme = this._shape.getSheet().getTheme();
+               XmlObject lnProps = theme.getXmlObject().getThemeElements().getFmtScheme().getLnStyleLst().selectPath(&quot;*&quot;)[idx - 1];
+               paint = this.getPaint(graphics, lnProps, phClr);
+            }
+         }
+      }
+
+      return paint == NO_PAINT ? null : paint;
+   }
+
+   private static float[] getDashPattern(LineDash lineDash, float lineWidth) {
+      float[] dash = null;
+      switch(lineDash) {
+      case SYS_DOT:
+         dash = new float[]{lineWidth, lineWidth};
+         break;
+      case SYS_DASH:
+         dash = new float[]{2.0F * lineWidth, 2.0F * lineWidth};
+         break;
+      case DASH:
+         dash = new float[]{3.0F * lineWidth, 4.0F * lineWidth};
+         break;
+      case DASH_DOT:
+         dash = new float[]{4.0F * lineWidth, 3.0F * lineWidth, lineWidth, 3.0F * lineWidth};
+         break;
+      case LG_DASH:
+         dash = new float[]{8.0F * lineWidth, 3.0F * lineWidth};
+         break;
+      case LG_DASH_DOT:
+         dash = new float[]{8.0F * lineWidth, 3.0F * lineWidth, lineWidth, 3.0F * lineWidth};
+         break;
+      case LG_DASH_DOT_DOT:
+         dash = new float[]{8.0F * lineWidth, 3.0F * lineWidth, lineWidth, 3.0F * lineWidth, lineWidth, 3.0F * lineWidth};
+      }
+
+      return dash;
+   }
+
+   public Stroke applyStroke(Graphics2D graphics) {
+      float lineWidth = (float)this._shape.getLineWidth();
+      if (lineWidth == 0.0F) {
+         lineWidth = 0.25F;
+      }
+
+      LineDash lineDash = this._shape.getLineDash();
+      float[] dash = null;
+      float dash_phase = 0.0F;
+      if (lineDash != null) {
+         dash = getDashPattern(lineDash, lineWidth);
+      }
+
+      int cap = 0;
+      LineCap lineCap = this._shape.getLineCap();
+      if (lineCap != null) {
+         switch(lineCap) {
+         case ROUND:
+            cap = 1;
+            break;
+         case SQUARE:
+            cap = 2;
+            break;
+         default:
+            cap = 0;
+         }
+      }
+
+      int meter = 1;
+      Stroke stroke = new BasicStroke(lineWidth, cap, meter, Math.max(1.0F, lineWidth), dash, dash_phase);
+      graphics.setStroke(stroke);
+      return stroke;
+   }
+
+   public void render(Graphics2D graphics) {
+      Collection&lt;Outline&gt; elems = this.computeOutlines(graphics);
+      XSLFShadow shadow = this._shape.getShadow();
+      Paint fill = this.getFillPaint(graphics);
+      Paint line = this.getLinePaint(graphics);
+      this.applyStroke(graphics);
+      Iterator i$;
+      Outline o;
+      if (shadow != null) {
+         i$ = elems.iterator();
+
+         while(i$.hasNext()) {
+            o = (Outline)i$.next();
+            if (o.getPath().isFilled()) {
+               if (fill != null) {
+                  shadow.fill(graphics, o.getOutline());
+               } else if (line != null) {
+                  shadow.draw(graphics, o.getOutline());
+               }
+            }
+         }
+      }
+
+      if (fill != null) {
+         i$ = elems.iterator();
+
+         while(i$.hasNext()) {
+            o = (Outline)i$.next();
+            if (o.getPath().isFilled()) {
+               graphics.setPaint(fill);
+               graphics.fill(o.getOutline());
+            }
+         }
+      }
+
+      this._shape.drawContent(graphics);
+      if (line != null) {
+         i$ = elems.iterator();
+
+         while(i$.hasNext()) {
+            o = (Outline)i$.next();
+            if (o.getPath().isStroked()) {
+               graphics.setPaint(line);
+               graphics.draw(o.getOutline());
+            }
+         }
+      }
+
+   }
+
+   private Collection&lt;Outline&gt; computeOutlines(Graphics2D graphics) {
+      Collection&lt;Outline&gt; lst = new ArrayList();
+      CustomGeometry geom = this._shape.getGeometry();
+      if (geom == null) {
+         return lst;
+      } else {
+         Rectangle2D anchor = this.getAnchor(graphics);
+         Iterator i$ = geom.iterator();
+
+         while(i$.hasNext()) {
+            Path p = (Path)i$.next();
+            double w = p.getW() == -1L ? anchor.getWidth() * 12700.0D : (double)p.getW();
+            double h = p.getH() == -1L ? anchor.getHeight() * 12700.0D : (double)p.getH();
+            Rectangle2D pathAnchor = new Double(0.0D, 0.0D, w, h);
+            Context ctx = new Context(geom, pathAnchor, new IAdjustableShape() {
+               public Guide getAdjustValue(String name) {
+                  CTPresetGeometry2D prst = RenderableShape.this._shape.getSpPr().getPrstGeom();
+                  if (prst.isSetAvLst()) {
+                     Iterator i$ = prst.getAvLst().getGdList().iterator();
+
+                     while(i$.hasNext()) {
+                        CTGeomGuide g = (CTGeomGuide)i$.next();
+                        if (g.getName().equals(name)) {
+                           return new Guide(g);
+                        }
+                     }
+                  }
+
+                  return null;
+               }
+            });
+            Shape gp = p.getPath(ctx);
+            AffineTransform at = new AffineTransform();
+            at.translate(anchor.getX(), anchor.getY());
+            double scaleX;
+            if (p.getW() != -1L) {
+               scaleX = anchor.getWidth() / (double)p.getW();
+            } else {
+               scaleX = 7.874015748031496E-5D;
+            }
+
+            double scaleY;
+            if (p.getH() != -1L) {
+               scaleY = anchor.getHeight() / (double)p.getH();
+            } else {
+               scaleY = 7.874015748031496E-5D;
+            }
+
+            at.scale(scaleX, scaleY);
+            Shape canvasShape = at.createTransformedShape(gp);
+            lst.add(new Outline(canvasShape, p));
+         }
+
+         return lst;
+      }
+   }
+
+   public Rectangle2D getAnchor(Graphics2D graphics) {
+      Rectangle2D anchor = this._shape.getAnchor();
+      if (graphics == null) {
+         return anchor;
+      } else {
+         AffineTransform tx = (AffineTransform)graphics.getRenderingHint(XSLFRenderingHint.GROUP_TRANSFORM);
+         if (tx != null) {
+            anchor = tx.createTransformedShape(anchor).getBounds2D();
+         }
+
+         return anchor;
+      }
+   }
+
+   // $FF: synthetic class
+   static class SyntheticClass_1 {
+      // $FF: synthetic field
+      static final int[] $SwitchMap$org$zkoss$poi$xslf$usermodel$LineDash;
+      // $FF: synthetic field
+      static final int[] $SwitchMap$org$zkoss$poi$xslf$usermodel$LineCap = new int[LineCap.values().length];
+
+      static {
+         try {
+            $SwitchMap$org$zkoss$poi$xslf$usermodel$LineCap[LineCap.ROUND.ordinal()] = 1;
+         } catch (NoSuchFieldError var9) {
+            ;
+         }
+
+         try {
+            $SwitchMap$org$zkoss$poi$xslf$usermodel$LineCap[LineCap.SQUARE.ordinal()] = 2;
+         } catch (NoSuchFieldError var8) {
+            ;
+         }
+
+         $SwitchMap$org$zkoss$poi$xslf$usermodel$LineDash = new int[LineDash.values().length];
+
+         try {
+            $SwitchMap$org$zkoss$poi$xslf$usermodel$LineDash[LineDash.SYS_DOT.ordinal()] = 1;
+         } catch (NoSuchFieldError var7) {
+            ;
+         }
+
+         try {
+            $SwitchMap$org$zkoss$poi$xslf$usermodel$LineDash[LineDash.SYS_DASH.ordinal()] = 2;
+         } catch (NoSuchFieldError var6) {
+            ;
+         }
+
+         try {
+            $SwitchMap$org$zkoss$poi$xslf$usermodel$LineDash[LineDash.DASH.ordinal()] = 3;
+         } catch (NoSuchFieldError var5) {
+            ;
+         }
+
+         try {
+            $SwitchMap$org$zkoss$poi$xslf$usermodel$LineDash[LineDash.DASH_DOT.ordinal()] = 4;
+         } catch (NoSuchFieldError var4) {
+            ;
+         }
+
+         try {
+            $SwitchMap$org$zkoss$poi$xslf$usermodel$LineDash[LineDash.LG_DASH.ordinal()] = 5;
+         } catch (NoSuchFieldError var3) {
+            ;
+         }
+
+         try {
+            $SwitchMap$org$zkoss$poi$xslf$usermodel$LineDash[LineDash.LG_DASH_DOT.ordinal()] = 6;
+         } catch (NoSuchFieldError var2) {
+            ;
+         }
+
+         try {
+            $SwitchMap$org$zkoss$poi$xslf$usermodel$LineDash[LineDash.LG_DASH_DOT_DOT.ordinal()] = 7;
+         } catch (NoSuchFieldError var1) {
+            ;
+         }
+
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: 18/09/2019, 6:17:00 p.m.</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "168,169,167,219" });
+
+            $("<div id='168-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(168)');
+            $("<div id='169-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(169)');
+            $("<div id='167-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(167)');
+            $("<div id='219-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(219)');
+
+
+$("<a name='49672424' class='windup-file-location'></a><div class='inline-source-comment green tag-classloader'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>Dynamic class instantiation</strong><a title='View Rule: environment-dependent-calls-01000' href='windup_ruleproviders.html#environment-dependent-calls-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The class is dynamically loaded within application. During the migration, multiple classes that are provided on classpath by a different server may not be present anymore.<\/p><p>Please review the class-loading mechanisms and ensure that the dynamically loaded class is available in JBoss EAP.<\/p><ul><li><a href='https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.0/html-single/development_guide/#class_loading_and_modules' target='_blank'>Class Loading and Modules in JBoss EAP 7</a></li><li><a href='https://access.redhat.com/solutions/361343' target='_blank'>Article about Classloading in JBoss EAP 6</a></li><li><a href='https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.4/html-single/Development_Guide/index.html#chap-Class_Loading_and_Modules' target='_blank'>Class Loading and Modules in JBoss EAP 6</a></li></ul></div></div></div>").appendTo('#168-inlines');
+
+$("<a name='49742056' class='windup-file-location'></a><div class='inline-source-comment green tag-classloader'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>Dynamic class instantiation</strong><a title='View Rule: environment-dependent-calls-01000' href='windup_ruleproviders.html#environment-dependent-calls-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The class is dynamically loaded within application. During the migration, multiple classes that are provided on classpath by a different server may not be present anymore.<\/p><p>Please review the class-loading mechanisms and ensure that the dynamically loaded class is available in JBoss EAP.<\/p><ul><li><a href='https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.0/html-single/development_guide/#class_loading_and_modules' target='_blank'>Class Loading and Modules in JBoss EAP 7</a></li><li><a href='https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.4/html-single/Development_Guide/index.html#chap-Class_Loading_and_Modules' target='_blank'>Class Loading and Modules in JBoss EAP 6</a></li><li><a href='https://access.redhat.com/solutions/361343' target='_blank'>Article about Classloading in JBoss EAP 6</a></li></ul></div></div></div>").appendTo('#169-inlines');
+
+$("<a name='50114600' class='windup-file-location'></a><div class='inline-source-comment green tag-classloader'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>Dynamic class instantiation</strong><a title='View Rule: environment-dependent-calls-01000' href='windup_ruleproviders.html#environment-dependent-calls-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The class is dynamically loaded within application. During the migration, multiple classes that are provided on classpath by a different server may not be present anymore.<\/p><p>Please review the class-loading mechanisms and ensure that the dynamically loaded class is available in JBoss EAP.<\/p><ul><li><a href='https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.0/html-single/development_guide/#class_loading_and_modules' target='_blank'>Class Loading and Modules in JBoss EAP 7</a></li><li><a href='https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.4/html-single/Development_Guide/index.html#chap-Class_Loading_and_Modules' target='_blank'>Class Loading and Modules in JBoss EAP 6</a></li><li><a href='https://access.redhat.com/solutions/361343' target='_blank'>Article about Classloading in JBoss EAP 6</a></li></ul></div></div></div>").appendTo('#167-inlines');
+
+$("<a name='99659784' class='windup-file-location'></a><div class='inline-source-comment green tag-classloader'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>Dynamic class instantiation</strong><a title='View Rule: environment-dependent-calls-01000' href='windup_ruleproviders.html#environment-dependent-calls-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The class is dynamically loaded within application. During the migration, multiple classes that are provided on classpath by a different server may not be present anymore.<\/p><p>Please review the class-loading mechanisms and ensure that the dynamically loaded class is available in JBoss EAP.<\/p><ul><li><a href='https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.4/html-single/Development_Guide/index.html#chap-Class_Loading_and_Modules' target='_blank'>Class Loading and Modules in JBoss EAP 6</a></li><li><a href='https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.0/html-single/development_guide/#class_loading_and_modules' target='_blank'>Class Loading and Modules in JBoss EAP 7</a></li><li><a href='https://access.redhat.com/solutions/361343' target='_blank'>Article about Classloading in JBoss EAP 6</a></li></ul></div></div></div>").appendTo('#219-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            $(window).load(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 21667888;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

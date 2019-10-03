@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for pedidosTab.xhtml</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="21667888">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_SIGRU_ear.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_SIGRU_ear.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="tattletale_SIGRU_ear.html">
+                        <i class="glyphicon tattletale-nav-logo"></i>
+                      Tattletale
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsSIGRU_ear.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_SIGRU_ear.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Red Hat Application Migration Toolkit found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="21667888">
+                            SIGRU.ear/SIGRU.war/prospectos/Gestion/Includes/pedidosTab.xhtml
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+
+                                <ul class="classifications">
+                                            <li>
+                                                <div class="title">
+                                                    <em>Unparsable XML File</em>
+<a title='View Rule: DiscoverXmlFilesRuleProvider_5' href='windup_ruleproviders.html#DiscoverXmlFilesRuleProvider_5'><span class='glyphicon glyphicon-link rule-link'></span></a>                                                </div>
+                                                <div class="desc">This XML file could not be parsed.</div>
+                                            </li>
+                                </ul>
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+				
+					&lt;h:panelGrid width=&quot;100%&quot;&gt;
+					&lt;p:panelGrid columns=&quot;12&quot;&gt;
+						&lt;p:outputLabel value=&quot; Pedido: &quot; styleClass=&quot;dataTableContentBold&quot; /&gt;
+						&lt;p:outputLabel value=&quot; 170309 &quot; styleClass=&quot;dataTableContent&quot; /&gt;
+						&lt;p:outputLabel value=&quot; 	Fecha: &quot; styleClass=&quot;dataTableContentBold&quot; /&gt;
+						&lt;p:outputLabel value=&quot; Nov 02 de 2016  &quot;
+							styleClass=&quot;dataTableContent&quot; /&gt;
+						&lt;p:outputLabel value=&quot; 	Estado: &quot;
+							styleClass=&quot;dataTableContentBold&quot; /&gt;
+						&lt;p:outputLabel value=&quot;ASIGNADO  &quot; styleClass=&quot;dataTableContent&quot; /&gt;
+						&lt;p:outputLabel value=&quot; 	Sucursal: &quot;
+							styleClass=&quot;dataTableContentBold&quot; /&gt;
+						&lt;p:outputLabel value=&quot;1 - Bogota  &quot; styleClass=&quot;dataTableContent&quot; /&gt;
+						&lt;p:outputLabel value=&quot; Vitrina: &quot;
+							styleClass=&quot;dataTableContentBold&quot; /&gt;
+						&lt;p:outputLabel value=&quot;8 - BOG - Motor Show   &quot;
+							styleClass=&quot;dataTableContent&quot; /&gt;
+						&lt;p:outputLabel value=&quot;  Asesor: &quot;
+							styleClass=&quot;dataTableContentBold&quot; /&gt;
+						&lt;p:outputLabel
+							value=&quot;52957838 - NOMBRE 10241 PRI APE 10241 SEG APE 10241   &quot;
+							styleClass=&quot;dataTableContent&quot; /&gt;
+
+					&lt;/p:panelGrid&gt;
+
+
+
+				&lt;/h:panelGrid&gt;
+				&lt;p:tabView id=&quot;pedidotapview&quot;&gt;
+					&lt;p:tab title=&quot;Informaci�n del pedido&quot;&gt;
+						&lt;h:panelGrid columns=&quot;2&quot; width=&quot;99%&quot;&gt;
+							&lt;h:panelGroup&gt;
+								&lt;h:panelGrid columns=&quot;4&quot;&gt;
+									&lt;p:outputLabel value=&quot;   Marca: &quot;
+										styleClass=&quot;dataTableContentBold&quot; /&gt;
+									&lt;p:outputLabel value=&quot;  	 01 - NISSAN   &quot;
+										styleClass=&quot;dataTableContent&quot; /&gt;
+									&lt;p:outputLabel value=&quot;  Linea: &quot;
+										styleClass=&quot;dataTableContentBold&quot; /&gt;
+									&lt;p:outputLabel value=&quot;  	39 - MARCH   &quot;
+										styleClass=&quot;dataTableContent&quot; /&gt;
+									&lt;p:outputLabel value=&quot;   Modelo: &quot;
+										styleClass=&quot;dataTableContentBold&quot; /&gt;
+									&lt;p:outputLabel
+										value=&quot;  	39.169 - 1.6 ADVANCE AUT RIM 15LUJO R/CD AA 2A/BAG ABS V.E   &quot;
+										styleClass=&quot;dataTableContent&quot; /&gt;
+									&lt;p:outputLabel value=&quot;    	A�o Modelo: &quot;
+										styleClass=&quot;dataTableContentBold&quot; /&gt;
+									&lt;p:outputLabel value=&quot;  2017 &quot; styleClass=&quot;dataTableContent&quot; /&gt;
+									&lt;p:outputLabel value=&quot;   Color:&quot;
+										styleClass=&quot;dataTableContentBold&quot; /&gt;
+									&lt;p:outputLabel value=&quot;   	 9298 - AZUL TURQUESA  &quot;
+										styleClass=&quot;dataTableContent&quot; /&gt;
+									&lt;p:outputLabel value=&quot;     	Tapicer�a: &quot;
+										styleClass=&quot;dataTableContentBold&quot; /&gt;
+									&lt;p:outputLabel value=&quot;  NEGRO &quot; styleClass=&quot;dataTableContent&quot; /&gt;
+									&lt;p:outputLabel value=&quot;   Inventario:&quot;
+										styleClass=&quot;dataTableContentBold&quot; /&gt;
+									&lt;p:outputLabel value=&quot;207239  &quot; styleClass=&quot;dataTableContent&quot; /&gt;
+									&lt;p:outputLabel value=&quot;      	 Placa: &quot;
+										styleClass=&quot;dataTableContentBold&quot; /&gt;
+									&lt;p:outputLabel value=&quot;   &quot; styleClass=&quot;dataTableContent&quot; /&gt;
+									&lt;p:outputLabel value=&quot;      	 Ubicacion: &quot;
+										styleClass=&quot;dataTableContentBold&quot; /&gt;
+									&lt;p:outputLabel value=&quot; BOG - Patio Peaje  &quot;
+										styleClass=&quot;dataTableContent&quot; /&gt;
+									&lt;p:outputLabel value=&quot;   Campa�a:&quot;
+										styleClass=&quot;dataTableContentBold&quot; /&gt;
+									&lt;p:outputLabel value=&quot; 	 0 - NINGUNA &quot;
+										styleClass=&quot;dataTableContent&quot; /&gt;
+									&lt;p:outputLabel value=&quot;      	Promocion: &quot;
+										styleClass=&quot;dataTableContentBold&quot; /&gt;
+									&lt;p:outputLabel value=&quot;       	 0 - NINGUNA &quot;
+										styleClass=&quot;dataTableContent&quot; /&gt;
+								&lt;/h:panelGrid&gt;
+								&lt;p:dataTable id=&quot;dtClieped&quot; widgetVar=&quot;widgetCliePedi&quot; var=&quot;fin&quot;
+									rows=&quot;10&quot; emptyMessage=&quot;#{msg_comun.label_paginador_empty}&quot;&gt;
+
+
+									&lt;p:column headerText=&quot;Identificaci�n&quot;
+										style=&quot;text-align: left; width: 10%&quot;&gt;
+										&lt;h:outputText value=&quot;&quot; /&gt;
+									&lt;/p:column&gt;
+									&lt;p:column headerText=&quot;  Cliente &quot;
+										style=&quot;text-align: left; width: 10%&quot;&gt;
+										&lt;h:outputText value=&quot;&quot; /&gt;
+									&lt;/p:column&gt;
+									&lt;p:column headerText=&quot;Telefonos&quot;
+										style=&quot;text-align: left; width: 10%&quot;&gt;
+										&lt;h:outputText value=&quot;&quot; /&gt;
+									&lt;/p:column&gt;
+
+								&lt;/p:dataTable&gt;
+							&lt;/h:panelGroup&gt;
+							&lt;h:panelGroup&gt;
+								&lt;h:panelGrid columns=&quot;4&quot;&gt;
+									&lt;p:outputLabel value=&quot;   Factura: &quot;
+										styleClass=&quot;dataTableContentBold&quot; /&gt;
+									&lt;p:outputLabel value=&quot;&quot; styleClass=&quot;dataTableContent&quot; /&gt;
+									&lt;p:outputLabel value=&quot;   Fec. Factura: &quot;
+										styleClass=&quot;dataTableContentBold&quot; /&gt;
+									&lt;p:outputLabel value=&quot;&quot; styleClass=&quot;dataTableContent&quot; /&gt;
+									&lt;p:outputLabel value=&quot;   Fec. Est. Entrega: &quot;
+										styleClass=&quot;dataTableContentBold&quot; /&gt;
+									&lt;p:outputLabel value=&quot;&quot; styleClass=&quot;dataTableContent&quot; /&gt;
+									&lt;p:outputLabel value=&quot;   Ubicaci�n: &quot;
+										styleClass=&quot;dataTableContentBold&quot; /&gt;
+									&lt;p:outputLabel value=&quot;BOG - Motor Show&quot;
+										styleClass=&quot;dataTableContent&quot; /&gt;
+									&lt;p:outputLabel value=&quot;   Precio Lista: &quot;
+										styleClass=&quot;dataTableContentBold&quot; /&gt;
+									&lt;p:outputLabel value=&quot; 	 $46,990,000&quot;
+										styleClass=&quot;dataTableContent&quot; /&gt;
+									&lt;p:outputLabel value=&quot;   Vlr. Pedido: &quot;
+										styleClass=&quot;dataTableContentBold&quot; /&gt;
+									&lt;p:outputLabel value=&quot; 	 $46,190,000&quot;
+										styleClass=&quot;dataTableContent&quot; /&gt;
+									&lt;p:outputLabel value=&quot;   Vlr. Real Pedido: &quot;
+										styleClass=&quot;dataTableContentBold&quot; /&gt;
+									&lt;p:outputLabel value=&quot; 	 $46,190,000 &quot;
+										styleClass=&quot;dataTableContent&quot; /&gt;
+
+
+								&lt;/h:panelGrid&gt;
+								&lt;p:dataTable id=&quot;dtdescuentosped&quot;
+									widgetVar=&quot;widgetdescuentosPedi&quot; var=&quot;fin&quot; rows=&quot;10&quot;
+									emptyMessage=&quot;#{msg_comun.label_paginador_empty}&quot;&gt;
+									&lt;f:facet name=&quot;header&quot;&gt; Descuentos&lt;/f:facet&gt;
+
+
+									&lt;p:column headerText=&quot;Efectivo&quot;
+										style=&quot;text-align: left; width: 10%&quot;&gt;
+										&lt;h:outputText value=&quot;&quot; /&gt;
+									&lt;/p:column&gt;
+									&lt;p:column headerText=&quot;   Acc. x Neg &quot;
+										style=&quot;text-align: left; width: 10%&quot;&gt;
+										&lt;h:outputText value=&quot;&quot; /&gt;
+									&lt;/p:column&gt;
+									&lt;p:column headerText=&quot; Adic. Retoma&quot;
+										style=&quot;text-align: left; width: 10%&quot;&gt;
+										&lt;h:outputText value=&quot;&quot; /&gt;
+									&lt;/p:column&gt;
+									&lt;p:columnGroup type=&quot;footer&quot;&gt;
+										&lt;p:row&gt;
+											&lt;p:column colspan=&quot;2&quot; style=&quot;text-align:right&quot;
+												footerText=&quot; Total Descuentos&quot; /&gt;
+
+											&lt;p:column footerText=&quot;$000&quot; /&gt;
+										&lt;/p:row&gt;
+									&lt;/p:columnGroup&gt;
+								&lt;/p:dataTable&gt;
+							&lt;/h:panelGroup&gt;
+
+						&lt;/h:panelGrid&gt;
+						&lt;p:fieldset legend=&quot;Consulta Pedidos&quot; toggleable=&quot;true&quot;
+							style=&quot;width:97%&quot;&gt;
+							&lt;p:tabView id=&quot;pedidosConsultabview&quot;&gt;
+								&lt;p:tab title=&quot;Veh. Nuevos&quot;
+									titleStyle=&quot;padding-left: 45px; background: url(/SIGRU/Include/Images/Icons/vehNuevos.gif) no-repeat left transparent;&quot;&gt;
+									&lt;p:dataTable id=&quot;dtPedidosConsNuev&quot;
+										widgetVar=&quot;widgetPedidosConsNuev&quot; var=&quot;fin&quot; paginator=&quot;true&quot;
+										paginatorPosition=&quot;bottom&quot; rows=&quot;10&quot; style=&quot;width:99%&quot;
+										emptyMessage=&quot;#{msg_comun.label_paginador_empty}&quot;
+										paginatorTemplate=&quot;#{msg_comun.label_paginador_template}&quot;
+										currentPageReportTemplate=&quot;#{msg_comun.label_paginador_currentTemplate}&quot;
+										rowsPerPageTemplate=&quot;#{msg_comun.label_paginador_rowsTemplate_3}&quot;
+										filteredValue=&quot;#{rolesMB.rolesFiltered}&quot;&gt;
+
+
+										&lt;p:column headerText=&quot;Sucursal&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+										&lt;p:column headerText=&quot;  No &quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+										&lt;p:column headerText=&quot;Vehiculo&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+
+										&lt;p:column headerText=&quot;A�o&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+										&lt;p:column headerText=&quot;Color&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+										&lt;p:column headerText=&quot;Estado&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+										&lt;p:column headerText=&quot;Inventario&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+										&lt;p:column headerText=&quot;Fecha&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+
+
+
+									&lt;/p:dataTable&gt;
+
+								&lt;/p:tab&gt;
+
+								&lt;p:tab title=&quot;Maquinaria&quot;
+									titleStyle=&quot;padding-left: 45px; background: url(/SIGRU/Include/Images/Icons/maquinaria.gif) no-repeat left transparent;&quot;&gt;
+									&lt;p:dataTable id=&quot;dtPedidosConsMaq&quot;
+										widgetVar=&quot;widgetPedidosConsMaq&quot; var=&quot;fin&quot; paginator=&quot;true&quot;
+										paginatorPosition=&quot;bottom&quot; rows=&quot;10&quot; style=&quot;width:99%&quot;
+										emptyMessage=&quot;#{msg_comun.label_paginador_empty}&quot;
+										paginatorTemplate=&quot;#{msg_comun.label_paginador_template}&quot;
+										currentPageReportTemplate=&quot;#{msg_comun.label_paginador_currentTemplate}&quot;
+										rowsPerPageTemplate=&quot;#{msg_comun.label_paginador_rowsTemplate_3}&quot;
+										filteredValue=&quot;#{rolesMB.rolesFiltered}&quot;&gt;
+
+
+										&lt;p:column headerText=&quot;Sucursal&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+										&lt;p:column headerText=&quot;  No &quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+										&lt;p:column headerText=&quot;Vehiculo&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+
+										&lt;p:column headerText=&quot;A�o&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+										&lt;p:column headerText=&quot;Color&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+										&lt;p:column headerText=&quot;Estado&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+										&lt;p:column headerText=&quot;Inventario&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+										&lt;p:column headerText=&quot;Fecha&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+
+
+
+									&lt;/p:dataTable&gt;
+
+								&lt;/p:tab&gt;
+
+								&lt;p:tab title=&quot;COM - Veh. Nuevos&quot;
+									titleStyle=&quot;padding-left: 45px; background: url(/SIGRU/Include/Images/Icons/ZNA.gif) no-repeat left transparent;&quot;&gt;
+									&lt;p:dataTable id=&quot;dtPedidosConsCOMn&quot;
+										widgetVar=&quot;widgetPedidosConsCOMn&quot; var=&quot;fin&quot; paginator=&quot;true&quot;
+										paginatorPosition=&quot;bottom&quot; rows=&quot;10&quot; style=&quot;width:99%&quot;
+										emptyMessage=&quot;#{msg_comun.label_paginador_empty}&quot;
+										paginatorTemplate=&quot;#{msg_comun.label_paginador_template}&quot;
+										currentPageReportTemplate=&quot;#{msg_comun.label_paginador_currentTemplate}&quot;
+										rowsPerPageTemplate=&quot;#{msg_comun.label_paginador_rowsTemplate_3}&quot;
+										filteredValue=&quot;#{rolesMB.rolesFiltered}&quot;&gt;
+
+
+										&lt;p:column headerText=&quot;Sucursal&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+										&lt;p:column headerText=&quot;  No &quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+										&lt;p:column headerText=&quot;Vehiculo&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+
+										&lt;p:column headerText=&quot;A�o&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+										&lt;p:column headerText=&quot;Color&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+										&lt;p:column headerText=&quot;Estado&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+										&lt;p:column headerText=&quot;Inventario&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+										&lt;p:column headerText=&quot;Fecha&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+
+
+
+									&lt;/p:dataTable&gt;
+
+
+								&lt;/p:tab&gt;
+								&lt;p:tab title=&quot;COM - Veh. Usados&quot;
+									titleStyle=&quot;padding-left: 45px; background: url(/SIGRU/Include/Images/Icons/usados.gif) no-repeat left transparent;&quot;&gt;
+									&lt;p:dataTable id=&quot;dtPedidosConsComu&quot;
+										widgetVar=&quot;widgetPedidosConsComu&quot; var=&quot;fin&quot; paginator=&quot;true&quot;
+										paginatorPosition=&quot;bottom&quot; rows=&quot;10&quot; style=&quot;width:99%&quot;
+										emptyMessage=&quot;#{msg_comun.label_paginador_empty}&quot;
+										paginatorTemplate=&quot;#{msg_comun.label_paginador_template}&quot;
+										currentPageReportTemplate=&quot;#{msg_comun.label_paginador_currentTemplate}&quot;
+										rowsPerPageTemplate=&quot;#{msg_comun.label_paginador_rowsTemplate_3}&quot;
+										filteredValue=&quot;#{rolesMB.rolesFiltered}&quot;&gt;
+
+
+										&lt;p:column headerText=&quot;Sucursal&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+										&lt;p:column headerText=&quot;  No &quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+										&lt;p:column headerText=&quot;Vehiculo&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+
+										&lt;p:column headerText=&quot;A�o&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+										&lt;p:column headerText=&quot;Color&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+										&lt;p:column headerText=&quot;Estado&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+										&lt;p:column headerText=&quot;Inventario&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+										&lt;p:column headerText=&quot;Fecha&quot;
+											style=&quot;text-align: left; width: 10%&quot;&gt;
+											&lt;h:outputText value=&quot;&quot; /&gt;
+										&lt;/p:column&gt;
+
+
+
+									&lt;/p:dataTable&gt;
+
+
+								&lt;/p:tab&gt;
+
+
+
+							&lt;/p:tabView&gt;
+
+						&lt;/p:fieldset&gt;
+					&lt;/p:tab&gt;
+					&lt;p:tab title=&quot;Linea de Tiempo&quot;&gt;
+						&lt;p:fieldset legend=&quot;L�nea de Tiempo: Proceso Log�stico&quot;
+							toggleable=&quot;true&quot;&gt;
+							&lt;p:steps activeIndex=&quot;0&quot; styleClass=&quot;custom&quot; readonly=&quot;false&quot;
+								id=&quot;steps1&quot;&gt;
+								&lt;p:menuitem value=&quot;Fabricaci�n&quot; /&gt;
+								&lt;p:menuitem value=&quot;PreArribo&quot; /&gt;
+								&lt;p:menuitem value=&quot;Arribo&quot; /&gt;
+								&lt;p:menuitem value=&quot;DTA&quot; /&gt;
+								&lt;p:menuitem value=&quot;Nacionalizaci�n&quot; /&gt;
+								&lt;p:menuitem value=&quot;Trans. Inter&quot; /&gt;
+								&lt;p:menuitem value=&quot;Trans. Final&quot; /&gt;
+								&lt;p:menuitem value=&quot;Tiempo Muerto&quot; /&gt;
+								&lt;p:menuitem value=&quot;Prog Alist&quot; /&gt;
+								&lt;p:menuitem value=&quot;Traslado Taller&quot; /&gt;
+								&lt;p:menuitem value=&quot;Alistamiento&quot; /&gt;
+								&lt;p:menuitem value=&quot;Traslado Vitrina&quot; /&gt;
+								&lt;p:menuitem value=&quot;Entrega Cliente&quot; /&gt;
+							&lt;/p:steps&gt;
+						&lt;/p:fieldset&gt;
+						&lt;p:fieldset
+							legend=&quot;L�nea de Tiempo: Proceso Admimistrativo ACTIVO&quot;
+							toggleable=&quot;true&quot;&gt;
+							&lt;p:steps activeIndex=&quot;0&quot; styleClass=&quot;custom&quot; readonly=&quot;false&quot;
+								id=&quot;steps2&quot;&gt;
+								&lt;p:menuitem value=&quot;Pedido&quot; /&gt;
+								&lt;p:menuitem value=&quot;Facturacion&quot; /&gt;
+								&lt;p:menuitem value=&quot;Matricula&quot; /&gt;
+								&lt;p:menuitem value=&quot;Entrega&quot; /&gt;
+							&lt;/p:steps&gt;
+						&lt;/p:fieldset&gt;
+						&lt;p:fieldset legend=&quot;L�nea de Tiempo: Proceso de Alistamiento&quot;
+							toggleable=&quot;true&quot;&gt;
+
+						&lt;/p:fieldset&gt;
+					&lt;/p:tab&gt;
+					&lt;p:tab title=&quot;Bitacora&quot;&gt;
+						&lt;p:dataTable id=&quot;dtPedidosbitacoa&quot; widgetVar=&quot;widgetPedidosbitac&quot;
+							var=&quot;fin&quot; paginator=&quot;true&quot; paginatorPosition=&quot;bottom&quot; rows=&quot;10&quot;
+							style=&quot;width:99%&quot;
+							emptyMessage=&quot;No existen comentarios para este pedido!&quot;
+							paginatorTemplate=&quot;#{msg_comun.label_paginador_template}&quot;
+							currentPageReportTemplate=&quot;#{msg_comun.label_paginador_currentTemplate}&quot;
+							rowsPerPageTemplate=&quot;#{msg_comun.label_paginador_rowsTemplate_3}&quot;
+							filteredValue=&quot;#{rolesMB.rolesFiltered}&quot;&gt;
+							&lt;f:facet name=&quot;header&quot;&gt; Bitacora del pedido 170309&lt;/f:facet&gt;
+
+							&lt;p:column headerText=&quot;Comentarios&quot;
+								style=&quot;text-align: left; width: 10%&quot;&gt;
+								&lt;h:outputText value=&quot;&quot; /&gt;
+							&lt;/p:column&gt;
+						&lt;/p:dataTable&gt;
+
+					&lt;/p:tab&gt;
+
+				&lt;/p:tabView&gt;
+				
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: 18/09/2019, 6:17:03 p.m.</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("xml",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            $(window).load(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 21667888;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

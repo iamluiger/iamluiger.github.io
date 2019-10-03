@@ -18,6 +18,9 @@ Pero como todo en la vida no es trabajo (la verdad yo no veo esto como trabajo :
 
 [*Y cuando uno comienza a investigar el por que el  súbito interés por este tema, muchos de mis colegas me manifiestan  que en sus organizaciones grandes iniciativas de SOA vienen fracasando unas tras otras.....*](../articulos/2019/MicroSOA/micro2soa)
 
+
+
+
 <div id="disqus_thread"></div>
 <script>
 

@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for DetalleLicitacionMB.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="21667888">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_SIGRU_ear.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_SIGRU_ear.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="tattletale_SIGRU_ear.html">
+                        <i class="glyphicon tattletale-nav-logo"></i>
+                      Tattletale
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsSIGRU_ear.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_SIGRU_ear.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Red Hat Application Migration Toolkit found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="21667888">
+                            SIGRU.ear/SIGRU.war/WEB-INF/classes/com/Dinissan/comercial/licitaciones/view/mb/DetalleLicitacionMB.java
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                                        <span class="label label-info" title="classloader">classloader</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package com.Dinissan.comercial.licitaciones.view.mb;
+
+import com.Dinissan.comercial.licitaciones.model.dto.ConceptoDTO;
+import com.Dinissan.comercial.licitaciones.model.dto.LicitacionDTO;
+import com.Dinissan.comercial.licitaciones.model.ejb.AdjudicacionEJB;
+import com.Dinissan.comercial.licitaciones.model.ejb.CalculosEJB;
+import com.Dinissan.comercial.licitaciones.model.ejb.CotizacionLicitacionEJB;
+import com.Dinissan.comercial.licitaciones.model.ejb.ObjetosEJB;
+import com.Dinissan.comercial.licitaciones.model.ejb.UtilEJB;
+import com.Dinissan.comercial.licitaciones.model.vo.VedconliVO;
+import com.Dinissan.empresa.compania.ejb.CompaniaEJB;
+import com.Dinissan.utilWeb.JSFUtils;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import javax.faces.application.FacesMessage;
+import javax.faces.application.FacesMessage.Severity;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
+import javax.faces.context.FacesContext;
+import javax.servlet.http.HttpServletRequest;
+import org.primefaces.context.RequestContext;
+
+@ManagedBean(
+   name = &quot;detalleLicitacionMB&quot;
+)
+@ViewScoped
+public class DetalleLicitacionMB {
+   private List&lt;ConceptoDTO&gt; listConceptoDTO;
+   private List&lt;LicitacionDTO&gt; listLicitacionesDTO;
+   private String sNitProspecto;
+   private String sUrlDialogo;
+   private String sTituloDialogo;
+   private VedconliVO vedconliVO;
+   private LicitacionDTO licitacionDTO;
+   private Map&lt;String, Object&gt; mapParameters = new HashMap();
+   private boolean disableDetinoFactura = false;
+
+   public DetalleLicitacionMB() {
+      HttpServletRequest req = (HttpServletRequest)FacesContext.getCurrentInstance().getExternalContext().getRequest();
+      this.sNitProspecto = req.getParameter(&quot;sId&quot;);
+      this.consultaLicitacionesCliente();
+      if (this.listLicitacionesDTO != null) {
+         this.cargarLicitacion((LicitacionDTO)this.listLicitacionesDTO.get(0));
+      }
+
+   }
+
+   public void cargarLicitacion(LicitacionDTO licitacion) {
+      try {
+         if (licitacion != null) {
+            this.licitacionDTO = licitacion;
+         } else {
+            this.consultaLicitacionesCliente();
+         }
+
+         this.mapParameters.put(&quot;cd_cia&quot;, this.licitacionDTO.getVemcotliVO().getiCompannia());
+         this.mapParameters.put(&quot;cd_area&quot;, this.licitacionDTO.getVemcotliVO().getsArea());
+         this.mapParameters.put(&quot;nu_nego&quot;, this.licitacionDTO.getVemcotliVO().getiNumeroNegocio());
+         this.mapParameters.put(&quot;cd_conc&quot;, Integer.valueOf(1));
+         this.vedconliVO = ObjetosEJB.getObjetosEJB().consultaConcepto(this.mapParameters);
+         this.listConceptoDTO = new ArrayList();
+         this.listConceptoDTO.add(new ConceptoDTO(this.licitacionDTO.getVemcotliVO().getiCompannia(), this.licitacionDTO.getVemcotliVO().getsArea(), this.licitacionDTO.getVemcotliVO().getiNumeroNegocio(), 1, &quot;VEHICULOS Y CONDICIONES&quot;, this.licitacionDTO.getVemcotliVO().getsDescripcionCompannia().toUpperCase(), CalculosEJB.getCalculosEJB().valorTotalVehiculos(this.licitacionDTO.getVemcotliVO().getiCompannia(), this.licitacionDTO.getVemcotliVO().getsArea(), this.licitacionDTO.getVemcotliVO().getiNumeroNegocio()), this.licitacionDTO.getVemcotliVO().getsCompraEficiente().equals(&quot;S&quot;) ? &quot;O&quot; : (this.vedconliVO == null ? null : this.vedconliVO.getsDestinoFactura()), this.vedconliVO == null ? false : (this.vedconliVO.getsConfirmacion() == null ? false : this.vedconliVO.getsConfirmacion().equals(&quot;S&quot;)), &quot;vistasDialogos/asignacionVehiculos.xhtml&quot;, &quot;vistasDetalles/asignacionVehiculos.xhtml&quot;, &quot;asignarVehiculosMB&quot;));
+         if (this.licitacionDTO.getVemcotliVO().getsRequiereTraslados().equals(&quot;S&quot;)) {
+            this.mapParameters.put(&quot;cd_conc&quot;, Integer.valueOf(2));
+            this.vedconliVO = ObjetosEJB.getObjetosEJB().consultaConcepto(this.mapParameters);
+            this.listConceptoDTO.add(new ConceptoDTO(this.licitacionDTO.getVemcotliVO().getiCompannia(), this.licitacionDTO.getVemcotliVO().getsArea(), this.licitacionDTO.getVemcotliVO().getiNumeroNegocio(), 2, &quot;TRASLADOS&quot;, &quot;&quot;, CalculosEJB.getCalculosEJB().consultaValorTotalTraslados(this.licitacionDTO.getVemcotliVO().getiCompannia(), this.licitacionDTO.getVemcotliVO().getsArea(), this.licitacionDTO.getVemcotliVO().getiNumeroNegocio()), this.licitacionDTO.getVemcotliVO().getsCompraEficiente().equals(&quot;S&quot;) ? &quot;O&quot; : (this.vedconliVO == null ? null : this.vedconliVO.getsDestinoFactura()), this.vedconliVO == null ? false : (this.vedconliVO.getsConfirmacion() == null ? false : this.vedconliVO.getsConfirmacion().equals(&quot;S&quot;)), &quot;vistasDialogos/traslados.xhtml&quot;, &quot;vistasDetalles/traslados.xhtml&quot;, &quot;trasladoMB&quot;));
+         }
+
+         if (this.licitacionDTO.getVemcotliVO().getsRequiereGarantiaExtendida().equals(&quot;S&quot;)) {
+            this.mapParameters.put(&quot;cd_conc&quot;, Integer.valueOf(3));
+            this.vedconliVO = ObjetosEJB.getObjetosEJB().consultaConcepto(this.mapParameters);
+            this.listConceptoDTO.add(new ConceptoDTO(this.licitacionDTO.getVemcotliVO().getiCompannia(), this.licitacionDTO.getVemcotliVO().getsArea(), this.licitacionDTO.getVemcotliVO().getiNumeroNegocio(), 3, &quot;GARANTIA EXTENDIDA&quot;, &quot;&quot;, CalculosEJB.getCalculosEJB().consultaValorTotalGarantiasExtendida(this.licitacionDTO.getVemcotliVO().getiCompannia(), this.licitacionDTO.getVemcotliVO().getsArea(), this.licitacionDTO.getVemcotliVO().getiNumeroNegocio()), this.licitacionDTO.getVemcotliVO().getsCompraEficiente().equals(&quot;S&quot;) ? &quot;O&quot; : (this.vedconliVO == null ? null : this.vedconliVO.getsDestinoFactura()), this.vedconliVO == null ? false : (this.vedconliVO.getsConfirmacion() == null ? false : this.vedconliVO.getsConfirmacion().equals(&quot;S&quot;)), &quot;vistasDialogos/garantiaExtendida.xhtml&quot;, &quot;vistasDetalles/detalleGarantiaExtendia.xhtml&quot;, &quot;garantiaExtendidaMB&quot;));
+         }
+
+         if (this.licitacionDTO.getVemcotliVO().getsRequiereInstalaciones().equals(&quot;S&quot;)) {
+            this.mapParameters.put(&quot;cd_conc&quot;, Integer.valueOf(4));
+            this.vedconliVO = ObjetosEJB.getObjetosEJB().consultaConcepto(this.mapParameters);
+            this.listConceptoDTO.add(new ConceptoDTO(this.licitacionDTO.getVemcotliVO().getiCompannia(), this.licitacionDTO.getVemcotliVO().getsArea(), this.licitacionDTO.getVemcotliVO().getiNumeroNegocio(), 4, &quot;INSTALACION CON PROVEEDOR EXTERNO&quot;, UtilEJB.getUtilEJB().consultaNombresProveedoresComprasExternas(this.licitacionDTO.getVemcotliVO().getiCompannia(), this.licitacionDTO.getVemcotliVO().getsArea(), this.licitacionDTO.getVemcotliVO().getiNumeroNegocio()), CalculosEJB.getCalculosEJB().consultaTotalIntalacionesPorLicitaciones(this.licitacionDTO.getVemcotliVO().getiCompannia(), this.licitacionDTO.getVemcotliVO().getsArea(), this.licitacionDTO.getVemcotliVO().getiNumeroNegocio()), this.licitacionDTO.getVemcotliVO().getsCompraEficiente().equals(&quot;S&quot;) ? &quot;O&quot; : (this.vedconliVO == null ? null : this.vedconliVO.getsDestinoFactura()), this.vedconliVO == null ? false : (this.vedconliVO.getsConfirmacion() == null ? false : this.vedconliVO.getsConfirmacion().equals(&quot;S&quot;)), &quot;vistasDialogos/instalaciones.xhtml&quot;, &quot;vistasDetalles/detalleIntalaciones.xhtml&quot;, &quot;instalacionesMB&quot;));
+         }
+
+         if (this.licitacionDTO.getVemcotliVO().getsRequiereMatricula().equals(&quot;S&quot;)) {
+            this.mapParameters.put(&quot;cd_conc&quot;, Integer.valueOf(8));
+            this.vedconliVO = ObjetosEJB.getObjetosEJB().consultaConcepto(this.mapParameters);
+            this.listConceptoDTO.add(new ConceptoDTO(this.licitacionDTO.getVemcotliVO().getiCompannia(), this.licitacionDTO.getVemcotliVO().getsArea(), this.licitacionDTO.getVemcotliVO().getiNumeroNegocio(), 8, &quot;MATRICULAS&quot;, &quot;&quot;, CalculosEJB.getCalculosEJB().consultaTotalMatriculasPorLicitacion(this.licitacionDTO.getVemcotliVO().getiCompannia(), this.licitacionDTO.getVemcotliVO().getsArea(), this.licitacionDTO.getVemcotliVO().getiNumeroNegocio()), this.licitacionDTO.getVemcotliVO().getsCompraEficiente().equals(&quot;S&quot;) ? &quot;O&quot; : (this.vedconliVO == null ? null : this.vedconliVO.getsDestinoFactura()), this.vedconliVO == null ? false : (this.vedconliVO.getsConfirmacion() == null ? false : this.vedconliVO.getsConfirmacion().equals(&quot;S&quot;)), &quot;vistasDialogos/matricula.xhtml&quot;, &quot;vistasDetalles/detalleMatricula.xhtml&quot;, &quot;matriculasMB&quot;));
+         }
+
+         if (this.licitacionDTO.getVemcotliVO().getsComprasTasa().equals(&quot;S&quot;)) {
+            this.mapParameters.put(&quot;cd_conc&quot;, Integer.valueOf(10));
+            this.vedconliVO = ObjetosEJB.getObjetosEJB().consultaConcepto(this.mapParameters);
+            this.listConceptoDTO.add(new ConceptoDTO(this.licitacionDTO.getVemcotliVO().getiCompannia(), this.licitacionDTO.getVemcotliVO().getsArea(), this.licitacionDTO.getVemcotliVO().getiNumeroNegocio(), 10, &quot;COMPRAS LOCALES CON TASA&quot;, CompaniaEJB.getCompaniaEJB().consultarCompaniaPorCod(Integer.valueOf(2)).getDescripcion().toUpperCase(), 0.0D, this.licitacionDTO.getVemcotliVO().getsCompraEficiente().equals(&quot;S&quot;) ? &quot;O&quot; : (this.vedconliVO == null ? null : this.vedconliVO.getsDestinoFactura()), this.vedconliVO == null ? false : (this.vedconliVO.getsConfirmacion() == null ? false : this.vedconliVO.getsConfirmacion().equals(&quot;S&quot;)), &quot;vistasDialogos/comprasTASA.xhtml&quot;, &quot;vistasDetalles/detalleComprasTasa.xhtml&quot;, &quot;comprasTasaMB&quot;));
+         }
+
+         if (this.licitacionDTO.getVemcotliVO().getsRevisionesMantenimiento().equals(&quot;S&quot;)) {
+            this.mapParameters.put(&quot;cd_conc&quot;, Integer.valueOf(11));
+            this.vedconliVO = ObjetosEJB.getObjetosEJB().consultaConcepto(this.mapParameters);
+            this.listConceptoDTO.add(new ConceptoDTO(this.licitacionDTO.getVemcotliVO().getiCompannia(), this.licitacionDTO.getVemcotliVO().getsArea(), this.licitacionDTO.getVemcotliVO().getiNumeroNegocio(), 11, &quot;REVISIONES MANTENIMIENTO&quot;, CompaniaEJB.getCompaniaEJB().consultarCompaniaPorCod(Integer.valueOf(2)).getDescripcion().toUpperCase(), CalculosEJB.getCalculosEJB().consultaValorTotalRevisiones(this.licitacionDTO.getVemcotliVO().getiCompannia(), this.licitacionDTO.getVemcotliVO().getsArea(), this.licitacionDTO.getVemcotliVO().getiNumeroNegocio()), this.licitacionDTO.getVemcotliVO().getsCompraEficiente().equals(&quot;S&quot;) ? &quot;O&quot; : (this.vedconliVO == null ? null : this.vedconliVO.getsDestinoFactura()), this.vedconliVO == null ? false : (this.vedconliVO.getsConfirmacion() == null ? false : this.vedconliVO.getsConfirmacion().equals(&quot;S&quot;)), &quot;vistasDialogos/revisionesMantenimiento.xhtml&quot;, &quot;vistasDetalles/detalleRevisionesMxcto.xhtml&quot;, &quot;revisionesMB&quot;));
+         }
+
+         if (this.licitacionDTO.getVemcotliVO().getsRequiereSoat().equals(&quot;S&quot;)) {
+            this.mapParameters.put(&quot;cd_conc&quot;, Integer.valueOf(5));
+            this.vedconliVO = ObjetosEJB.getObjetosEJB().consultaConcepto(this.mapParameters);
+            this.listConceptoDTO.add(new ConceptoDTO(this.licitacionDTO.getVemcotliVO().getiCompannia(), this.licitacionDTO.getVemcotliVO().getsArea(), this.licitacionDTO.getVemcotliVO().getiNumeroNegocio(), 5, &quot;SOAT&quot;, CompaniaEJB.getCompaniaEJB().consultarCompaniaPorCod(Integer.valueOf(5)).getDescripcion().toUpperCase(), CalculosEJB.getCalculosEJB().consultaValorTotalSoat(this.licitacionDTO.getVemcotliVO().getiCompannia(), this.licitacionDTO.getVemcotliVO().getsArea(), this.licitacionDTO.getVemcotliVO().getiNumeroNegocio()), this.licitacionDTO.getVemcotliVO().getsCompraEficiente().equals(&quot;S&quot;) ? &quot;O&quot; : (this.vedconliVO == null ? null : this.vedconliVO.getsDestinoFactura()), this.vedconliVO == null ? false : (this.vedconliVO.getsConfirmacion() == null ? false : this.vedconliVO.getsConfirmacion().equals(&quot;S&quot;)), &quot;vistasDialogos/soat.xhtml&quot;, &quot;vistasDetalles/detalleSoat.xhtml&quot;, &quot;soatMB&quot;));
+         }
+
+         if (this.licitacionDTO.getVemcotliVO().getsRequierePolizaContraro().equals(&quot;S&quot;)) {
+            this.mapParameters.put(&quot;cd_conc&quot;, Integer.valueOf(6));
+            this.vedconliVO = ObjetosEJB.getObjetosEJB().consultaConcepto(this.mapParameters);
+            this.listConceptoDTO.add(new ConceptoDTO(this.licitacionDTO.getVemcotliVO().getiCompannia(), this.licitacionDTO.getVemcotliVO().getsArea(), this.licitacionDTO.getVemcotliVO().getiNumeroNegocio(), 6, &quot;POLIZA COTRATO&quot;, CompaniaEJB.getCompaniaEJB().consultarCompaniaPorCod(Integer.valueOf(5)).getDescripcion().toUpperCase(), CalculosEJB.getCalculosEJB().consultaValorTotalPolizaContrato(this.licitacionDTO.getVemcotliVO().getiCompannia(), this.licitacionDTO.getVemcotliVO().getsArea(), this.licitacionDTO.getVemcotliVO().getiNumeroNegocio()), this.licitacionDTO.getVemcotliVO().getsCompraEficiente().equals(&quot;S&quot;) ? &quot;O&quot; : (this.vedconliVO == null ? null : this.vedconliVO.getsDestinoFactura()), this.vedconliVO == null ? false : (this.vedconliVO.getsConfirmacion() == null ? false : this.vedconliVO.getsConfirmacion().equals(&quot;S&quot;)), &quot;vistasDialogos/polizaContrato.xhtml&quot;, &quot;vistasDetalles/detallePolizaContrato.xhtml&quot;, &quot;polizaContratoMB&quot;));
+         }
+
+         if (this.licitacionDTO.getVemcotliVO().getsRequierePolizaTodoRiesgo().equals(&quot;S&quot;)) {
+            this.mapParameters.put(&quot;cd_conc&quot;, Integer.valueOf(7));
+            this.vedconliVO = ObjetosEJB.getObjetosEJB().consultaConcepto(this.mapParameters);
+            this.listConceptoDTO.add(new ConceptoDTO(this.licitacionDTO.getVemcotliVO().getiCompannia(), this.licitacionDTO.getVemcotliVO().getsArea(), this.licitacionDTO.getVemcotliVO().getiNumeroNegocio(), 7, &quot;POLIZA TODO RIESGO&quot;, CompaniaEJB.getCompaniaEJB().consultarCompaniaPorCod(Integer.valueOf(5)).getDescripcion().toUpperCase(), CalculosEJB.getCalculosEJB().consultaValorTotalPolizaTodoRiesgo(this.licitacionDTO.getVemcotliVO().getiCompannia(), this.licitacionDTO.getVemcotliVO().getsArea(), this.licitacionDTO.getVemcotliVO().getiNumeroNegocio()), this.licitacionDTO.getVemcotliVO().getsCompraEficiente().equals(&quot;S&quot;) ? &quot;O&quot; : (this.vedconliVO == null ? null : this.vedconliVO.getsDestinoFactura()), this.vedconliVO == null ? false : (this.vedconliVO.getsConfirmacion() == null ? false : this.vedconliVO.getsConfirmacion().equals(&quot;S&quot;)), &quot;vistasDialogos/polizaTodoRiesgo.xhtml&quot;, &quot;vistasDetalles/detallePolizaTodoRiesgo.xhtml&quot;, &quot;polizaTodoRiesgoMB&quot;));
+         }
+
+         if (this.licitacionDTO.getVemcotliVO().getsImpuestoContrato().equals(&quot;S&quot;)) {
+            this.mapParameters.put(&quot;cd_conc&quot;, Integer.valueOf(9));
+            this.vedconliVO = ObjetosEJB.getObjetosEJB().consultaConcepto(this.mapParameters);
+            this.listConceptoDTO.add(new ConceptoDTO(this.licitacionDTO.getVemcotliVO().getiCompannia(), this.licitacionDTO.getVemcotliVO().getsArea(), this.licitacionDTO.getVemcotliVO().getiNumeroNegocio(), 9, &quot;IMPUESTOS CONTRATO&quot;, UtilEJB.getUtilEJB().consultaNombresProveedoresImpuestos(this.licitacionDTO.getVemcotliVO().getiCompannia(), this.licitacionDTO.getVemcotliVO().getsArea(), this.licitacionDTO.getVemcotliVO().getiNumeroNegocio()), CalculosEJB.getCalculosEJB().consultaValorTotalImpuesto(this.licitacionDTO.getVemcotliVO().getiCompannia(), this.licitacionDTO.getVemcotliVO().getsArea(), this.licitacionDTO.getVemcotliVO().getiNumeroNegocio()), this.licitacionDTO.getVemcotliVO().getsCompraEficiente().equals(&quot;S&quot;) ? &quot;O&quot; : (this.vedconliVO == null ? null : this.vedconliVO.getsDestinoFactura()), this.vedconliVO == null ? false : (this.vedconliVO.getsConfirmacion() == null ? false : this.vedconliVO.getsConfirmacion().equals(&quot;S&quot;)), &quot;vistasDialogos/impuestos.xhtml&quot;, &quot;vistasDetalles/detalleImpuestos.xhtml&quot;, &quot;impuestosMB&quot;));
+         }
+      } catch (Throwable var3) {
+         ;
+      }
+
+   }
+
+   private void enviarMensaje(String mensaje, Severity tipo) {
+      FacesContext context = FacesContext.getCurrentInstance();
+      context.addMessage((String)null, new FacesMessage(tipo, mensaje, mensaje));
+   }
+
+   public void adjudicarLicitacion() {
+      RequestContext rq = RequestContext.getCurrentInstance();
+
+      try {
+         if (this.licitacionDTO.getVemcotliVO().getsEstadoLicitacion().equals(&quot;S&quot;) &amp;&amp; UtilEJB.getUtilEJB().validarEstadoLicitacion(this.licitacionDTO.getVemcotliVO())) {
+            AdjudicacionEJB.getAdjudicacionEJB().iniciarAdjudicacion(this.licitacionDTO.getListVedcovehVO(), this.licitacionDTO.getVemcotliVO(), JSFUtils.getSessionUsuario(), JSFUtils.getSessionPassword());
+            this.licitacionDTO.getVemcotliVO().setsEstadoLicitacion(&quot;C&quot;);
+            CotizacionLicitacionEJB.getCotizacionLicitacionEJB().actualizarLicitacion(this.licitacionDTO.getVemcotliVO(), JSFUtils.getSessionUsuario(), JSFUtils.getSessionPassword());
+            this.enviarMensaje(&quot;Adjudicacion terminada con exito.&quot;, FacesMessage.SEVERITY_INFO);
+         }
+      } catch (Exception var6) {
+         this.enviarMensaje(var6.getMessage(), FacesMessage.SEVERITY_WARN);
+      } finally {
+         this.consultaLicitacionesCliente();
+         rq.execute(&quot;PF(&#39;dlgAdjudicacion&#39;).hide()&quot;);
+         rq.update(&quot;formLicitaciones:listaLicitaciones&quot;);
+         rq.update(&quot;formDetalleLicitacion:msgGenericos&quot;);
+      }
+
+   }
+
+   public void cancelarCotizacion() {
+      if (this.licitacionDTO.getVemcotliVO().getsEstadoLicitacion().equals(&quot;S&quot;)) {
+         this.licitacionDTO.getVemcotliVO().setsEstadoLicitacion(&quot;R&quot;);
+         boolean var6 = false;
+
+         RequestContext rq;
+         label58: {
+            try {
+               var6 = true;
+               if (CotizacionLicitacionEJB.getCotizacionLicitacionEJB().actualizarLicitacion(this.licitacionDTO.getVemcotliVO(), JSFUtils.getSessionUsuario(), JSFUtils.getSessionPassword()) == 1) {
+                  this.enviarMensaje(&quot;Exito: Cancelando la cotizacion de licitacion&quot;, FacesMessage.SEVERITY_INFO);
+                  var6 = false;
+               } else {
+                  this.enviarMensaje(&quot;Error: Cancelando la cotizacion de licitacion&quot;, FacesMessage.SEVERITY_INFO);
+                  var6 = false;
+               }
+               break label58;
+            } catch (Exception var7) {
+               this.enviarMensaje(var7.getMessage(), FacesMessage.SEVERITY_WARN);
+               var6 = false;
+            } finally {
+               if (var6) {
+                  this.consultaLicitacionesCliente();
+                  RequestContext rq = RequestContext.getCurrentInstance();
+                  rq.update(&quot;formLicitaciones:listaLicitaciones&quot;);
+                  rq.update(&quot;formDetalleLicitacion:msgGenericos&quot;);
+               }
+            }
+
+            this.consultaLicitacionesCliente();
+            rq = RequestContext.getCurrentInstance();
+            rq.update(&quot;formLicitaciones:listaLicitaciones&quot;);
+            rq.update(&quot;formDetalleLicitacion:msgGenericos&quot;);
+            return;
+         }
+
+         this.consultaLicitacionesCliente();
+         rq = RequestContext.getCurrentInstance();
+         rq.update(&quot;formLicitaciones:listaLicitaciones&quot;);
+         rq.update(&quot;formDetalleLicitacion:msgGenericos&quot;);
+      }
+
+   }
+
+   public void guardarConcepto(ConceptoDTO conceptoDTO) {
+      this.mapParameters.clear();
+      this.mapParameters.put(&quot;cd_cia&quot;, this.licitacionDTO.getVemcotliVO().getiCompannia());
+      this.mapParameters.put(&quot;cd_area&quot;, this.licitacionDTO.getVemcotliVO().getsArea());
+      this.mapParameters.put(&quot;nu_nego&quot;, this.licitacionDTO.getVemcotliVO().getiNumeroNegocio());
+      this.mapParameters.put(&quot;cd_conc&quot;, conceptoDTO.getiCodigoConcepto());
+
+      try {
+         this.vedconliVO = ObjetosEJB.getObjetosEJB().consultaConcepto(this.mapParameters);
+         if (this.vedconliVO == null) {
+            CotizacionLicitacionEJB.getCotizacionLicitacionEJB().guardarConcepto(new VedconliVO(conceptoDTO.getiCompannia(), conceptoDTO.getsArea(), conceptoDTO.getiNumeroNegocio(), conceptoDTO.getiCodigoConcepto(), conceptoDTO.getsDestinoFactura(), conceptoDTO.isbConfirmacion() ? &quot;S&quot; : &quot;N&quot;), JSFUtils.getSessionUsuario(), JSFUtils.getSessionPassword());
+         } else {
+            CotizacionLicitacionEJB.getCotizacionLicitacionEJB().actualizarConcepto(new VedconliVO(conceptoDTO.getiCompannia(), conceptoDTO.getsArea(), conceptoDTO.getiNumeroNegocio(), conceptoDTO.getiCodigoConcepto(), conceptoDTO.getsDestinoFactura(), conceptoDTO.isbConfirmacion() ? &quot;S&quot; : &quot;N&quot;), JSFUtils.getSessionUsuario(), JSFUtils.getSessionPassword());
+         }
+      } catch (Exception var4) {
+         this.enviarMensaje(var4.getMessage(), FacesMessage.SEVERITY_WARN);
+         RequestContext rq = RequestContext.getCurrentInstance();
+         rq.update(&quot;formDetalleLicitacion:msgGenericos&quot;);
+      }
+
+   }
+
+   private void limpiarMB() {
+      this.listConceptoDTO = new ArrayList();
+      this.sUrlDialogo = new String();
+   }
+
+   public void consultaLicitacionesCliente() {
+      try {
+         this.listLicitacionesDTO = CotizacionLicitacionEJB.getCotizacionLicitacionEJB().consultaResumenLicitacionesCliente(this.sNitProspecto);
+      } catch (Exception var2) {
+         ;
+      }
+
+   }
+
+   public void abrirDialogo(ConceptoDTO conceptoDTO) {
+      this.abrirDialogo(conceptoDTO.getsNombre(), conceptoDTO.getsUrlDialogo(), conceptoDTO.getsMB());
+   }
+
+   public void abrirDialogo(String sTituloDialogo, String sUrlDialogo, String sMB) {
+      FacesContext fc = FacesContext.getCurrentInstance();
+      fc.getExternalContext().getSessionMap().put(&quot;sNitProspecto&quot;, this.sNitProspecto);
+      fc.getExternalContext().getSessionMap().put(&quot;licitacionDTO&quot;, this.licitacionDTO);
+      Object object = this.getBeanController(fc, sMB);
+
+      try {
+         Class&lt;?&gt; c = Class.forName(object.getClass().getName());
+         Method method = c.getDeclaredMethod(&quot;initialize&quot;, (Class[])null);
+         method.invoke(object, (Object[])null);
+      } catch (ClassNotFoundException var9) {
+         var9.printStackTrace();
+      } catch (SecurityException var10) {
+         var10.printStackTrace();
+      } catch (NoSuchMethodException var11) {
+         var11.printStackTrace();
+      } catch (IllegalArgumentException var12) {
+         var12.printStackTrace();
+      } catch (IllegalAccessException var13) {
+         var13.printStackTrace();
+      } catch (InvocationTargetException var14) {
+         var14.printStackTrace();
+      }
+
+      this.sTituloDialogo = sTituloDialogo;
+      this.sUrlDialogo = sUrlDialogo;
+   }
+
+   private Object getBeanController(FacesContext context, String string) {
+      return context.getELContext().getELResolver().getValue(context.getELContext(), (Object)null, string);
+   }
+
+   public List&lt;ConceptoDTO&gt; getListConceptoDTO() {
+      return this.listConceptoDTO;
+   }
+
+   public void setListConceptoDTO(List&lt;ConceptoDTO&gt; listConceptoDTO) {
+      this.listConceptoDTO = listConceptoDTO;
+   }
+
+   public List&lt;LicitacionDTO&gt; getListLicitacionesDTO() {
+      return this.listLicitacionesDTO;
+   }
+
+   public void setListLicitacionesDTO(List&lt;LicitacionDTO&gt; listLicitacionesDTO) {
+      this.listLicitacionesDTO = listLicitacionesDTO;
+   }
+
+   public String getsNitProspecto() {
+      return this.sNitProspecto;
+   }
+
+   public void setsNitProspecto(String sNitProspecto) {
+      this.sNitProspecto = sNitProspecto;
+   }
+
+   public String getsUrlDialogo() {
+      return this.sUrlDialogo;
+   }
+
+   public void setsUrlDialogo(String sUrlDialogo) {
+      this.sUrlDialogo = sUrlDialogo;
+   }
+
+   public String getsTituloDialogo() {
+      return this.sTituloDialogo;
+   }
+
+   public void setsTituloDialogo(String sTituloDialogo) {
+      this.sTituloDialogo = sTituloDialogo;
+   }
+
+   public LicitacionDTO getLicitacionDTO() {
+      return this.licitacionDTO;
+   }
+
+   public void setLicitacionDTO(LicitacionDTO licitacionDTO) {
+      this.licitacionDTO = licitacionDTO;
+   }
+
+   public Map&lt;String, Object&gt; getMapParameters() {
+      return this.mapParameters;
+   }
+
+   public void setMapParameters(Map&lt;String, Object&gt; mapParameters) {
+      this.mapParameters = mapParameters;
+   }
+
+   public boolean isDisableDetinoFactura() {
+      return this.disableDetinoFactura;
+   }
+
+   public void setDisableDetinoFactura(boolean disableDetinoFactura) {
+      this.disableDetinoFactura = disableDetinoFactura;
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: 18/09/2019, 6:17:00 p.m.</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "249" });
+
+            $("<div id='249-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(249)');
+
+
+$("<a name='49766632' class='windup-file-location'></a><div class='inline-source-comment green tag-classloader'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>Dynamic class instantiation</strong><a title='View Rule: environment-dependent-calls-01000' href='windup_ruleproviders.html#environment-dependent-calls-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The class is dynamically loaded within application. During the migration, multiple classes that are provided on classpath by a different server may not be present anymore.<\/p><p>Please review the class-loading mechanisms and ensure that the dynamically loaded class is available in JBoss EAP.<\/p><ul><li><a href='https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.4/html-single/Development_Guide/index.html#chap-Class_Loading_and_Modules' target='_blank'>Class Loading and Modules in JBoss EAP 6</a></li><li><a href='https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.0/html-single/development_guide/#class_loading_and_modules' target='_blank'>Class Loading and Modules in JBoss EAP 7</a></li><li><a href='https://access.redhat.com/solutions/361343' target='_blank'>Article about Classloading in JBoss EAP 6</a></li></ul></div></div></div>").appendTo('#249-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            $(window).load(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 21667888;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

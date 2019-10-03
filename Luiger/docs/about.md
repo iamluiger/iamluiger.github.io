@@ -11,3 +11,18 @@ Mis opiniones no necesariamente corresponden a los de mi empleador y son de mi e
 [Correo personal](mailto:iamluiger@gmail.com)
 
 [Correo corporativo](mailto:lugonzal@redhat.com)
+
+## **Mis presentaciones**
+
+### **Tech University Bogota 2019**
+*Cloud Apps y Microservicios*
+Presentandole a la base instalada de clientes de pltaformas P y Z de IBM de Colombia sobre la disrupción de las aplicaciones con Modelo de Microservicios
+
+_enlace a la presentación_
+[link](./Techu2019/micro.pdf)
+
+_enlance al libro migración de bases de datos_ 
+[Link](./Techu2019/database.pdf)
+
+_enlace a programación reactiva_
+[Link](./Techu2019/reactive.pdf)

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for creaOT.properties</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="21667888">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_SIGRU_ear.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_SIGRU_ear.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="tattletale_SIGRU_ear.html">
+                        <i class="glyphicon tattletale-nav-logo"></i>
+                      Tattletale
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsSIGRU_ear.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_SIGRU_ear.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Red Hat Application Migration Toolkit found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="21667888">
+                            SIGRU.ear/SIGRU.war/WEB-INF/classes/com/Dinissan/garantiasV2/view/msj/creaOT.properties
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Properties</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+#{crearOTMB.asesorTallerDTOs}#Panel Principal
+label_titulo_principal=Creaci�n de Ordenes de Trabajo
+label_panel_principal_descripcion=Opci�n para crear Ordenes de Trabajo
+label_tittle_button_historial_vehiculo=Ver el Historial de OTs del Veh�culo
+label_button_historial_vehiculo=Hist. Veh�culo
+label_tittle_button_bajar_hd=Descargar Hojas de Diagnostico
+label_button_bajar_hd=Descargar H.D.
+label_button_crear_ot=Crear OT
+
+#Panel de informaci�n del asesor
+label_tittle_info_usuario=Informaci�n del usuario
+label_info_usuario_sucursal=Sucursal:
+label_info_usuario_taller=Taller:
+label_info_usuario_nombre_asesor=Nombre del Asesor:
+label_info_usuario_id_asesor=Id del Asesor:
+
+#Panel de informaci�n del vehiculo
+label_tittle_info_vehiculo=Informaci�n del veh�culo
+label_info_vehiculo_cedula=C�dula del Cliente:
+label_info_vehiculo_nombre=Nombre del Cliente:
+label_info_vehiculo_telefono=Tel�fono:
+label_info_vehiculo_direccion=Direcci�n:
+label_info_vehiculo_numero_chasis=No Chasis:
+label_info_vehiculo_modelo=Modelo:
+label_info_vehiculo_anno_modelo=A�o Modelo:
+label_info_vehiculo_color=Color:
+label_info_vehiculo_motor=No. Motor:
+label_info_vehiculo_placa=Placa del Veh�culo:
+label_info_vehiculo_linea=L�nea:
+label_info_fecha_matricula=Fecha Matricula:
+label_info_vehiculo_kilometraje=Kilometraje:
+label_info_es_reparacion_motor=�Es una reparaci�n de Motor?
+label_info_reclamacion_garantia=�Es una reclamaci�n de Garant�a?
+label_info_vehiculo_cumple_parametros=Cumple Par�metros:
+label_info_vehiculo_entregado_hace=Entregado Hace:
+label_info_vehiculo_mensaje_cliente=Informar al Cliente:
+label_info_vehiculo_button_tittle_continuar_vehi=Continuar con la creaci�n de la OT
+label_info_vehiculo_button_continuar_vehi=Continuar
+label_info_vehiculo_button_tittle_cons_prop=Consultar propietario
+label_info_vehiculo_button_tittle_cons_vehiculo=Consultar Veh�culos
+label_panel_cumple_parametros=Cumple Par�metros:
+label_panel_entregado_hace=Entregado Hace:
+label_info_vehiculo_dias_suspencion=D�as de Suspensi�n:
+label_info_resultados_codigo_bodega=Bodega
+label_info_resultados_numero_ot=N�mero de OT
+label_info_resultados_tipo_ot=Tipo de OT
+label_info_resultados_abrir_ot=Abrir OT
+label_info_resultados_vehiculo_gas=Veh�culo con GN desde:
+label_info_resultados_marcar_vehiculo_gas=Marcar veh�culo como GN:
+label_info_resultados_vehiculo_siniestrado=Perdida Total desde:
+
+#Panel de informaci�n de la ot
+label_tittle_info_ot=Informaci�n de la Orden de Trabajo
+label_info_ot_tipo_ot=Tipo de OT
+label_info_ot_paquete=Paquete:
+label_info_ot_tipo_servicio=Tipo de Servicio:
+label_info_ot_origen_ot=Origen de OT:
+label_info_ot_motivo_ingreso=Motivo de Ingreso:
+label_info_ot_promocion=Promoci�n:
+label_info_ot_rige_cotizacion=Rige por Cotizaci�n:
+label_info_ot_nro_cotizacion=No. Cotizaci�n:
+label_info_ot_fec_recibido=Fecha Recibido:
+label_info_ot_estimado_entrega=Estimado de entrega:
+label_info_ot_hora_entrega=Hora de Entrega:
+label_info_ot_hora=Hora:
+label_info_ot_nro_rombo=No. Rombo:
+label_info_ot_nro_contrato=No. Contrato:
+label_info_ot_otro_si=No. Otro si:
+label_info_ot_valor_estimado_ot=Valor Estimado OT:
+label_info_ot_nit_aseguradora=NIT Aseguradora:
+label_info_ot_nro_siniestro=No. de Siniestro:
+label_info_ot_aseguradora_asume=Aseguradora asume el:
+label_info_ot_button_tittle_cons_campanna=Consultar Campa�as Activas
+label_info_ot_button_tittle_cons_promocion=Consultar Promociones Activas
+label_info_vehiculo_button_tittle_continuar_fs=Continuar con la creaci�n de Fallas y S�ntomas
+label_info_vehiculo_button_continuar_fs=Continuar
+
+#Panel de informacion de fallas y s�ntomas
+label_tittle_info_fallas_sintomas=Informaci�n de Fallas y S�ntomas
+label_info_fallas_sintomas_tipo=Tipo
+label_info_fallas_sintomas_grupo=Grupo
+label_info_fallas_sintomas_sintoma=S�ntoma
+label_info_fallas_sintomas_descripcion=Solicitud del Cliente
+label_info_fallas_sintomas_opciones=Opciones
+label_info_fallas_sintomas_guardar=Guardar Falla o S�ntoma
+label_info_fallas_sintomas_eliminar=Eliminar Falla o S�ntoma
+
+#Panel de consulta de informaci�n de propietario
+label_tittle_info_propietario=Datos del Propietario y/o Contacto
+label_info_propietario_filtros=Filtros de Consulta
+label_info_propietario_placa=Placa:
+label_info_propietario_inventario=No. Inventario:
+label_info_propietario_chasis=Chas�s:
+label_button_consultar=Consultar
+label_tittle_info_propietario_panel=Informaci�n del Propietario
+label_info_propietario_tipo_persona=Tipo Persona:
+label_info_propietario_nit=NIT:
+label_info_propietario_dig_verificacion=D.V.:
+label_info_propietario_nombres=Nombres:
+label_info_propietario_primer_apellido=Primer Apellido:
+label_info_propietario_segundo_apellido=Segundo Apellido:
+label_info_propietario_direccion=Direcci�n:
+label_info_propietario_tel_fijo=Tel�fono Fijo:
+label_info_propietario_tel_movil=Tel�fono M�vil:
+label_info_propietario_email=Email:
+label_info_propietario_ocupacion=Ocupaci�n:
+label_tittle_info_propietario_usuario=Informaci�n del Usuario
+label_info_propietario_tipo_contacto=Tipo Contacto:
+label_info_propietario_nombre_quien=�Factura a nombre de?
+label_info_propietario=Contacto
+label_info_propietario_desea_actualizar=�Desea actualizar los datos del Propietario?
+label_button_actualizar_datos=Actualizar
+label_tittle_button_actualizar_datos=Actualizar Informaci�n del Propietario
+label_button_no_actualizar_datos=Continuar
+label_tittle_button_no_actualizar_datos=Continuar sin Actualizar Informaci�n del Propietario
+
+#Panel de consulta de informaci�n de veh�culo
+label_tittle_cons_vehiculo=Consulta de Veh�culos
+label_info_vehiculo_filtros=Filtros de Consulta
+label_info_vehiculo_marca=Marca:
+label_info_vehiculo_inventario=No. Inventario:
+label_info_vehiculo_chasis=Chas�s:
+label_info_vehiculo_tittle_button_consultar=Consultar veh�culos
+label_info_vehiculo_button_consultar=Consultar
+label_info_vehiculo_tittle_resultados=Veh�culos encontrados
+label_info_vehiculo_cod_modelo=C�digo Modelo:
+label_info_vehiculo_nro_chasis=Chasis:
+label_info_vehiculo_opciones=Opciones
+label_info_vehiculo_tittle_continuar=Seleccionar este veh�culo
+
+#Panel de consulta de informaci�n de campa�as
+label_tittle_cons_campanna=Consulta de Campa�as
+label_info_campanna_tittle_resultados=Campa�as encontrados
+label_info_campanna_codigo=C�digo Campa�a
+label_info_campanna_descripcion=Descripci�n
+label_info_campanna_id_tarjeta=Id Tarjeta
+label_info_campanna_opciones=Opciones
+label_info_campanna_tittle_continuar=Seleccionar esta campa�a
+
+#Panel de consulta de informaci�n de promociones
+label_tittle_cons_promociones=Consulta de Promociones
+label_info_promocion_tittle_resultados=Promociones encontradas
+label_info_promocion_codigo=C�digo Promoci�n
+label_info_promocion_descripcion=Descripci�n
+label_info_promocion_fecha_inicio=Fecha de Inicio
+label_info_promocion_fecha_fin=Fecha Final
+label_info_promocion_opciones=Opciones
+label_info_promocion_tittle_continuar=Seleccionar esta promoci�n
+
+#Panel de consulta de informaci�n de contratos
+label_tittle_cons_contratos=Consulta de Contratos
+label_info_contrato_tittle_resultados=Contratos encontrados
+label_info_contrato_codigo=C�digo Contrato:
+label_info_contrato_descripcion=Descripci�n:
+label_info_contrato_objeto=Objeto del Contrato:
+label_info_contrato_otro_si=Otro si:
+label_info_contrato_opciones=Opciones
+label_info_contrato_tittle_continuar=Seleccionar esta promoci�n
+
+#Panel de consulta de informaci�n de horas disponibles
+label_tittle_cons_horas=Consulta de Horas Disponibles para entrega de veh�culos
+label_info_horas_asesor=Asesor:
+label_info_horas_fecha=Fecha:
+label_info_horas_disponibles=Horas Disponibles:
+label_info_horas_tittle_seleccionar_hora=Seleccionar Hora de Entrega
+label_info_horas_seleccionar_hora=Seleccionar
+
+#Dialog Historial OTs
+label_tittle_historial_ots=Historial de OTs
+label_panel_historial_modelo_tasa=Modelo Tasa
+label_panel_historial_numero_chasis=Numero Chasis
+label_panel_historial_numero_motor=Numero Motor
+label_info_ot_numero_ot=No. OT
+label_info_ot_taller=Taller
+label_info_ot_fecha_servicio=Fecha Servicio
+label_info_ot_estado=Estado
+label_info_ot_asesor=Asesor
+label_info_ot_opciones=Opciones
+label_info_tittle_ot_ver_detalle=Ver Detalle de la OT
+label_tittle_button_cerrar=Cerrar Ventana
+label_button_cerrar=Cerrar
+
+#Dialog Detalle OT
+label_tittle_ver_detalle_ot=Ver Detalle de OT
+label_info_ot_numero_requisicion=Numero Requisici�n
+label_info_ot_tipo_referencia=Tipo Referencia
+label_info_ot_codigo_referencia=C�digo
+label_info_ot_desc_referencia=Descripci�n
+label_info_ot_cantidad=Cantidad
+
+#Dialog Subir Hoja de Diagnostico
+label_info_fallas_sintomas_subir_hoja_diagnostico=Subir Hoja de Diagnostico
+label_tittle_subir_hoja_diagnostico=Subir Hoja de Diagnostico
+label_tittle_hoja_diagnostico_pdf=Hoja de Diagnostico:
+
+#Dialog Imprimir Hoja de Diagnostico
+label_tittle_bajar_hds=Descargar Formatos de Hojas de Diagnostico
+label_bajar_hds_tipo=Tipo:
+label_bajar_hds_tittle_button_bajar_hd=Descargar Formatos de Hojas de Diagnostico
+label_bajar_hds_button_bajar_hd=Descargar Formato
+
+
+#Dialog Pregunta si abre garantia taller
+label_tittle_info_acepta_abrir_garantia_taller=Pregunta
+label_info_acepta_abrir_garantia_taller=Esta orden de trabajo puede ser una garant�a de taller, �Desea que se cambie el tipo de orden a garant�a de Taller?
+
+#Validaciones MB
+label_warning_usuario_no_vendedor=El usuario no est� creado en la tabla de vendedores
+label_warning_placa_caracteres_invalidos=La placa ingresada contiene caracteres inv�lidos. Por favor digite solo letras y n�meros.
+label_warning_nro_inventario_caracteres_invalidos=El n�mero de inventario contiene caracteres inv�lidos. Por favor digite solo n�meros.
+label_warning_chasis_caracteres_invalidos=El chas�s contiene caracteres inv�lidos. Por favor digite solo letras y n�meros.
+label_warning_sin_filtros=Debe seleccionar alg�n filtro para realizar la consulta
+label_warning_vehiculo_no_encontrado=No se ha encontrado un veh�culo con los filtros utilizados.
+label_warning_bodega_no_seleccionada=Debe seleccionar la bodega.
+label_warning_vehiculo_no_seleccionado=Debe seleccionar el veh�culo.
+
+label_warning_codigo_linea=Debe seleccionar la linea.
+label_warning_codigo_modelo=Debe seleccionar el modelo.
+label_warning_codigo_color=Debe seleccionar el color.
+label_warning_anno_modelo=Debe ingresar el a�o modelo.
+label_warning_numero_chasis=Debe ingresar el numero del chasis.
+label_warning_numero_motor=Debe ingresar el numero de motor.
+label_warning_numero_chasis_or_motor=Ya existe n�mero chasis/motor en el sistema.
+label_warning_fecha_entrega=Debe seleccionar la fecha de matricula.
+label_warning_kilometraje=El kilometraje no puede ser menor al actual.
+
+label_warning_kilometraje_no_ingresado=Debe ingresar el kilometraje.
+label_warning_sin_promociones=No hay promociones activas para el modelo seleccionado.
+label_warning_cotizacion_no_encontrada=No se ha encontrado la cotizaci�n con ese numero.
+label_warning_cotizacion_no_encontrada_averia=No se ha encontrado una aver�a asociada a la cotizaci�n seleccionada.
+label_warning_cotizacion_no_aprobada=La cotizaci�n no ha sido aprobada.
+label_warning_cotizacion_no_rechazada=La cotizaci�n se encuentra rechazada.
+label_warning_cotizacion_vencida=La cotizaci�n esta vencida.
+label_warning_cotizacion_estado_no_cerrado=La cotizaci�n tiene un estado diferente a cerrado.
+label_warning_tipo_persona_no_seleccionado=El tipo de persona es obligatorio. Por favor seleccione uno.
+label_warning_digito_verificacion_vacio=Para personas jur�dicas el digito de verificaci�n es obligatorio.
+label_warning_ocupacion_no_seleccionada=La ocupaci�n del propietario es obligatoria. Por favor seleccione una.
+label_warning_nit_vacio=El nit o la c�dula del propietario del veh�culo es obligatoria. Por favor dig�tela.
+label_warning_nit_caracteres_invalidos=El nit del propietario contiene caracteres inv\u00E1lidos. Por favor digite solo n\u00FAmeros y letras.
+label_warning_nit_no_numero=La c�dula del propietario contiene caracteres inv�lidos. Por favor digite solo n�meros.
+label_warning_nombres_vacio=El nombre del propietario es obligatorio. Por favor dig�telo.
+label_warning_nombres_caracteres_invalidos=El nombre del propietario contiene caracteres inv�lidos. Por favor digite solo letras.
+label_warning_primer_apellido_vacio=El primer apellido del propietario es obligatorio. Por favor dig�telo.
+label_warning_primer_apellido_caracteres_invalidos=El primer apellido del propietario contiene caracteres inv�lidos. Por favor digite solo letras.
+label_warning_segundo_apellido_vacio=El segundo apellido del propietario es obligatorio. Por favor dig�telo.
+label_warning_segundo_apellido_caracteres_invalidos=El segundo apellido del propietario contiene caracteres inv�lidos. Por favor digite solo letras.
+label_warning_direccion_vacio=La direcci�n de residencia del propietario es obligatoria. Por favor dig�tela.
+label_warning_direccion_caracteres_invalidos=La direcci�n de residencia del propietario contiene caracteres inv�lidos. Por favor digite solo n�meros y letras.
+label_warning_telefono_vacio=El tel�fono fijo del propietario es obligatorio. Por favor dig�telo.
+label_warning_telefono_caracteres_invalidos=El tel�fono fijo del propietario contiene caracteres inv�lidos. Por favor digite solo n�meros.
+label_warning_telefono_movil_vacio=El tel�fono m�vil del propietario es obligatorio. Por favor dig�telo.
+label_warning_telefono_movil_caracteres_invalidos=El tel�fono m�vil del propietario contiene caracteres inv�lidos. Por favor digite solo n�meros.
+label_warning_email_vacio=El email del propietario es obligatorio. Por favor dig�telo.
+label_warning_email_caracteres_invalidos=El email del propietario contiene caracteres inv�lidos o una estructura no v�lida para un email.
+label_warning_grupo_no_seleccionado=Para adicionar una falla / s�ntoma se debe seleccionar el grupo. Por favor seleccione uno.
+label_warning_tipo_no_seleccionado=Para adicionar una falla / s�ntoma se debe seleccionar el tipo de s�ntoma. Por favor seleccione una.
+label_warning_descripcion_falla_no_seleccionado=Para adicionar una falla / s�ntoma se debe seleccionar la descripci�n de la falla o s�ntoma. Por favor digite uno.
+label_warning_descripcion_caracteres_invalidos=La descripci�n de la falla o s�ntoma contiene caracteres especiales. Por favor ingrese solo letras y n�meros.
+label_warning_sin_falla_sintoma=Para crear la OT debe seleccionar al menos una falla / s�ntoma.
+label_warning_tipo_servicio_sin_seleccionar=Para seleccionar una hora de entrega estimada debe seleccionar el tipo de servicio.
+label_warning_numero_rombo_vacio=El n�mero de rombo es obligatorio. Por favor ingrese uno.
+label_warning_fecha_esti_entrega_sin_seleccionar=La fecha estimada de entrega es obligatoria. Por favor seleccione una.
+label_warning_nombre_archivo_hoja_diag_vacio=El PDF con la hoja de diagn�stico es obligatoria. Por favor suba un archivo con la informaci�n solicitada.
+label_warning_seleccion_tipo_hd_vacio=Debe seleccionar el tipo de formato a descargar.
+label_warning_fecha_entrega_sin_seleccionar=Para seleccionar una hora de entrega estimada debe seleccionar la fecha de entrega estimada.
+label_warning_hora_estimada_sin_seleccionar=Debe seleccionar una hora estimada.
+label_warning_kilometraje_sin_ingresar=Debe ingresar un kilometraje mayor al de la �ltima actualizaci�n.
+label_warning_tipo_ot_sin_seleccionar=El tipo de la OT es obligatorio. Por favor seleccione uno.
+label_warning_motivo_ingreso=Debe seleccionar el motivo del ingreso.
+label_warning_fecha_entrega_sin_seleccionar_continuar=Para continuar debe seleccionar la fecha de entrega estimada.
+label_warning_hora_estimada_sin_seleccionar_continuar=Para continuar debe seleccionar una hora de entrega estimada.
+label_warning_tipo_fs_sin_seleccionar=Para buscar el s�ntoma debe seleccionar el tipo. Por favor seleccione uno.
+label_warning_grupo_fs_sin_seleccionar=Para buscar el s�ntoma debe seleccionar el grupo. Por favor seleccione uno.
+label_warning_garantia_sin_marcar=Para marcar que una OT es una reparaci�n de motor debe marcar que la OT procede de una posible Garant�a.
+label_warning_vehiculo_sin_parametros_garantia=El veh�culo es de un modelo comercial que no se le han configurado los par�metros de garant�a. Por favor informar al departamento de garant�as
+label_warning_cliente_sin_datos_contacto=Debe ingresar un dato de contacto, email, telefono fijo � celular
+label_warning_cliente_sin_ciudad=Debe seleccionar una ciudad
+label_warning_cliente_sin_verificar_celular=Debe verificar el celular del cliente
+label_warning_vehiculo_sin_boleta_salida=Veh�culo sin boleta de salida.
+label_warning_vehiculo_sin_contacto=Por favor ingrese los datos del conductor en la secci�n de informaci�n del usuario
+
+
+label_info_datos_actualizados=Se han actualizado los datos del propietario del veh�culo.
+label_error_datos_no_actualizados=Ha ocurrido un error con la actualizaci�n de los datos del propietario del veh�culo.
+label_info_ot_solo_rmp=Orden de trabajo solo para RMP
+
+label_boton_cambiar_propietario = Cambiar Propietario
+label_boton_copiar_propietario = Copiar a usuario
+label_warning_sin_Habeas = Debe llenar el formulario de preferencias de contacto
+label_info_datos_no_actualizados=Datos no actualizados
+
+#MANTENIMIENTO PREPAGADO
+label_info_mp_informacion_contrato=Informaci�n Contrato Mantenimiento Prepagado
+label_info_mp_numero_contrato=Numero Contrato MP
+label_info_mp_fecha_inicial=Fecha Inicio Contrato
+label_info_mp_fecha_final=Fecha Fin Contrato
+label_info_mp_guardar=Guardar
+label_info_mp_salir=Salir
+label_info_mp_cantidad_redimir=Ingreso Informaci�n Cantidad a Redimir
+label_info_mp_tiene_contrato=El veh�culo cuenta con un contrato de mantenimiento prepagado
+label_info_mp_beneficio=Beneficio
+label_info_mp_referencia=Referencia
+label_info_mp_descripcion=Descripci�n
+label_info_mp_ultimo_redimido=�ltimo Redimido
+label_info_mp_cantidad_otorgada=Cantidad Otorgada
+label_info_mp_cantidad_disponible=Cantidad En Proceso
+label_info_mp_cantidad_disponible=Cantidad Disponible
+label_info_mp_cantidad_redimir=Cantidad Redimir
+label_info_mp_opciones=Opciones
+label_info_mp_ver_detalle=Ver Detalle
+label_info_mp_cantidad_proceso=Cantidad en Proceso
+#AVERIAS
+label_rige_averias = Seleccion Evento:
+mensaje_noEsTaller_rige_averias = Debe seleccionar un evento donde la empresa entrega sea Talleres Autorizados S.A para el tipo de OT seleccionado
+
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: 18/09/2019, 6:16:58 p.m.</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("properties",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            $(window).load(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 21667888;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

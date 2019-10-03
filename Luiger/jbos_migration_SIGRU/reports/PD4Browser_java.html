@@ -1,0 +1,2449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for PD4Browser.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="21667888">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_SIGRU_ear.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_SIGRU_ear.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="tattletale_SIGRU_ear.html">
+                        <i class="glyphicon tattletale-nav-logo"></i>
+                      Tattletale
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsSIGRU_ear.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_SIGRU_ear.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Red Hat Application Migration Toolkit found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="21667888">
+                            SIGRU.ear/SIGRU.war/WEB-INF/lib/p4ml-1.0.0.jar/org/zefer/pd4ml/tools/PD4Browser.java
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                                        <span class="label label-info" title="classloader">classloader</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.zefer.pd4ml.tools;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.Frame;
+import java.awt.Graphics;
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Image;
+import java.awt.Insets;
+import java.awt.LayoutManager;
+import java.awt.Rectangle;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.image.BufferedImage;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.lang.reflect.Field;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+import java.util.Enumeration;
+import java.util.Properties;
+import java.util.StringTokenizer;
+import javax.servlet.ServletContext;
+import javax.swing.ComboBoxModel;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JComponent;
+import javax.swing.JDialog;
+import javax.swing.JEditorPane;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JSeparator;
+import javax.swing.JTabbedPane;
+import javax.swing.JTextField;
+import javax.swing.Scrollable;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+import javax.swing.border.AbstractBorder;
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.EmptyBorder;
+import javax.swing.event.HyperlinkEvent;
+import javax.swing.event.HyperlinkListener;
+import javax.swing.event.HyperlinkEvent.EventType;
+import javax.swing.filechooser.FileFilter;
+import javax.swing.text.html.HTMLDocument;
+import javax.swing.text.html.HTMLFrameHyperlinkEvent;
+import org.zefer.cache.CookieManager;
+import org.zefer.cache.ResourceCache;
+import org.zefer.font.TrueType;
+import org.zefer.html.doc.Document;
+import org.zefer.html.doc.PD4MLHtmlParser;
+import org.zefer.pd4ml.PD4ML;
+import org.zefer.pd4ml.PD4PageMark;
+import org.zefer.pd4ml.pdf.PD4Device;
+
+public class PD4Browser extends JFrame implements HyperlinkListener {
+   protected boolean Ò00000 = false;
+   private JComboBox float;
+   PD4Browser.PD4Converter oO0000 = null;
+   private JLabel void;
+   protected Document ÒO0000;
+   private PD4MLHtmlParser o00000;
+   private boolean public = false;
+   private static File ö00000 = null;
+   private String[] Ô00000 = new String[]{&quot;/usr/bin/acroread&quot;, &quot;/usr/local/bin/acroread&quot;, &quot;/bin/acroread&quot;, &quot;/sbin/acroread&quot;, &quot;/usr/X11R6/bin/acroread&quot;};
+   private String[] Õ00000 = new String[]{&quot;/Adobe/Acrobat 10.0/Reader/AcroRd32.exe&quot;, &quot;/Adobe/Acrobat 9.0/Reader/AcroRd32.exe&quot;, &quot;/Adobe/Acrobat 8.0/Reader/AcroRd32.exe&quot;, &quot;/Adobe/Acrobat 7.0/Reader/AcroRd32.exe&quot;, &quot;/Adobe/Acrobat 6.0/Reader/AcroRd32.exe&quot;, &quot;/Adobe/Acrobat 5.0/Reader/AcroRd32.exe&quot;};
+   private String[] Object = new String[]{&quot;C:/Program Files&quot;, &quot;C:/Programme&quot;, &quot;D:/Program Files&quot;, &quot;D:/Programme&quot;};
+   protected boolean õ00000 = false;
+   private PD4Browser._b Ö00000;
+   private JScrollPane ô00000;
+   private JPanel OO0000;
+   // $FF: synthetic field
+   static Class class$org$zefer$pd4ml$PD4Constants;
+
+   private void Ô00000() {
+      for(int var1 = 0; var1 &lt; 10; ++var1) {
+         String var2 = this.oO0000.o00000.getProperty(&quot;history.&quot; + var1);
+         if (var2 == null) {
+            if (var1 == 0) {
+               this.float.insertItemAt(&quot;http://pd4ml.com/&quot;, 0);
+            }
+            break;
+         }
+
+         this.float.insertItemAt(var2, var1);
+      }
+
+   }
+
+   public PD4Browser() {
+      this.oO0000 = new PD4Browser.PD4Converter();
+      String var1 = this.oO0000.o00000.getProperty(&quot;viewer.executeble&quot;);
+      if (var1 != null &amp;&amp; var1.length() != 0) {
+         this.oO0000.OÒ0000 = var1;
+      } else {
+         String var2 = System.getProperty(&quot;file.separator&quot;);
+         int var3;
+         String var4;
+         if (var2.equals(&quot;\\&quot;)) {
+            for(var3 = 0; var3 &lt; this.Object.length; ++var3) {
+               var4 = this.Object[var3];
+
+               for(int var5 = 0; var5 &lt; this.Õ00000.length; ++var5) {
+                  String var6 = var4 + this.Õ00000[var5];
+                  File var7 = new File(var6);
+                  if (var7.exists() &amp;&amp; var7.isFile()) {
+                     this.oO0000.OÒ0000 = var6;
+                     break;
+                  }
+               }
+            }
+         } else if (var2.equals(&quot;/&quot;)) {
+            for(var3 = 0; var3 &lt; this.Ô00000.length; ++var3) {
+               var4 = this.Ô00000[var3];
+               File var8 = new File(var4);
+               if (var8.exists() &amp;&amp; var8.isFile()) {
+                  this.oO0000.OÒ0000 = var4;
+                  break;
+               }
+            }
+         } else {
+            this.oO0000.OÒ0000 = &quot;open&quot;;
+         }
+      }
+
+   }
+
+   private static String o00000(Color var0) {
+      String var1 = &quot;#&quot;;
+      String var2 = Integer.toHexString(var0.getRed());
+      if (var2.length() &lt; 2) {
+         var2 = &quot;0&quot; + var2;
+      }
+
+      var1 = var1 + var2;
+      var2 = Integer.toHexString(var0.getGreen());
+      if (var2.length() &lt; 2) {
+         var2 = &quot;0&quot; + var2;
+      }
+
+      var1 = var1 + var2;
+      var2 = Integer.toHexString(var0.getBlue());
+      if (var2.length() &lt; 2) {
+         var2 = &quot;0&quot; + var2;
+      }
+
+      var1 = var1 + var2;
+      return var1;
+   }
+
+   public void initGUI() {
+      try {
+         this.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent var1) {
+               PD4Browser.this.new();
+            }
+         });
+         this.setTitle(&quot;PD4ML Converter&quot;);
+         this.float = new JComboBox();
+         this.float.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent var1) {
+               PD4Browser.this.o00000(var1);
+            }
+         });
+         this.float.getEditor().getEditorComponent().addFocusListener(new FocusListener() {
+            public void focusGained(FocusEvent var1) {
+               JTextField var2 = (JTextField)PD4Browser.this.float.getEditor().getEditorComponent();
+               var2.selectAll();
+            }
+
+            public void focusLost(FocusEvent var1) {
+            }
+         });
+         JButton var1 = new JButton();
+         var1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent var1) {
+               PD4Browser.this.Ó00000(var1);
+            }
+         });
+         JButton var2 = new JButton();
+         var2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent var1) {
+               PD4Browser.this.new(var1);
+            }
+         });
+         JPanel var3 = new JPanel(new GridBagLayout());
+         this.getContentPane().setLayout(new BorderLayout());
+         this.float.setEditable(true);
+         this.float.setAutoscrolls(true);
+         var3.add(this.float, new GridBagConstraints(0, 0, 1, 1, 1.0D, 0.0D, 10, 2, new Insets(5, 5, 5, 0), 0, 0));
+         var1.setText(&quot;GO&quot;);
+         var1.setPreferredSize(new Dimension(60, 22));
+         var3.add(var1, new GridBagConstraints(1, 0, 1, 1, 0.0D, 0.0D, 10, 0, new Insets(5, 5, 5, 0), 0, 0));
+         var2.setText(&quot;PDF&quot;);
+         var2.setPreferredSize(new Dimension(60, 22));
+         var3.add(var2, new GridBagConstraints(2, 0, 1, 1, 0.0D, 0.0D, 10, 0, new Insets(5, 5, 5, 5), 0, 0));
+         this.getContentPane().add(&quot;North&quot;, var3);
+         JMenuBar var12 = new JMenuBar();
+         JMenu var11 = new JMenu();
+         JMenuItem var10 = new JMenuItem();
+         JSeparator var9 = new JSeparator();
+         JMenuItem var8 = new JMenuItem();
+         JMenu var7 = new JMenu();
+         JMenuItem var6 = new JMenuItem();
+         JMenu var5 = new JMenu();
+         JMenuItem var4 = new JMenuItem();
+         this.setJMenuBar(var12);
+         var11.setText(&quot;File&quot;);
+         var11.setVisible(true);
+         var12.add(var11);
+         var10.setPreferredSize(new Dimension(150, 16));
+         var10.setText(&quot;Open local file...&quot;);
+         var10.setVisible(true);
+         var10.setBounds(new Rectangle(5, 5, 100, 30));
+         var10.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent var1) {
+               PD4Browser.this.Õ00000();
+            }
+         });
+         var11.add(var10);
+         var9.setLayout((LayoutManager)null);
+         var9.setVisible(true);
+         var9.setBounds(new Rectangle(5, 5, 100, 30));
+         var11.add(var9);
+         var8.setText(&quot;Exit&quot;);
+         var8.setVisible(true);
+         var8.setBounds(new Rectangle(5, 5, 100, 30));
+         var8.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent var1) {
+               PD4Browser.this.new();
+            }
+         });
+         var11.add(var8);
+         var7.setText(&quot;Edit&quot;);
+         var7.setVisible(true);
+         var12.add(var7);
+         var6.setText(&quot;Options...&quot;);
+         var6.setVisible(true);
+         var6.setPreferredSize(new Dimension(100, 16));
+         var6.setBounds(new Rectangle(5, 5, 100, 16));
+         var6.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent var1) {
+               PD4Browser.this.õ00000 = false;
+               PD4Browser.PD4BrowserOptions var2 = PD4Browser.this.new PD4BrowserOptions();
+               var2.setResizable(false);
+               var2.setModal(true);
+               if (PD4Device.isVersionOlder14()) {
+                  Dimension var3 = Toolkit.getDefaultToolkit().getScreenSize();
+                  Dimension var4 = var2.getSize();
+                  var2.setLocation((var3.width - var4.width) / 2, (var3.height - var4.height) / 2);
+               } else {
+                  var2.setLocationRelativeTo(Frame.getFrames()[0]);
+               }
+
+               var2.show();
+               if (PD4Browser.this.õ00000) {
+                  PD4Browser.this.return();
+               }
+
+            }
+         });
+         var7.add(var6);
+         var5.setText(&quot;About&quot;);
+         var5.setVisible(true);
+         var12.add(var5);
+         var4.setText(&quot;About...&quot;);
+         var4.setVisible(true);
+         var4.setPreferredSize(new Dimension(100, 16));
+         var4.setBounds(new Rectangle(5, 5, 100, 16));
+         var4.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent var1) {
+               PD4Browser.PD4BrowserAbout var2 = PD4Browser.this.new PD4BrowserAbout();
+               var2.setResizable(false);
+               var2.setModal(true);
+               if (PD4Device.isVersionOlder14()) {
+                  Dimension var3 = Toolkit.getDefaultToolkit().getScreenSize();
+                  Dimension var4 = var2.getSize();
+                  var2.setLocation((var3.width - var4.width) / 2, (var3.height - var4.height) / 2);
+               } else {
+                  var2.setLocationRelativeTo(Frame.getFrames()[0]);
+               }
+
+               var2.show();
+            }
+         });
+         var5.add(var4);
+         this.void = new PD4Browser.ScrollablePicture();
+         this.void.setBackground(Color.white);
+         this.ô00000 = new JScrollPane(this.void, 22, 31);
+         this.ô00000.setOpaque(false);
+         this.void.setOpaque(true);
+         PD4Browser.Rule var13 = new PD4Browser.Rule();
+         this.ô00000.setColumnHeaderView(var13);
+         this.ô00000.setBorder(new CompoundBorder(new EmptyBorder(5, 5, 5, 5), new PD4Browser.ShadowBorder()));
+         this.getContentPane().add(&quot;Center&quot;, this.ô00000);
+         JPanel var14 = new JPanel(new FlowLayout(3, 5, 0));
+         this.Ö00000 = new PD4Browser._b();
+         var14.add(this.Ö00000);
+         this.getContentPane().add(var14, &quot;South&quot;);
+         this.OO0000 = new JPanel();
+         this.OO0000.setBackground(Color.white);
+         this.OO0000.setLayout(new BorderLayout());
+         URL var15 = this.getClass().getResource(&quot;/resources/icons/busy.gif&quot;);
+         ImageIcon var16 = new ImageIcon(var15);
+         this.OO0000.add(new JLabel(var16), &quot;Center&quot;);
+         this.setSize(new Dimension(this.oO0000.ØO0000, this.oO0000.ÕÒ0000));
+         int var17;
+         int var18;
+         if (this.oO0000.Oo0000 != -1 &amp;&amp; this.oO0000.øO0000 != -1) {
+            var17 = this.oO0000.Oo0000;
+            var18 = this.oO0000.øO0000;
+         } else {
+            GraphicsDevice var19 = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+            Rectangle var20 = var19.getDefaultConfiguration().getBounds();
+            var17 = var20.x + (var20.width - this.oO0000.ØO0000) / 2;
+            var18 = var20.y + (var20.height - this.oO0000.ÕÒ0000) / 2;
+         }
+
+         this.setLocation(var17, var18);
+         this.addComponentListener(new ComponentAdapter() {
+            public void componentShown(ComponentEvent var1) {
+               PD4Browser.this.Ö00000.o00000(PD4Browser.this.ô00000.getViewport().getWidth());
+            }
+
+            public void componentResized(ComponentEvent var1) {
+               PD4Browser.this.o00000();
+            }
+         });
+      } catch (Exception var21) {
+         var21.printStackTrace(System.err);
+      }
+
+   }
+
+   protected void Õ00000() {
+      JFileChooser var1 = new JFileChooser(this.oO0000.õ00000);
+      var1.setFileFilter(new PD4Browser.HtmlFilter());
+      int var2 = var1.showOpenDialog(this);
+      if (var2 == 0) {
+         this.oO0000.õ00000 = var1.getCurrentDirectory();
+         String var3 = &quot;file:&quot; + var1.getSelectedFile().getPath();
+         this.o00000(var3, true);
+      }
+
+   }
+
+   protected void new() {
+      for(int var1 = 0; var1 &lt; 10 &amp;&amp; var1 &lt; this.float.getItemCount(); ++var1) {
+         String var2 = this.float.getItemAt(var1).toString();
+         this.oO0000.o00000.setProperty(&quot;history.&quot; + var1, var2);
+      }
+
+      this.oO0000.saveProperties(this.getBounds(), this.ô00000.getViewport().getWidth());
+      System.exit(0);
+   }
+
+   protected void o00000(ActionEvent var1) {
+      if (&quot;comboBoxChanged&quot;.equals(var1.getActionCommand())) {
+         this.return();
+      } else if (&quot;comboBoxEdited&quot;.equals(var1.getActionCommand())) {
+         String var2 = (String)this.float.getSelectedItem();
+         if (var2.length() &gt; 0) {
+            if (!var2.startsWith(&quot;http://&quot;) &amp;&amp; !var2.startsWith(&quot;https://&quot;) &amp;&amp; !var2.startsWith(&quot;file:&quot;)) {
+               var2 = &quot;http://&quot; + var2;
+               JTextField var3 = (JTextField)this.float.getEditor().getEditorComponent();
+               var3.setText(var2);
+               this.float.repaint();
+            }
+
+            try {
+               new URL(var2);
+               this.o00000(var2, false);
+            } catch (MalformedURLException var4) {
+               ;
+            }
+         }
+
+      }
+   }
+
+   private void o00000(String var1) {
+      this.o00000(var1, true);
+   }
+
+   protected void Ó00000(ActionEvent var1) {
+      this.return();
+   }
+
+   protected void new(ActionEvent var1) {
+      new PD4Browser._c(new PD4Browser.IndeterminateOperation() {
+         public void run() {
+            PD4Browser.this.Ø00000();
+         }
+      });
+   }
+
+   protected void Ø00000() {
+      String var1 = (String)this.float.getSelectedItem();
+      if (var1.length() &gt; 0) {
+         if (!var1.startsWith(&quot;http://&quot;) &amp;&amp; !var1.startsWith(&quot;https://&quot;) &amp;&amp; !var1.startsWith(&quot;file:&quot;)) {
+            var1 = &quot;http://&quot; + var1;
+            JTextField var2 = (JTextField)this.float.getEditor().getEditorComponent();
+            var2.setText(var1);
+            this.float.repaint();
+         }
+
+         try {
+            File var7 = File.createTempFile(&quot;pd4ml&quot;, &quot;.pdf&quot;);
+            var7.deleteOnExit();
+            this.oO0000.super(var1, var7, this.ô00000.getViewport().getWidth());
+            String var3 = var7.getAbsolutePath();
+            File var4 = new File(this.oO0000.OÒ0000);
+            if (!var4.exists()) {
+               this.Ó00000();
+            }
+
+            var4 = new File(this.oO0000.OÒ0000);
+            if (var4.exists()) {
+               String var5 = this.oO0000.OÒ0000 + &quot; &quot; + this.oO0000.ÓO0000 + &quot; &quot; + var3;
+               Runtime.getRuntime().exec(var5);
+            }
+         } catch (IOException var6) {
+            var6.printStackTrace(System.err);
+         }
+      }
+
+   }
+
+   protected void return() {
+      new PD4Browser._c(new PD4Browser.IndeterminateOperation() {
+         public void run() {
+            PD4Browser.this.ô00000();
+         }
+      });
+   }
+
+   protected void ô00000() {
+      if (this.oO0000.ôo0000 != null &amp;&amp; this.oO0000.ôo0000.length() != 0 &amp;&amp; this.oO0000.new != 0) {
+         System.getProperties().setProperty(&quot;proxySet&quot;, &quot;true&quot;);
+         System.getProperties().setProperty(&quot;proxyHost&quot;, this.oO0000.ôo0000);
+         System.getProperties().setProperty(&quot;proxyPort&quot;, &quot;&quot; + this.oO0000.new);
+      }
+
+      String var1 = (String)this.float.getSelectedItem();
+      if (var1 != null &amp;&amp; var1.length() &gt; 0) {
+         if (!var1.startsWith(&quot;http://&quot;) &amp;&amp; !var1.startsWith(&quot;https://&quot;) &amp;&amp; !var1.startsWith(&quot;file:&quot;)) {
+            var1 = &quot;http://&quot; + var1;
+            this.o00000(var1, true);
+         }
+
+         URL var2 = null;
+
+         try {
+            var2 = new URL(var1);
+         } catch (MalformedURLException var4) {
+            var4.printStackTrace(System.err);
+            System.exit(1);
+         }
+
+         String var3 = null;
+         if (this.oO0000.oÒ0000 != null &amp;&amp; this.oO0000.oÒ0000.trim().length() &gt; 0) {
+            var3 = this.oO0000.oÒ0000;
+         }
+
+         this.o00000 = new PD4MLHtmlParser(var2, var3, this.oO0000.ÔÒ0000, this.oO0000.while, this.oO0000.Stringsuper, false, (String)null, (CookieManager)null, this.oO0000.Õo0000, (ResourceCache)null, (ServletContext)null, -1.0D, false);
+         this.o00000.setProfile(this.public);
+         this.ÒO0000 = this.o00000.buildDocument();
+         this.o00000();
+      }
+
+   }
+
+   private void o00000(String var1, boolean var2) {
+      ComboBoxModel var3 = this.float.getModel();
+      int var4 = -1;
+
+      for(int var5 = 0; var5 &lt; var3.getSize(); ++var5) {
+         String var6 = (String)var3.getElementAt(var5);
+         if (var1.equals(var6)) {
+            var4 = var5;
+            break;
+         }
+      }
+
+      if (var4 == -1) {
+         this.float.insertItemAt(var1, 0);
+         var4 = 0;
+      }
+
+      if (var2 &amp;&amp; var4 != -1) {
+         this.float.setSelectedIndex(var4);
+      }
+
+   }
+
+   private void o00000() {
+      int var1 = this.ô00000.getViewport().getWidth();
+      this.Ö00000.o00000(var1);
+      if (this.ÒO0000 != null) {
+         this.ÒO0000.layout(var1);
+         int var2 = this.ÒO0000.getHeight();
+         int var3 = this.ô00000.getViewport().getHeight();
+         var2 = var2 &gt; var3 ? var2 : var3;
+         if (var2 &gt; 48000) {
+            var2 = 48000;
+         }
+
+         BufferedImage var4 = new BufferedImage(var1, var2, 6);
+         Graphics var5 = var4.getGraphics();
+         var5.setColor(Color.white);
+         var5.fillRect(0, 0, var1, var2);
+         this.ÒO0000.paint(0, 0, new Rectangle(0, 0, var1, var2), var5);
+         this.void.setIcon(new ImageIcon(var4));
+         this.o00000.profile(&quot;layouted&quot;);
+         this.repaint();
+         this.o00000.profile(&quot;painted&quot;);
+      }
+   }
+
+   public static void main(String[] var0) {
+      String var1 = null;
+      String var2 = null;
+      String var3 = null;
+      String var4 = null;
+      String var5 = null;
+
+      for(int var6 = 0; var6 &lt; var0.length; ++var6) {
+         if (&quot;-configure.fonts&quot;.equals(var0[var6])) {
+            ++var6;
+            if (var6 == var0.length) {
+               System.out.println(&quot;invalid parameters. using default properties file location&quot;);
+               return;
+            }
+
+            var4 = var0[var6];
+            ++var6;
+            if (var6 &lt; var0.length) {
+               var5 = var0[var6];
+            }
+            break;
+         }
+
+         if (&quot;-config&quot;.equals(var0[var6])) {
+            ++var6;
+            if (var6 == var0.length) {
+               System.out.println(&quot;invalid parameters. using default properties file location&quot;);
+               return;
+            }
+
+            var3 = var0[var6];
+         } else if (var1 == null) {
+            var1 = var0[var6];
+         } else if (var2 == null) {
+            var2 = var0[var6];
+         }
+      }
+
+      if (var3 != null) {
+         ö00000 = new File(var3);
+      } else {
+         ö00000 = new File(&quot;pd4browser.properties&quot;);
+      }
+
+      if (var4 != null) {
+         Properties var12 = buildFontProperties(var4);
+         String var7 = var4 + &quot;/pd4fonts.properties&quot;;
+         if (var5 != null &amp;&amp; var5.length() &gt; 0) {
+            var12.put(&quot;font.dir.location&quot;, var4);
+            File var8 = new File(var5);
+            if (var8.exists() &amp;&amp; var8.isDirectory()) {
+               var7 = var5 + &quot;/pd4fonts.properties&quot;;
+            } else {
+               var7 = var5;
+            }
+         }
+
+         try {
+            BufferedOutputStream var13 = new BufferedOutputStream(new FileOutputStream(var7));
+            var12.store(var13, &quot;this is an autogenerated file. please remove manually any references to copyrighted fonts&quot;);
+            var13.close();
+         } catch (IOException var9) {
+            var9.printStackTrace(System.err);
+            return;
+         }
+
+         if (!ö00000.exists()) {
+            PD4Browser.PD4Converter var14 = new PD4Browser.PD4Converter();
+            var14.oÒ0000 = var4;
+            var14.saveProperties(new Rectangle(850, 600, 100, 100), 800);
+         }
+
+         System.out.println(&quot;done.&quot;);
+      } else {
+         if (var1 == null &amp;&amp; var2 == null) {
+            showGUI((String)null);
+         } else if (var1 != null &amp;&amp; var2 == null) {
+            showGUI(var1);
+         } else {
+            PD4Browser.PD4Converter var11 = new PD4Browser.PD4Converter();
+
+            try {
+               var11.super(var1, new File(var2), -1);
+            } catch (IOException var10) {
+               var10.printStackTrace(System.err);
+            }
+
+            System.exit(0);
+         }
+
+      }
+   }
+
+   public static void showGUI(String var0) {
+      try {
+         PD4Browser var1 = new PD4Browser();
+         var1.initGUI();
+         var1.Ô00000();
+
+         try {
+            UIManager.setLookAndFeel(&quot;com.sun.java.swing.plaf.windows.WindowsLookAndFeel&quot;);
+            SwingUtilities.updateComponentTreeUI(var1);
+         } catch (Exception var3) {
+            System.err.println(&quot;Could not load LookAndFeel&quot;);
+         }
+
+         var1.o00000();
+         var1.setVisible(true);
+         if (var0 != null) {
+            var1.o00000(var0);
+         }
+      } catch (Exception var4) {
+         var4.printStackTrace(System.err);
+      }
+
+   }
+
+   public void hyperlinkUpdate(HyperlinkEvent var1) {
+      EventType var2 = var1.getEventType();
+      if (var2 == EventType.ACTIVATED) {
+         JEditorPane var3 = (JEditorPane)var1.getSource();
+         if (var1 instanceof HTMLFrameHyperlinkEvent) {
+            HTMLFrameHyperlinkEvent var4 = (HTMLFrameHyperlinkEvent)var1;
+            HTMLDocument var5 = (HTMLDocument)var3.getDocument();
+            var5.processHTMLFrameHyperlinkEvent(var4);
+         } else {
+            try {
+               this.o00000(var1.getURL().toString(), true);
+            } catch (Throwable var6) {
+               var6.printStackTrace(System.err);
+            }
+         }
+      }
+
+   }
+
+   protected void Ó00000() {
+      JFileChooser var1 = new JFileChooser(this.oO0000.ÕO0000);
+      var1.setDialogTitle(&quot;Browse for PDF Viewer&quot;);
+      int var2 = var1.showOpenDialog(this);
+      if (var2 == 0) {
+         this.oO0000.ÕO0000 = var1.getCurrentDirectory();
+         this.oO0000.OÒ0000 = var1.getSelectedFile().getPath();
+      }
+
+   }
+
+   private static String o00000(String var0, String var1, String var2) {
+      if (var0 == null) {
+         return var0;
+      } else if (var1 == null) {
+         return var0;
+      } else {
+         if (var2 == null) {
+            var2 = &quot;&quot;;
+         }
+
+         for(int var3 = var0.indexOf(var1); var3 != -1; var3 = var0.indexOf(var1, var3)) {
+            var0 = var0.substring(0, var3) + var2 + var0.substring(var3 + var1.length());
+            var3 += var2.length();
+         }
+
+         return var0;
+      }
+   }
+
+   public static Properties buildFontProperties(String var0) {
+      File var1 = new File(var0);
+      Properties var2 = PD4Device.isVersionOlder14() ? new Properties() : new Properties() {
+         public synchronized Enumeration keys() {
+            ArrayList var1 = Collections.list(super.keys());
+            Collections.sort(var1);
+            return Collections.enumeration(var1);
+         }
+      };
+      int var3 = 0;
+      if (var1.isDirectory()) {
+         ResourceCache var4 = new ResourceCache((String)null, (String)null, (String)null, (ServletContext)null, new CookieManager(), (String)null, (String)null, var0, (String)null, true, false);
+         String[] var5 = var1.list();
+         if (var5 != null) {
+            for(int var6 = 0; var6 &lt; var5.length; ++var6) {
+               if (var5[var6].toLowerCase().indexOf(&quot;.tt&quot;) &gt; 0 || var5[var6].toLowerCase().indexOf(&quot;.ot&quot;) &gt; 0) {
+                  File var7 = new File(var0 + &quot;/&quot; + var5[var6]);
+                  if (!var7.isDirectory() &amp;&amp; var7.canRead()) {
+                     ++var3;
+
+                     try {
+                        if (var5[var6].toLowerCase().endsWith(&quot;.ttc&quot;)) {
+                           try {
+                              int var8 = 0;
+
+                              while(true) {
+                                 var7 = new File(var0 + &quot;/&quot; + var5[var6] + &quot;_&quot; + var8);
+                                 TrueType var9 = new TrueType(var4, &quot;file:&quot; + var7.toString());
+                                 String var10 = var9.getFullName();
+                                 var2.put(var10, var5[var6] + &quot;_&quot; + var8++);
+                              }
+                           } catch (Exception var11) {
+                              ;
+                           }
+                        } else {
+                           TrueType var13 = new TrueType(var4, &quot;file:&quot; + var7.toString());
+                           String var14 = var13.getFullName();
+                           var2.put(var14, var5[var6]);
+                        }
+                     } catch (Exception var12) {
+                        System.err.println(var12.getMessage());
+                     }
+                  }
+               }
+            }
+         }
+      }
+
+      return var2;
+   }
+
+   // $FF: synthetic method
+   static Class class$(String var0) {
+      try {
+         return Class.forName(var0);
+      } catch (ClassNotFoundException var2) {
+         throw new NoClassDefFoundError(var2.getMessage());
+      }
+   }
+
+   public class ScrollablePicture extends JLabel implements Scrollable {
+      private int o00000 = 30;
+
+      public Dimension getPreferredScrollableViewportSize() {
+         return this.getPreferredSize();
+      }
+
+      public int getScrollableUnitIncrement(Rectangle var1, int var2, int var3) {
+         int var4;
+         if (var2 == 0) {
+            var4 = var1.x;
+         } else {
+            var4 = var1.y;
+         }
+
+         if (var3 &lt; 0) {
+            int var5 = var4 - var4 / this.o00000 * this.o00000;
+            return var5 == 0 ? this.o00000 : var5;
+         } else {
+            return (var4 / this.o00000 + 1) * this.o00000 - var4;
+         }
+      }
+
+      public int getScrollableBlockIncrement(Rectangle var1, int var2, int var3) {
+         return var2 == 0 ? var1.width - this.o00000 : var1.height - this.o00000;
+      }
+
+      public boolean getScrollableTracksViewportWidth() {
+         return false;
+      }
+
+      public boolean getScrollableTracksViewportHeight() {
+         return false;
+      }
+   }
+
+   private static class _b extends JLabel {
+      private static final Font o00000 = new Font(&quot;Tahoma&quot;, 0, 11);
+
+      public _b() {
+         this.setPreferredSize(new Dimension(400, 16));
+         this.setBorder(new EmptyBorder(0, 2, 8, 0));
+         this.setFont(o00000);
+      }
+
+      public void o00000(int var1) {
+         this.setText(&quot;HTML WIDTH: &quot; + var1 + &quot;px&quot;);
+      }
+   }
+
+   public static class PD4Converter {
+      Properties o00000 = PD4Device.isVersionOlder14() ? new Properties() : new Properties() {
+         public synchronized Enumeration keys() {
+            ArrayList var1 = Collections.list(super.keys());
+            Collections.sort(var1);
+            return Collections.enumeration(var1);
+         }
+      };
+      protected File õ00000 = null;
+      protected File ÕO0000 = null;
+      protected int ÕÒ0000 = 580;
+      protected int ØO0000 = 780;
+      protected int Oo0000 = -1;
+      protected int øO0000 = -1;
+      protected String øo0000 = &quot;A4&quot;;
+      protected boolean oO0000 = false;
+      protected int õo0000 = 10;
+      protected int Óo0000 = 10;
+      protected int Õ00000 = 10;
+      protected int ÔO0000 = 10;
+      protected String nullsuper = &quot;mm&quot;;
+      protected boolean Ô00000 = true;
+      protected boolean privatesuper = true;
+      protected boolean thissuper = false;
+      protected boolean ô00000 = true;
+      protected String oÒ0000 = &quot;&quot;;
+      protected String ÔÒ0000;
+      protected String while;
+      protected String Stringsuper;
+      protected boolean newnew = false;
+      protected boolean return = false;
+      protected boolean ÓÒ0000 = true;
+      protected boolean Õo0000 = false;
+      protected boolean ôO0000 = false;
+      protected boolean ø00000 = false;
+      protected String OÒ0000 = &quot;acroread.exe&quot;;
+      protected String ÓO0000 = &quot;&quot;;
+      protected String ôo0000 = &quot;&quot;;
+      protected int new = 0;
+      protected String Ôo0000 = &quot;&quot;;
+      protected String forsuper = &quot;&quot;;
+      private boolean oo0000 = false;
+      private int OO0000 = 0;
+      private String Øo0000 = null;
+      protected PD4PageMark Ó00000 = new PD4PageMark();
+      protected PD4PageMark if = new PD4PageMark();
+      protected int Ø00000 = 780;
+      protected boolean õO0000 = false;
+
+      public PD4Converter() {
+         this.super();
+      }
+
+      public void saveProperties(Rectangle var1, int var2) {
+         this.o00000.setProperty(&quot;insets.top&quot;, &quot;&quot; + this.õo0000);
+         this.o00000.setProperty(&quot;insets.left&quot;, &quot;&quot; + this.Óo0000);
+         this.o00000.setProperty(&quot;insets.right&quot;, &quot;&quot; + this.Õ00000);
+         this.o00000.setProperty(&quot;insets.bottom&quot;, &quot;&quot; + this.ÔO0000);
+         this.o00000.setProperty(&quot;insets.units&quot;, this.nullsuper);
+         this.o00000.setProperty(&quot;page.format&quot;, this.øo0000);
+         this.o00000.setProperty(&quot;page.orientation&quot;, &quot;&quot; + this.oO0000);
+         this.o00000.setProperty(&quot;rendering.patch&quot;, &quot;&quot; + this.Ô00000);
+         this.o00000.setProperty(&quot;rendering.split&quot;, &quot;&quot; + this.privatesuper);
+         this.o00000.setProperty(&quot;images.interpolate&quot;, &quot;&quot; + this.thissuper);
+         this.o00000.setProperty(&quot;adobe.font.metrics&quot;, &quot;&quot; + this.ô00000);
+         this.o00000.setProperty(&quot;userSpace.width&quot;, &quot;&quot; + var2);
+         this.o00000.setProperty(&quot;ttf.fonts.dir&quot;, this.oÒ0000);
+         this.o00000.setProperty(&quot;ttf.fonts.default.serif&quot;, this.ÔÒ0000 == null ? &quot;&quot; : this.ÔÒ0000);
+         this.o00000.setProperty(&quot;ttf.fonts.default.sansserif&quot;, this.while == null ? &quot;&quot; : this.while);
+         this.o00000.setProperty(&quot;ttf.fonts.default.monospace&quot;, this.Stringsuper == null ? &quot;&quot; : this.Stringsuper);
+         this.o00000.setProperty(&quot;page.bookmarks.destinations&quot;, &quot;&quot; + this.newnew);
+         this.o00000.setProperty(&quot;page.bookmarks.headings&quot;, &quot;&quot; + this.return);
+         this.o00000.setProperty(&quot;page.hyperlinks&quot;, &quot;&quot; + this.ÓÒ0000);
+         this.o00000.setProperty(&quot;debug.info.enable&quot;, &quot;&quot; + this.Õo0000);
+         this.o00000.setProperty(&quot;table.breaks.enable&quot;, &quot;&quot; + this.ôO0000);
+         this.o00000.setProperty(&quot;pdf.forms.enable&quot;, &quot;&quot; + this.ø00000);
+         this.o00000.setProperty(&quot;viewer.executeble&quot;, this.OÒ0000);
+         this.o00000.setProperty(&quot;viewer.params&quot;, this.ÓO0000);
+         this.o00000.setProperty(&quot;proxy.host&quot;, this.ôo0000);
+         this.o00000.setProperty(&quot;proxy.port&quot;, &quot;&quot; + this.new);
+         this.o00000.setProperty(&quot;document.author&quot;, this.Ôo0000);
+         this.o00000.setProperty(&quot;document.title&quot;, &quot;&quot; + this.forsuper);
+         this.o00000.setProperty(&quot;header.font.style&quot;, &quot;&quot; + this.Ó00000.getFont().getStyle());
+         this.o00000.setProperty(&quot;header.font.face&quot;, this.Ó00000.getFont().getFontName());
+         this.o00000.setProperty(&quot;header.font.size&quot;, &quot;&quot; + this.Ó00000.getFontSize());
+         this.o00000.setProperty(&quot;header.height&quot;, &quot;&quot; + this.Ó00000.getAreaHeight());
+         this.o00000.setProperty(&quot;header.color&quot;, &quot;&quot; + PD4Browser.o00000(this.Ó00000.getColor()));
+         this.o00000.setProperty(&quot;header.init.page.num&quot;, &quot;&quot; + this.Ó00000.getInitialPageNumber());
+         String var3 = &quot;&quot;;
+         switch(this.Ó00000.getPageNumberAlignment()) {
+         case 0:
+            var3 = &quot;left&quot;;
+            break;
+         case 1:
+            var3 = &quot;center&quot;;
+            break;
+         case 2:
+            var3 = &quot;right&quot;;
+         }
+
+         this.o00000.setProperty(&quot;header.page.num.align&quot;, &quot;&quot; + var3);
+         this.o00000.setProperty(&quot;header.page.num.template&quot;, &quot;&quot; + this.Ó00000.getPageNumberTemplate());
+         this.o00000.setProperty(&quot;header.pages.to.skip&quot;, &quot;&quot; + this.Ó00000.getPagesToSkip());
+         var3 = &quot;&quot;;
+         switch(this.Ó00000.getTitleAlignment()) {
+         case 0:
+            var3 = &quot;left&quot;;
+            break;
+         case 1:
+            var3 = &quot;center&quot;;
+            break;
+         case 2:
+            var3 = &quot;right&quot;;
+         }
+
+         this.o00000.setProperty(&quot;header.title.align&quot;, &quot;&quot; + var3);
+         this.o00000.setProperty(&quot;header.title.template&quot;, &quot;&quot; + this.Ó00000.getTitleTemplate());
+         this.o00000.setProperty(&quot;footer.font.style&quot;, &quot;&quot; + this.if.getFont().getStyle());
+         this.o00000.setProperty(&quot;footer.font.face&quot;, this.if.getFont().getFontName());
+         this.o00000.setProperty(&quot;footer.font.size&quot;, &quot;&quot; + this.if.getFontSize());
+         this.o00000.setProperty(&quot;footer.height&quot;, &quot;&quot; + this.if.getAreaHeight());
+         this.o00000.setProperty(&quot;footer.color&quot;, &quot;&quot; + PD4Browser.o00000(this.if.getColor()));
+         this.o00000.setProperty(&quot;footer.init.page.num&quot;, &quot;&quot; + this.if.getInitialPageNumber());
+         var3 = &quot;&quot;;
+         switch(this.if.getPageNumberAlignment()) {
+         case 0:
+            var3 = &quot;left&quot;;
+            break;
+         case 1:
+            var3 = &quot;center&quot;;
+            break;
+         case 2:
+            var3 = &quot;right&quot;;
+         }
+
+         this.o00000.setProperty(&quot;footer.page.num.align&quot;, &quot;&quot; + var3);
+         this.o00000.setProperty(&quot;footer.page.num.template&quot;, &quot;&quot; + this.if.getPageNumberTemplate());
+         this.o00000.setProperty(&quot;footer.pages.to.skip&quot;, &quot;&quot; + this.if.getPagesToSkip());
+         var3 = &quot;&quot;;
+         switch(this.if.getTitleAlignment()) {
+         case 0:
+            var3 = &quot;left&quot;;
+            break;
+         case 1:
+            var3 = &quot;center&quot;;
+            break;
+         case 2:
+            var3 = &quot;right&quot;;
+         }
+
+         this.o00000.setProperty(&quot;footer.title.align&quot;, &quot;&quot; + var3);
+         this.o00000.setProperty(&quot;footer.title.template&quot;, &quot;&quot; + this.if.getTitleTemplate());
+         Rectangle var4 = this.Ó00000.getWatermarkBounds();
+         String var5 = this.Ó00000.getWatermarkUrl();
+         if (var4 != null &amp;&amp; var5 != null &amp;&amp; var5.trim().length() &gt; 0) {
+            this.o00000.setProperty(&quot;header.watermark.bounds&quot;, (int)var4.getX() + &quot;,&quot; + (int)var4.getY() + &quot;,&quot; + (int)var4.getWidth() + &quot;,&quot; + (int)var4.getHeight());
+            this.o00000.setProperty(&quot;header.watermark.opacity&quot;, &quot;&quot; + this.Ó00000.getWatermarkOpacity());
+            this.o00000.setProperty(&quot;header.watermark.url&quot;, var5);
+         }
+
+         var4 = this.if.getWatermarkBounds();
+         var5 = this.if.getWatermarkUrl();
+         if (var4 != null &amp;&amp; var5 != null &amp;&amp; var5.trim().length() &gt; 0) {
+            this.o00000.setProperty(&quot;footer.watermark.bounds&quot;, (int)var4.getX() + &quot;,&quot; + (int)var4.getY() + &quot;,&quot; + (int)var4.getWidth() + &quot;,&quot; + (int)var4.getHeight());
+            this.o00000.setProperty(&quot;footer.watermark.opacity&quot;, &quot;&quot; + this.if.getWatermarkOpacity());
+            this.o00000.setProperty(&quot;footer.watermark.url&quot;, var5);
+         }
+
+         String var6 = this.Ó00000.getHtmlTemplate();
+         if (var6 != null &amp;&amp; var6.trim().length() &gt; 0) {
+            this.o00000.setProperty(&quot;header.html.template&quot;, var6);
+         }
+
+         var6 = this.if.getHtmlTemplate();
+         if (var6 != null &amp;&amp; var6.trim().length() &gt; 0) {
+            this.o00000.setProperty(&quot;footer.html.template&quot;, var6);
+         }
+
+         this.o00000.setProperty(&quot;window.width&quot;, &quot;&quot; + var1.width);
+         this.o00000.setProperty(&quot;window.height&quot;, &quot;&quot; + var1.height);
+         this.o00000.setProperty(&quot;window.x&quot;, &quot;&quot; + var1.x);
+         this.o00000.setProperty(&quot;window.y&quot;, &quot;&quot; + var1.y);
+         this.o00000.setProperty(&quot;userSpace.adjustToContent&quot;, &quot;&quot; + this.õO0000);
+         if (this.õ00000 != null) {
+            this.o00000.setProperty(&quot;dir.openlocalfile&quot;, this.õ00000.getAbsolutePath());
+         }
+
+         if (this.ÕO0000 != null) {
+            this.o00000.setProperty(&quot;dir.viewer&quot;, this.ÕO0000.getAbsolutePath());
+         }
+
+         try {
+            BufferedOutputStream var7 = new BufferedOutputStream(new FileOutputStream(PD4Browser.ö00000));
+            this.o00000.store(var7, &quot;&quot;);
+            var7.close();
+         } catch (IOException var8) {
+            ;
+         }
+
+      }
+
+      private void super() {
+         try {
+            BufferedInputStream var1 = new BufferedInputStream(new FileInputStream(PD4Browser.ö00000));
+            this.o00000.load(var1);
+            var1.close();
+         } catch (FileNotFoundException var23) {
+            ;
+         } catch (IOException var24) {
+            ;
+         }
+
+         this.õo0000 = Integer.parseInt(this.o00000.getProperty(&quot;insets.top&quot;, &quot;&quot; + this.õo0000));
+         this.Óo0000 = Integer.parseInt(this.o00000.getProperty(&quot;insets.left&quot;, &quot;&quot; + this.Óo0000));
+         this.Õ00000 = Integer.parseInt(this.o00000.getProperty(&quot;insets.right&quot;, &quot;&quot; + this.Õ00000));
+         this.ÔO0000 = Integer.parseInt(this.o00000.getProperty(&quot;insets.bottom&quot;, &quot;&quot; + this.ÔO0000));
+         this.nullsuper = this.o00000.getProperty(&quot;insets.units&quot;, this.nullsuper);
+         this.øo0000 = this.o00000.getProperty(&quot;page.format&quot;, this.øo0000);
+         this.oO0000 = &quot;true&quot;.equalsIgnoreCase(this.o00000.getProperty(&quot;page.orientation&quot;, &quot;&quot; + this.oO0000));
+         this.Ô00000 = &quot;true&quot;.equalsIgnoreCase(this.o00000.getProperty(&quot;rendering.patch&quot;, &quot;&quot; + this.Ô00000));
+         this.privatesuper = &quot;true&quot;.equalsIgnoreCase(this.o00000.getProperty(&quot;rendering.split&quot;, &quot;&quot; + this.privatesuper));
+         this.Ø00000 = Integer.parseInt(this.o00000.getProperty(&quot;userSpace.width&quot;, &quot;&quot; + this.Ø00000));
+         this.thissuper = &quot;true&quot;.equalsIgnoreCase(this.o00000.getProperty(&quot;images.interpolate&quot;, &quot;&quot; + this.thissuper));
+         this.ô00000 = &quot;true&quot;.equalsIgnoreCase(this.o00000.getProperty(&quot;adobe.font.metrics&quot;, &quot;&quot; + this.ô00000));
+         this.Øo0000 = this.o00000.getProperty(&quot;permissions.password&quot;);
+         this.OO0000 = Integer.parseInt(this.o00000.getProperty(&quot;permissions.mask&quot;, &quot;0&quot;));
+         this.oo0000 = &quot;true&quot;.equals(this.o00000.getProperty(&quot;permissions.encryption.strong&quot;, &quot;false&quot;));
+         this.oÒ0000 = this.o00000.getProperty(&quot;ttf.fonts.dir&quot;, this.oÒ0000);
+         this.ÔÒ0000 = this.o00000.getProperty(&quot;ttf.fonts.default.serif&quot;, this.ÔÒ0000);
+         this.while = this.o00000.getProperty(&quot;ttf.fonts.default.sansserif&quot;, this.while);
+         this.Stringsuper = this.o00000.getProperty(&quot;ttf.fonts.default.monospace&quot;, this.Stringsuper);
+         this.newnew = &quot;true&quot;.equalsIgnoreCase(this.o00000.getProperty(&quot;page.bookmarks.destinations&quot;, &quot;&quot; + this.newnew));
+         this.return = &quot;true&quot;.equalsIgnoreCase(this.o00000.getProperty(&quot;page.bookmarks.headings&quot;, &quot;&quot; + this.return));
+         this.ÓÒ0000 = &quot;true&quot;.equalsIgnoreCase(this.o00000.getProperty(&quot;page.hyperlinks&quot;, &quot;&quot; + this.ÓÒ0000));
+         this.Õo0000 = &quot;true&quot;.equalsIgnoreCase(this.o00000.getProperty(&quot;debug.info.enable&quot;, &quot;&quot; + this.Õo0000));
+         this.ôO0000 = &quot;true&quot;.equalsIgnoreCase(this.o00000.getProperty(&quot;table.breaks.enable&quot;, &quot;&quot; + this.ôO0000));
+         this.ø00000 = &quot;true&quot;.equalsIgnoreCase(this.o00000.getProperty(&quot;pdf.forms.enable&quot;, &quot;&quot; + this.ø00000));
+         this.Ôo0000 = this.o00000.getProperty(&quot;document.author&quot;, this.Ôo0000);
+         this.forsuper = this.o00000.getProperty(&quot;document.title&quot;, this.forsuper);
+         if (&quot;null&quot;.equals(this.forsuper)) {
+            this.forsuper = null;
+         }
+
+         this.ÓO0000 = this.o00000.getProperty(&quot;viewer.params&quot;, this.ÓO0000);
+         this.ôo0000 = this.o00000.getProperty(&quot;proxy.host&quot;, this.ôo0000);
+         this.new = Integer.parseInt(this.o00000.getProperty(&quot;proxy.port&quot;, &quot;&quot; + this.new));
+         this.ØO0000 = Integer.parseInt(this.o00000.getProperty(&quot;window.width&quot;, &quot;&quot; + this.ØO0000));
+         this.ÕÒ0000 = Integer.parseInt(this.o00000.getProperty(&quot;window.height&quot;, &quot;&quot; + this.ÕÒ0000));
+         this.Oo0000 = Integer.parseInt(this.o00000.getProperty(&quot;window.x&quot;, &quot;&quot; + this.Oo0000));
+         this.øO0000 = Integer.parseInt(this.o00000.getProperty(&quot;window.y&quot;, &quot;&quot; + this.øO0000));
+         this.õO0000 = &quot;true&quot;.equalsIgnoreCase(this.o00000.getProperty(&quot;userSpace.adjustToContent&quot;, &quot;&quot; + this.õO0000));
+         String var25 = this.o00000.getProperty(&quot;dir.openlocalfile&quot;);
+         if (var25 != null) {
+            this.õ00000 = new File(var25);
+         }
+
+         var25 = this.o00000.getProperty(&quot;dir.viewer&quot;);
+         if (var25 != null) {
+            this.ÕO0000 = new File(var25);
+         }
+
+         this.if.setHtmlTemplate(this.o00000.getProperty(&quot;footer.html.template&quot;, this.if.getHtmlTemplate()));
+         int var2 = Integer.parseInt(this.o00000.getProperty(&quot;footer.font.size&quot;, &quot;&quot; + this.if.getFontSize()));
+         int var3 = Integer.parseInt(this.o00000.getProperty(&quot;footer.font.style&quot;, &quot;&quot; + this.if.getFont().getStyle()));
+         String var4 = this.o00000.getProperty(&quot;footer.font.face&quot;, &quot;&quot; + this.if.getFont().getFontName());
+         this.if.setFont(new Font(var4, var3, var2));
+         this.if.setAreaHeight(Integer.parseInt(this.o00000.getProperty(&quot;footer.height&quot;, &quot;&quot; + this.if.getAreaHeight())));
+         this.if.setInitialPageNumber(Integer.parseInt(this.o00000.getProperty(&quot;footer.init.page.num&quot;, &quot;&quot; + this.if.getInitialPageNumber())));
+         this.if.setPagesToSkip(Integer.parseInt(this.o00000.getProperty(&quot;footer.pages.to.skip&quot;, &quot;&quot; + this.if.getPagesToSkip())));
+         this.if.setPageNumberTemplate(this.o00000.getProperty(&quot;footer.page.num.template&quot;, this.if.getPageNumberTemplate()));
+         this.if.setTitleTemplate(this.o00000.getProperty(&quot;footer.title.template&quot;, this.if.getTitleTemplate()));
+         String var5 = this.if.getPageNumberTemplate();
+         if (&quot;null&quot;.equals(var5) || &quot;&quot;.equals(var5)) {
+            this.if.setPageNumberTemplate((String)null);
+         }
+
+         var5 = this.if.getTitleTemplate();
+         if (&quot;null&quot;.equals(var5) || &quot;&quot;.equals(var5)) {
+            this.if.setTitleTemplate((String)null);
+         }
+
+         String var6 = this.o00000.getProperty(&quot;footer.color&quot;);
+
+         try {
+            Color var7 = Color.decode(var6);
+            this.if.setColor(var7);
+         } catch (Exception var22) {
+            ;
+         }
+
+         String var26 = this.o00000.getProperty(&quot;footer.page.num.align&quot;);
+         if (var26 != null) {
+            var26 = var26.toLowerCase().trim();
+            if (var26.equals(&quot;left&quot;)) {
+               this.if.setPageNumberAlignment(0);
+            } else if (var26.equals(&quot;center&quot;)) {
+               this.if.setPageNumberAlignment(1);
+            } else if (var26.equals(&quot;right&quot;)) {
+               this.if.setPageNumberAlignment(2);
+            }
+         }
+
+         var26 = this.o00000.getProperty(&quot;footer.title.align&quot;);
+         if (var26 != null) {
+            var26 = var26.toLowerCase().trim();
+            if (var26.equals(&quot;left&quot;)) {
+               this.if.setTitleAlignment(0);
+            } else if (var26.equals(&quot;center&quot;)) {
+               this.if.setTitleAlignment(1);
+            } else if (var26.equals(&quot;right&quot;)) {
+               this.if.setTitleAlignment(2);
+            }
+         }
+
+         this.Ó00000.setHtmlTemplate(this.o00000.getProperty(&quot;header.html.template&quot;, this.Ó00000.getHtmlTemplate()));
+         int var8 = Integer.parseInt(this.o00000.getProperty(&quot;header.font.size&quot;, &quot;&quot; + this.Ó00000.getFontSize()));
+         int var9 = Integer.parseInt(this.o00000.getProperty(&quot;header.font.style&quot;, &quot;&quot; + this.Ó00000.getFont().getStyle()));
+         String var10 = this.o00000.getProperty(&quot;header.font.face&quot;, &quot;&quot; + this.Ó00000.getFont().getFontName());
+         this.Ó00000.setFont(new Font(var10, var9, var8));
+         this.Ó00000.setAreaHeight(Integer.parseInt(this.o00000.getProperty(&quot;header.height&quot;, &quot;&quot; + this.Ó00000.getAreaHeight())));
+         this.Ó00000.setInitialPageNumber(Integer.parseInt(this.o00000.getProperty(&quot;header.init.page.num&quot;, &quot;&quot; + this.Ó00000.getInitialPageNumber())));
+         this.Ó00000.setPagesToSkip(Integer.parseInt(this.o00000.getProperty(&quot;header.pages.to.skip&quot;, &quot;&quot; + this.Ó00000.getPagesToSkip())));
+         this.Ó00000.setPageNumberTemplate(this.o00000.getProperty(&quot;header.page.num.template&quot;, this.Ó00000.getPageNumberTemplate()));
+         this.Ó00000.setTitleTemplate(this.o00000.getProperty(&quot;header.title.template&quot;, this.Ó00000.getTitleTemplate()));
+         var5 = this.Ó00000.getPageNumberTemplate();
+         if (&quot;null&quot;.equals(var5) || &quot;&quot;.equals(var5)) {
+            this.Ó00000.setPageNumberTemplate((String)null);
+         }
+
+         var5 = this.Ó00000.getTitleTemplate();
+         if (&quot;null&quot;.equals(var5) || &quot;&quot;.equals(var5)) {
+            this.Ó00000.setTitleTemplate((String)null);
+         }
+
+         var6 = this.o00000.getProperty(&quot;header.color&quot;);
+
+         try {
+            Color var11 = Color.decode(var6);
+            this.Ó00000.setColor(var11);
+         } catch (Exception var21) {
+            ;
+         }
+
+         var26 = this.o00000.getProperty(&quot;header.page.num.align&quot;);
+         if (var26 != null) {
+            var26 = var26.toLowerCase().trim();
+            if (var26.equals(&quot;left&quot;)) {
+               this.Ó00000.setPageNumberAlignment(0);
+            } else if (var26.equals(&quot;center&quot;)) {
+               this.Ó00000.setPageNumberAlignment(1);
+            } else if (var26.equals(&quot;right&quot;)) {
+               this.Ó00000.setPageNumberAlignment(2);
+            }
+         }
+
+         var26 = this.o00000.getProperty(&quot;header.title.align&quot;);
+         if (var26 != null) {
+            var26 = var26.toLowerCase().trim();
+            if (var26.equals(&quot;left&quot;)) {
+               this.Ó00000.setTitleAlignment(0);
+            } else if (var26.equals(&quot;center&quot;)) {
+               this.Ó00000.setTitleAlignment(1);
+            } else if (var26.equals(&quot;right&quot;)) {
+               this.Ó00000.setTitleAlignment(2);
+            }
+         }
+
+         var26 = this.o00000.getProperty(&quot;header.watermark.bounds&quot;);
+         Rectangle var27 = null;
+
+         int var15;
+         int var16;
+         try {
+            StringTokenizer var12 = new StringTokenizer(var26, &quot;,&quot;);
+            int var13 = Integer.parseInt(var12.nextToken());
+            int var14 = Integer.parseInt(var12.nextToken());
+            var15 = Integer.parseInt(var12.nextToken());
+            var16 = Integer.parseInt(var12.nextToken());
+            var27 = new Rectangle(var13, var14, var15, var16);
+         } catch (Exception var20) {
+            ;
+         }
+
+         int var28 = Integer.parseInt(this.o00000.getProperty(&quot;header.watermark.opacity&quot;, &quot;100&quot;));
+         String var29 = this.o00000.getProperty(&quot;header.watermark.url&quot;);
+         if (var29 != null &amp;&amp; var27 != null) {
+            this.Ó00000.setWatermark(var29, var27, var28);
+         }
+
+         var26 = this.o00000.getProperty(&quot;footer.watermark.bounds&quot;);
+         var27 = null;
+
+         try {
+            StringTokenizer var30 = new StringTokenizer(var26, &quot;,&quot;);
+            var15 = Integer.parseInt(var30.nextToken());
+            var16 = Integer.parseInt(var30.nextToken());
+            int var17 = Integer.parseInt(var30.nextToken());
+            int var18 = Integer.parseInt(var30.nextToken());
+            var27 = new Rectangle(var15, var16, var17, var18);
+         } catch (Exception var19) {
+            ;
+         }
+
+         var28 = Integer.parseInt(this.o00000.getProperty(&quot;footer.watermark.opacity&quot;, &quot;100&quot;));
+         var29 = this.o00000.getProperty(&quot;footer.watermark.url&quot;);
+         if (var29 != null &amp;&amp; var27 != null) {
+            this.if.setWatermark(var29, var27, var28);
+         }
+
+      }
+
+      private void super(String var1, File var2, int var3) throws IOException {
+         if (var3 &lt; 0) {
+            var3 = this.Ø00000;
+         }
+
+         if (var1.length() &gt; 0) {
+            if (!var1.startsWith(&quot;http://&quot;) &amp;&amp; !var1.startsWith(&quot;https://&quot;) &amp;&amp; !var1.startsWith(&quot;file:&quot;)) {
+               var1 = &quot;http://&quot; + var1;
+            }
+
+            FileOutputStream var4 = new FileOutputStream(var2);
+            if (this.ôo0000 != null &amp;&amp; this.ôo0000.length() != 0 &amp;&amp; this.new != 0) {
+               if (PD4Device.isVersionOlder14()) {
+                  System.getProperties().setProperty(&quot;proxySet&quot;, &quot;true&quot;);
+                  System.getProperties().setProperty(&quot;proxyHost&quot;, this.ôo0000);
+                  System.getProperties().setProperty(&quot;proxyPort&quot;, &quot;&quot; + this.new);
+               } else {
+                  System.getProperties().setProperty(&quot;http.proxySet&quot;, &quot;true&quot;);
+                  System.getProperties().setProperty(&quot;http.proxyHost&quot;, this.ôo0000);
+                  System.getProperties().setProperty(&quot;http.proxyPort&quot;, &quot;&quot; + this.new);
+               }
+            }
+
+            PD4ML var5 = new PD4ML();
+
+            try {
+               Class var6 = PD4Browser.class$org$zefer$pd4ml$PD4Constants == null ? (PD4Browser.class$org$zefer$pd4ml$PD4Constants = PD4Browser.class$(&quot;org.zefer.pd4ml.PD4Constants&quot;)) : PD4Browser.class$org$zefer$pd4ml$PD4Constants;
+               Field var7 = var6.getField(this.øo0000);
+               Dimension var8 = (Dimension)var7.get(var5);
+               if (this.oO0000) {
+                  var8 = var5.changePageOrientation(var8);
+               }
+
+               var5.setPageSize(var8);
+            } catch (SecurityException var9) {
+               var9.printStackTrace(System.err);
+            } catch (NoSuchFieldException var10) {
+               var10.printStackTrace(System.err);
+            } catch (IllegalArgumentException var11) {
+               var11.printStackTrace(System.err);
+            } catch (IllegalAccessException var12) {
+               var12.printStackTrace(System.err);
+            }
+
+            if (this.nullsuper.equals(&quot;mm&quot;)) {
+               var5.setPageInsetsMM(new Insets(this.õo0000, this.Óo0000, this.ÔO0000, this.Õ00000));
+            } else {
+               var5.setPageInsets(new Insets(this.õo0000, this.Óo0000, this.ÔO0000, this.Õ00000));
+            }
+
+            if (var3 &gt; 0) {
+               var5.setHtmlWidth(var3);
+            } else {
+               var5.setHtmlWidth(var3);
+            }
+
+            if (this.õO0000) {
+               var5.adjustHtmlWidth();
+            }
+
+            var5.enableImgSplit(this.privatesuper);
+            var5.interpolateImages(this.thissuper);
+            var5.enableTableBreaks(this.ôO0000);
+            var5.generatePdfForms(this.ø00000, (String)null);
+            var5.useTTF(this.oÒ0000, true);
+            var5.setDefaultTTFs(this.ÔÒ0000, this.while, this.Stringsuper);
+            var5.setPageHeader(this.Ó00000);
+            var5.setPageFooter(this.if);
+            if (this.Õo0000) {
+               var5.enableDebugInfo();
+            }
+
+            if (this.newnew) {
+               var5.generateOutlines(false);
+            }
+
+            if (this.return) {
+               if (this.newnew) {
+                  System.err.println(&quot;Warning: both page.bookmarks.destinations and page.bookmarks.headings are set to true. Ignoring page.bookmarks.destinations&quot;);
+               }
+
+               var5.generateOutlines(true);
+            }
+
+            if (!this.ÓÒ0000) {
+               var5.disableHyperlinks();
+            }
+
+            if (this.forsuper != null &amp;&amp; this.forsuper.length() &gt; 0) {
+               var5.setDocumentTitle(this.forsuper);
+            }
+
+            if (this.Ôo0000 != null &amp;&amp; this.Ôo0000.length() &gt; 0) {
+               var5.setAuthorName(this.Ôo0000);
+            }
+
+            if (this.Øo0000 != null &amp;&amp; this.Øo0000.trim().length() != 0 || this.OO0000 != 0) {
+               if (this.Øo0000 == null || this.Øo0000.trim().length() == 0) {
+                  this.Øo0000 = &quot;empty&quot;;
+               }
+
+               var5.setPermissions(this.Øo0000, this.OO0000, this.oo0000);
+            }
+
+            var5.render(var1, var4);
+         }
+
+      }
+   }
+
+   public class PD4Panel extends JPanel {
+      String o00000 = null;
+      ImageIcon Object = null;
+      Image Ò00000 = null;
+
+      public PD4Panel(String var2) {
+         this.setOpaque(false);
+         this.o00000 = &quot;&quot; + var2;
+         URL var3 = this.getClass().getResource(this.o00000);
+         this.Object = new ImageIcon(var3);
+         this.Ò00000 = this.Object.getImage();
+      }
+
+      public void paintComponent(Graphics var1) {
+         var1.drawImage(this.Ò00000, 0, 0, this);
+         super.paintComponent(var1);
+      }
+   }
+
+   public class PD4BrowserOptions extends JDialog {
+      protected JTextField public = null;
+      protected JComboBox ö00000 = null;
+      protected JCheckBox Òo0000 = null;
+      protected JTextField ÕO0000 = null;
+      protected JTextField Object = null;
+      protected JTextField intsuper = null;
+      protected JTextField õ00000 = null;
+      protected JComboBox supersuper = null;
+      protected JCheckBox Ô00000 = null;
+      protected JCheckBox ÖO0000 = null;
+      protected JTextField Ôo0000 = null;
+      protected JTextField ÔO0000 = null;
+      protected JTextField OO0000 = null;
+      protected JTextField öO0000 = null;
+      protected JTextField Õ00000 = null;
+      protected JTextField Öo0000 = null;
+      protected JTextField float = null;
+      protected JTextField oo0000 = null;
+      protected JComboBox dosuper = null;
+      protected JTextField ÒO0000 = null;
+      protected JComboBox ôO0000 = null;
+      protected JTextField o00000 = null;
+      protected JTextField Ò00000 = null;
+      protected JTextField Õo0000 = null;
+      protected JTextField oO0000 = null;
+      protected JTextField Oo0000 = null;
+      protected JTextField ô00000 = null;
+      protected JComboBox classsuper = null;
+      protected JTextField õO0000 = null;
+      protected JComboBox void = null;
+      protected JTextField Ö00000 = null;
+
+      public PD4BrowserOptions() {
+         super(PD4Browser.this, &quot;Options&quot;, true);
+         this.initGUI();
+      }
+
+      public void initGUI() {
+         try {
+            JTabbedPane var1 = new JTabbedPane();
+            PD4Browser.PD4Panel var2 = PD4Browser.this.new PD4Panel(&quot;/resources/dialogs/options1.gif&quot;);
+            var2.setLayout((LayoutManager)null);
+            this.ö00000 = new JComboBox();
+            this.ö00000.setBounds(29, 32, 120, 21);
+            this.ö00000.addItem(&quot;A10&quot;);
+            this.ö00000.addItem(&quot;A9&quot;);
+            this.ö00000.addItem(&quot;A8&quot;);
+            this.ö00000.addItem(&quot;A7&quot;);
+            this.ö00000.addItem(&quot;A6&quot;);
+            this.ö00000.addItem(&quot;A5&quot;);
+            this.ö00000.addItem(&quot;A4&quot;);
+            this.ö00000.addItem(&quot;A3&quot;);
+            this.ö00000.addItem(&quot;A2&quot;);
+            this.ö00000.addItem(&quot;A1&quot;);
+            this.ö00000.addItem(&quot;A0&quot;);
+            this.ö00000.addItem(&quot;ISOB5&quot;);
+            this.ö00000.addItem(&quot;ISOB4&quot;);
+            this.ö00000.addItem(&quot;ISOB3&quot;);
+            this.ö00000.addItem(&quot;ISOB2&quot;);
+            this.ö00000.addItem(&quot;ISOB1&quot;);
+            this.ö00000.addItem(&quot;ISOB0&quot;);
+            this.ö00000.addItem(&quot;HALFLETTER&quot;);
+            this.ö00000.addItem(&quot;LETTER&quot;);
+            this.ö00000.addItem(&quot;TABLOID&quot;);
+            this.ö00000.addItem(&quot;LEDGER&quot;);
+            this.ö00000.addItem(&quot;NOTE&quot;);
+            this.ö00000.addItem(&quot;LEGAL&quot;);
+            this.ö00000.setSelectedItem(&quot;A4&quot;);
+            var2.add(this.ö00000);
+            this.Òo0000 = new JCheckBox(&quot;&quot;);
+            this.Òo0000.setOpaque(false);
+            this.Òo0000.setBounds(23, 93, 150, 20);
+            var2.add(this.Òo0000);
+            this.ÕO0000 = new JTextField();
+            this.ÕO0000.setBounds(282, 32, 30, 20);
+            var2.add(this.ÕO0000);
+            this.Object = new JTextField();
+            this.Object.setBounds(282, 57, 30, 20);
+            var2.add(this.Object);
+            this.intsuper = new JTextField();
+            this.intsuper.setBounds(282, 81, 30, 20);
+            var2.add(this.intsuper);
+            this.õ00000 = new JTextField();
+            this.õ00000.setBounds(282, 105, 30, 20);
+            var2.add(this.õ00000);
+            this.supersuper = new JComboBox();
+            this.supersuper.setBounds(212, 137, 99, 21);
+            this.supersuper.addItem(&quot;mm&quot;);
+            this.supersuper.addItem(&quot;points&quot;);
+            this.supersuper.setSelectedIndex(0);
+            var2.add(this.supersuper);
+            PD4Browser.PD4Panel var3 = PD4Browser.this.new PD4Panel(&quot;/resources/dialogs/options2.gif&quot;);
+            var3.setLayout((LayoutManager)null);
+            this.Ô00000 = new JCheckBox(&quot;&quot;);
+            this.Ô00000.setOpaque(false);
+            this.Ô00000.setBounds(21, 26, 150, 20);
+            var3.add(this.Ô00000);
+            this.ÖO0000 = new JCheckBox(&quot;&quot;);
+            this.ÖO0000.setOpaque(false);
+            this.ÖO0000.setBounds(21, 46, 150, 20);
+            var3.add(this.ÖO0000);
+            PD4Browser.PD4Panel var4 = PD4Browser.this.new PD4Panel(&quot;/resources/dialogs/options3.gif&quot;);
+            var4.setLayout((LayoutManager)null);
+            this.public = new JTextField();
+            this.public.setBounds(93, 30, 150, 20);
+            var4.add(this.public);
+            this.Ôo0000 = new JTextField();
+            this.Ôo0000.setBounds(93, 55, 150, 20);
+            var4.add(this.Ôo0000);
+            JButton var5 = new JButton(&quot;Browse...&quot;);
+            var5.addActionListener(new ActionListener() {
+               public void actionPerformed(ActionEvent var1) {
+                  PD4Browser.this.Ó00000();
+                  PD4BrowserOptions.this.public.setText(PD4Browser.this.oO0000.OÒ0000);
+               }
+            });
+            var5.setBounds(252, 28, 80, 22);
+            var4.add(var5);
+            PD4Browser.PD4Panel var6 = PD4Browser.this.new PD4Panel(&quot;/resources/dialogs/options4.gif&quot;);
+            var6.setLayout((LayoutManager)null);
+            this.ÔO0000 = new JTextField();
+            this.ÔO0000.setBounds(93, 30, 95, 20);
+            var6.add(this.ÔO0000);
+            this.OO0000 = new JTextField();
+            this.OO0000.setBounds(93, 55, 45, 20);
+            var6.add(this.OO0000);
+            PD4Browser.PD4Panel var7 = PD4Browser.this.new PD4Panel(&quot;/resources/dialogs/options5.gif&quot;);
+            var7.setLayout((LayoutManager)null);
+            this.öO0000 = new JTextField();
+            this.öO0000.setBounds(153, 30, 30, 20);
+            var7.add(this.öO0000);
+            this.Õ00000 = new JTextField();
+            this.Õ00000.setBounds(153, 55, 30, 20);
+            var7.add(this.Õ00000);
+            this.Öo0000 = new JTextField();
+            this.Öo0000.setBounds(292, 30, 30, 20);
+            var7.add(this.Öo0000);
+            this.float = new JTextField();
+            this.float.setBounds(292, 55, 75, 20);
+            var7.add(this.float);
+            this.oo0000 = new JTextField();
+            this.oo0000.setBounds(153, 115, 215, 20);
+            var7.add(this.oo0000);
+            this.dosuper = new JComboBox();
+            this.dosuper.setBounds(153, 140, 55, 21);
+            this.dosuper.addItem(&quot;left&quot;);
+            this.dosuper.addItem(&quot;center&quot;);
+            this.dosuper.addItem(&quot;right&quot;);
+            this.dosuper.setSelectedIndex(0);
+            var7.add(this.dosuper);
+            this.ÒO0000 = new JTextField();
+            this.ÒO0000.setBounds(153, 200, 215, 20);
+            var7.add(this.ÒO0000);
+            this.ôO0000 = new JComboBox();
+            this.ôO0000.setBounds(153, 225, 55, 21);
+            this.ôO0000.addItem(&quot;left&quot;);
+            this.ôO0000.addItem(&quot;center&quot;);
+            this.ôO0000.addItem(&quot;right&quot;);
+            this.ôO0000.setSelectedIndex(0);
+            var7.add(this.ôO0000);
+            this.o00000 = new JTextField();
+            this.o00000.setBounds(338, 225, 30, 20);
+            var7.add(this.o00000);
+            PD4Browser.PD4Panel var8 = PD4Browser.this.new PD4Panel(&quot;/resources/dialogs/options5.gif&quot;);
+            var8.setLayout((LayoutManager)null);
+            this.Ò00000 = new JTextField();
+            this.Ò00000.setBounds(153, 30, 30, 20);
+            var8.add(this.Ò00000);
+            this.Õo0000 = new JTextField();
+            this.Õo0000.setBounds(153, 55, 30, 20);
+            var8.add(this.Õo0000);
+            this.oO0000 = new JTextField();
+            this.oO0000.setBounds(292, 30, 30, 20);
+            var8.add(this.oO0000);
+            this.Oo0000 = new JTextField();
+            this.Oo0000.setBounds(292, 55, 75, 20);
+            var8.add(this.Oo0000);
+            this.ô00000 = new JTextField();
+            this.ô00000.setBounds(153, 115, 215, 20);
+            var8.add(this.ô00000);
+            this.classsuper = new JComboBox();
+            this.classsuper.setBounds(153, 140, 55, 21);
+            this.classsuper.addItem(&quot;left&quot;);
+            this.classsuper.addItem(&quot;center&quot;);
+            this.classsuper.addItem(&quot;right&quot;);
+            this.classsuper.setSelectedIndex(0);
+            var8.add(this.classsuper);
+            this.õO0000 = new JTextField();
+            this.õO0000.setBounds(153, 200, 215, 20);
+            var8.add(this.õO0000);
+            this.void = new JComboBox();
+            this.void.setBounds(153, 225, 55, 21);
+            this.void.addItem(&quot;left&quot;);
+            this.void.addItem(&quot;center&quot;);
+            this.void.addItem(&quot;right&quot;);
+            this.void.setSelectedIndex(0);
+            var8.add(this.void);
+            this.Ö00000 = new JTextField();
+            this.Ö00000.setBounds(338, 225, 30, 20);
+            var8.add(this.Ö00000);
+            var1.addTab(&quot;Page Format&quot;, var2);
+            var1.addTab(&quot;Rendering&quot;, var3);
+            var1.addTab(&quot;PDF Viewer&quot;, var4);
+            var1.addTab(&quot;Connection&quot;, var6);
+            var1.addTab(&quot;Header&quot;, var7);
+            var1.addTab(&quot;Footer&quot;, var8);
+            BorderLayout var9 = new BorderLayout();
+            this.getContentPane().setLayout(var9);
+            var9.setHgap(0);
+            var9.setVgap(0);
+            this.setSize(new Dimension(500, 400));
+            JPanel var10 = new JPanel();
+            FlowLayout var11 = new FlowLayout();
+            var11.setAlignment(2);
+            var10.setLayout(var11);
+            JButton var12 = new JButton(&quot;Apply&quot;);
+            var12.addActionListener(new ActionListener() {
+               public void actionPerformed(ActionEvent var1) {
+                  PD4BrowserOptions.this.o00000();
+               }
+            });
+            var10.add(var12);
+            JButton var13 = new JButton(&quot; OK &quot;);
+            var13.addActionListener(new ActionListener() {
+               public void actionPerformed(ActionEvent var1) {
+                  PD4BrowserOptions.this.o00000();
+                  PD4BrowserOptions.this.hide();
+               }
+            });
+            var10.add(var13);
+            JButton var14 = new JButton(&quot;Cancel&quot;);
+            var14.addActionListener(new ActionListener() {
+               public void actionPerformed(ActionEvent var1) {
+                  PD4BrowserOptions.this.hide();
+               }
+            });
+            var10.add(var14);
+            this.getContentPane().add(var1);
+            this.getContentPane().add(&quot;South&quot;, var10);
+            this.Ò00000();
+         } catch (Exception var15) {
+            var15.printStackTrace(System.err);
+         }
+
+      }
+
+      public void showGUI() {
+         try {
+            PD4Browser.PD4BrowserOptions var1 = PD4Browser.this.new PD4BrowserOptions();
+            var1.setVisible(true);
+         } catch (Exception var2) {
+            var2.printStackTrace(System.err);
+         }
+
+      }
+
+      protected void o00000() {
+         if (this.ö00000.getSelectedItem() != null) {
+            PD4Browser.this.oO0000.øo0000 = this.ö00000.getSelectedItem().toString();
+         }
+
+         PD4Browser.this.oO0000.oO0000 = this.Òo0000.isSelected();
+
+         try {
+            PD4Browser.this.oO0000.õo0000 = Integer.parseInt(this.ÕO0000.getText());
+            if (PD4Browser.this.oO0000.õo0000 &lt; 0) {
+               PD4Browser.this.oO0000.õo0000 = -PD4Browser.this.oO0000.õo0000;
+            }
+         } catch (NumberFormatException var19) {
+            PD4Browser.this.oO0000.õo0000 = 10;
+            this.ÕO0000.setText(&quot;10&quot;);
+         }
+
+         try {
+            PD4Browser.this.oO0000.Óo0000 = Integer.parseInt(this.Object.getText());
+            if (PD4Browser.this.oO0000.Óo0000 &lt; 0) {
+               PD4Browser.this.oO0000.Óo0000 = -PD4Browser.this.oO0000.Óo0000;
+            }
+         } catch (NumberFormatException var18) {
+            PD4Browser.this.oO0000.Óo0000 = 10;
+            this.Object.setText(&quot;10&quot;);
+         }
+
+         try {
+            PD4Browser.this.oO0000.Õ00000 = Integer.parseInt(this.intsuper.getText());
+            if (PD4Browser.this.oO0000.Õ00000 &lt; 0) {
+               PD4Browser.this.oO0000.Õ00000 = -PD4Browser.this.oO0000.Õ00000;
+            }
+         } catch (NumberFormatException var17) {
+            PD4Browser.this.oO0000.Õ00000 = 10;
+            this.intsuper.setText(&quot;10&quot;);
+         }
+
+         try {
+            PD4Browser.this.oO0000.ÔO0000 = Integer.parseInt(this.õ00000.getText());
+            if (PD4Browser.this.oO0000.ÔO0000 &lt; 0) {
+               PD4Browser.this.oO0000.ÔO0000 = -PD4Browser.this.oO0000.ÔO0000;
+            }
+         } catch (NumberFormatException var16) {
+            PD4Browser.this.oO0000.ÔO0000 = 10;
+            this.õ00000.setText(&quot;10&quot;);
+         }
+
+         if (this.supersuper.getSelectedItem() != null) {
+            PD4Browser.this.oO0000.nullsuper = this.supersuper.getSelectedItem().toString();
+         }
+
+         if (PD4Browser.this.oO0000.Ô00000 != this.Ô00000.isSelected()) {
+            PD4Browser.this.õ00000 = true;
+            PD4Browser.this.oO0000.Ô00000 = this.Ô00000.isSelected();
+         }
+
+         PD4Browser.this.oO0000.privatesuper = this.ÖO0000.isSelected();
+         PD4Browser.this.oO0000.OÒ0000 = this.public.getText();
+         PD4Browser.this.oO0000.ÓO0000 = this.Ôo0000.getText();
+         if (!this.ÔO0000.getText().equals(PD4Browser.this.oO0000.ôo0000)) {
+            PD4Browser.this.õ00000 = true;
+            PD4Browser.this.oO0000.ôo0000 = this.ÔO0000.getText();
+         }
+
+         int var1 = PD4Browser.this.oO0000.new;
+
+         try {
+            PD4Browser.this.oO0000.new = Integer.parseInt(this.OO0000.getText());
+            if (PD4Browser.this.oO0000.new &lt; 0) {
+               PD4Browser.this.oO0000.new = -PD4Browser.this.oO0000.new;
+            }
+         } catch (NumberFormatException var15) {
+            PD4Browser.this.oO0000.new = 0;
+            this.OO0000.setText(&quot;0&quot;);
+         }
+
+         if (var1 != PD4Browser.this.oO0000.new) {
+            PD4Browser.this.õ00000 = true;
+         }
+
+         boolean var2 = false;
+
+         int var20;
+         try {
+            var20 = Integer.parseInt(this.öO0000.getText());
+            if (var20 &gt;= 0) {
+               PD4Browser.this.oO0000.Ó00000.setAreaHeight(var20);
+            }
+         } catch (NumberFormatException var14) {
+            ;
+         }
+
+         try {
+            var20 = Integer.parseInt(this.Õ00000.getText());
+            if (var20 &gt;= 0) {
+               PD4Browser.this.oO0000.Ó00000.setPagesToSkip(var20);
+            }
+         } catch (NumberFormatException var13) {
+            ;
+         }
+
+         try {
+            var20 = Integer.parseInt(this.Öo0000.getText());
+            if (var20 &gt; 0) {
+               PD4Browser.this.oO0000.Ó00000.setFontSize(var20);
+            }
+         } catch (NumberFormatException var12) {
+            ;
+         }
+
+         try {
+            Color var3 = Color.decode(this.float.getText());
+            PD4Browser.this.oO0000.Ó00000.setColor(var3);
+         } catch (Exception var11) {
+            ;
+         }
+
+         String var21 = this.oo0000.getText();
+         if (var21.length() == 0) {
+            var21 = null;
+         } else {
+            var21 = PD4Browser.o00000(var21, &quot;\\n&quot;, &quot;\n&quot;);
+         }
+
+         PD4Browser.this.oO0000.Ó00000.setTitleTemplate(var21);
+         if (this.dosuper.getSelectedItem() != null) {
+            PD4Browser.this.oO0000.Ó00000.setTitleAlignment(this.dosuper.getSelectedIndex());
+         }
+
+         var21 = this.ÒO0000.getText();
+         if (var21.length() == 0) {
+            var21 = null;
+         } else {
+            var21 = PD4Browser.o00000(var21, &quot;\\n&quot;, &quot;\n&quot;);
+         }
+
+         PD4Browser.this.oO0000.Ó00000.setPageNumberTemplate(var21);
+         if (this.ôO0000.getSelectedItem() != null) {
+            PD4Browser.this.oO0000.Ó00000.setPageNumberAlignment(this.ôO0000.getSelectedIndex());
+         }
+
+         try {
+            var20 = Integer.parseInt(this.o00000.getText());
+            if (var20 &gt;= 0) {
+               PD4Browser.this.oO0000.Ó00000.setInitialPageNumber(var20);
+            }
+         } catch (NumberFormatException var10) {
+            ;
+         }
+
+         try {
+            var20 = Integer.parseInt(this.Ò00000.getText());
+            if (var20 &gt;= 0) {
+               PD4Browser.this.oO0000.if.setAreaHeight(var20);
+            }
+         } catch (NumberFormatException var9) {
+            ;
+         }
+
+         try {
+            var20 = Integer.parseInt(this.Õo0000.getText());
+            if (var20 &gt;= 0) {
+               PD4Browser.this.oO0000.if.setPagesToSkip(var20);
+            }
+         } catch (NumberFormatException var8) {
+            ;
+         }
+
+         try {
+            var20 = Integer.parseInt(this.oO0000.getText());
+            if (var20 &gt; 0) {
+               PD4Browser.this.oO0000.if.setFontSize(var20);
+            }
+         } catch (NumberFormatException var7) {
+            ;
+         }
+
+         try {
+            Color var4 = Color.decode(this.Oo0000.getText());
+            PD4Browser.this.oO0000.if.setColor(var4);
+         } catch (Exception var6) {
+            ;
+         }
+
+         var21 = this.ô00000.getText();
+         if (var21.length() == 0) {
+            var21 = null;
+         } else {
+            var21 = PD4Browser.o00000(var21, &quot;\\n&quot;, &quot;\n&quot;);
+         }
+
+         PD4Browser.this.oO0000.if.setTitleTemplate(var21);
+         if (this.classsuper.getSelectedItem() != null) {
+            PD4Browser.this.oO0000.if.setTitleAlignment(this.classsuper.getSelectedIndex());
+         }
+
+         var21 = this.õO0000.getText();
+         if (var21.length() == 0) {
+            var21 = null;
+         } else {
+            var21 = PD4Browser.o00000(var21, &quot;\\n&quot;, &quot;\n&quot;);
+         }
+
+         PD4Browser.this.oO0000.if.setPageNumberTemplate(var21);
+         if (this.void.getSelectedItem() != null) {
+            PD4Browser.this.oO0000.if.setPageNumberAlignment(this.void.getSelectedIndex());
+         }
+
+         try {
+            var20 = Integer.parseInt(this.Ö00000.getText());
+            if (var20 &gt;= 0) {
+               PD4Browser.this.oO0000.if.setInitialPageNumber(var20);
+            }
+         } catch (NumberFormatException var5) {
+            ;
+         }
+
+      }
+
+      protected void Ò00000() {
+         this.ö00000.setSelectedItem(PD4Browser.this.oO0000.øo0000);
+         this.Òo0000.setSelected(PD4Browser.this.oO0000.oO0000);
+         this.ÕO0000.setText(&quot;&quot; + PD4Browser.this.oO0000.õo0000);
+         this.Object.setText(&quot;&quot; + PD4Browser.this.oO0000.Óo0000);
+         this.intsuper.setText(&quot;&quot; + PD4Browser.this.oO0000.Õ00000);
+         this.õ00000.setText(&quot;&quot; + PD4Browser.this.oO0000.ÔO0000);
+         this.supersuper.setSelectedItem(PD4Browser.this.oO0000.nullsuper);
+         this.Ô00000.setSelected(PD4Browser.this.oO0000.Ô00000);
+         this.ÖO0000.setSelected(PD4Browser.this.oO0000.privatesuper);
+         this.public.setText(PD4Browser.this.oO0000.OÒ0000);
+         this.Ôo0000.setText(PD4Browser.this.oO0000.ÓO0000);
+         this.ÔO0000.setText(PD4Browser.this.oO0000.ôo0000);
+         this.OO0000.setText(&quot;&quot; + PD4Browser.this.oO0000.new);
+         this.öO0000.setText(&quot;&quot; + PD4Browser.this.oO0000.Ó00000.getAreaHeight());
+         this.Õ00000.setText(&quot;&quot; + PD4Browser.this.oO0000.Ó00000.getPagesToSkip());
+         this.Öo0000.setText(&quot;&quot; + PD4Browser.this.oO0000.Ó00000.getFontSize());
+         this.float.setText(PD4Browser.o00000(PD4Browser.this.oO0000.Ó00000.getColor()));
+         this.oo0000.setText(PD4Browser.o00000(PD4Browser.this.oO0000.Ó00000.getTitleTemplate(), &quot;\n&quot;, &quot;\\n&quot;));
+         String var1 = &quot;&quot;;
+         switch(PD4Browser.this.oO0000.Ó00000.getTitleAlignment()) {
+         case 0:
+            var1 = &quot;left&quot;;
+            break;
+         case 1:
+            var1 = &quot;center&quot;;
+            break;
+         case 2:
+            var1 = &quot;right&quot;;
+         }
+
+         this.dosuper.setSelectedItem(var1);
+         this.ÒO0000.setText(PD4Browser.o00000(PD4Browser.this.oO0000.Ó00000.getPageNumberTemplate(), &quot;\n&quot;, &quot;\\n&quot;));
+         var1 = &quot;&quot;;
+         switch(PD4Browser.this.oO0000.Ó00000.getPageNumberAlignment()) {
+         case 0:
+            var1 = &quot;left&quot;;
+            break;
+         case 1:
+            var1 = &quot;center&quot;;
+            break;
+         case 2:
+            var1 = &quot;right&quot;;
+         }
+
+         this.ôO0000.setSelectedItem(var1);
+         this.o00000.setText(&quot;&quot; + PD4Browser.this.oO0000.Ó00000.getInitialPageNumber());
+         this.Ò00000.setText(&quot;&quot; + PD4Browser.this.oO0000.if.getAreaHeight());
+         this.Õo0000.setText(&quot;&quot; + PD4Browser.this.oO0000.if.getPagesToSkip());
+         this.oO0000.setText(&quot;&quot; + PD4Browser.this.oO0000.if.getFontSize());
+         this.Oo0000.setText(PD4Browser.o00000(PD4Browser.this.oO0000.if.getColor()));
+         this.ô00000.setText(PD4Browser.o00000(PD4Browser.this.oO0000.if.getTitleTemplate(), &quot;\n&quot;, &quot;\\n&quot;));
+         var1 = &quot;&quot;;
+         switch(PD4Browser.this.oO0000.if.getTitleAlignment()) {
+         case 0:
+            var1 = &quot;left&quot;;
+            break;
+         case 1:
+            var1 = &quot;center&quot;;
+            break;
+         case 2:
+            var1 = &quot;right&quot;;
+         }
+
+         this.classsuper.setSelectedItem(var1);
+         this.õO0000.setText(PD4Browser.o00000(PD4Browser.this.oO0000.if.getPageNumberTemplate(), &quot;\n&quot;, &quot;\\n&quot;));
+         var1 = &quot;&quot;;
+         switch(PD4Browser.this.oO0000.if.getPageNumberAlignment()) {
+         case 0:
+            var1 = &quot;left&quot;;
+            break;
+         case 1:
+            var1 = &quot;center&quot;;
+            break;
+         case 2:
+            var1 = &quot;right&quot;;
+         }
+
+         this.void.setSelectedItem(var1);
+         this.Ö00000.setText(&quot;&quot; + PD4Browser.this.oO0000.if.getInitialPageNumber());
+      }
+   }
+
+   public class PD4BrowserAbout extends JDialog {
+      public PD4BrowserAbout() {
+         super(PD4Browser.this, &quot;About PD4ML Converter&quot;, true);
+         this.initGUI();
+      }
+
+      public void initGUI() {
+         try {
+            PD4Browser.PD4Panel var1 = PD4Browser.this.new PD4Panel(&quot;/resources/dialogs/about.gif&quot;);
+            var1.setLayout((LayoutManager)null);
+            var1.addMouseListener(new MouseListener() {
+               public void mouseClicked(MouseEvent var1) {
+                  PD4Browser.this.o00000(&quot;http://pd4ml.com/&quot;, true);
+                  PD4BrowserAbout.this.hide();
+               }
+
+               public void mouseEntered(MouseEvent var1) {
+               }
+
+               public void mouseExited(MouseEvent var1) {
+               }
+
+               public void mousePressed(MouseEvent var1) {
+               }
+
+               public void mouseReleased(MouseEvent var1) {
+               }
+            });
+            BorderLayout var2 = new BorderLayout();
+            this.getContentPane().setLayout(var2);
+            var2.setHgap(0);
+            var2.setVgap(0);
+            this.setSize(new Dimension(400, 300));
+            JPanel var3 = new JPanel();
+            FlowLayout var4 = new FlowLayout();
+            var4.setAlignment(2);
+            var3.setLayout(var4);
+            JButton var5 = new JButton(&quot; OK &quot;);
+            var5.addActionListener(new ActionListener() {
+               public void actionPerformed(ActionEvent var1) {
+                  PD4BrowserAbout.this.hide();
+               }
+            });
+            var3.add(var5);
+            String var6 = &quot;test&quot;;
+            PD4PageMark var7 = new PD4PageMark();
+            boolean var8 = true;
+
+            try {
+               var7.setHtmlTemplate(var6);
+               var8 = var6.equals(var7.getHtmlTemplate());
+            } catch (Throwable var14) {
+               var8 = false;
+            }
+
+            String var9 = PD4ML.getVersion() + (var8 ? &quot; Pro&quot; : &quot;&quot;) + (PD4ML.isDemoMode() ? &quot; (eval)&quot; : &quot;&quot;);
+            Font var10 = new Font(&quot;Tahoma&quot;, 1, 15);
+            JLabel var11 = new JLabel(&quot;version: &quot; + var9);
+            var11.setFont(var10);
+            var11.setBounds(180, 30, 200, 20);
+            var1.add(var11);
+            var10 = new Font(&quot;Tahoma&quot;, 0, 12);
+            JLabel var12 = new JLabel(&quot;web: http://pd4ml.com&quot;);
+            var12.setFont(var10);
+            var12.setBounds(180, 100, 200, 20);
+            var1.add(var12);
+            var12 = new JLabel(&quot;tech support: support@pd4ml.com&quot;);
+            var12.setFont(var10);
+            var12.setBounds(180, 120, 200, 20);
+            var1.add(var12);
+            var12 = new JLabel(&quot;sales: sales@pd4ml.com&quot;);
+            var12.setFont(var10);
+            var12.setBounds(180, 140, 200, 20);
+            var1.add(var12);
+            int var13 = Math.max(4, (new Date()).getYear() - 100);
+            var12 = new JLabel(&quot;Copyright ©2004-&quot; + (var13 &lt; 10 ? &quot;0&quot; : &quot;&quot;) + var13 + &quot; zefer|org&quot;);
+            var12.setFont(var10);
+            var12.setBounds(180, 180, 200, 20);
+            var1.add(var12);
+            this.getContentPane().add(var1);
+            this.getContentPane().add(&quot;South&quot;, var3);
+         } catch (Exception var15) {
+            var15.printStackTrace(System.err);
+         }
+
+      }
+   }
+
+   public class HtmlFilter extends FileFilter {
+      public boolean accept(File var1) {
+         if (var1.isDirectory()) {
+            return true;
+         } else {
+            String var2 = this.o00000(var1);
+            if (var2 != null) {
+               return var2.equals(&quot;html&quot;) || var2.equals(&quot;htm&quot;);
+            } else {
+               return false;
+            }
+         }
+      }
+
+      private String o00000(File var1) {
+         String var2 = null;
+         String var3 = var1.getName();
+         int var4 = var3.lastIndexOf(46);
+         if (var4 &gt; 0 &amp;&amp; var4 &lt; var3.length() - 1) {
+            var2 = var3.substring(var4 + 1).toLowerCase();
+         }
+
+         return var2;
+      }
+
+      public String getDescription() {
+         return &quot;Just HTMLs&quot;;
+      }
+   }
+
+   public interface IndeterminateOperation {
+      void run() throws InterruptedException;
+   }
+
+   private class _c {
+      private Thread super;
+
+      public _c(final PD4Browser.IndeterminateOperation var2) {
+         this.super = new Thread(new Runnable() {
+            public void run() {
+               try {
+                  PD4Browser.this.ô00000.setViewportView(PD4Browser.this.OO0000);
+                  var2.run();
+                  _c.this.o00000(true);
+               } catch (InterruptedException var2x) {
+                  _c.this.o00000(false);
+               } catch (Throwable var3) {
+                  _c.this.o00000(false);
+                  var3.printStackTrace();
+               }
+
+            }
+         }, &quot;IndeterminateOperation&quot;);
+         this.super.start();
+      }
+
+      private synchronized void o00000(boolean var1) {
+         this.super = null;
+         PD4Browser.this.ô00000.setViewportView(PD4Browser.this.void);
+      }
+   }
+
+   public static class Rule extends JComponent {
+      private static final Font super = new Font(&quot;SansSerif&quot;, 0, 10);
+
+      public Rule() {
+         this.setPreferredSize(new Dimension(15, 15));
+      }
+
+      protected void paintComponent(Graphics var1) {
+         Rectangle var2 = var1.getClipBounds();
+         var1.setColor(Color.white);
+         var1.fillRect(var2.x, var2.y, var2.width, var2.height);
+         var1.setFont(super);
+         var1.setColor(Color.GRAY);
+         var1.drawLine(0, var2.height - 1, var2.width - 1, var2.height - 1);
+         int var3 = var2.x / 10 * 10;
+         int var4 = ((var2.x + var2.width) / 10 + 1) * 10;
+
+         for(int var5 = var3; var5 &lt; var4; var5 += 10) {
+            byte var6;
+            if (var5 % 50 == 0) {
+               var6 = 15;
+               String var7 = Integer.toString(var5);
+               var1.drawString(var7, var5 + 3, 10);
+            } else {
+               var6 = 3;
+            }
+
+            if (var5 != var3) {
+               var1.drawLine(var5, 14, var5, 15 - var6 - 1);
+            }
+         }
+
+      }
+   }
+
+   public static class ShadowBorder extends AbstractBorder {
+      private static final Insets o00000 = new Insets(1, 1, 3, 3);
+
+      public Insets getBorderInsets(Component var1) {
+         return o00000;
+      }
+
+      public void paintBorder(Component var1, Graphics var2, int var3, int var4, int var5, int var6) {
+         Color var7 = UIManager.getColor(&quot;controlShadow&quot;);
+         if (var7 == null) {
+            var7 = Color.GRAY;
+         }
+
+         Color var8 = new Color(var7.getRed(), var7.getGreen(), var7.getBlue(), 170);
+         Color var9 = new Color(var7.getRed(), var7.getGreen(), var7.getBlue(), 70);
+         var2.translate(var3, var4);
+         var2.setColor(var7);
+         var2.fillRect(0, 0, var5 - 3, 1);
+         var2.fillRect(0, 0, 1, var6 - 3);
+         var2.fillRect(var5 - 3, 1, 1, var6 - 3);
+         var2.fillRect(1, var6 - 3, var5 - 3, 1);
+         var2.setColor(var8);
+         var2.fillRect(var5 - 3, 0, 1, 1);
+         var2.fillRect(0, var6 - 3, 1, 1);
+         var2.fillRect(var5 - 2, 1, 1, var6 - 3);
+         var2.fillRect(1, var6 - 2, var5 - 3, 1);
+         var2.setColor(var9);
+         var2.fillRect(var5 - 2, 0, 1, 1);
+         var2.fillRect(0, var6 - 2, 1, 1);
+         var2.fillRect(var5 - 2, var6 - 2, 1, 1);
+         var2.fillRect(var5 - 1, 1, 1, var6 - 2);
+         var2.fillRect(1, var6 - 1, var5 - 2, 1);
+         var2.translate(-var3, -var4);
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: 18/09/2019, 6:16:55 p.m.</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "772" });
+
+            $("<div id='772-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(772)');
+
+
+$("<a name='99835912' class='windup-file-location'></a><div class='inline-source-comment green tag-classloader'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>Dynamic class instantiation</strong><a title='View Rule: environment-dependent-calls-01000' href='windup_ruleproviders.html#environment-dependent-calls-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The class is dynamically loaded within application. During the migration, multiple classes that are provided on classpath by a different server may not be present anymore.<\/p><p>Please review the class-loading mechanisms and ensure that the dynamically loaded class is available in JBoss EAP.<\/p><ul><li><a href='https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.4/html-single/Development_Guide/index.html#chap-Class_Loading_and_Modules' target='_blank'>Class Loading and Modules in JBoss EAP 6</a></li><li><a href='https://access.redhat.com/solutions/361343' target='_blank'>Article about Classloading in JBoss EAP 6</a></li><li><a href='https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.0/html-single/development_guide/#class_loading_and_modules' target='_blank'>Class Loading and Modules in JBoss EAP 7</a></li></ul></div></div></div>").appendTo('#772-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            $(window).load(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 21667888;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

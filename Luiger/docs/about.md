@@ -20,7 +20,9 @@ Presentándole a la base instalada de clientes de plataformas P y Z de IBM de Co
 
 _enlace a la presentación_
 [link](./Techu2019/micro.pdf)
+
 _enlance al libro migración de bases de datos_ 
 [Link](./Techu2019/database.pdf)
+
 _enlace a programación reactiva_
 [Link](./Techu2019/reactive.pdf)

@@ -28,7 +28,7 @@ _enlace a programación reactiva_
 [Link](./Techu2019/reactive.pdf)
 
 
-### Entrevista en Impacto TI: Las ventajas de las nubes híbridas en los ambientes empresariales ###
+### **Entrevista en Impacto TI: Las ventajas de las nubes híbridas en los ambientes empresariales** ###
 
 El equipo de Impacto TI me entrevisto este 21 de Noviembre del 2019 para hablar sobre nubes hibridas.
 

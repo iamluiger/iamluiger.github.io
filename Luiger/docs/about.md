@@ -26,3 +26,10 @@ _enlance al libro migración de bases de datos_
 
 _enlace a programación reactiva_
 [Link](./Techu2019/reactive.pdf)
+
+
+### Entrevista en Impacto TI: Las ventajas de las nubes híbridas en los ambientes empresariales ###
+
+El equipo de Impacto TI me entrevisto este 21 de Noviembre del 2019 para hablar sobre nubes hibridas.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IyKU9k09F5E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

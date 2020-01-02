@@ -21,6 +21,18 @@ Pero como todo en la vida no es trabajo (la verdad yo no veo esto como trabajo :
 
 
 
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-11347245-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-11347245-2');
+</script>
+
+
 <div id="disqus_thread"></div>
 <script>
 

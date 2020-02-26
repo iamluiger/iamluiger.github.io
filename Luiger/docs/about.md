@@ -33,3 +33,9 @@ _enlace a programación reactiva_
 El equipo de Impacto TI me entrevisto este 21 de Noviembre del 2019 para hablar sobre nubes hibridas.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IyKU9k09F5E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### **Entrevista en Diario La Republica de Colombia 2020**
+
+Muy buena entrevista con el Diario La República de Colombia donde abordamos temas de cultura organizativa en Red Hat y los recientes lanzamientos de productos.
+
+![](./larepublica.jpeg)

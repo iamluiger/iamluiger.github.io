@@ -294,22 +294,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#de-donde-viene-lo-micro-de-microservicios" class="md-nav__link">
-    De donde viene lo micro de Microservicios
+  <a href="#organizado-entorno-a-las-capacidades-del-negocio" class="md-nav__link">
+    Organizado entorno a las capacidades del negocio
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#organizado-entorno-a-las-capacidades-del-negocio" class="md-nav__link">
-    Organizado entorno a las capacidades del negocio
+  <a href="#de-donde-viene-lo-micro-de-los-microservicios" class="md-nav__link">
+    De donde viene lo micro de los Microservicios
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#despliegue-independiente" class="md-nav__link">
+    Despliegue Independiente
+  </a>
   
 </li>
       
@@ -390,22 +397,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#de-donde-viene-lo-micro-de-microservicios" class="md-nav__link">
-    De donde viene lo micro de Microservicios
+  <a href="#organizado-entorno-a-las-capacidades-del-negocio" class="md-nav__link">
+    Organizado entorno a las capacidades del negocio
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#organizado-entorno-a-las-capacidades-del-negocio" class="md-nav__link">
-    Organizado entorno a las capacidades del negocio
+  <a href="#de-donde-viene-lo-micro-de-los-microservicios" class="md-nav__link">
+    De donde viene lo micro de los Microservicios
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#despliegue-independiente" class="md-nav__link">
+    Despliegue Independiente
+  </a>
   
 </li>
       
@@ -448,13 +462,16 @@
 <h2 id="no-solo-es-mas-corto-ademas-debe-ser-mas-cerca">No solo es mas corto, ademas debe ser mas cerca</h2>
 <p>No solamente entonces debemos hacer el código mas rápido, debemos hacer mas corto los despliegues a producción (o algún otro ambiente definido) y para eso necesitamos que se involucre la gente que puede llevar a producción ese código. Allí aparece el paradigma de DEVOPS donde en esas células ágiles ya no solo deben  participar desarrolladores, ahora deben participar los operadores, seguridad y cuanto miembro se requiera para poder hacer esos despliegues.</p>
 <p>Pero es importante entender que no solamente se debe acercar los miembros a estas células, mas bien se deben crear una cultura que permita la autonomía y autoservicios de estas células. No es fácil hemos invertido mucho dinero y tiempo en ITIL y no es que ITIL este mal pero se puede fácilmente convertir en una religión que impida que se pueda modelar procesos mas flexibles de diseño de la entrega de servicios.</p>
-<p>![DEVOPS]</p>
 <hr />
-<h2 id="de-donde-viene-lo-micro-de-microservicios">De donde viene lo micro de Microservicios</h2>
-<p>Ya tenemos equipos mas pequeños listos no solo para hacer mas cortos los tiempos de desarrollos adicionalmente ahora podemos hacer esos despliegues si tenemos practicas y cultura <strong>DEVOPS</strong> debemos asegurarnos que  el alcance de lo que están construyendo (productos digitales) sea lo suficientemente acotado para que no cree efectos colaterales que pueden quitar autonomía al equipo, si no mas bien lograr la autonomía que estos equipos requieren.</p>
-<p>Principalmente esta autonomía esta dado por estas características que comentaremos.</p>
-<h3 id="organizado-entorno-a-las-capacidades-del-negocio">Organizado entorno a las capacidades del negocio</h3>
-<p>en desarrollo . . .</p>
+<h2 id="organizado-entorno-a-las-capacidades-del-negocio">Organizado entorno a las capacidades del negocio</h2>
+<p>Ya tenemos equipos mas pequeños listos no solo para hacer mas cortos los tiempos de desarrollos, adicionalmente ahora podemos hacer esos despliegues si tenemos practicas y cultura <strong>DEVOPS</strong> debemos asegurarnos que  el alcance de lo que están construyendo (productos digitales) sea lo suficientemente acotado para que no cree efectos colaterales que pueden quitar autonomía al equipo, si no mas bien lograr la autonomía que estos equipos requieren.</p>
+<h3 id="de-donde-viene-lo-micro-de-los-microservicios">De donde viene lo micro de los Microservicios</h3>
+<p>Cuando comenzó a sonar el concepto de microservicios ya hace algún tiempo, existían muchas mentiras sobre que era un microservicio y la mayor parte de las que llegue a escuchar era de donde venia el prefijo micro y decían cosas como que era por el tamaño del código o cosas por el estilo. Ya entrados en estas profundidades debemos entonces entender de donde viene el prefijo micro y aunque se puede aplicar también al despliegue, en este punto lo mas importante es que debe desplegar una micro capacidad  única de negocio muy acotada y definida.</p>
+<p>En base a este punto una de las inferencias básicas que debemos tener en cuenta es que microservicios es igual a capacidad de negocio.</p>
+<h2 id="despliegue-independiente">Despliegue Independiente</h2>
+<p>Ya metidos en lo micro de los microservicios tenemos que tener en cuenta unos de los elementos mas importantes que es desplegarlos en una infraestructura independiente. Esto no es menor si decimos que un microservicios debe ser independiente debemos asegurar una independencia no solamente conceptual, también que esta independencia sea técnica. </p>
+<p>En el despliegue no podemos hacer cosas que típicamente hacen las empresas como es tener un mismo servidor de aplicaciones en una misma maquina virtual para varios microservicios, todo lo contrario debemos garantizar una total independencia tecnológica (en la medida de lo posible) de cualquier otra plataforma que este en ejecución en la organización.
+Esto trae como es entender costos a nivel de recursos (ya no puedo compartir un mismo servidor de aplicaciones con mas de una aplicación) lo que aumenta la huella de infraestructura que debemos tener y precisamente por eso se han vuelto tan populares los contenedores (que no revisaremos en profundidad en este articulo) pues permiten entre otras cosas disminuir esa huela de infraestructura y facilitar el aislamiento de cada microservicio.</p>
 <div id="disqus_thread"></div>
 
 <script>

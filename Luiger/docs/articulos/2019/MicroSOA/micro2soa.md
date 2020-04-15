@@ -63,9 +63,9 @@ En base a este punto una de las inferencias básicas que debemos tener en cuenta
 
 ## Despliegue Independiente
 
-Ya metidos en lo micro de los microservicios tenemos que tener en cuenta unos de los elementos mas importantes que es desplegarlos en una infraestructura independiente. Esto no es menor si decimos que un microservicios debe ser independiente debemos asegurar una independencia no solamente conceptual, tambien que esta independencia sea tecnica. 
+Ya metidos en lo micro de los microservicios tenemos que tener en cuenta unos de los elementos mas importantes que es desplegarlos en una infraestructura independiente. Esto no es menor si decimos que un microservicios debe ser independiente debemos asegurar una independencia no solamente conceptual, también que esta independencia sea técnica. 
 
-En el despliegue no podemos hacer cosas que tipicamente hacen las empresas como es tener un mismo servidor de aplicaciones en una misma maquina virtual para varios microservicios, todo lo contrario debemos garantizar una total independencia tecnológica (en la medida de lo posible) de cualquier otra plataforma que este en ejecución en la organización.
+En el despliegue no podemos hacer cosas que típicamente hacen las empresas como es tener un mismo servidor de aplicaciones en una misma maquina virtual para varios microservicios, todo lo contrario debemos garantizar una total independencia tecnológica (en la medida de lo posible) de cualquier otra plataforma que este en ejecución en la organización.
 Esto trae como es entender costos a nivel de recursos (ya no puedo compartir un mismo servidor de aplicaciones con mas de una aplicación) lo que aumenta la huella de infraestructura que debemos tener y precisamente por eso se han vuelto tan populares los contenedores (que no revisaremos en profundidad en este articulo) pues permiten entre otras cosas disminuir esa huela de infraestructura y facilitar el aislamiento de cada microservicio.
 
 

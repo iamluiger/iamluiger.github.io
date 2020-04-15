@@ -47,18 +47,30 @@ No solamente entonces debemos hacer el código mas rápido, debemos hacer mas co
 
 Pero es importante entender que no solamente se debe acercar los miembros a estas células, mas bien se deben crear una cultura que permita la autonomía y autoservicios de estas células. No es fácil hemos invertido mucho dinero y tiempo en ITIL y no es que ITIL este mal pero se puede fácilmente convertir en una religión que impida que se pueda modelar procesos mas flexibles de diseño de la entrega de servicios.
 
-![DEVOPS]
 
 ---
-## De donde viene lo micro de Microservicios
 
-Ya tenemos equipos mas pequeños listos no solo para hacer mas cortos los tiempos de desarrollos adicionalmente ahora podemos hacer esos despliegues si tenemos practicas y cultura **DEVOPS** debemos asegurarnos que  el alcance de lo que están construyendo (productos digitales) sea lo suficientemente acotado para que no cree efectos colaterales que pueden quitar autonomía al equipo, si no mas bien lograr la autonomía que estos equipos requieren.
+## Organizado entorno a las capacidades del negocio ##
 
-Principalmente esta autonomía esta dado por estas características que comentaremos.
+Ya tenemos equipos mas pequeños listos no solo para hacer mas cortos los tiempos de desarrollos, adicionalmente ahora podemos hacer esos despliegues si tenemos practicas y cultura **DEVOPS** debemos asegurarnos que  el alcance de lo que están construyendo (productos digitales) sea lo suficientemente acotado para que no cree efectos colaterales que pueden quitar autonomía al equipo, si no mas bien lograr la autonomía que estos equipos requieren.
 
-### Organizado entorno a las capacidades del negocio ###
+### De donde viene lo micro de los Microservicios
 
-en desarrollo . . .
+
+Cuando comenzó a sonar el concepto de microservicios ya hace algún tiempo, existían muchas mentiras sobre que era un microservicio y la mayor parte de las que llegue a escuchar era de donde venia el prefijo micro y decían cosas como que era por el tamaño del código o cosas por el estilo. Ya entrados en estas profundidades debemos entonces entender de donde viene el prefijo micro y aunque se puede aplicar también al despliegue, en este punto lo mas importante es que debe desplegar una micro capacidad  única de negocio muy acotada y definida.
+
+En base a este punto una de las inferencias básicas que debemos tener en cuenta es que microservicios es igual a capacidad de negocio.
+
+## Despliegue Independiente
+
+Ya metidos en lo micro de los microservicios tenemos que tener en cuenta unos de los elementos mas importantes que es desplegarlos en una infraestructura independiente. Esto no es menor si decimos que un microservicios debe ser independiente debemos asegurar una independencia no solamente conceptual, tambien que esta independencia sea tecnica. 
+
+En el despliegue no podemos hacer cosas que tipicamente hacen las empresas como es tener un mismo servidor de aplicaciones en una misma maquina virtual para varios microservicios, todo lo contrario debemos garantizar una total independencia tecnológica (en la medida de lo posible) de cualquier otra plataforma que este en ejecución en la organización.
+Esto trae como es entender costos a nivel de recursos (ya no puedo compartir un mismo servidor de aplicaciones con mas de una aplicación) lo que aumenta la huella de infraestructura que debemos tener y precisamente por eso se han vuelto tan populares los contenedores (que no revisaremos en profundidad en este articulo) pues permiten entre otras cosas disminuir esa huela de infraestructura y facilitar el aislamiento de cada microservicio.
+
+
+
+
 
 <div id="disqus_thread"></div>
 <script>

@@ -26,3 +26,10 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script
       run: |
+        cd ./iamluiger.github.io/Luiger
+        mkdocs build
+        cd site
+        cp -r ./* ../../
+        git checkout master
+        git push
+        

@@ -8,4 +8,4 @@ nav:
         - Microservicios: articulos/2019/MicroSOA/micro2soa.md
     - Acerca de mi: about.md
     
-theme: material
+theme: windmill

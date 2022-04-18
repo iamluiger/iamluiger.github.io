@@ -17,7 +17,9 @@ Para cruzar el puente lo mas recomendable es hacerlo con uno de los carretillero
 
 ## **Lo primero en que se debe hacer en San Antonio**
 
+Definitivamente lo primero que se debe hacer es buscar un hotel (si requerirá por lo menos 2 días hacer todo) yo recomiendo uno llamado Kariven que dejare la foto pues tiene plata y por lo menos eso te garantiza luz y un internet que te va a ayudar algo.
 
+<img src="kariven.jpg" alt="drawing" style="width:350px;"/>
 
 
 <div id="disqus_thread"></div>

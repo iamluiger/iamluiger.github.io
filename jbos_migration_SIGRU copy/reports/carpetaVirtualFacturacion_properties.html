@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for carpetaVirtualFacturacion.properties</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="21667888">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_SIGRU_ear.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_SIGRU_ear.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="tattletale_SIGRU_ear.html">
+                        <i class="glyphicon tattletale-nav-logo"></i>
+                      Tattletale
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsSIGRU_ear.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_SIGRU_ear.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Red Hat Application Migration Toolkit found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="21667888">
+                            SIGRU.ear/SIGRU.war/WEB-INF/classes/com/Dinissan/cartera/carpetaVirtualFacturacion/view/msg/carpetaVirtualFacturacion.properties
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Properties</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+headerLabelAdminCatalogoRequisitos= Admin. Catalogo Requisitos
+leyendaLabelAdminCatalogoRequisitos= Administrar la lista de requisitos para emisi�n de facturas a cr�dito
+
+dialogAgregarRequisito= Agregar Requisito
+leyendaLabelRequisito= Escriba el nombre del nuevo Requisito, Presione el bot�n guardar y confirme la creaci�n.
+
+headerLabelConsultaRequisitosDelCliente= Consulta Requisitos Del Cliente
+leyendaLabelConsultaRequisitosDelCliente= Permite consulta y visualizar la lista de requisitos necesarios para facturar a cada cliente
+
+headerLabelGrabarRequisitosDelCliente= Grabar Requisitos Del Cliente
+leyendaLabelGrabarRequisitosDelCliente= Crear y administrar  lista de requisitos para autorizar autom�ticamente la emisi�n de facturas a cr�dito para clientes en posventa
+leyendaLabelPasosGrabarRequisitosDelCliente= Seleccione el tipo de negocio seguido cargara la lista de requisitos no asociados aun al cliente seleccione uno, por ultimo seleccione el estado inicial activo o inactivo y guarde.
+
+headerLabelActivarODesactivarRequisitosDelCliente= Activar o Desactivar Requisitos Del Cliente
+leyendaLabelActivarODesactivarRequisitosDelCliente= Activar o desactivar requisitos que el sistema debe validar al momento de emisi�n de facturas a cr�dito en posventa
+
+headerLabelCargaDocumentosPosventa= Cargar Documentos Posventa
+leyendaLabelCargaDocumentosPosventa= Permite cargar los documentos requisito en la emisi�n de facturas a cr�dito en posventa en cada negocio
+
+headerLabelConsultaRequisitosNegocioPosventa= Consulta Requisitos por Negocio Posventa
+leyendaLabelConsultaRequisitosNegocioPosventa= Permite consultar los documentos cargados como requisito para la emisi�n de facturas a cr�dito en posventa
+
+dialogCargaDocumentoEvidencia= Carga Documento Evidencia
+leyendaLabelCargaDocumentoEvidencia= Seleccione el documento de su ubicaci�n local y realice el cargu�, El documento debe estar en formato PDF y debe pesar un m�ximo 200 kb
+
+dialogVersionCargasRequisito= Versiones cargas por requisito
+
+dataTableAdminCatalogoRequisitos= Catalogo Requisitos
+dataTableAdminCatalogoRequisitosDelCliente= Catalogo Requisitos Del Cliente
+dataTableDocumentosEvidencias= Lista de Documentos Evidencia Requisitos del Negocio
+dataTableVersionesDocumentosEvidencias= Lista de Versiones Documentos Evidencia Requisitos del Negocio
+
+labelRequisito= Requisito
+labelFecha= Fecha
+labelUsuario= Usuario
+labelEstado= Estado
+labelTipoNegocio= Tipo Negocio
+labelNoIdentificacion= No. Identificaci�n
+labelNombreCliente= Nombre Cliente
+
+labelCompannia= Compa�ia
+labelUnidadNegocio= Unidad Negocio
+labelSucursal= Sucursal
+labelBodega= Bodega
+labelNumeroNegocio= Numero Negocio
+labelNombreArchivo= Nombre Archivo
+labelNombreCliente= Nombre Cliente
+labelIdentificacionCliente= Id. Cliente
+
+labelAgregar= Agregar
+labelGuardar= Guardar
+labelConsultar= Consultar
+labelCargarEvidencia= Cargar Evidencia
+labelDescargarUltimaVersionEvidencia= Descargar Ultima Versi�n Cargada
+labelVerVersionesEvidencia= Ver lista de versiones de los documentos que son evidencia del requisito
+
+fileUpload_invalidFileMessage= El archivo contiene una extensi�n err�nea. Solo permite archivos pdf
+fileUpload_invalidSizeMessage= El archivo tiene un tama�o no permitido, m�ximo 200 kb
+fileUpload_label= Cargar Evidencia
+label_cancel= Cancelar
+label_subir= Subir
+
+labelConfirmacion= Confirmaci�n
+labelEstaSeguro=  � Est� seguro ?
+labelSi= Si
+labelNo= No
+
+labelSeleccione= Seleccione...
+
+msgRequisito= Campo Requisito es requerido
+msgNoIdentificacion= Campo numero identificaci�n es requerido
+msgClienteNoExiste= Cliente no existe
+msgRequisitoActualizado= �xito: Se actualizo el estado del requisito asociado al cliente
+msgRequisitoGuardado= �xito: Se Grabo requisito asociado al cliente
+msgTipoNegocio= Seleccione un tipo de negocio
+msgEstado= Seleccione el estado inicial de requisito
+msgCompannia= Seleccione una compa��a
+msgUnidadNegocio= Seleccione una Unida de Negocio
+msgSucursal= Seleccione una Sucursal
+msgBodega= Seleccione una Bodega
+msgNumeroNegocio= Campo numero negocio es requerido
+msgRequisitosPreventa= �xito: Consulta documento evidencia requisito por negocio posventa
+msgResultadoCargaEvidencia= �xito: Se carga de forma correcta el documento
+msgVersionesDocumentosEvidencia= El requisito para el negocio no tiene otras versiones de evidencias cargadas. 
+msgNegocioEstadoFacturado= El negocio ya fue facturado
+
+titleNoIdentificacion= Numero Identificaci�n debe ser mayor a cero
+titleActivarDesactivar= Active o Desactive el requisito haciendo clic en este bot�n
+
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: 18/09/2019, 6:17:00 p.m.</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("properties",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            $(window).load(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 21667888;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

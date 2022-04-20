@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for IfxConnectionPoolManager.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="21667888">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_SIGRU_ear.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_SIGRU_ear.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="tattletale_SIGRU_ear.html">
+                        <i class="glyphicon tattletale-nav-logo"></i>
+                      Tattletale
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsSIGRU_ear.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_SIGRU_ear.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Red Hat Application Migration Toolkit found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="21667888">
+                            SIGRU.ear/AdminCU.war/WEB-INF/lib/jdbc-4.50.1.jar/com/informix/jdbcx/IfxConnectionPoolManager.java
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">1</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                                        <span class="label label-info" title="classloader">classloader</span>
+                                        <span class="label label-info" title="jndi">jndi</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package com.informix.jdbcx;
+
+import com.informix.jdbc.IfxSqliConnect;
+import com.informix.util.IfxErrMsg;
+import com.informix.util.Trace;
+import com.informix.util.TraceFlag;
+import java.lang.reflect.Method;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.LinkedList;
+import java.util.ListIterator;
+import java.util.NoSuchElementException;
+import java.util.Properties;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+
+public class IfxConnectionPoolManager {
+   private static final Object logger = Trace.getLoggerForClass(IfxConnectionPoolManager.class);
+   private IfxConnectionPoolDataSource cpds;
+   private IfxConnectionEventListener connectionListener = null;
+   private String ClientLocale;
+   private Trace trace = null;
+   private String cpdsName = null;
+   private IfxConnectionPoolManager.Pool pool;
+   private IfxConnectionPoolManager.Pool prim_pool = new IfxConnectionPoolManager.Pool(this);
+   private IfxConnectionPoolManager.Pool sec_pool = new IfxConnectionPoolManager.Pool(this);
+   private IfxConnectionPoolManager.PoolServiceThread poolService = null;
+   private long serviceInterval = 100L;
+   private long ageLimit = -1L;
+   private long minAgeLimit = -1L;
+   private int initialPoolSize = 0;
+   private int maxConnections = -1;
+   private int maxPoolSize = 50;
+   private int minPoolSize = 0;
+   private String DSuser;
+   private String DSpassword;
+   private boolean isDirectConnect = false;
+
+   public IfxConnectionPoolManager(String dsName) throws SQLException {
+      this.cpdsName = dsName;
+      Context initCtx = null;
+      this.cpds = null;
+      this.prim_pool.isPrimaryPool = true;
+      this.sec_pool.isPrimaryPool = false;
+      this.pool = this.prim_pool;
+
+      try {
+         initCtx = new InitialContext();
+         this.cpds = (IfxConnectionPoolDataSource)initCtx.lookup(this.cpdsName);
+         this.ClientLocale = this.cpds.getIfxCLIENT_LOCALE();
+         if (TraceFlag.isTraceEnabled()) {
+            this.trace = this.gettrace();
+         }
+      } catch (Exception var7) {
+         throw IfxErrMsg.getLocSQLException(-79716, var7.toString(), this.ClientLocale);
+      }
+
+      this.getNcheckProperties();
+      this.connectionListener = new IfxConnectionEventListener(this);
+      Method addShutdownHook = null;
+      this.isDirectConnect = this.cpds.checkIsDirect();
+      if (this.isDirectConnect) {
+         if (TraceFlag.isTraceEnabled() &amp;&amp; this.trace != null) {
+            this.trace.writeTrace(logger, 1, &quot;IfxConnectionPoolManager: cpdds MinAge &quot; + this.cpds.getIfxCPMMinAgeLimit());
+         }
+
+         if (TraceFlag.isTraceEnabled() &amp;&amp; this.trace != null) {
+            this.trace.writeTrace(logger, 1, &quot;IfxConnectionPoolManager: cpds age &quot; + this.cpds.getIfxCPMAgeLimit());
+         }
+      }
+
+      try {
+         Class&lt;?&gt; runtime = Class.forName(&quot;java.lang.Runtime&quot;);
+         Class&lt;?&gt;[] param = new Class[]{Class.forName(&quot;java.lang.Thread&quot;)};
+         addShutdownHook = runtime.getMethod(&quot;addShutdownHook&quot;, param);
+         Object[] arg = new Object[]{new IfxConnectionPoolManager.PoolShutdownThread(this)};
+         addShutdownHook.invoke(Runtime.getRuntime(), arg);
+      } catch (NoSuchMethodException var8) {
+         if (this.trace != null) {
+            this.trace.writeTrace(logger, 1, &quot;IfxConnectionPoolManager: NO shutdownThread() registered&quot;);
+         }
+      } catch (Exception var9) {
+         throw IfxErrMsg.getLocSQLException(-79716, var9.toString(), this.ClientLocale);
+      }
+
+      if (this.minPoolSize &gt; 0 || this.ageLimit &gt; 0L) {
+         this.poolService = new IfxConnectionPoolManager.PoolServiceThread(this, this.ageLimit);
+      }
+
+   }
+
+   private void getNcheckProperties() throws SQLException {
+      this.DSuser = this.cpds.getUser();
+      this.DSpassword = this.cpds.getPassword();
+      this.maxConnections = this.cpds.getIfxCPMMaxConnections();
+      this.initialPoolSize = this.cpds.getIfxCPMInitPoolSize();
+      this.maxPoolSize = this.cpds.getIfxCPMMaxPoolSize();
+      this.minPoolSize = this.cpds.getIfxCPMMinPoolSize();
+      this.minAgeLimit = this.cpds.getIfxCPMMinAgeLimit();
+      this.ageLimit = this.cpds.getIfxCPMAgeLimit();
+      this.serviceInterval = this.cpds.getIfxCPMServiceInterval();
+      if (this.ageLimit &gt; 0L) {
+         this.ageLimit *= 1000L;
+      }
+
+      if (this.minAgeLimit &gt; 0L) {
+         this.minAgeLimit *= 1000L;
+      }
+
+      if (this.maxConnections &lt; -1 || this.maxPoolSize &lt; -1 || this.minPoolSize &lt; 0 || this.initialPoolSize &lt; 0 || this.ageLimit &lt; -1L || this.minAgeLimit &lt; -1L || this.serviceInterval &lt; 0L || this.maxPoolSize != -1 &amp;&amp; this.maxPoolSize &lt; this.minPoolSize || this.maxConnections != -1 &amp;&amp; this.maxConnections &lt; this.initialPoolSize) {
+         throw IfxErrMsg.getLocSQLException(-79841, this.ClientLocale);
+      }
+   }
+
+   private Trace gettrace() {
+      try {
+         String traceFile = this.cpds.getIfxTRACEFILE();
+         int traceLevel = this.cpds.getIfxTRACE();
+         if (traceFile != null &amp;&amp; traceLevel &gt; 0) {
+            return new Trace(traceLevel, traceFile);
+         }
+      } catch (Exception var3) {
+         ;
+      }
+
+      return null;
+   }
+
+   public Connection getConnection() throws SQLException {
+      if (this.DSuser != null &amp;&amp; this.DSpassword != null) {
+         return this.getConnection(this.DSuser, this.DSpassword);
+      } else {
+         throw IfxErrMsg.getLocSQLException(-79811, this.ClientLocale);
+      }
+   }
+
+   public Connection getConnection(String luser, String lpassword) throws SQLException {
+      IfxPooledConnection pc = this.pool.remove(luser, lpassword);
+      boolean invalidPC = false;
+      boolean primaryServerUp = false;
+      IfxConnectionPoolDataSource var6 = this.cpds;
+      synchronized(this.cpds) {
+         if (this.cpds.getIfxCPMSwitchHDRPool()) {
+            try {
+               primaryServerUp = this.isPrimaryServerRunning(luser, lpassword);
+            } catch (SQLException var11) {
+               ;
+            }
+         }
+      }
+
+      if (pc == null || primaryServerUp) {
+         try {
+            pc = (IfxPooledConnection)this.cpds.getPooledConnection(luser, lpassword, this.connectionListener);
+         } catch (SQLException var14) {
+            if (var14.getErrorCode() == -79831) {
+               try {
+                  Thread.sleep(this.serviceInterval * 20L);
+               } catch (InterruptedException var10) {
+                  ;
+               }
+
+               pc = this.pool.remove(luser, lpassword);
+            }
+
+            if (var14.getErrorCode() == -27002 || var14.getErrorCode() == -908 || var14.getErrorCode() == -79716 || pc == null) {
+               invalidPC = true;
+            }
+         }
+      }
+
+      if (invalidPC) {
+         try {
+            pc = (IfxPooledConnection)this.cpds.getPooledConnection(luser, lpassword, this.connectionListener);
+         } catch (SQLException var13) {
+            if (var13.getErrorCode() == -79831) {
+               try {
+                  Thread.currentThread();
+                  Thread.sleep(this.serviceInterval * 20L);
+               } catch (InterruptedException var9) {
+                  ;
+               }
+
+               pc = this.pool.remove(luser, lpassword);
+            }
+
+            if (pc == null) {
+               throw var13;
+            }
+         }
+      }
+
+      if (this.poolService != null) {
+         this.notifyPoolService();
+      }
+
+      Connection conn = pc.getConnection();
+      if (this.cpds.getIfxENABLE_HDRSWITCH()) {
+         try {
+            boolean connReadOnly = this.checkConnection(conn);
+            if (connReadOnly) {
+               this.pool = this.sec_pool;
+               if (this.cpds.getIfxCPMSwitchHDRPool()) {
+                  IfxConnectionPoolDataSource.isPrimaryUp = false;
+               }
+            } else {
+               this.pool = this.prim_pool;
+               if (this.cpds.getIfxCPMSwitchHDRPool()) {
+                  IfxConnectionPoolDataSource.isPrimaryUp = true;
+               }
+            }
+         } catch (SQLException var12) {
+            if (var12.getErrorCode() != -79716 &amp;&amp; var12.getErrorCode() != -27002) {
+               throw var12;
+            }
+
+            if (this.pool.isPrimaryPool) {
+               this.pool.remove(luser, lpassword);
+               this.pool = this.sec_pool;
+               conn = this.getConnection(luser, lpassword);
+            } else {
+               this.pool.remove(luser, lpassword);
+               this.pool = this.prim_pool;
+               conn = this.getConnection(luser, lpassword);
+            }
+         }
+      }
+
+      if (TraceFlag.isTraceEnabled() &amp;&amp; this.trace != null) {
+         this.trace.writeTrace(logger, 1, &quot;IfxConnectionPoolManager: getConnection() exited&quot;);
+      }
+
+      return conn;
+   }
+
+   private boolean isPrimaryServerRunning(String luser, String lpasswd) throws SQLException {
+      String urlString = null;
+      String dbName = null;
+      String host = null;
+      String port = null;
+      if (IfxConnectionPoolDataSource.isPrimaryUp) {
+         return true;
+      } else {
+         Properties DSProp = this.cpds.DSProperties;
+         boolean bflag = this.cpds.getIfxENABLE_HDRSWITCH();
+         host = DSProp.getProperty(&quot;IFXHOST&quot;);
+         port = DSProp.getProperty(&quot;PORTNO&quot;);
+         if (host != null &amp;&amp; port != null) {
+            urlString = host + &quot;:&quot; + port;
+         }
+
+         if ((dbName = DSProp.getProperty(&quot;DATABASE&quot;)) != null) {
+            IfxSqliConnect conn = null;
+            DSProp.remove(&quot;DATABASE&quot;);
+            DSProp.remove(&quot;ENABLE_HDRSWITCH&quot;);
+
+            try {
+               conn = new IfxSqliConnect(luser, lpasswd, urlString, DSProp);
+               IfxConnectionPoolDataSource.isPrimaryUp = true;
+            } catch (SQLException var11) {
+               IfxConnectionPoolDataSource.isPrimaryUp = false;
+               conn = null;
+            } catch (Exception var12) {
+               IfxConnectionPoolDataSource.isPrimaryUp = false;
+               conn = null;
+            }
+
+            DSProp.setProperty(&quot;DATABASE&quot;, dbName);
+            DSProp.setProperty(&quot;ENABLE_HDRSWITCH&quot;, (new Boolean(bflag)).toString());
+            if (conn != null) {
+               conn.close();
+            }
+
+            return IfxConnectionPoolDataSource.isPrimaryUp;
+         } else {
+            throw IfxErrMsg.getLocSQLException(-79716, &quot;Missing DATABASE Property&quot;, this.cpds.getIfxCLIENT_LOCALE());
+         }
+      }
+   }
+
+   private boolean checkConnection(Connection conn) throws SQLException {
+      String type = null;
+
+      try {
+         Statement stmt = conn.createStatement();
+         String sql = &quot;select type from sysmaster:sysdri&quot;;
+         ResultSet rs = stmt.executeQuery(sql);
+         if (rs.next()) {
+            type = rs.getString(1);
+         }
+
+         rs.close();
+         stmt.close();
+      } catch (SQLException var6) {
+         throw var6;
+      }
+
+      return type != null &amp;&amp; type.trim().equalsIgnoreCase(&quot;Secondary&quot;);
+   }
+
+   void recycleConnection(IfxPooledConnection pc, int errorCode) {
+      if (TraceFlag.isTraceEnabled() &amp;&amp; this.trace != null) {
+         this.trace.writeTrace(logger, 1, &quot;IfxConnectionPoolManager: recycleConnection() called&quot;);
+      }
+
+      if (errorCode &gt; 0 || this.pool.add(pc)) {
+         if (TraceFlag.isTraceEnabled() &amp;&amp; this.trace != null) {
+            this.trace.writeTrace(logger, 1, &quot;IfxConnectionPoolManager: pool full, hardclose&quot;);
+         }
+
+         try {
+            pc.close();
+         } catch (SQLException var4) {
+            ;
+         }
+      }
+
+      if (this.poolService != null) {
+         this.notifyPoolService();
+      }
+
+   }
+
+   void startPoolService() throws SQLException {
+      if (this.initialPoolSize &gt; 0) {
+         this.pool.fillThePool(this.initialPoolSize, 0L);
+      }
+
+      if (this.poolService != null) {
+         this.poolService.start();
+      }
+
+   }
+
+   void switchActivePool(String type) throws SQLException {
+      System.out.println(&quot;Called switchActivePool&quot;);
+      if (type.compareTo(&quot;PRIMARY&quot;) == 0) {
+         this.pool = this.prim_pool;
+      }
+
+      if (type.compareTo(&quot;SECONDARY&quot;) == 0) {
+         this.pool = this.sec_pool;
+      }
+
+   }
+
+   private void notifyPoolService() {
+      if (this.pool.roughCount() &lt; this.minPoolSize) {
+         if (this.poolService.isAlive()) {
+            if (!this.pool.fillingInProgress) {
+               this.poolService.interrupt();
+            }
+         } else {
+            synchronized(this) {
+               if (!this.poolService.isAlive()) {
+                  this.poolService = new IfxConnectionPoolManager.PoolServiceThread(this, this.ageLimit);
+                  this.poolService.start();
+                  this.pool.fillingInProgress = false;
+               }
+
+               this.poolService.interrupt();
+            }
+         }
+      }
+
+   }
+
+   protected int getFreeCount() {
+      return this.pool.roughCount();
+   }
+
+   protected IfxConnectionPoolDataSource getCPDS() {
+      return this.cpds;
+   }
+
+   private class PoolShutdownThread extends Thread {
+      private IfxConnectionPoolManager cpm;
+
+      PoolShutdownThread(IfxConnectionPoolManager owner) {
+         this.cpm = owner;
+      }
+
+      public void run() {
+         if (TraceFlag.isTraceEnabled() &amp;&amp; IfxConnectionPoolManager.this.trace != null) {
+            IfxConnectionPoolManager.this.trace.writeTrace(IfxConnectionPoolManager.logger, 1, &quot;IfxConnectionPoolManager: Pool shutdown...&quot;);
+         }
+
+         this.cpm.pool.flushThePool();
+         if (TraceFlag.isTraceEnabled() &amp;&amp; IfxConnectionPoolManager.this.trace != null) {
+            IfxConnectionPoolManager.this.trace.writeTrace(IfxConnectionPoolManager.logger, 1, &quot;IfxConnectionPoolManager: Pool shutdown completed&quot;);
+         }
+
+      }
+   }
+
+   private class Pool {
+      private IfxConnectionPoolManager cpm;
+      private LinkedList&lt;IfxPooledConnection&gt; poolList;
+      private boolean fillingInProgress = false;
+      private boolean shutdownFlag = false;
+      private boolean isPrimaryPool;
+
+      Pool(IfxConnectionPoolManager owner) {
+         this.cpm = owner;
+         this.poolList = new LinkedList();
+      }
+
+      boolean add(IfxPooledConnection pc) {
+         LinkedList var2 = this.poolList;
+         synchronized(this.poolList) {
+            if ((IfxConnectionPoolManager.this.maxPoolSize &lt;= -1 || this.poolList.size() &lt; IfxConnectionPoolManager.this.maxPoolSize) &amp;&amp; !this.shutdownFlag) {
+               pc.setTimeInPool();
+               this.poolList.addLast(pc);
+               return false;
+            } else {
+               return true;
+            }
+         }
+      }
+
+      IfxPooledConnection remove(String luser, String lpasswd) throws SQLException {
+         LinkedList var3 = this.poolList;
+         synchronized(this.poolList) {
+            IfxPooledConnection pc = null;
+            if (this.shutdownFlag) {
+               throw IfxErrMsg.getLocSQLException(-79716, &quot;shutdown in progress&quot;, IfxConnectionPoolManager.this.ClientLocale);
+            } else {
+               try {
+                  int listSize = this.poolList.size();
+                  ListIterator iterator = this.poolList.listIterator(listSize);
+
+                  while((pc = (IfxPooledConnection)iterator.previous()) != null) {
+                     String connUser = null;
+                     String connPasswd = null;
+                     IfxSqliConnReUsableConnection sqliConn = (IfxSqliConnReUsableConnection)pc.getConnection();
+                     if (sqliConn != null &amp;&amp; (connUser = sqliConn.getConnUser()) != null &amp;&amp; connUser.equals(luser) &amp;&amp; (connPasswd = sqliConn.getConnPasswd()) != null &amp;&amp; connPasswd.equals(lpasswd)) {
+                        iterator.remove();
+                        break;
+                     }
+                  }
+               } catch (NoSuchElementException var11) {
+                  pc = null;
+               } catch (IndexOutOfBoundsException var12) {
+                  throw IfxErrMsg.getLocSQLException(-79896, IfxConnectionPoolManager.this.ClientLocale);
+               }
+
+               return pc;
+            }
+         }
+      }
+
+      public int roughCount() {
+         return this.poolList.size();
+      }
+
+      private void fillThePool(int upTo, long pause) throws SQLException {
+         this.fillingInProgress = true;
+         int var5 = 0;
+
+         while(this.roughCount() &lt; upTo - 1) {
+            try {
+               IfxPooledConnection pc = (IfxPooledConnection)IfxConnectionPoolManager.this.cpds.getPooledConnection(IfxConnectionPoolManager.this.DSuser, IfxConnectionPoolManager.this.DSpassword, IfxConnectionPoolManager.this.connectionListener);
+               if (this.add(pc)) {
+                  if (TraceFlag.isTraceEnabled() &amp;&amp; IfxConnectionPoolManager.this.trace != null) {
+                     IfxConnectionPoolManager.this.trace.writeTrace(IfxConnectionPoolManager.logger, 1, &quot;IfxConnectionPoolManager: fillThePool(), full, hardclose&quot;);
+                  }
+
+                  pc.close();
+                  break;
+               }
+
+               ++var5;
+               if (pause &gt; 0L) {
+                  Thread.sleep(pause);
+               }
+            } catch (InterruptedException var7) {
+               ;
+            } catch (SQLException var8) {
+               break;
+            } catch (Exception var9) {
+               break;
+            }
+         }
+
+         this.fillingInProgress = false;
+      }
+
+      private void skimThePool(long now) {
+         if (IfxConnectionPoolManager.this.ageLimit &gt;= 0L) {
+            for(int var4 = Integer.MAX_VALUE; var4-- &gt; 0 &amp;&amp; !this.shutdownFlag; Thread.yield()) {
+               IfxPooledConnection pc;
+               try {
+                  LinkedList var5 = this.poolList;
+                  synchronized(this.poolList) {
+                     pc = (IfxPooledConnection)this.poolList.removeFirst();
+                  }
+               } catch (NoSuchElementException var12) {
+                  break;
+               }
+
+               long age = now - pc.timeInPool;
+               if ((age &lt; IfxConnectionPoolManager.this.ageLimit || (IfxConnectionPoolManager.this.minAgeLimit == -1L || age &lt; IfxConnectionPoolManager.this.minAgeLimit + IfxConnectionPoolManager.this.ageLimit) &amp;&amp; this.poolList.size() &lt; IfxConnectionPoolManager.this.minPoolSize) &amp;&amp; !this.shutdownFlag) {
+                  LinkedList var7 = this.poolList;
+                  synchronized(this.poolList) {
+                     this.poolList.addFirst(pc);
+                     break;
+                  }
+               }
+
+               if (TraceFlag.isTraceEnabled() &amp;&amp; IfxConnectionPoolManager.this.trace != null) {
+                  IfxConnectionPoolManager.this.trace.writeTrace(IfxConnectionPoolManager.logger, 1, &quot;IfxConnectionPoolManager: skimThePool(), conn expired, hardclose&quot;);
+               }
+
+               try {
+                  pc.close();
+               } catch (SQLException var10) {
+                  ;
+               }
+            }
+
+         }
+      }
+
+      protected void flushThePool() {
+         this.shutdownFlag = true;
+         LinkedList var1 = this.poolList;
+         synchronized(this.poolList) {
+            while(true) {
+               while(true) {
+                  try {
+                     IfxPooledConnection pc = (IfxPooledConnection)this.poolList.removeFirst();
+                     pc.close();
+                  } catch (NoSuchElementException var4) {
+                     return;
+                  } catch (Exception var5) {
+                     ;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   private class PoolServiceThread extends Thread {
+      private IfxConnectionPoolManager cpm;
+      private long sleepTime;
+
+      PoolServiceThread(IfxConnectionPoolManager cpm, long sleepInterval) {
+         this.cpm = cpm;
+         if (sleepInterval &gt; 0L) {
+            this.sleepTime = sleepInterval;
+         } else {
+            this.sleepTime = Long.MAX_VALUE;
+         }
+
+         this.setName(&quot;CPMservice&quot;);
+         if (!cpm.isDirectConnect) {
+            this.setDaemon(true);
+         }
+      }
+
+      public void run() {
+         while(true) {
+            try {
+               sleep(this.sleepTime);
+               IfxConnectionPoolManager.this.pool.skimThePool(System.currentTimeMillis());
+               if (this.cpm.isDirectConnect &amp;&amp; IfxConnectionPoolManager.this.pool.roughCount() == 0) {
+                  synchronized(IfxConnectionPoolManager.this.cpds) {
+                     if (IfxConnectionPoolManager.this.cpds.getConnectionCount() == 0) {
+                        if (this.cpm.trace != null) {
+                           this.cpm.trace.writeTrace(IfxConnectionPoolManager.logger, 1, &quot;IfxConnectionPoolManager: PoolServiceThread exits&quot;);
+                        }
+
+                        return;
+                     }
+                  }
+               }
+            } catch (InterruptedException var5) {
+               try {
+                  IfxConnectionPoolManager.this.pool.fillThePool(IfxConnectionPoolManager.this.minPoolSize, IfxConnectionPoolManager.this.serviceInterval);
+               } catch (SQLException var3) {
+                  ;
+               }
+            }
+         }
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: 18/09/2019, 6:16:59 p.m.</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "75,51,76" });
+
+            $("<div id='75-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(75)');
+            $("<div id='51-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(51)');
+            $("<div id='76-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(76)');
+
+
+$("<a name='49438808' class='windup-file-location'></a><div class='inline-source-comment green tag-classloader'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>Dynamic class instantiation</strong><a title='View Rule: environment-dependent-calls-01000' href='windup_ruleproviders.html#environment-dependent-calls-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The class is dynamically loaded within application. During the migration, multiple classes that are provided on classpath by a different server may not be present anymore.<\/p><p>Please review the class-loading mechanisms and ensure that the dynamically loaded class is available in JBoss EAP.<\/p><ul><li><a href='https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.4/html-single/Development_Guide/index.html#chap-Class_Loading_and_Modules' target='_blank'>Class Loading and Modules in JBoss EAP 6</a></li><li><a href='https://access.redhat.com/solutions/361343' target='_blank'>Article about Classloading in JBoss EAP 6</a></li><li><a href='https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.0/html-single/development_guide/#class_loading_and_modules' target='_blank'>Class Loading and Modules in JBoss EAP 7</a></li></ul></div></div></div>").appendTo('#75-inlines');
+
+$("<a name='49533048' class='windup-file-location'></a><div class='inline-source-comment green tag-jndi'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Call of JNDI lookup</strong><a title='View Rule: environment-dependent-calls-02000' href='windup_ruleproviders.html#environment-dependent-calls-02000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>This method lookups an object using a JNDI String. During the migration process, some entity JNDI bindings may change. Ensure that the JNDI Name does not need to change for JBoss EAP.<\/p><p><em>For Example:<\/em><\/p>\n<pre><code class=\"java\">(ConnectionFactory)initialContext.lookup(&quot;weblogic.jms.ConnectionFactory&quot;);\n<\/code><\/pre><p><em>should become:<\/em><\/p>\n<pre><code class=\"java\">(ConnectionFactory)initialContext.lookup(&quot;/ConnectionFactory&quot;);\n<\/code><\/pre><ul><li><a href='https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/6.4/html-single/development_guide/#chap-Remote_JNDI_Lookup' target='_blank'>JBoss EAP 6 - JNDI Reference</a></li><li><a href='https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/6.4/html-single/migration_guide/#sect-JNDI_Changes' target='_blank'>JNDI Changes</a></li></ul></div></div></div>").appendTo('#51-inlines');
+
+$("<a name='99663880' class='windup-file-location'></a><div class='inline-source-comment green tag-classloader'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>Dynamic class instantiation</strong><a title='View Rule: environment-dependent-calls-01000' href='windup_ruleproviders.html#environment-dependent-calls-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The class is dynamically loaded within application. During the migration, multiple classes that are provided on classpath by a different server may not be present anymore.<\/p><p>Please review the class-loading mechanisms and ensure that the dynamically loaded class is available in JBoss EAP.<\/p><ul><li><a href='https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.4/html-single/Development_Guide/index.html#chap-Class_Loading_and_Modules' target='_blank'>Class Loading and Modules in JBoss EAP 6</a></li><li><a href='https://access.redhat.com/solutions/361343' target='_blank'>Article about Classloading in JBoss EAP 6</a></li><li><a href='https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.0/html-single/development_guide/#class_loading_and_modules' target='_blank'>Class Loading and Modules in JBoss EAP 7</a></li></ul></div></div></div>").appendTo('#76-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            $(window).load(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 21667888;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for TransmisorCorreo.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="21667888">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_SIGRU_ear.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_SIGRU_ear.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="tattletale_SIGRU_ear.html">
+                        <i class="glyphicon tattletale-nav-logo"></i>
+                      Tattletale
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsSIGRU_ear.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_SIGRU_ear.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Red Hat Application Migration Toolkit found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="21667888">
+                            SIGRU.ear/AdminCU.war/WEB-INF/lib/SIGRUlib-1.jar/com/Dinissan/comunicaciones/email/envio/TransmisorCorreo.java
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                                </div>
+
+                                <ul class="classifications">
+                                            <li>
+                                                <div class="title">
+                                                    <em>Mail usage</em>
+<a title='View Rule: technology-usage-connect-01200' href='windup_ruleproviders.html#technology-usage-connect-01200'><span class='glyphicon glyphicon-link rule-link'></span></a>                                                </div>
+                                                <div class="desc">Mailing is used in the application</div>
+                                            </li>
+                                </ul>
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package com.Dinissan.comunicaciones.email.envio;
+
+import com.Dinissan.comunicaciones.email.envio.adjunto.Adjunto;
+import com.Dinissan.comunicaciones.email.envio.adjunto.AdjuntoByte;
+import com.Dinissan.comunicaciones.email.envio.adjunto.AdjuntoFile;
+import com.Dinissan.comunicaciones.email.envio.adjunto.AdjuntoRuta;
+import com.Dinissan.comunicaciones.email.envio.adjunto.BufferedDataSource;
+import com.Dinissan.general.ControlPanel;
+import com.Dinissan.util.exceptions.ExcepcionTecnica;
+import java.io.File;
+import java.io.RandomAccessFile;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.Properties;
+import java.util.Map.Entry;
+import javax.activation.DataHandler;
+import javax.activation.FileDataSource;
+import javax.mail.Authenticator;
+import javax.mail.BodyPart;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.Message.RecipientType;
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
+import javax.mail.internet.MimeUtility;
+
+public class TransmisorCorreo {
+   private ArrayList&lt;String&gt; hosts;
+   private int indiceHost;
+
+   public TransmisorCorreo() {
+      this.cargarHosts();
+   }
+
+   private void cargarHosts() {
+      try {
+         this.indiceHost = 0;
+         RandomAccessFile myFile = new RandomAccessFile(ControlPanel.CONF_FILE_PATH, &quot;r&quot;);
+         myFile.seek(0L);
+         String sLinea = &quot;&quot;;
+         this.hosts = new ArrayList();
+
+         while((sLinea = myFile.readLine()) != null) {
+            this.hosts.add(sLinea);
+         }
+
+         myFile.close();
+      } catch (Exception var3) {
+         this.hosts.add(&quot;localhost&quot;);
+      }
+
+   }
+
+   public void send(Correo... emails) throws ExcepcionTecnica {
+      Session session = null;
+
+      try {
+         session = this.cargarPropiedadesCorreo();
+      } catch (Exception var16) {
+         var16.printStackTrace();
+         throw new ExcepcionTecnica(&quot;Error cargando la configuraciÃ³n del servidor de correo&quot;);
+      }
+
+      try {
+         try {
+            Correo[] var6 = emails;
+            int var5 = emails.length;
+
+            for(int var4 = 0; var4 &lt; var5; ++var4) {
+               Correo email = var6[var4];
+               Message message = new MimeMessage(session);
+               message.setHeader(&quot;MIME-Version&quot;, &quot;1.0&quot;);
+               message.setHeader(&quot;Content-type&quot;, &quot;multipart/mixed;&quot;);
+               message.setHeader(&quot;charset&quot;, &quot;ISO-8859-1&quot;);
+               message.setHeader(&quot;boundary&quot;, &quot;Message-Boundary&quot;);
+               message.setHeader(&quot;Reply-To&quot;, email.getRemitente());
+               message.setHeader(&quot;Return-path&quot;, email.getRemitente());
+               message.setHeader(&quot;X-Mailer&quot;, &quot;JavaMail&quot;);
+               message.setHeader(&quot;Content-Type&quot;, &quot;multipart/related;boundary=mmsc-mgw-unique-boundary-1;type=text/html&quot;);
+               message.setSentDate(new Date());
+               if (email.getNombreRemitente() != null &amp;&amp; !email.getRemitente().isEmpty()) {
+                  message.setFrom(new InternetAddress(email.getRemitente(), email.getNombreRemitente()));
+               } else {
+                  message.setFrom(new InternetAddress(email.getRemitente(), true));
+               }
+
+               Entry entry;
+               Iterator var9;
+               if (email.getDestinos() != null) {
+                  var9 = email.getDestinos().entrySet().iterator();
+
+                  while(var9.hasNext()) {
+                     entry = (Entry)var9.next();
+                     if (entry.getValue() == null) {
+                        message.addRecipient(RecipientType.TO, new InternetAddress((String)entry.getKey(), (String)entry.getValue()));
+                     } else {
+                        message.addRecipient(RecipientType.TO, new InternetAddress((String)entry.getKey(), true));
+                     }
+                  }
+               }
+
+               if (email.getCc() != null) {
+                  var9 = email.getCc().entrySet().iterator();
+
+                  while(var9.hasNext()) {
+                     entry = (Entry)var9.next();
+                     if (entry.getValue() == null) {
+                        message.addRecipient(RecipientType.TO, new InternetAddress((String)entry.getKey(), (String)entry.getValue()));
+                     } else {
+                        message.addRecipient(RecipientType.TO, new InternetAddress((String)entry.getKey(), true));
+                     }
+                  }
+               }
+
+               if (email.getCco() != null) {
+                  var9 = email.getCco().entrySet().iterator();
+
+                  while(var9.hasNext()) {
+                     entry = (Entry)var9.next();
+                     if (entry.getValue() == null) {
+                        message.addRecipient(RecipientType.TO, new InternetAddress((String)entry.getKey(), (String)entry.getValue()));
+                     } else {
+                        message.addRecipient(RecipientType.TO, new InternetAddress((String)entry.getKey(), true));
+                     }
+                  }
+               }
+
+               message.setSubject(MimeUtility.encodeText(email.getAsunto()));
+               new MimeMultipart();
+               MimeMultipart mp;
+               if (email.getEmbebido().booleanValue()) {
+                  mp = new MimeMultipart(&quot;related&quot;);
+               } else {
+                  mp = new MimeMultipart();
+               }
+
+               BodyPart texto = new MimeBodyPart();
+               texto.setText(email.getMensaje());
+               if (email.getHtml().booleanValue()) {
+                  texto.setHeader(&quot;Content-Type&quot;, &quot;text/html&quot;);
+               }
+
+               mp.addBodyPart(texto);
+               Adjunto archivoAdjuntar;
+               Iterator var11;
+               if (email.getAdjuntos() != null) {
+                  var11 = email.getAdjuntos().iterator();
+
+                  while(var11.hasNext()) {
+                     archivoAdjuntar = (Adjunto)var11.next();
+                     MimeBodyPart adjunto = new MimeBodyPart();
+                     if (archivoAdjuntar instanceof AdjuntoFile) {
+                        AdjuntoFile a = (AdjuntoFile)archivoAdjuntar;
+                        if (a.getAdjunto().exists()) {
+                           adjunto.attachFile(a.getAdjunto());
+                           if (archivoAdjuntar.isEmbebido()) {
+                              adjunto.setHeader(&quot;Content-ID&quot;, a.getAdjunto().getName());
+                           }
+
+                           mp.addBodyPart(adjunto);
+                        }
+                     } else if (archivoAdjuntar instanceof AdjuntoByte) {
+                        AdjuntoByte a = (AdjuntoByte)archivoAdjuntar;
+                        BufferedDataSource bds = new BufferedDataSource(a.getContenido(), a.getNombreAdjunto());
+                        adjunto.setDataHandler(new DataHandler(bds));
+                        adjunto.setFileName(bds.getName());
+                        if (archivoAdjuntar.isEmbebido()) {
+                           adjunto.setHeader(&quot;Content-ID&quot;, a.getNombreAdjunto());
+                        }
+
+                        mp.addBodyPart(adjunto);
+                     } else if (archivoAdjuntar instanceof AdjuntoRuta) {
+                        AdjuntoRuta a = (AdjuntoRuta)archivoAdjuntar;
+                        FileDataSource fds = new FileDataSource(a.getRuta());
+                        adjunto.setDataHandler(new DataHandler(fds));
+                        adjunto.setFileName(a.getNombreArchivo());
+                        if (archivoAdjuntar.isEmbebido()) {
+                           adjunto.setHeader(&quot;Content-ID&quot;, a.getNombreArchivo());
+                        }
+
+                        mp.addBodyPart(adjunto);
+                     }
+                  }
+               }
+
+               message.setContent(mp);
+               Transport.send(message);
+               var11 = email.getAdjuntos().iterator();
+
+               while(var11.hasNext()) {
+                  archivoAdjuntar = (Adjunto)var11.next();
+
+                  try {
+                     if (archivoAdjuntar instanceof AdjuntoFile) {
+                        AdjuntoFile a = (AdjuntoFile)archivoAdjuntar;
+                        if (a.getAdjunto().exists()) {
+                           a.getAdjunto().delete();
+                        }
+                     } else if (archivoAdjuntar instanceof AdjuntoRuta) {
+                        AdjuntoRuta a = (AdjuntoRuta)archivoAdjuntar;
+                        File f = new File(a.getRuta());
+                        if (f.exists()) {
+                           f.delete();
+                        }
+                     }
+                  } catch (Throwable var15) {
+                     ;
+                  }
+               }
+
+               ++this.indiceHost;
+               if (this.indiceHost == this.hosts.size()) {
+                  this.indiceHost = 0;
+               }
+            }
+
+         } catch (AddressException var17) {
+            var17.printStackTrace();
+            throw new ExcepcionTecnica(&quot;No se pudo enviar el e-mail, direcciónn incorrecta.&quot;);
+         } catch (MessagingException var18) {
+            var18.printStackTrace();
+            throw new ExcepcionTecnica(&quot;No se pudo enviar el e-mail&quot;);
+         } catch (Exception var19) {
+            var19.printStackTrace();
+            throw new ExcepcionTecnica(&quot;No se pudo enviar el e-mail&quot;);
+         }
+      } catch (Exception var20) {
+         var20.printStackTrace();
+         throw new ExcepcionTecnica(&quot;No se pudo enviar el e-mail&quot;, var20);
+      }
+   }
+
+   private Session cargarPropiedadesCorreo() {
+      Properties props = System.getProperties();
+      props.put(&quot;mail.smtp.host&quot;, this.hosts.get(this.indiceHost));
+      return Session.getDefaultInstance(props, (Authenticator)null);
+   }
+
+   public class TransmisorCorreoHilo extends Thread {
+      private TransmisorCorreo mail = new TransmisorCorreo();
+      private Correo[] correos;
+
+      public TransmisorCorreoHilo(Correo... correos) {
+         this.correos = correos;
+      }
+
+      public void run() {
+         try {
+            this.mail.send(this.correos);
+         } catch (Throwable var2) {
+            var2.printStackTrace();
+         }
+
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: 18/09/2019, 6:16:57 p.m.</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            $(window).load(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 21667888;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

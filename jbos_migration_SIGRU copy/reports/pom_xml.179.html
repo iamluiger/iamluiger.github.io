@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for pom.xml</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="21667888">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_SIGRU_ear.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_SIGRU_ear.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="tattletale_SIGRU_ear.html">
+                        <i class="glyphicon tattletale-nav-logo"></i>
+                      Tattletale
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsSIGRU_ear.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_SIGRU_ear.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Red Hat Application Migration Toolkit found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="21667888">
+                            SIGRU.ear/AdminCU.war/WEB-INF/lib/primefaces-6.2.jar/META-INF/maven/org.primefaces/primefaces/pom.xml
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Maven XML</span>
+                                </div>
+
+                                <ul class="classifications">
+                                            <li>
+                                                <div class="title">
+                                                    <em>Maven POM (pom.xml)</em>
+<a title='View Rule: DiscoverMavenProjectsRuleProvider_1' href='windup_ruleproviders.html#DiscoverMavenProjectsRuleProvider_1'><span class='glyphicon glyphicon-link rule-link'></span></a>                                                </div>
+                                                <div class="desc">Maven Project Object Model (POM) File</div>
+                                            </li>
+                                </ul>
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd&quot;&gt;
+
+    &lt;parent&gt;
+        &lt;groupId&gt;org.sonatype.oss&lt;/groupId&gt;
+        &lt;artifactId&gt;oss-parent&lt;/artifactId&gt;
+        &lt;version&gt;7&lt;/version&gt;
+    &lt;/parent&gt;
+
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;groupId&gt;org.primefaces&lt;/groupId&gt;
+    &lt;artifactId&gt;primefaces&lt;/artifactId&gt;
+    &lt;packaging&gt;jar&lt;/packaging&gt;
+    &lt;version&gt;6.2&lt;/version&gt;
+
+    &lt;name&gt;primefaces&lt;/name&gt;
+    &lt;url&gt;http://www.primefaces.org&lt;/url&gt;
+
+    &lt;description&gt;
+        &lt;![CDATA[PrimeFaces is one of the most popular UI libraries in Java EE Ecosystem and widely used by software companies, world renowned brands, banks, financial institutions, insurance companies, universities and more.]]&gt;
+    &lt;/description&gt;
+
+    &lt;licenses&gt;
+        &lt;license&gt;
+            &lt;name&gt;The Apache Software License, Version 2.0&lt;/name&gt;
+            &lt;url&gt;http://www.apache.org/licenses/LICENSE-2.0.txt&lt;/url&gt;
+            &lt;distribution&gt;repo&lt;/distribution&gt;
+            &lt;comments&gt;A business-friendly OSS license&lt;/comments&gt;
+        &lt;/license&gt;
+    &lt;/licenses&gt;
+
+    &lt;scm&gt;
+        &lt;connection&gt;scm:git:https://github.com/primefaces/primefaces.git&lt;/connection&gt;
+        &lt;developerConnection&gt;scm:git:https://github.com/primefaces/primefaces.git&lt;/developerConnection&gt;
+        &lt;url&gt;https://github.com/primefaces/primefaces&lt;/url&gt;
+    &lt;/scm&gt;
+
+    &lt;developers&gt;
+        &lt;developer&gt;
+            &lt;id&gt;cagatay.civici&lt;/id&gt;
+            &lt;name&gt;Cagatay Civici&lt;/name&gt;
+        &lt;/developer&gt;
+        &lt;developer&gt;
+            &lt;id&gt;andraschko.thomas&lt;/id&gt;
+            &lt;name&gt;Thomas Andraschko&lt;/name&gt;
+        &lt;/developer&gt;
+        &lt;developer&gt;
+            &lt;id&gt;jfarcand.oss&lt;/id&gt;
+            &lt;name&gt;Jeanfrancois Arcand&lt;/name&gt;
+        &lt;/developer&gt;
+        &lt;developer&gt;
+            &lt;id&gt;rdebusscher&lt;/id&gt;
+            &lt;name&gt;Rudy De Busscher&lt;/name&gt;
+        &lt;/developer&gt;
+        &lt;developer&gt;
+            &lt;id&gt;sincan.mert&lt;/id&gt;
+            &lt;name&gt;Mert Sincan&lt;/name&gt;
+        &lt;/developer&gt;
+        &lt;developer&gt;
+            &lt;id&gt;sudheer.jonna&lt;/id&gt;
+            &lt;name&gt;Sudheer Jonna&lt;/name&gt;
+        &lt;/developer&gt;
+    &lt;/developers&gt;
+
+    &lt;properties&gt;
+        &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+    &lt;/properties&gt;
+
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.glassfish&lt;/groupId&gt;
+            &lt;artifactId&gt;javax.faces&lt;/artifactId&gt;
+            &lt;version&gt;2.3.2&lt;/version&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.glassfish&lt;/groupId&gt;
+            &lt;artifactId&gt;javax.servlet&lt;/artifactId&gt;
+            &lt;version&gt;3.0&lt;/version&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;javax.validation&lt;/groupId&gt;
+            &lt;artifactId&gt;validation-api&lt;/artifactId&gt;
+            &lt;version&gt;1.1.0.Final&lt;/version&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;javax.el&lt;/groupId&gt;
+            &lt;artifactId&gt;el-api&lt;/artifactId&gt;
+            &lt;version&gt;2.2&lt;/version&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- Data Exporter --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.apache.poi&lt;/groupId&gt;
+            &lt;artifactId&gt;poi&lt;/artifactId&gt;
+            &lt;version&gt;3.17&lt;/version&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.apache.poi&lt;/groupId&gt;
+            &lt;artifactId&gt;poi-ooxml&lt;/artifactId&gt;
+            &lt;version&gt;3.17&lt;/version&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.lowagie&lt;/groupId&gt;
+            &lt;artifactId&gt;itext&lt;/artifactId&gt;
+            &lt;version&gt;2.1.7&lt;/version&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- File Upload --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;commons-fileupload&lt;/groupId&gt;
+            &lt;artifactId&gt;commons-fileupload&lt;/artifactId&gt;
+            &lt;version&gt;1.3&lt;/version&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- FeedReader --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.rometools&lt;/groupId&gt;
+            &lt;artifactId&gt;rome&lt;/artifactId&gt;
+            &lt;version&gt;1.7.3&lt;/version&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- PhotoCam for Java5 --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;javax.xml.bind&lt;/groupId&gt;
+            &lt;artifactId&gt;jaxb-api&lt;/artifactId&gt;
+            &lt;version&gt;2.0&lt;/version&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- Barcode --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;net.glxn&lt;/groupId&gt;
+            &lt;artifactId&gt;qrgen&lt;/artifactId&gt;
+            &lt;version&gt;1.4&lt;/version&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;net.sf.barcode4j&lt;/groupId&gt;
+            &lt;artifactId&gt;barcode4j-light&lt;/artifactId&gt;
+            &lt;version&gt;2.0&lt;/version&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- Test  --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;junit&lt;/groupId&gt;
+            &lt;artifactId&gt;junit&lt;/artifactId&gt;
+            &lt;version&gt;4.8.2&lt;/version&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.easymock&lt;/groupId&gt;
+            &lt;artifactId&gt;easymock&lt;/artifactId&gt;
+            &lt;version&gt;3.5.1&lt;/version&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;de.odysseus.juel&lt;/groupId&gt;
+            &lt;artifactId&gt;juel-impl&lt;/artifactId&gt;
+            &lt;version&gt;2.2.7&lt;/version&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- Atmosphere --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.atmosphere&lt;/groupId&gt;
+            &lt;artifactId&gt;atmosphere-runtime&lt;/artifactId&gt;
+            &lt;version&gt;2.4.6&lt;/version&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;javax&lt;/groupId&gt;
+            &lt;artifactId&gt;javaee-api&lt;/artifactId&gt;
+            &lt;version&gt;6.0&lt;/version&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- Cache --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.hazelcast&lt;/groupId&gt;
+            &lt;artifactId&gt;hazelcast&lt;/artifactId&gt;
+            &lt;version&gt;2.6.5&lt;/version&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;net.sf.ehcache&lt;/groupId&gt;
+            &lt;artifactId&gt;ehcache&lt;/artifactId&gt;
+            &lt;version&gt;2.7.4&lt;/version&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+
+    &lt;build&gt;
+        &lt;defaultGoal&gt;install&lt;/defaultGoal&gt;
+
+        &lt;resources&gt;
+            &lt;resource&gt;
+                &lt;directory&gt;src/main/resources&lt;/directory&gt;
+                &lt;filtering&gt;true&lt;/filtering&gt;
+            &lt;/resource&gt;
+        &lt;/resources&gt;
+
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+                &lt;version&gt;3.1&lt;/version&gt;
+                &lt;configuration&gt;
+                    &lt;source&gt;1.6&lt;/source&gt;
+                    &lt;target&gt;1.6&lt;/target&gt;
+                    &lt;encoding&gt;${project.build.sourceEncoding}&lt;/encoding&gt;
+                &lt;/configuration&gt;
+                &lt;executions&gt;
+                    &lt;execution&gt;
+                        &lt;id&gt;default-compile&lt;/id&gt;
+                        &lt;configuration&gt;
+                            &lt;showDeprecation&gt;true&lt;/showDeprecation&gt;
+                            &lt;showWarnings&gt;true&lt;/showWarnings&gt;
+                        &lt;/configuration&gt;
+                    &lt;/execution&gt;
+                    &lt;execution&gt;
+                        &lt;id&gt;default-testCompile&lt;/id&gt;
+                        &lt;configuration&gt;
+
+                        &lt;/configuration&gt;
+                    &lt;/execution&gt;
+                &lt;/executions&gt;
+            &lt;/plugin&gt;
+
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+                &lt;artifactId&gt;xslt-maven-plugin&lt;/artifactId&gt;
+                &lt;version&gt;1.0&lt;/version&gt;
+                &lt;executions&gt;
+                    &lt;execution&gt;
+                        &lt;id&gt;generate-ui-metadata&lt;/id&gt;
+                        &lt;phase&gt;generate-sources&lt;/phase&gt;
+                        &lt;configuration&gt;
+                            &lt;xslFile&gt;src/main/resources-maven-jsf/misc/resolve_entities.xsl&lt;/xslFile&gt;
+                            &lt;srcIncludes&gt;**/*.xml&lt;/srcIncludes&gt;
+                            &lt;srcDir&gt;src/main/resources-maven-jsf/ui&lt;/srcDir&gt;
+                            &lt;destDir&gt;target/resources-maven-jsf/ui&lt;/destDir&gt;
+                        &lt;/configuration&gt;
+                        &lt;goals&gt;
+                            &lt;goal&gt;transform&lt;/goal&gt;
+                        &lt;/goals&gt;
+                    &lt;/execution&gt;
+                    &lt;execution&gt;
+                        &lt;id&gt;generate-ui-metadata-mobile&lt;/id&gt;
+                        &lt;phase&gt;generate-sources&lt;/phase&gt;
+                        &lt;configuration&gt;
+                            &lt;xslFile&gt;src/main/resources-maven-jsf/misc/resolve_entities.xsl&lt;/xslFile&gt;
+                            &lt;srcIncludes&gt;**/*.xml&lt;/srcIncludes&gt;
+                            &lt;srcDir&gt;src/main/resources-maven-jsf/mobile&lt;/srcDir&gt;
+                            &lt;destDir&gt;target/resources-maven-jsf/mobile&lt;/destDir&gt;
+                        &lt;/configuration&gt;
+                        &lt;goals&gt;
+                            &lt;goal&gt;transform&lt;/goal&gt;
+                        &lt;/goals&gt;
+                    &lt;/execution&gt;
+                &lt;/executions&gt;
+            &lt;/plugin&gt;
+
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+                &lt;artifactId&gt;build-helper-maven-plugin&lt;/artifactId&gt;
+                &lt;version&gt;1.5&lt;/version&gt;
+                &lt;executions&gt;
+                    &lt;execution&gt;
+                        &lt;id&gt;add-source&lt;/id&gt;
+                        &lt;phase&gt;generate-sources&lt;/phase&gt;
+                        &lt;goals&gt;
+                            &lt;goal&gt;add-source&lt;/goal&gt;
+                        &lt;/goals&gt;
+                        &lt;configuration&gt;
+                            &lt;sources&gt;
+                                &lt;source&gt;target/generated-sources/maven-jsf-plugin&lt;/source&gt;
+                            &lt;/sources&gt;
+                        &lt;/configuration&gt;
+                    &lt;/execution&gt;
+                &lt;/executions&gt;
+            &lt;/plugin&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                &lt;artifactId&gt;maven-checkstyle-plugin&lt;/artifactId&gt;
+                &lt;version&gt;2.17&lt;/version&gt;
+                &lt;configuration&gt;
+                    &lt;consoleOutput&gt;true&lt;/consoleOutput&gt;
+                    &lt;configLocation&gt;./checkstyle.xml&lt;/configLocation&gt;
+                    &lt;excludes&gt;**/UIData.java,**/Base64.java,**/UITabPanel.java,**/json/**,**/UITree.java,**/UIRepeat.java,**/AbstractBehaviorHandler.java&lt;/excludes&gt;
+                &lt;/configuration&gt;
+                &lt;executions&gt;
+                    &lt;execution&gt;
+                        &lt;id&gt;checkstyle&lt;/id&gt;
+                        &lt;phase&gt;validate&lt;/phase&gt;
+                        &lt;goals&gt;
+                            &lt;goal&gt;check&lt;/goal&gt;
+                        &lt;/goals&gt;
+                        &lt;configuration&gt;
+                            &lt;failOnViolation&gt;true&lt;/failOnViolation&gt;
+                        &lt;/configuration&gt;
+                    &lt;/execution&gt;
+                &lt;/executions&gt;
+            &lt;/plugin&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;com.mycila&lt;/groupId&gt;
+                &lt;artifactId&gt;license-maven-plugin&lt;/artifactId&gt;
+                &lt;version&gt;3.0&lt;/version&gt;
+                &lt;configuration&gt;
+                    &lt;header&gt;./header.txt&lt;/header&gt;
+                    &lt;includes&gt;
+                        &lt;include&gt;src/main/java/**&lt;/include&gt;
+                    &lt;/includes&gt;
+                    &lt;excludes&gt;
+                        &lt;exclude&gt;**/BoundedInputStream.java&lt;/exclude&gt;
+                    &lt;/excludes&gt;
+                &lt;/configuration&gt;
+                &lt;executions&gt;
+                    &lt;execution&gt;
+                        &lt;goals&gt;
+                            &lt;goal&gt;check&lt;/goal&gt;
+                        &lt;/goals&gt;
+                    &lt;/execution&gt;
+                &lt;/executions&gt;
+            &lt;/plugin&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.primefaces&lt;/groupId&gt;
+                &lt;artifactId&gt;maven-jsf-plugin&lt;/artifactId&gt;
+                &lt;version&gt;1.3.3-SNAPSHOT&lt;/version&gt;
+                &lt;executions&gt;
+                    &lt;execution&gt;
+                        &lt;id&gt;generate-ui&lt;/id&gt;
+                        &lt;phase&gt;generate-sources&lt;/phase&gt;
+                        &lt;configuration&gt;
+                            &lt;uri&gt;http://primefaces.org/ui&lt;/uri&gt;
+                            &lt;shortName&gt;p&lt;/shortName&gt;
+                            &lt;templatesDir&gt;src/main/java-templates&lt;/templatesDir&gt;
+                            &lt;componentConfigsDir&gt;target/resources-maven-jsf/ui&lt;/componentConfigsDir&gt;
+                            &lt;standardFacesConfig&gt;src/main/resources-maven-jsf/standard-faces-config.xml&lt;/standardFacesConfig&gt;
+                            &lt;standardFaceletsTaglib&gt;src/main/resources-maven-jsf/standard-facelets-taglib.xml&lt;/standardFaceletsTaglib&gt;
+                            &lt;standardTLD&gt;src/main/resources-maven-jsf/standard-tld.xml&lt;/standardTLD&gt;
+                        &lt;/configuration&gt;
+                        &lt;goals&gt;
+                            &lt;goal&gt;generate-components&lt;/goal&gt;
+                            &lt;goal&gt;generate-facelets-taglib&lt;/goal&gt;
+                        &lt;/goals&gt;
+                    &lt;/execution&gt;
+                    &lt;execution&gt;
+                        &lt;id&gt;generate-ui-mobile&lt;/id&gt;
+                        &lt;phase&gt;generate-sources&lt;/phase&gt;
+                        &lt;configuration&gt;
+                            &lt;uri&gt;http://primefaces.org/mobile&lt;/uri&gt;
+                            &lt;shortName&gt;pm&lt;/shortName&gt;
+                            &lt;templatesDir&gt;src/main/java-templates&lt;/templatesDir&gt;
+                            &lt;componentConfigsDir&gt;target/resources-maven-jsf/mobile&lt;/componentConfigsDir&gt;
+                        &lt;/configuration&gt;
+                        &lt;goals&gt;
+                            &lt;goal&gt;generate-components&lt;/goal&gt;
+                            &lt;goal&gt;generate-facelets-taglib&lt;/goal&gt;
+                        &lt;/goals&gt;
+                    &lt;/execution&gt;
+                    &lt;execution&gt;
+                        &lt;id&gt;generate-facesconfig&lt;/id&gt;
+                        &lt;phase&gt;generate-sources&lt;/phase&gt;
+                        &lt;configuration&gt;
+                            &lt;componentConfigsDir&gt;target/resources-maven-jsf/ui&lt;/componentConfigsDir&gt;
+                            &lt;standardFacesConfig&gt;src/main/resources-maven-jsf/standard-faces-config.xml&lt;/standardFacesConfig&gt;
+                            &lt;standardRenderersConfig&gt;src/main/resources-maven-jsf/standard-renderers.xml&lt;/standardRenderersConfig&gt;
+                            &lt;jsfVersion&gt;2&lt;/jsfVersion&gt;
+                        &lt;/configuration&gt;
+                        &lt;goals&gt;
+                            &lt;goal&gt;generate-faces-config&lt;/goal&gt;
+                        &lt;/goals&gt;
+                    &lt;/execution&gt;
+                &lt;/executions&gt;
+            &lt;/plugin&gt;
+
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                &lt;artifactId&gt;maven-resources-plugin&lt;/artifactId&gt;
+                &lt;version&gt;3.0.2&lt;/version&gt;
+                &lt;configuration&gt;
+                    &lt;encoding&gt;${project.build.sourceEncoding}&lt;/encoding&gt;
+                    &lt;nonFilteredFileExtensions&gt;
+                       &lt;nonFilteredFileExtension&gt;eot&lt;/nonFilteredFileExtension&gt;
+                       &lt;nonFilteredFileExtension&gt;ttf&lt;/nonFilteredFileExtension&gt;
+                       &lt;nonFilteredFileExtension&gt;woff&lt;/nonFilteredFileExtension&gt;
+                       &lt;nonFilteredFileExtension&gt;woff2&lt;/nonFilteredFileExtension&gt;
+                    &lt;/nonFilteredFileExtensions&gt;
+                &lt;/configuration&gt;
+            &lt;/plugin&gt;
+
+            &lt;plugin&gt;
+                &lt;groupId&gt;net.alchim31.maven&lt;/groupId&gt;
+                &lt;artifactId&gt;yuicompressor-maven-plugin&lt;/artifactId&gt;
+                &lt;version&gt;1.4.0&lt;/version&gt;
+                &lt;executions&gt;
+                    &lt;execution&gt;
+                        &lt;goals&gt;
+                            &lt;goal&gt;compress&lt;/goal&gt;
+                        &lt;/goals&gt;
+                    &lt;/execution&gt;
+                &lt;/executions&gt;
+                &lt;configuration&gt;
+                    &lt;nosuffix&gt;true&lt;/nosuffix&gt;
+                    &lt;linebreakpos&gt;-1&lt;/linebreakpos&gt;
+                    &lt;excludes&gt;
+                        &lt;exclude&gt;**/*.js&lt;/exclude&gt;
+                        &lt;exclude&gt;**/*.css&lt;/exclude&gt;
+                    &lt;/excludes&gt;
+                    &lt;aggregations&gt;
+                        &lt;aggregation&gt;
+                            &lt;insertNewLine&gt;true&lt;/insertNewLine&gt;
+                            &lt;removeIncluded&gt;true&lt;/removeIncluded&gt;
+                            &lt;output&gt;${project.build.directory}/classes/META-INF/resources/primefaces/components.css&lt;/output&gt;
+                            &lt;includes&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/core/core.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/jquery/jquery.ui.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/jquery/jquery.ui.timepicker.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/jquery/jquery.ui.pfextensions.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/accordion/accordion.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/autocomplete/autocomplete.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/blockui/blockui.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/carousel/carousel.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/columntoggler/columntoggler.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/dashboard/dashboard.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/datalist/datalist.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/datagrid/datagrid.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/datascroller/datascroller.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/datatable/datatable.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/dialog/dialog.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/fieldset/fieldset.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/forms/forms.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/forms/inputgroup.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/grid/grid.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/growl/growl.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/inplace/inplace.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/lightbox/lightbox.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/menu/menu.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/messages/messages.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/notificationbar/notificationbar.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/orderlist/orderlist.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/outputpanel/outputpanel.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/overlaypanel/overlaypanel.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/panel/panel.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/panelgrid/panelgrid.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/paginator/paginator.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/picklist/picklist.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/progressbar/progressbar.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/rating/rating.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/spinner/spinner.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/tabview/tabview.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/tagcloud/tagcloud.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/toolbar/toolbar.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/tooltip/tooltip.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/tree/tree.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/treetable/treetable.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/wizard/wizard.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/chips/chips.css&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/sidebar/sidebar.css&lt;/include&gt;
+                            &lt;/includes&gt;
+                        &lt;/aggregation&gt;
+                        &lt;aggregation&gt;
+                            &lt;insertNewLine&gt;true&lt;/insertNewLine&gt;
+                            &lt;removeIncluded&gt;true&lt;/removeIncluded&gt;
+                            &lt;output&gt;${project.build.directory}/classes/META-INF/resources/primefaces/core.js&lt;/output&gt;
+                            &lt;includes&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/core/core.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/core/core.env.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/core/core.ajax.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/core/core.expressions.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/core/core.widget.js&lt;/include&gt;
+
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/ajaxstatus/ajaxstatus.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/poll/poll.js&lt;/include&gt;
+                            &lt;/includes&gt;
+                        &lt;/aggregation&gt;
+                        &lt;aggregation&gt;
+                            &lt;insertNewLine&gt;true&lt;/insertNewLine&gt;
+                            &lt;removeIncluded&gt;true&lt;/removeIncluded&gt;
+                            &lt;output&gt;${project.build.directory}/classes/META-INF/resources/primefaces/components.js&lt;/output&gt;
+                            &lt;includes&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/core/core.dialog.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/accordion/accordion.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/autocomplete/autocomplete.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/blockui/blockui.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/calendar/calendar.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/carousel/carousel.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/columntoggler/columntoggler.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/dashboard/dashboard.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/datagrid/datagrid.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/datalist/datalist.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/datascroller/datascroller.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/datatable/datatable.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/dialog/dialog.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/dragdrop/dragdrop.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/effect/effect.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/fieldset/fieldset.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/forms/forms.inputtext.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/forms/forms.inputtextarea.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/forms/forms.selectonemenu.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/forms/forms.selectoneradio.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/forms/forms.selectbooleancheckbox.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/forms/forms.selectmanycheckbox.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/forms/forms.selectlistbox.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/forms/forms.selectonelistbox.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/forms/forms.selectmanymenu.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/forms/forms.commandbutton.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/forms/forms.button.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/forms/forms.selectmanybutton.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/forms/forms.selectonebutton.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/forms/forms.selectbooleanbutton.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/forms/forms.selectcheckboxmenu.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/forms/forms.inputmask.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/forms/forms.password.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/forms/forms.defaultcommand.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/forms/forms.splitbutton.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/forms/forms.themeswitcher.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/forms/forms.multiselectlistbox.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/growl/growl.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/inplace/inplace.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/lightbox/lightbox.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/menu/menu.base.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/menu/menu.tieredmenu.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/menu/menu.menubar.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/menu/menu.slidemenu.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/menu/menu.plainmenu.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/menu/menu.menubutton.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/menu/menu.contextmenu.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/menu/menu.megamenu.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/menu/menu.panelmenu.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/menu/menu.tabmenu.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/messages/messages.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/notificationbar/notificationbar.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/panel/panel.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/orderlist/orderlist.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/outputpanel/outputpanel.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/overlaypanel/overlaypanel.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/paginator/paginator.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/picklist/picklist.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/progressbar/progressbar.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/rating/rating.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/resizable/resizable.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/slider/slider.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/spinner/spinner.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/spotlight/spotlight.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/sticky/sticky.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/tabview/tabview.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/tagcloud/tagcloud.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/tooltip/tooltip.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/tree/tree.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/treetable/treetable.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/wizard/wizard.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/tristatecheckbox/tristatecheckbox.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/chips/chips.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/sidebar/sidebar.js&lt;/include&gt;
+                            &lt;/includes&gt;
+                        &lt;/aggregation&gt;
+                        &lt;aggregation&gt;
+                            &lt;insertNewLine&gt;true&lt;/insertNewLine&gt;
+                            &lt;removeIncluded&gt;true&lt;/removeIncluded&gt;
+                            &lt;output&gt;${project.build.directory}/classes/META-INF/resources/primefaces/components-mobile.js&lt;/output&gt;
+                            &lt;includes&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/core/core.mobile.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/mobile/widgets/accordion.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/mobile/widgets/autocomplete.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/mobile/widgets/calendar.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/mobile/widgets/datalist.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/mobile/widgets/datagrid.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/mobile/widgets/datatable.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/mobile/widgets/dialog.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/mobile/widgets/forms.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/mobile/widgets/growl.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/mobile/widgets/menu.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/mobile/widgets/paginator.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/mobile/widgets/overlaypanel.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/mobile/widgets/panel.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/mobile/widgets/tabview.js&lt;/include&gt;
+                            &lt;/includes&gt;
+                        &lt;/aggregation&gt;
+                        &lt;aggregation&gt;
+                            &lt;insertNewLine&gt;true&lt;/insertNewLine&gt;
+                            &lt;removeIncluded&gt;true&lt;/removeIncluded&gt;
+                            &lt;output&gt;${project.build.directory}/classes/META-INF/resources/primefaces/inputnumber/inputnumber.js&lt;/output&gt;
+                            &lt;includes&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/inputnumber/0-autoNumeric.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/inputnumber/1-jquery.metadata.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/inputnumber/2-inputnumber.js&lt;/include&gt;
+                            &lt;/includes&gt;
+                        &lt;/aggregation&gt;
+                        &lt;aggregation&gt;
+                            &lt;insertNewLine&gt;true&lt;/insertNewLine&gt;
+                            &lt;removeIncluded&gt;true&lt;/removeIncluded&gt;
+                            &lt;output&gt;${project.build.directory}/classes/META-INF/resources/primefaces/keyfilter/keyfilter.js&lt;/output&gt;
+                            &lt;includes&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/keyfilter/0-jquery.keyfilter.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/keyfilter/1-keyfilter.js&lt;/include&gt;
+                            &lt;/includes&gt;
+                        &lt;/aggregation&gt;
+                        &lt;aggregation&gt;
+                            &lt;insertNewLine&gt;true&lt;/insertNewLine&gt;
+                            &lt;removeIncluded&gt;true&lt;/removeIncluded&gt;
+                            &lt;output&gt;${project.build.directory}/classes/META-INF/resources/primefaces/layout/layout.js&lt;/output&gt;
+                            &lt;includes&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/layout/0-jquery.layout.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/layout/1-layout.js&lt;/include&gt;
+                            &lt;/includes&gt;
+                        &lt;/aggregation&gt;
+                        &lt;aggregation&gt;
+                            &lt;insertNewLine&gt;true&lt;/insertNewLine&gt;
+                            &lt;removeIncluded&gt;true&lt;/removeIncluded&gt;
+                            &lt;output&gt;${project.build.directory}/classes/META-INF/resources/primefaces/knob/knob.js&lt;/output&gt;
+                            &lt;includes&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/knob/1-jquery.knob.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/knob/2-knob.js&lt;/include&gt;
+                            &lt;/includes&gt;
+                        &lt;/aggregation&gt;
+                        &lt;aggregation&gt;
+                            &lt;insertNewLine&gt;true&lt;/insertNewLine&gt;
+                            &lt;removeIncluded&gt;true&lt;/removeIncluded&gt;
+                            &lt;output&gt;${project.build.directory}/classes/META-INF/resources/primefaces/timeline/timeline.js&lt;/output&gt;
+                            &lt;includes&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/timeline/0-timeline.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/timeline/1-timeline.js&lt;/include&gt;
+                            &lt;/includes&gt;
+                        &lt;/aggregation&gt;
+                        &lt;aggregation&gt;
+                            &lt;insertNewLine&gt;true&lt;/insertNewLine&gt;
+                            &lt;removeIncluded&gt;true&lt;/removeIncluded&gt;
+                            &lt;output&gt;${project.build.directory}/classes/META-INF/resources/primefaces/socket/socket.js&lt;/output&gt;
+                            &lt;includes&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/socket/0-atmosphere.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/socket/1-socket.js&lt;/include&gt;
+                            &lt;/includes&gt;
+                        &lt;/aggregation&gt;
+                        &lt;aggregation&gt;
+                            &lt;insertNewLine&gt;true&lt;/insertNewLine&gt;
+                            &lt;removeIncluded&gt;true&lt;/removeIncluded&gt;
+                            &lt;output&gt;${project.build.directory}/classes/META-INF/resources/primefaces/idlemonitor/idlemonitor.js&lt;/output&gt;
+                            &lt;includes&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/idlemonitor/0-jquery.idletimer.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/idlemonitor/1-idlemonitor.js&lt;/include&gt;
+                            &lt;/includes&gt;
+                        &lt;/aggregation&gt;
+                        &lt;aggregation&gt;
+                            &lt;insertNewLine&gt;true&lt;/insertNewLine&gt;
+                            &lt;removeIncluded&gt;true&lt;/removeIncluded&gt;
+                            &lt;output&gt;${project.build.directory}/classes/META-INF/resources/primefaces/jquery/jquery-plugins.js&lt;/output&gt;
+                            &lt;includes&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/jquery/jquery.ui.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/jquery/jquery.ui.timepicker.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/jquery/jquery.maskedinput.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/jquery/jquery.caretposition.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/jquery/jquery.autosize.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/jquery/jquery.cookie.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/jquery/jquery.mousewheel.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/jquery/jquery.rangy.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/jquery/jquery.browser.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/jquery/jquery.ui.touch-punch.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/jquery/jquery.ui.pfextensions.js&lt;/include&gt;
+                            &lt;/includes&gt;
+                        &lt;/aggregation&gt;
+                        &lt;aggregation&gt;
+                            &lt;insertNewLine&gt;true&lt;/insertNewLine&gt;
+                            &lt;removeIncluded&gt;true&lt;/removeIncluded&gt;
+                            &lt;output&gt;${project.build.directory}/classes/META-INF/resources/primefaces/colorpicker/colorpicker.js&lt;/output&gt;
+                            &lt;includes&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/colorpicker/0-jquery.colorpicker.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/colorpicker/1-colorpicker.js&lt;/include&gt;
+                            &lt;/includes&gt;
+                        &lt;/aggregation&gt;
+                        &lt;aggregation&gt;
+                            &lt;insertNewLine&gt;true&lt;/insertNewLine&gt;
+                            &lt;removeIncluded&gt;true&lt;/removeIncluded&gt;
+                            &lt;output&gt;${project.build.directory}/classes/META-INF/resources/primefaces/fileupload/fileupload.js&lt;/output&gt;
+                            &lt;includes&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/fileupload/0-jquery.iframe-transport.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/fileupload/1-jquery.fileupload.js&lt;/include&gt;
+                                &lt;include&gt;${project.build.directory}/classes/META-INF/resources/primefaces/fileupload/2-fileupload.js&lt;/include&gt;
+                            &lt;/includes&gt;
+                        &lt;/aggregation&gt;
+                    &lt;/aggregations&gt;
+                &lt;/configuration&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+
+    &lt;profiles&gt;
+        &lt;profile&gt;
+            &lt;id&gt;release&lt;/id&gt;
+            &lt;build&gt;
+                &lt;plugins&gt;
+                    &lt;plugin&gt;
+                        &lt;groupId&gt;org.apache.felix&lt;/groupId&gt;
+                        &lt;artifactId&gt;maven-bundle-plugin&lt;/artifactId&gt;
+                        &lt;version&gt;3.5.0&lt;/version&gt;
+                        &lt;extensions&gt;true&lt;/extensions&gt;
+                        &lt;configuration&gt;
+                            &lt;supportedProjectTypes&gt;
+                                &lt;supportedProjectType&gt;jar&lt;/supportedProjectType&gt;
+                            &lt;/supportedProjectTypes&gt;
+                            &lt;instructions&gt;
+                                &lt;Export-Package&gt;org.primefaces.*;version=&quot;${project.version}&lt;/Export-Package&gt;
+                                &lt;Import-Package&gt;
+                                    javax.faces.component.search;resolution:=optional,
+                                    javax.faces.component.search.*;resolution:=optional,
+                                    javax.faces;version=&quot;[2.0.0,3.0.0)&quot;,
+                                    javax.faces.*;version=&quot;[2.0.0,3.0.0)&quot;,
+                                    javax.inject;resolution:=optional,
+                                    javax.inject.*;resolution:=optional,
+                                    javax.enterprise;resolution:=optional,
+                                    javax.enterprise.*;resolution:=optional,
+                                    javax.*,
+                                    *;resolution:=optional
+                                &lt;/Import-Package&gt;
+                            &lt;/instructions&gt;
+                        &lt;/configuration&gt;
+                        &lt;executions&gt;
+                            &lt;execution&gt;
+                                &lt;id&gt;bundle-manifest&lt;/id&gt;
+                                &lt;phase&gt;process-classes&lt;/phase&gt;
+                                &lt;goals&gt;
+                                    &lt;goal&gt;manifest&lt;/goal&gt;
+                                &lt;/goals&gt;
+                            &lt;/execution&gt;
+                        &lt;/executions&gt;
+                    &lt;/plugin&gt;
+
+                    &lt;plugin&gt;
+                        &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                        &lt;artifactId&gt;maven-jar-plugin&lt;/artifactId&gt;
+                        &lt;version&gt;3.0.2&lt;/version&gt;
+                        &lt;configuration&gt;
+                            &lt;archive&gt;
+                                &lt;manifestFile&gt;${project.build.outputDirectory}/META-INF/MANIFEST.MF&lt;/manifestFile&gt;
+                                &lt;manifest&gt;
+                                    &lt;addDefaultImplementationEntries&gt;true&lt;/addDefaultImplementationEntries&gt;
+                                    &lt;addDefaultSpecificationEntries&gt;true&lt;/addDefaultSpecificationEntries&gt;
+                                &lt;/manifest&gt;
+                            &lt;/archive&gt;
+                        &lt;/configuration&gt;
+                    &lt;/plugin&gt;
+
+                    &lt;plugin&gt;
+                        &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                        &lt;artifactId&gt;maven-source-plugin&lt;/artifactId&gt;
+                        &lt;version&gt;2.1&lt;/version&gt;
+                        &lt;executions&gt;
+                            &lt;execution&gt;
+                                &lt;id&gt;attach-sources&lt;/id&gt;
+                                &lt;phase&gt;package&lt;/phase&gt;
+                                &lt;goals&gt;
+                                    &lt;goal&gt;jar-no-fork&lt;/goal&gt;
+                                &lt;/goals&gt;
+                            &lt;/execution&gt;
+                        &lt;/executions&gt;
+                    &lt;/plugin&gt;
+
+                    &lt;plugin&gt;
+                        &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                        &lt;artifactId&gt;maven-javadoc-plugin&lt;/artifactId&gt;
+                        &lt;version&gt;2.10.4&lt;/version&gt;
+                        &lt;configuration&gt;
+                            &lt;sourcepath&gt;${basedir}/src/main/java;${basedir}/target/generated-sources/maven-jsf-plugin&lt;/sourcepath&gt;
+                            &lt;additionalparam&gt;-Xdoclint:none&lt;/additionalparam&gt;
+                        &lt;/configuration&gt;
+                        &lt;executions&gt;
+                            &lt;execution&gt;
+                                &lt;id&gt;attach-docs&lt;/id&gt;
+                                &lt;phase&gt;package&lt;/phase&gt;
+                                &lt;goals&gt;
+                                    &lt;goal&gt;jar&lt;/goal&gt;
+                                &lt;/goals&gt;
+                            &lt;/execution&gt;
+                        &lt;/executions&gt;
+                    &lt;/plugin&gt;
+
+
+                    &lt;plugin&gt;
+                        &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                        &lt;artifactId&gt;maven-gpg-plugin&lt;/artifactId&gt;
+                        &lt;version&gt;1.4&lt;/version&gt;
+                        &lt;executions&gt;
+                            &lt;execution&gt;
+                                &lt;id&gt;sign-artifacts&lt;/id&gt;
+                                &lt;phase&gt;verify&lt;/phase&gt;
+                                &lt;goals&gt;
+                                    &lt;goal&gt;sign&lt;/goal&gt;
+                                &lt;/goals&gt;
+                            &lt;/execution&gt;
+                        &lt;/executions&gt;
+                    &lt;/plugin&gt;
+
+                    &lt;!--
+                        don&#39;t skip *.js and *.css, we need to minify
+                    --&gt;
+                    &lt;plugin&gt;
+                        &lt;groupId&gt;net.alchim31.maven&lt;/groupId&gt;
+                        &lt;artifactId&gt;yuicompressor-maven-plugin&lt;/artifactId&gt;
+                        &lt;version&gt;1.4.0&lt;/version&gt;
+                        &lt;configuration&gt;
+                            &lt;jswarn&gt;false&lt;/jswarn&gt;
+                            &lt;excludes&gt;
+                                &lt;exclude&gt;**/*.something&lt;/exclude&gt;
+                                &lt;exclude&gt;**/photocam.js&lt;/exclude&gt;
+                                &lt;exclude&gt;**/texteditor.js&lt;/exclude&gt;
+                                &lt;exclude&gt;**/jquery.js&lt;/exclude&gt;
+                            &lt;/excludes&gt;
+                            &lt;includes&gt;
+                                &lt;include&gt;**/*.js&lt;/include&gt;
+                                &lt;include&gt;**/*.css&lt;/include&gt;
+                            &lt;/includes&gt;
+                        &lt;/configuration&gt;
+                    &lt;/plugin&gt;
+                &lt;/plugins&gt;
+            &lt;/build&gt;
+        &lt;/profile&gt;
+    &lt;/profiles&gt;
+
+&lt;/project&gt;
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: 18/09/2019, 6:17:03 p.m.</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("xml",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            $(window).load(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 21667888;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

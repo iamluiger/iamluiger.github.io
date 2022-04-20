@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<jboss-deployment-structure>
+  <deployment>
+     <dependencies>
+        <module name="asm.asm"/>
+        <module name="com.sun.xml.bind"/>
+        <module name="javaee.api"/>
+        <module name="javax.annotation.api"/>
+        <module name="javax.ejb.api"/>
+        <module name="javax.enterprise.api"/>
+        <module name="javax.faces.api"/>
+        <module name="javax.interceptor.api"/>
+        <module name="javax.jms.api"/>
+        <module name="javax.jws.api"/>
+        <module name="javax.mail.api"/>
+        <module name="javax.rmi.api"/>
+        <module name="javax.servlet.api"/>
+        <module name="javax.transaction.api"/>
+        <module name="javax.validation.api"/>
+        <module name="javax.xml.ws.api"/>
+        <module name="nu.xom"/>
+        <module name="org.antlr"/>
+        <module name="org.apache.commons.cli"/>
+        <module name="org.apache.commons.pool"/>
+        <module name="org.apache.log4j"/>
+        <module name="org.apache.santuario.xmlsec"/>
+        <module name="org.apache.velocity"/>
+        <module name="org.apache.xml-resolver"/>
+        <module name="org.codehaus.woodstox"/>
+        <module name="org.hibernate"/>
+        <module name="org.hibernate.validator"/>
+        <module name="org.jacorb"/>
+        <module name="org.jboss.as.web"/>
+        <module name="org.jboss.osgi.repository"/>
+        <module name="org.jdom"/>
+        <module name="org.junit"/>
+        <module name="org.osgi.core"/>
+        <module name="org.python.jython.standalone"/>
+        <module name="org.slf4j.impl"/>
+        <module name="system"/>
+     </dependencies>
+  </deployment>
+</jboss-deployment-structure>

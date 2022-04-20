@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for PD4MLHtmlParser.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="21667888">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_SIGRU_ear.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_SIGRU_ear.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="tattletale_SIGRU_ear.html">
+                        <i class="glyphicon tattletale-nav-logo"></i>
+                      Tattletale
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsSIGRU_ear.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_SIGRU_ear.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Red Hat Application Migration Toolkit found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="21667888">
+                            SIGRU.ear/SIGRU.war/WEB-INF/lib/p4ml-1.0.0.jar/org/zefer/html/doc/PD4MLHtmlParser.java
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                                        <span class="label label-info" title="classloader">classloader</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.zefer.html.doc;
+
+import java.io.ByteArrayInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.io.StringReader;
+import java.io.UnsupportedEncodingException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Stack;
+import javax.servlet.ServletContext;
+import org.zefer.cache.CookieManager;
+import org.zefer.cache.ResourceCache;
+import org.zefer.font.d;
+import org.zefer.html.c.i;
+import org.zefer.html.c.b.b;
+import org.zefer.html.c.b.g;
+import org.zefer.html.c.b.h;
+import org.zefer.html.c.b.j;
+import org.zefer.html.c.b.l;
+import org.zefer.html.c.b.m;
+import org.zefer.html.doc.d.c;
+import org.zefer.pd4ml.pdf.PD4Device;
+
+public class PD4MLHtmlParser extends t {
+   private URL oØO000 = null;
+   private Reader ÔØO000 = null;
+   private URL õÖO000 = null;
+   private boolean ÕÖO000 = false;
+   private boolean ÖÖO000;
+   private c voidwhile;
+   private boolean ÕØO000 = false;
+   private String ôÖO000;
+   private String Objectwhile;
+   private boolean õØO000 = false;
+   private boolean interfacedo = false;
+   private boolean ÖØO000;
+   private long dodo = 0L;
+   private ResourceCache öÖO000;
+   private CookieManager OØO000;
+   private double ôØO000 = -1.0D;
+   private PD4MLHtmlParser._b[] ÒØO000;
+
+   public PD4MLHtmlParser(URL var1, String var2, String var3, String var4, String var5, boolean var6, String var7, CookieManager var8, boolean var9, ResourceCache var10, ServletContext var11, double var12, boolean var14) {
+      this.oØO000 = var1;
+      this.õÖO000 = var1;
+      this.super(var2, var6, var7, var8, var9, var10, var11, var3, var4, var5, var12, var14);
+   }
+
+   public PD4MLHtmlParser(Reader var1, URL var2, String var3, String var4, String var5, String var6, boolean var7, String var8, CookieManager var9, boolean var10, ResourceCache var11, ServletContext var12, double var13, boolean var15) {
+      this.ÔØO000 = var1;
+      this.õÖO000 = var2;
+      if (var2 != null &amp;&amp; !var15) {
+         this.ÕÖO000 = true;
+      }
+
+      this.super(var3, var7, var8, var9, var10, var11, var12, var4, var5, var6, var13, var15);
+   }
+
+   public PD4MLHtmlParser(String var1, URL var2, String var3, String var4, String var5, String var6, boolean var7, String var8, CookieManager var9, boolean var10, ResourceCache var11, ServletContext var12, double var13, boolean var15) {
+      StringReader var16 = new StringReader(var1);
+      this.ÔØO000 = var16;
+      this.õÖO000 = var2;
+      if (var2 != null &amp;&amp; !var15) {
+         this.ÕÖO000 = true;
+      }
+
+      this.super(var3, var7, var8, var9, var10, var11, var12, var4, var5, var6, var13, var15);
+   }
+
+   private void super(String var1, boolean var2, String var3, CookieManager var4, boolean var5, ResourceCache var6, ServletContext var7, String var8, String var9, String var10, double var11, boolean var13) {
+      this.ÖÖO000 = var2;
+      this.interfacedo = var5;
+      this.ôØO000 = var11;
+      this.ÖØO000 = var13;
+      if (var4 == null) {
+         var4 = new CookieManager();
+      }
+
+      this.OØO000 = var4;
+      if (var6 != null) {
+         this.öÖO000 = var6;
+      } else {
+         this.öÖO000 = new ResourceCache((String)null, (String)null, var3, var7, var4, var1, var8, var9, var10, false, this.interfacedo);
+      }
+
+      try {
+         Class.forName(&quot;com.steadystate.css.parser.SACParser&quot;);
+      } catch (ClassNotFoundException var17) {
+         System.err.println(&quot;\nError. ss_css2.jar is not in the classpath. See README.txt\n&quot;);
+      }
+
+      this.voidwhile = new c(this.öÖO000, this.interfacedo, var11);
+      if (var1 != null) {
+         try {
+            d.o00000(var1, this.öÖO000, var5);
+         } catch (FileNotFoundException var16) {
+            System.err.println(var16.getMessage());
+         }
+      }
+
+      try {
+         this.Objectwhile = System.getProperty(&quot;file.encoding&quot;, &quot;ISO8859_1&quot;);
+      } catch (Throwable var15) {
+         this.Objectwhile = &quot;ISO8859_1&quot;;
+      }
+
+      this.dodo = System.currentTimeMillis();
+   }
+
+   public void setDebug(boolean var1) {
+      this.interfacedo = var1;
+   }
+
+   public void setProfile(boolean var1) {
+      this.õØO000 = var1;
+   }
+
+   public Document buildDocument() {
+      if (this.õÖO000 == null) {
+         try {
+            this.õÖO000 = new URL(&quot;file:.&quot;);
+         } catch (MalformedURLException var35) {
+            ;
+         }
+      }
+
+      Document var1 = new Document(this.öÖO000, this.ÖÖO000);
+      var1.setDebugOn(this.interfacedo);
+      var1.setBase(this.õÖO000);
+      i var2 = null;
+
+      try {
+         var2 = this.parse(1, this.getEncoding(), this.isIgnoreCharset());
+         this.profile(&quot;parsed&quot;);
+      } catch (FileNotFoundException var32) {
+         var32.printStackTrace();
+         return null;
+      } catch (IOException var33) {
+         var33.printStackTrace();
+         return null;
+      } catch (org.zefer.html.c.c var34) {
+         var34.printStackTrace();
+         return null;
+      }
+
+      if (var2.o00000().isEmpty()) {
+         return null;
+      } else {
+         var1.setEncoding(this.getEncoding());
+         org.zefer.html.c.b.c var3 = o.super(var2, this.interfacedo);
+         this.profile(&quot;normalized&quot;);
+         this.ô00000(true);
+         boolean var4 = false;
+         Stack var5 = new Stack();
+         Stack var6 = new Stack();
+         Stack var7 = new Stack();
+         y var8 = null;
+         var6.push(new HashMap());
+         boolean var9 = false;
+         boolean var10 = false;
+         boolean var11 = false;
+         k var12 = null;
+         ArrayList var13 = new ArrayList();
+         HashMap var14 = null;
+         int var15 = 0;
+         int var16 = 0;
+         Iterator var17 = var3.iterator();
+
+         while(true) {
+            String var21;
+            String var44;
+            do {
+               j var18;
+               f var19;
+               do {
+                  do {
+                     while(true) {
+                        do {
+                           if (!var17.hasNext()) {
+                              if (var12 != null &amp;&amp; !var13.isEmpty()) {
+                                 var1.setTocDefined(true);
+                                 var17 = var13.iterator();
+
+                                 while(var17.hasNext()) {
+                                    v var36 = (v)var17.next();
+                                    this.super(var12, var36, var14);
+                                 }
+
+                                 var12.superString();
+                                 var1.setTocTable(var12);
+                              }
+
+                              this.profile(&quot;structured&quot;);
+                              var1.setStylesheet(this.voidwhile.Ò00000());
+                              return var1;
+                           }
+
+                           var18 = (j)var17.next();
+                           var3.set(var16++, (Object)null);
+                        } while(var18 == null);
+
+                        if (var5.size() == 0 &amp;&amp; !(var18 instanceof b)) {
+                           ;
+                        }
+
+                        var19 = !var5.isEmpty() ? (f)var5.peek() : null;
+                        if (var18 instanceof l) {
+                           break;
+                        }
+
+                        if (!(var18 instanceof m)) {
+                           String var23;
+                           if (var18 instanceof b) {
+                              b var40 = (b)var18;
+                              e var43 = var40.Ö00000;
+                              var11 = false;
+                              if (var43 == floatString) {
+                                 var44 = var40.o00000(&quot;href&quot;);
+                                 if (var44 != null &amp;&amp; !this.ÕÖO000) {
+                                    try {
+                                       this.õÖO000 = new URL(var44);
+                                       var1.setBase(this.õÖO000);
+                                    } catch (MalformedURLException var31) {
+                                       ;
+                                    }
+                                 }
+                              }
+
+                              if (var43 == oÕ0000) {
+                                 var9 = false;
+                                 var10 = true;
+                                 if (!var4) {
+                                    this.ô00000(false);
+                                    var4 = true;
+                                 }
+                              }
+
+                              if (var9 &amp;&amp; var43 == oÖ0000 &amp;&amp; var40 != null) {
+                                 var44 = var40.o00000(&quot;name&quot;);
+                                 var23 = var40.o00000(&quot;content&quot;);
+                                 if (var44 != null &amp;&amp; var23 != null) {
+                                    var1.addMeta(var44.toLowerCase(), var23);
+                                 }
+                              }
+
+                              if (var9 &amp;&amp; var43 == OÔ0000) {
+                                 var44 = var40 == null ? null : var40.o00000(&quot;rel&quot;);
+                                 if (var44 != null &amp;&amp; var44.equalsIgnoreCase(&quot;stylesheet&quot;)) {
+                                    var23 = var40.o00000(&quot;type&quot;);
+                                    if (var23 == null || var23.equalsIgnoreCase(&quot;text/css&quot;)) {
+                                       var23 = var40.o00000(&quot;media&quot;);
+                                       if (var23 == null || var23.equalsIgnoreCase(&quot;screen&quot;) || var23.equalsIgnoreCase(&quot;all&quot;) || var23.equalsIgnoreCase(&quot;pdf&quot;)) {
+                                          String var57 = var40.o00000(&quot;href&quot;);
+                                          if (var57 != null) {
+                                             try {
+                                                URL var55 = new URL(this.õÖO000, var57);
+                                                this.Objectsuper(&quot;loading CSS file &quot; + var55.toString());
+
+                                                try {
+                                                   byte[] var56 = this.öÖO000.getObject(var55.toString());
+                                                   if (var56 == null) {
+                                                      this.Objectsuper(&quot;can not read &quot; + var55.toString());
+                                                   } else {
+                                                      if (var56 != null &amp;&amp; var56.length &gt; 2 &amp;&amp; var56[0] == -17 &amp;&amp; var56[1] == -69 &amp;&amp; var56[2] == -65) {
+                                                         var56[0] = 32;
+                                                         var56[1] = 32;
+                                                         var56[2] = 32;
+                                                      }
+
+                                                      this.voidwhile.super(new String(var56), var55, true);
+                                                   }
+                                                } catch (Throwable var29) {
+                                                   System.err.println(&quot;processing &quot; + var55.toString());
+                                                   var29.printStackTrace(System.err);
+                                                }
+                                             } catch (MalformedURLException var30) {
+                                                var30.printStackTrace();
+                                             }
+                                          }
+                                       }
+                                    }
+                                 }
+                              } else {
+                                 if (var43 == float || var43 == ö00000 || var43 == õ00000 || var43 == ô00000 || var43 == void || var43 == Ö00000) {
+                                    var40.o00000(new org.zefer.html.c.b.d(&quot;pd4ml-anchor-name&quot;, &quot;ptoc-&quot; + var15++));
+                                 }
+
+                                 if (var43 == intObject &amp;&amp; var40 != null) {
+                                    var44 = var40.o00000(&quot;href&quot;);
+                                    if (var44 != null) {
+                                       var40.o00000(new org.zefer.html.c.b.d(&quot;color&quot;, &quot;#0000ff&quot;));
+                                       var40.o00000(new org.zefer.html.c.b.d(&quot;text-decoration&quot;, &quot;underline&quot;));
+                                    }
+                                 }
+
+                                 HashMap var49 = this.super(var43, var40.ô00000, var5);
+                                 if (var43.String() &amp;&amp; var19 != null) {
+                                    Object var47 = var49.get(&quot;margin-top&quot;);
+                                    if (var47 instanceof org.zefer.html.doc.d.c._b &amp;&amp; ((org.zefer.html.doc.d.c._b)var47).Ò00000()) {
+                                       double var51 = ((org.zefer.html.doc.d.c._b)var47).super();
+                                       if (var51 &gt; 100000.0D &amp;&amp; var19.Ö00000() &gt; 0 &amp;&amp; var19.öO0000(var19.Ö00000() - 1) instanceof v) {
+                                          var49 = (HashMap)var49.clone();
+                                          var49.put(&quot;margin-top&quot;, new Integer(0));
+                                       }
+                                    }
+                                 }
+
+                                 e var48 = null;
+                                 if (var19 != null) {
+                                    var48 = var19.OO0000();
+                                 }
+
+                                 HashMap var53;
+                                 if (var43 == ôÔ0000) {
+                                    var53 = this.super(var1, var43, var48, var6.isEmpty() ? null : (HashMap)var6.peek(), var49, false);
+                                    var8 = new y(var53, var8);
+                                    var7.push(var8);
+                                 }
+
+                                 var53 = this.super(var1, var43, var48, var6.isEmpty() ? null : (HashMap)var6.peek(), var49, true);
+                                 var6.push(var53);
+                                 if (!var43.Õ00000()) {
+                                    if (var43 == voidString &amp;&amp; !var10) {
+                                       var9 = true;
+                                    }
+
+                                    String var54 = var40 == null ? null : var40.o00000(&quot;class&quot;);
+                                    String var26 = var40 == null ? null : var40.o00000(&quot;id&quot;);
+                                    String var27;
+                                    if (var43 == oÕ0000) {
+                                       var9 = false;
+                                       var10 = true;
+                                       if (var40 != null) {
+                                          var27 = var40.o00000(&quot;dir&quot;);
+                                          if (var27 != null &amp;&amp; var27.equalsIgnoreCase(&quot;rtl&quot;)) {
+                                             var1.setRtl(true);
+                                          }
+                                       }
+                                    }
+
+                                    org.zefer.html.doc.m var58;
+                                    if (var43 == ÕO0000 &amp;&amp; var12 == null) {
+                                       var49.put(&quot;cellspacing&quot;, new Integer(0));
+                                       var49 = this.voidwhile.super(public, &quot;ptoc-table&quot;, (String)null, var5, var49, &quot;&quot;);
+                                       var58 = f.super(var19, var49, public, var1, var8);
+                                       if (var58 != null) {
+                                          var58.ö00000(var26);
+                                          var58.do(&quot;ptoc-table&quot;);
+                                          var12 = (k)var58;
+                                          var14 = var53;
+                                          Object var28 = var49.get(&quot;pncorr&quot;);
+                                          if (var28 instanceof Integer) {
+                                             var1.setTocPageNumberCorrection(((Integer)var28).intValue());
+                                          }
+                                       }
+                                       continue;
+                                    }
+
+                                    if (!var43.o00000()) {
+                                       if (var9) {
+                                          var19 = null;
+                                       }
+
+                                       if (var43 == superclass) {
+                                          var27 = (String)var53.get(&quot;display&quot;);
+                                          if (&quot;none&quot;.equalsIgnoreCase(var27)) {
+                                             var49 = (HashMap)var49.clone();
+                                             var49.put(&quot;display&quot;, &quot;none&quot;);
+                                          }
+                                       }
+
+                                       var58 = f.super(var19, var49, var43, var1, var8);
+                                       if (var58 != null) {
+                                          var58.ö00000(var26);
+                                          var58.do(var54);
+                                          if (var5.size() == 0) {
+                                             var1.setRoot((f)var58);
+                                          }
+
+                                          var5.push(var58);
+                                          if (var43 == float || var43 == ö00000 || var43 == õ00000 || var43 == ô00000 || var43 == void || var43 == Ö00000) {
+                                             var13.add(var58);
+                                          }
+                                       }
+                                    } else {
+                                       if (var43 == öÕ0000 || var43 == õO0000 || var43 == õÖ0000 || var43 == õÒ0000) {
+                                          HashMap var59 = (HashMap)var49.clone();
+                                          var59.putAll(var53);
+                                          var49 = var59;
+                                       }
+
+                                       var58 = f.super(var19, var49, var43, var1, var8);
+                                       if (var58 != null) {
+                                          var58.ö00000(var26);
+                                          var58.do(var54);
+                                       }
+                                    }
+                                 }
+
+                                 if (var43.String()) {
+                                    var8 = new y((HashMap)null, (y)null);
+                                    var7.push(var8);
+                                 }
+                              }
+                           } else if (var18 instanceof h) {
+                              h var38 = (h)var18;
+                              if (!var7.isEmpty() &amp;&amp; (var38.Object == ôÔ0000 || var38.Object.String())) {
+                                 var7.pop();
+                                 var8 = var7.isEmpty() ? null : (y)var7.peek();
+                              }
+
+                              var11 = false;
+                              if (var38.Object == voidString) {
+                                 var9 = false;
+                                 var10 = true;
+                              }
+
+                              if (!var9 || var38.Object != OÔ0000) {
+                                 if (!var6.isEmpty()) {
+                                    var6.pop();
+                                 }
+
+                                 if (!var38.Object.o00000() &amp;&amp; !var38.Object.Õ00000()) {
+                                    if (var5.isEmpty()) {
+                                       ;
+                                    }
+
+                                    p var42 = (p)var5.pop();
+                                    if (var38.Object != var42.OO0000()) {
+                                       ;
+                                    }
+
+                                    if (var38.Object == var42.OO0000() &amp;&amp; var42.OO0000().String() &amp;&amp; var19 != null) {
+                                       for(int var45 = 0; var45 &lt; var42.Ö00000(); ++var45) {
+                                          p var46 = var42.super(var45);
+                                          if (var46 instanceof v) {
+                                             Object var50 = var46.ô00000().get(&quot;margin-bottom&quot;);
+                                             if (var50 instanceof org.zefer.html.doc.d.c._b &amp;&amp; ((org.zefer.html.doc.d.c._b)var50).Ò00000()) {
+                                                double var52 = ((org.zefer.html.doc.d.c._b)var50).super();
+                                                if (var52 &gt; 100000.0D &amp;&amp; var45 == var42.Ö00000() - 1) {
+                                                   var46.super(&quot;margin-bottom&quot;, new Integer(0));
+                                                }
+                                             }
+                                          }
+                                       }
+                                    }
+
+                                    if (var42.OO0000() == public) {
+                                       ((k)var42).superString();
+                                    }
+                                 }
+                              }
+                           } else if (var18 instanceof g) {
+                              g var37 = (g)var18;
+                              if (var9 &amp;&amp; var19.OO0000() == t.ÒÕ0000) {
+                                 var21 = var1.getTitle();
+                                 var21 = var21 == null ? var37.Ò00000 : &quot; &quot; + var37.Ò00000;
+                                 var1.setTitle(var21);
+                              } else {
+                                 HashMap var39 = (HashMap)var6.peek();
+                                 if (var39 == null || !&quot;none&quot;.equalsIgnoreCase((String)var39.get(&quot;display&quot;))) {
+                                    if (var19 != null &amp;&amp; !var9 &amp;&amp; var19.OO0000() == ÔÒ0000) {
+                                       ((x)var19).super(var37.Ò00000, &quot;&quot; + var19.hashCode(), (String)null);
+                                    } else if (var19 != null &amp;&amp; !var9 &amp;&amp; var19.OO0000() == ÔÖ0000 &amp;&amp; var19.Ô00000().OO0000() == Objectnew) {
+                                       var44 = var19.super(&quot;value&quot;, (String)null, false);
+                                       var23 = var19.super(&quot;selected&quot;, (String)null, false);
+                                       ((x)var19.Ô00000()).super(var37.Ò00000, var44, var23);
+                                    } else if (var5.size() &gt; 1) {
+                                       boolean var22 = true;
+                                       var23 = var19.øÒ0000();
+                                       if (&quot;pre&quot;.equalsIgnoreCase(var23)) {
+                                          var22 = false;
+                                       }
+
+                                       if (var22 &amp;&amp; var11 &amp;&amp; var19 instanceof v &amp;&amp; !var19.ÔÓ0000()) {
+                                          if (!((v)var19).ÓO0000(var37.Ò00000)) {
+                                             new r(var19, (HashMap)var6.peek(), t.o00000, var37.Ò00000, var1, var8);
+                                          }
+                                       } else {
+                                          boolean var24 = true;
+                                          if (var22 &amp;&amp; var19 instanceof v &amp;&amp; var19.ObjectObject()) {
+                                             var24 = false;
+
+                                             for(int var25 = 0; var25 &lt; var37.Ò00000.length(); ++var25) {
+                                                if (!Character.isWhitespace(var37.Ò00000.charAt(var25))) {
+                                                   var24 = true;
+                                                }
+                                             }
+                                          }
+
+                                          if (var24) {
+                                             var11 = true;
+                                             new r(var19, (HashMap)var6.peek(), t.o00000, var37.Ò00000, var1, var8);
+                                          }
+                                       }
+                                    }
+                                 }
+                              }
+                           } else if (var18 instanceof org.zefer.html.c.b.k) {
+                              if (var19 != null &amp;&amp; !var9 &amp;&amp; var19.OO0000() == ÔÒ0000) {
+                                 ((x)var19).super(&quot;\n&quot;, &quot;&quot; + var19.hashCode(), (String)null);
+                              } else if (!var9 &amp;&amp; var5.size() &gt; 1) {
+                                 boolean var20 = true;
+                                 var21 = var19.øÒ0000();
+                                 if (&quot;pre&quot;.equalsIgnoreCase(var21)) {
+                                    var20 = false;
+                                 }
+
+                                 if (!var20) {
+                                    if (var19.OO0000() != public &amp;&amp; var19.OO0000() != superclass) {
+                                       new org.zefer.html.doc.i(var19, new HashMap(), var1);
+                                    }
+                                 } else if (var19 instanceof v &amp;&amp; !var19.ÔÓ0000()) {
+                                    if (var11) {
+                                       if (!var19.ÖÓ0000() &amp;&amp; var19 instanceof v &amp;&amp; var19.OO0000() != ôo0000 &amp;&amp; var19.OO0000() != voidString) {
+                                          new r(var19, (HashMap)var6.peek(), t.o00000, &quot; &quot;, var1, var8);
+                                       }
+                                    } else {
+                                       var11 = true;
+                                       new r(var19, (HashMap)var6.peek(), t.o00000, &quot; &quot;, var1, var8);
+                                    }
+                                 }
+                              }
+                           }
+                        }
+                     }
+                  } while(var19 == null);
+               } while(var19.OO0000() != ôo0000 &amp;&amp; (var19.OO0000() != voidString || var10));
+
+               l var41 = (l)var18;
+               var21 = var41.Õ00000.toString();
+               var44 = var41.Ô00000.o00000(&quot;media&quot;);
+            } while(var44 != null &amp;&amp; !var44.equalsIgnoreCase(&quot;screen&quot;) &amp;&amp; !var44.equalsIgnoreCase(&quot;all&quot;) &amp;&amp; !var44.equalsIgnoreCase(&quot;pdf&quot;));
+
+            this.voidwhile.super(var21, this.õÖO000, false);
+         }
+      }
+   }
+
+   private void ô00000(boolean var1) {
+      if (this.ÒØO000 != null) {
+         for(int var2 = 0; var2 &lt; this.ÒØO000.length; ++var2) {
+            PD4MLHtmlParser._b var3 = this.ÒØO000[var2];
+            if (var3 == null) {
+               break;
+            }
+
+            if (var3.Ó00000 != var1) {
+               URL var4 = this.õÖO000;
+
+               try {
+                  var4 = new URL(this.õÖO000, &quot;addStyle[&quot; + var2 + &quot;]&quot;);
+               } catch (MalformedURLException var9) {
+                  ;
+               }
+
+               String var5 = null;
+               boolean var6 = false;
+               if (var3.o00000()) {
+                  var4 = var3.o00000;
+                  var6 = true;
+                  this.Objectsuper(&quot;loading additional CSS file &quot; + var4.toString());
+                  byte[] var7 = this.öÖO000.getObject(var4.toString());
+                  if (var7 == null) {
+                     this.Objectsuper(&quot;can not read &quot; + var4.toString());
+                     continue;
+                  }
+
+                  var5 = new String(var7);
+               } else {
+                  this.Objectsuper(&quot;loading additional stylesheet &quot; + var4.toString());
+                  var5 = var3.new;
+               }
+
+               try {
+                  this.voidwhile.super(var5, var4, var6);
+               } catch (Throwable var8) {
+                  System.err.println(&quot;processing &quot; + var4.toString());
+                  var8.printStackTrace(System.err);
+               }
+            }
+         }
+
+      }
+   }
+
+   private void super(k var1, v var2, HashMap var3) {
+      boolean var4 = false;
+      byte var21;
+      if (var2.OO0000() == float) {
+         var21 = 1;
+      } else if (var2.OO0000() == ö00000) {
+         var21 = 2;
+      } else if (var2.OO0000() == õ00000) {
+         var21 = 3;
+      } else if (var2.OO0000() == ô00000) {
+         var21 = 4;
+      } else if (var2.OO0000() == void) {
+         var21 = 5;
+      } else {
+         if (var2.OO0000() != Ö00000) {
+            return;
+         }
+
+         var21 = 6;
+      }
+
+      String var5 = var2.ØÕ0000();
+      String var6 = var2.super(&quot;pd4ml-anchor-name&quot;, (String)null, false);
+      if (var6 != null) {
+         Stack var7 = new Stack();
+         var7.push(var1);
+         Stack var8 = new Stack();
+         var8.push(var3);
+         org.zefer.html.c.b.f var9 = new org.zefer.html.c.b.f();
+         var9.add(new org.zefer.html.c.b.d(&quot;class&quot;, &quot;ptoc&quot; + var21 + &quot;-row&quot;));
+         HashMap var10 = this.super(superclass, var9, var7);
+         HashMap var11 = this.super(var2.Ôo0000(), (e)null, public, (HashMap)var8.peek(), var10, true);
+         var8.push(var11);
+         org.zefer.html.doc.m var12 = f.super(var1, var10, superclass, var1.Ôo0000(), (y)null);
+         var12.do(&quot;ptoc&quot; + var21 + &quot;-row&quot;);
+         var7.push(var12);
+         var9.clear();
+         String var13 = var2.super(&quot;pd4toc&quot;, &quot;&quot;);
+         boolean var14 = true;
+         if (var13.indexOf(&quot;nopagenum&quot;) &lt; 0) {
+            var14 = false;
+         }
+
+         String var15 = &quot;###&quot;;
+         if (var14) {
+            var9.add(new org.zefer.html.c.b.d(&quot;class&quot;, &quot;ptoc-left-col-justcaption&quot;));
+            var15 = &quot;&quot;;
+         } else {
+            var9.add(new org.zefer.html.c.b.d(&quot;class&quot;, &quot;ptoc-left-col&quot;));
+         }
+
+         var10 = this.super(Ô00000, var9, var7);
+         var11 = this.super(var2.Ôo0000(), (e)null, superclass, (HashMap)var8.peek(), var10, true);
+         var8.push(var11);
+         org.zefer.html.doc.m var16 = f.super(var12, var10, Ô00000, var1.Ôo0000(), (y)null);
+         if (var16 != null) {
+            if (var14) {
+               var16.do(&quot;ptoc-left-col-justcaption&quot;);
+            } else {
+               var16.do(&quot;ptoc-left-col&quot;);
+            }
+         }
+
+         var7.push(var16);
+         var9.clear();
+         var9.add(new org.zefer.html.c.b.d(&quot;href&quot;, &quot;#&quot; + var6));
+         var9.add(new org.zefer.html.c.b.d(&quot;pd4ml-anchor-href&quot;, &quot;#&quot; + var6));
+         var9.add(new org.zefer.html.c.b.d(&quot;class&quot;, &quot;ptoc-link&quot;));
+         var10 = this.super(intObject, var9, var7);
+         var11 = this.super(var2.Ôo0000(), (e)null, Ô00000, (HashMap)var8.peek(), var10, true);
+         var8.push(var11);
+         var9.clear();
+         var9.add(new org.zefer.html.c.b.d(&quot;class&quot;, &quot;ptoc&quot; + var21 + &quot;-style-left&quot;));
+         var10 = this.super(floatnew, var9, var7);
+         var11 = this.super(var2.Ôo0000(), (e)null, Ô00000, (HashMap)var8.peek(), var10, true);
+         var8.push(var11);
+         org.zefer.html.doc.m var17 = f.super(var16, var10, floatnew, var1.Ôo0000(), (y)null);
+         if (var17 != null) {
+            var17.do(&quot;ptoc&quot; + var21 + &quot;-style-left&quot;);
+         }
+
+         var7.push(var17);
+         new r(var17, (HashMap)var8.peek(), t.o00000, var5, var1.Ôo0000(), (y)null);
+         var9.clear();
+         if (var14) {
+            var9.add(new org.zefer.html.c.b.d(&quot;nopagenum&quot;, &quot;true&quot;));
+         }
+
+         var10 = this.super(õO0000, var9, var7);
+         this.super(var2.Ôo0000(), (e)null, floatnew, (HashMap)var8.peek(), var10, true);
+         f.super(var17, var10, õO0000, var1.Ôo0000(), (y)null);
+         var8.pop();
+         var8.pop();
+         var8.pop();
+         var7.pop();
+         var7.pop();
+         var9.clear();
+         if (var14) {
+            var9.add(new org.zefer.html.c.b.d(&quot;class&quot;, &quot;ptoc-right-col-justcaption&quot;));
+         } else {
+            var9.add(new org.zefer.html.c.b.d(&quot;class&quot;, &quot;ptoc-right-col&quot;));
+         }
+
+         var10 = this.super(Ô00000, var9, var7);
+         var11 = this.super(var2.Ôo0000(), (e)null, superclass, (HashMap)var8.peek(), var10, true);
+         var8.push(var11);
+         org.zefer.html.doc.m var18 = f.super(var12, var10, Ô00000, var1.Ôo0000(), (y)null);
+         if (var18 != null) {
+            if (var14) {
+               var18.do(&quot;ptoc-right-col-justcaption&quot;);
+            } else {
+               var18.do(&quot;ptoc-right-col&quot;);
+            }
+         }
+
+         var7.push(var18);
+         var9.clear();
+         var9.add(new org.zefer.html.c.b.d(&quot;href&quot;, &quot;#&quot; + var6));
+         var9.add(new org.zefer.html.c.b.d(&quot;pd4ml-anchor-href&quot;, &quot;#&quot; + var6));
+         var9.add(new org.zefer.html.c.b.d(&quot;class&quot;, &quot;ptoc-link&quot;));
+         var10 = this.super(intObject, var9, var7);
+         var11 = this.super(var2.Ôo0000(), (e)null, Ô00000, (HashMap)var8.peek(), var10, true);
+         var8.push(var11);
+         var9.clear();
+         var9.add(new org.zefer.html.c.b.d(&quot;class&quot;, &quot;ptoc&quot; + var21 + &quot;-style-right&quot;));
+         var10 = this.super(floatnew, var9, var7);
+         var11 = this.super(var2.Ôo0000(), (e)null, Ô00000, (HashMap)var8.peek(), var10, true);
+         var8.push(var11);
+         org.zefer.html.doc.m var19 = f.super(var18, var10, floatnew, var1.Ôo0000(), (y)null);
+         if (var19 != null) {
+            var19.do(&quot;ptoc1-style-right&quot;);
+         }
+
+         var7.push(var19);
+         r var20 = new r(var19, (HashMap)var8.peek(), t.o00000, var15, var1.Ôo0000(), (y)null);
+         var1.Ôo0000().addTocPageEntry(var6, var20);
+      }
+   }
+
+   private HashMap super(Document var1, e var2, e var3, HashMap var4, HashMap var5, boolean var6) {
+      HashMap var7 = var4 == null ? new HashMap() : (HashMap)var4.clone();
+      if (var3 != null &amp;&amp; var3.String()) {
+         var7.remove(&quot;background-color&quot;);
+      }
+
+      if (var2 != null &amp;&amp; var2 == public) {
+         String var8 = (String)var7.get(&quot;white-space&quot;);
+         if (var8 != null) {
+            var7.remove(&quot;white-space&quot;);
+            if (!&quot;pre&quot;.equals(var8)) {
+               var7.remove(&quot;font-size&quot;);
+               var7.remove(&quot;font-family&quot;);
+            }
+         } else {
+            var7.remove(&quot;font-size&quot;);
+            var7.remove(&quot;font-family&quot;);
+         }
+      }
+
+      Iterator var14 = var5.keySet().iterator();
+
+      while(true) {
+         while(var14.hasNext()) {
+            String var9 = (String)var14.next();
+            if (&quot;font-size&quot;.equals(var9)) {
+               Object var10 = var5.get(var9);
+               if (var10 instanceof org.zefer.html.doc.d.c._b) {
+                  if (var2 != null &amp;&amp; var2 == public) {
+                     int var13 = ((org.zefer.html.doc.d.c._b)var10).super(var1.getBaseFontSize());
+                     var7.put(var9, new Integer(var13));
+                     continue;
+                  }
+
+                  Object var11 = var4.get(&quot;font-size&quot;);
+                  if (var11 == null) {
+                     var11 = new Integer(var1.getBaseFontSize());
+                  }
+
+                  if (var11 instanceof Integer) {
+                     int var12 = ((org.zefer.html.doc.d.c._b)var10).super(((Integer)var11).intValue());
+                     var7.put(var9, new Integer(var12));
+                     continue;
+                  }
+               }
+            }
+
+            if (c.Ô00000(var9)) {
+               var7.put(var9, var5.get(var9));
+            }
+         }
+
+         if (var6) {
+            var7.remove(&quot;position&quot;);
+            var7.remove(&quot;left&quot;);
+            var7.remove(&quot;right&quot;);
+            var7.remove(&quot;top&quot;);
+            var7.remove(&quot;bottom&quot;);
+         }
+
+         return var7;
+      }
+   }
+
+   private HashMap super(e var1, org.zefer.html.c.b.f var2, Stack var3) {
+      String var4 = null;
+      String var5 = null;
+      String var6 = null;
+      HashMap var7 = new HashMap();
+      if (var2 != null) {
+         Iterator var8 = var2.iterator();
+
+         while(true) {
+            while(var8.hasNext()) {
+               org.zefer.html.c.b.d var9 = (org.zefer.html.c.b.d)var8.next();
+               String var10 = !var9.o00000() ? i.new(var9.Ó00000) : &quot;undefined&quot;;
+               if (var9.o00000.equals(&quot;id&quot;) &amp;&amp; !var9.o00000() &amp;&amp; !&quot;&quot;.equals(var10)) {
+                  var6 = var10;
+               } else if (var9.o00000.equals(&quot;class&quot;) &amp;&amp; !var9.o00000()) {
+                  if (var5 == null) {
+                     var5 = var10.trim();
+                  }
+               } else if (var9.o00000.equals(&quot;style&quot;) &amp;&amp; !var9.o00000() &amp;&amp; !&quot;&quot;.equals(var10)) {
+                  if (var4 != null) {
+                     if (!var4.endsWith(&quot;;&quot;)) {
+                        var4 = var4 + &quot;;&quot;;
+                     }
+
+                     var4 = var4 + var10.trim();
+                  } else {
+                     var4 = var10.trim();
+                  }
+               } else {
+                  var7.put(var9.o00000, var10);
+               }
+            }
+
+            var7 = org.zefer.html.doc.d.e.super(var1, var7, this.voidwhile.super(), this.ôØO000);
+            break;
+         }
+      }
+
+      HashMap var11 = this.voidwhile.super(var1, var5, var6, var3, var7, var4);
+      return var11;
+   }
+
+   public i parse(int var1, String var2, boolean var3) throws UnsupportedEncodingException, IOException, org.zefer.html.c.c {
+      if (var1++ &gt; 2) {
+         throw new UnsupportedEncodingException(&quot;can not parse &#39;&quot; + var2 + &quot;&#39; encoded document&quot;);
+      } else {
+         String var4 = null;
+         String var7;
+         if (this.oØO000 != null) {
+            String var5 = this.oØO000.toString();
+            Object var6;
+            if (var5.toLowerCase().startsWith(&quot;java:&quot;)) {
+               var6 = new org.zefer.cache.d();
+            } else if (var5.toLowerCase().startsWith(&quot;https:&quot;)) {
+               if (PD4Device.isVersionOlder14()) {
+                  var6 = new org.zefer.cache.b();
+               } else {
+                  var6 = new org.zefer.cache.g();
+               }
+            } else {
+               var6 = new org.zefer.cache.c();
+            }
+
+            ((org.zefer.cache.e)var6).o00000(this.OØO000);
+            var7 = null;
+
+            byte[] var15;
+            try {
+               try {
+                  var15 = ((org.zefer.cache.e)var6).o00000(var5, this.interfacedo);
+               } catch (IOException var12) {
+                  if (!&quot;older ssl version&quot;.equals(var12.getMessage())) {
+                     throw var12;
+                  }
+
+                  var6 = new org.zefer.cache.b();
+                  ((org.zefer.cache.e)var6).o00000(this.OØO000);
+                  var15 = ((org.zefer.cache.e)var6).o00000(var5, this.interfacedo);
+               }
+
+               if (var15 == null) {
+                  throw new IOException(&quot;empty content: &quot; + var5);
+               }
+
+               var4 = ((org.zefer.cache.e)var6).o00000();
+            } catch (IOException var13) {
+               this.Objectsuper(var5 + &quot; not found.&quot;);
+               throw var13;
+            }
+
+            ByteArrayInputStream var8 = new ByteArrayInputStream(var15);
+            if (!var3 &amp;&amp; var4 != null &amp;&amp; var1 == 2 &amp;&amp; (var2 == null || this.Objectwhile.equals(var2))) {
+               var2 = var4;
+               this.setEncoding(var4);
+               this.Objectsuper(&quot;using content encoding from HTTP header: &quot; + var4);
+            }
+
+            if (var2 == null) {
+               InputStreamReader var9 = new InputStreamReader(var8);
+               this.ÔØO000 = var9;
+               var2 = var9.getEncoding();
+            } else {
+               this.ÔØO000 = new InputStreamReader(var8, var2);
+            }
+         }
+
+         org.zefer.html.c.f var14 = new org.zefer.html.c.f(this.ÔØO000, var2, var3);
+
+         try {
+            i var16 = var14.ØO0000();
+            this.ÔØO000.close();
+            this.setEncoding(var2);
+            return var16;
+         } catch (org.zefer.html.c.c var11) {
+            var7 = var11.getMessage();
+            if (var7 != null &amp;&amp; var7.startsWith(&quot;ENCODING_CHANGE: &quot;)) {
+               String var17 = var7.substring(&quot;ENCODING_CHANGE: &quot;.length());
+               if (this.oØO000 == null) {
+                  try {
+                     this.ÔØO000.reset();
+                  } catch (IOException var10) {
+                     throw new IOException(&quot;can not change default encoding &quot; + var2 + &quot; to &quot; + var17 + &quot; as specified in the source HTML: &quot; + &quot;the given input stream reader does not support reset()&quot;);
+                  }
+               } else {
+                  this.ÔØO000.close();
+               }
+
+               this.Objectsuper(&quot;new parse attempt with: &quot; + var17);
+               this.setEncoding(var17);
+               return this.parse(var1, var17, true);
+            } else {
+               throw var11;
+            }
+         }
+      }
+   }
+
+   private void Objectsuper(String var1) {
+      if (this.interfacedo) {
+         System.out.println(var1);
+      }
+
+   }
+
+   public void profile(String var1) {
+      if (this.õØO000) {
+         System.out.println(System.currentTimeMillis() - this.dodo + &quot;: &quot; + var1);
+      }
+
+   }
+
+   public boolean isIgnoreCharset() {
+      return this.ÕØO000;
+   }
+
+   public void setIgnoreCharset(boolean var1) {
+      this.ÕØO000 = var1;
+   }
+
+   public String getEncoding() {
+      return this.ôÖO000;
+   }
+
+   public void setEncoding(String var1) {
+      this.ôÖO000 = var1;
+   }
+
+   public ResourceCache getCache() {
+      return this.öÖO000;
+   }
+
+   public URL getDocumentBase() {
+      return this.õÖO000;
+   }
+
+   public PD4MLHtmlParser._b[] getMoreStyles() {
+      return this.ÒØO000;
+   }
+
+   public void setMoreStyles(PD4MLHtmlParser._b[] var1) {
+      this.ÒØO000 = var1;
+   }
+
+   public static class _b {
+      public boolean Ó00000 = false;
+      public String new;
+      public URL o00000;
+
+      public _b(URL var1, boolean var2) {
+         this.o00000 = var1;
+         this.Ó00000 = var2;
+      }
+
+      public _b(String var1, boolean var2) {
+         this.new = var1;
+         this.Ó00000 = var2;
+      }
+
+      boolean o00000() {
+         return null != this.o00000;
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: 18/09/2019, 6:17:00 p.m.</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "93" });
+
+            $("<div id='93-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(93)');
+
+
+$("<a name='50171944' class='windup-file-location'></a><div class='inline-source-comment green tag-classloader'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>Dynamic class instantiation</strong><a title='View Rule: environment-dependent-calls-01000' href='windup_ruleproviders.html#environment-dependent-calls-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The class is dynamically loaded within application. During the migration, multiple classes that are provided on classpath by a different server may not be present anymore.<\/p><p>Please review the class-loading mechanisms and ensure that the dynamically loaded class is available in JBoss EAP.<\/p><ul><li><a href='https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.0/html-single/development_guide/#class_loading_and_modules' target='_blank'>Class Loading and Modules in JBoss EAP 7</a></li><li><a href='https://access.redhat.com/solutions/361343' target='_blank'>Article about Classloading in JBoss EAP 6</a></li><li><a href='https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.4/html-single/Development_Guide/index.html#chap-Class_Loading_and_Modules' target='_blank'>Class Loading and Modules in JBoss EAP 6</a></li></ul></div></div></div>").appendTo('#93-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            $(window).load(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 21667888;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

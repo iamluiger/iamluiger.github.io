@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for cambioGrupo.properties</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="21667888">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_SIGRU_ear.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_SIGRU_ear.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="tattletale_SIGRU_ear.html">
+                        <i class="glyphicon tattletale-nav-logo"></i>
+                      Tattletale
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsSIGRU_ear.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_SIGRU_ear.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Red Hat Application Migration Toolkit found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="21667888">
+                            SIGRU.ear/SIGRU.war/WEB-INF/classes/com/Dinissan/contabilidad/activosfijos/view/msj/cambioGrupo.properties
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Properties</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+#Panel Principal
+label_titulo_principal=Cambio de Grupo de un Activo Fijo
+label_resultados_ayuda_titulo=Ayuda
+label_resultados_ayuda_descripcion=Opci\u00F3n que permite consulta un activo fijo para realizar un cambio sobre el grupo al que pertenece.
+
+#Panel de consulta
+label_panel_filtros=Par�metros de consulta
+label_filtros_compannia=Compa��a:
+label_filtros_unidad_negocio=Unidad Negocio:
+label_filtros_centro_costo=Centro Costo:
+label_filtros_codigo=C�digo:
+label_filtros_sucursal=Sucursal:
+label_filtros_estado_propiedad=Estado Propiedad:
+label_filtros_grupo=Grupo:
+label_filtros_tipo=Tipo:
+label_filtros_clase=Clase:
+label_filtros_proveedor=Proveedor:
+label_filtros_empleado=Empleado:
+label_filtros_propiedad_inversion=Propiedad Inversi�n:
+label_filtros_fecha_puma_inic=Fecha Puesta Marcha Inicial:
+label_filtros_fecha_puma_final=Fecha Puesta Marcha Final:
+label_filtros_numero_factura=Numero de Factura:
+label_buscar_activo_fijo=Usar los filtros para realizar la consulta de activos fijos
+button_resultados_buscar=Consultar
+
+#Panel de resultados
+label_resultados_busqueda=Resultados de B�squeda
+label_resultados_tabla=Listado de activos Fijos
+label_resultados_tabla_comp_desc=Compa\u00F1ia
+label_resultados_tabla_codigo=C\u00F3digo
+label_resultados_tabla_grup_desc=Grupo
+label_resultados_tabla_annos_vida_util_grupo=V.U. Grupo
+label_resultados_tabla_fecha_puesta_marcha=Fecha P.M.
+label_resultados_tabla_vida_util_colgaap=V.U. Colgaap
+label_resultados_tabla_vida_util_niff=V.U. Niif
+label_resultados_tabla_valor_saldo_colgaap=Saldo Libros Colgaap
+label_resultados_tabla_valor_saldo_niff=Saldo Libros Niif
+label_resultados_tabla_opciones=Opciones
+label_resultados_tabla_button_detalle=Ver detalle del Activo Fijo
+label_resultados_tabla_button_cambio_grupo=Cambiar el Grupo del Activo Fijo
+
+#Cambio de Grupo
+label_nuevo_editar_grup=*Grupo\:
+label_nuevo_editar_tipo=*Tipo\:
+label_nuevo_editar_clase=*Clase\:
+label_nuevo_editar_id_obje=Propiedad de Inversi\u00F3n\:
+label_nuevo_editar_modelo_costo=Modelo de Costo\:
+label_nuevo_editar_modelo_reevaluacion=Modelo de Reevaluaci\u00F3n\:
+label_ayuda_id_obje_modelo_costo=Si el activo fijo es propiedad de inversi\u00F3n y modelo de costo ser\u00E1 depreciado
+label_ayuda_id_obje_modelo_reevaluacion=Si el activo fijo es propiedad de inversi\u00F3n y modelo de reeevaluaci\u00F3n no ser\u00E1 depreciado
+label_cambiar_grupo_titulo=Cambiar Grupo del Activo Fijo
+button_editar_cambio_grupo=Cambiar de Grupo
+label_nuevo_editar_grup_ante=Grupo Anterior\:
+label_nuevo_editar_tipo_ante=Tipo Anterior\:
+label_nuevo_editar_clase_ante=Clase Anterior\:
+label_nuevo_editar_grup_nuevo=*Grupo Nuevo\:
+label_nuevo_editar_tipo_nuevo=*Tipo Nuevo\:
+label_nuevo_editar_clase_nuevo=*Clase Nuevo\:
+label_nuevo_editar_vu_mejora_ajena=Tiempo Contrato (a\u00F1os)\:
+label_nuevo_editar_justificacion=Justificaci\u00F3n\:
+label_detalle_titulo=Detalle del Activo Fijo
+label_detalle_compannia=Compa\u00F1ia\:
+label_detalle_codigo=C\u00F3digo\:
+label_detalle_grupo=Grupo\:
+label_detalle_subgrupo=Subgrupo\:
+label_detalle_tipo=Tipo\:
+label_detalle_clase=Clase\:
+label_detalle_descripcion=Descripci\u00F3n\:
+label_detalle_observacion=Observaci\u00F3n\:
+label_detalle_marca=Marca\:
+label_detalle_numero_serie=N\u00FAmero de Serie\:
+label_detalle_proveedor=Proveedor\:
+label_detalle_numero_factura=N\u00FAmero de Factura\:
+label_detalle_estado_propiedad=Estado de Propiedad\:
+label_detalle_estado_fisico=Estado F\u00EDsico\:
+label_detalle_valor_costo=Costo de Adquisici\u00F3n\:
+label_detalle_valor_descuento_pronto_pago=Descuento Pronto Pago\:
+label_detalle_centro_costo=Centro de Costo\:
+label_detalle_descripcion_ubicacion=Descripci\u00F3n de la Ubicaci\u00F3n\:
+label_detalle_empleado=Empleado\:
+label_detalle_fecha_entrada=Fecha de Entrada\:
+label_detalle_fecha_puesta_marcha=Fecha de Puesta en Marcha\:
+label_detalle_fecha_fin_garantia=Fecha Fin de la Garant\u00EDa\:
+label_detalle_cant_vida_util_cont=Vida \u00DAtil Contable (a\u00F1os)\:
+label_detalle_cant_vida_util_fiscal=Vida \u00DAtil Fiscal (a\u00F1os)
+label_detalle_id_propiedad_inversion=Propiedad de Inversi\u00F3n\:
+label_detalle_valor_arriendo=Valor del Arriendo\:
+label_detalle_fecha_suspencion_depreciacion=Fecha Suspenci\u00F3n Depreciaci\u00F3n\:
+label_detalle_fecha_reintegro_depreciacion=Fecha Reintegro Depreciaci\u00F3n\:
+label_detalle_fecha_retiro=Fecha de Retiro\:
+label_detalle_usuario=Usuario de Creaci\u00F3n\:
+
+#Validaciones
+label_info_registro_cambio_grupo=Se ha actualizado el grupo del activo fijo
+label_warning_registro_sin_cambio_grupo=No se ha actualizado el cambio del grupo de activo fijo
+label_warning_grupo_no_seleccionado=El grupo al que pertenece el activo fijo es obligatorio. Por favor seleccione uno.
+label_warning_tipo_no_seleccionado=El tipo al que pertenece el activo fijo es obligatorio. Por favor seleccione uno.
+label_warning_clase_no_seleccionado=La clase a la que pertenece el activo fijo es obligatoria. Por favor seleccione una.
+label_warning_dos_fechas_no_seleccionadas=Si desea realizar una b\u00FAsqueda por fecha debe seleccionar la fecha inicial y la final
+label_warning_valor_arriendo_no_numerico=El valor del arriendo debe ser un n\u00FAmero valido.
+label_warning_prop_inver_sin_modelo=Debe seleccionar un modelo propiedad de inversi\u00F3n para el activo fijo.
+label_warning_prop_inver_doble_modelo=Solo puede seleccionar un modelo de propiedad de inversi\u00F3n.
+
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: 18/09/2019, 6:17:00 p.m.</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("properties",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            $(window).load(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 21667888;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

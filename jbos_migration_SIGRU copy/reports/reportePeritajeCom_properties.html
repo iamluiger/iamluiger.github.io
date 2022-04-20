@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for reportePeritajeCom.properties</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="21667888">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_SIGRU_ear.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_SIGRU_ear.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="tattletale_SIGRU_ear.html">
+                        <i class="glyphicon tattletale-nav-logo"></i>
+                      Tattletale
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsSIGRU_ear.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_SIGRU_ear.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Red Hat Application Migration Toolkit found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="21667888">
+                            SIGRU.ear/SIGRU.war/WEB-INF/classes/com/Dinissan/retomas/reportes/view/msj/reportePeritajeCom.properties
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Properties</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+#Panel Principal
+label_titulo_principal=Reporte Peritaje por estado COM
+label_resultados_ayuda_descripcion=En esta opci�n usted podr� generar el reporte de peritaje COM, el filtro de fechas es sobre la fecha de peritaje, por esta raz�n no aparecer�n vehiculos en estado Acercamiento e Iniciado.
+
+#Panel de consulta
+label_panel_filtros_consulta=Par�metros de consulta
+label_panel_consulta_compania=compa�ia:
+label_panel_consulta_unidad_negocio=Unidad de Negocio:
+label_panel_consulta_zona=Zona:
+label_panel_consulta_sucursal=Sucursal:
+label_panel_consulta_fecha=Fecha de Peritaje:
+label_panel_consulta_Estado=Estado:
+label_panel_consulta_vitrina=Vitrina:
+label_panel_consulta_asesor=Asesor:
+label_panel_consulta_perito=Perito:
+label_panel_consulta_director=Director:
+
+label_panel_mensajes_compania=compa�ia
+label_panel_mensajes_unidad_negocio=Unidad de Negocio
+label_panel_mensajes_zona=Zona
+label_panel_mensajes_sucursal=Sucursal
+label_panel_mensajes_fecha=Fecha de registro
+label_panel_mensajes_Estado=Estado
+label_panel_mensajes_vitrina=Vitrina
+label_panel_mensajes_asesor=Asesor
+label_panel_mensajes_perito=Perito
+label_panel_mensajes_director=Director
+
+button_tittle_generar=Generar Reporte confidencial COM
+button_generar=Generar
+button_tittle_consultar=Consultar Reporte Confidencial COM
+button_consultar=Consultar
+
+#Tabla de resultados
+label_resultados_busqueda=Resultados de la b�squeda
+label_resultados_tabla= Listado reporte peritaje por estado COM
+label_resultados_tabla_vehiculo = Veh�culo usado
+label_resultados_tabla_marca = Marca
+label_resultados_tabla_linea = L�nea
+label_resultados_tabla_modelo = Modelo
+label_resultados_tabla_ano = A�o
+label_resultados_tabla_id_cliente = ID Cliente
+label_resultados_tabla_nombre_cliente = Nombre Cliente
+label_resultados_tabla_sucursal = Sucursal
+label_resultados_tabla_vitrina = Vitrina
+label_resultados_tabla_id_asesor = ID Asesor
+label_resultados_tabla_asesor = Asesor
+label_resultados_tabla_id_perito = ID Perito
+label_resultados_tabla_perito = Perito
+label_resultados_tabla_id_director_com = ID Director COM
+label_resultados_tabla_director = Director COM
+label_resultados_tabla_estado = Estado
+label_resultados_tabla_no_pedido = No Pedido
+label_resultados_tabla_fecha_reg = Fecha de Registro
+label_resultados_tabla_fecha_acercamiento = Fecha de acercamiento
+label_resultados_tabla_fecha_peritaje = Fecha de peritaje
+label_resultados_tabla_fecha_aprobacion = Fecha de aprobacion
+label_resultados_tabla_fecha_ingreso_usuado = Fecha de ingreso usado
+label_resultados_tabla_valor_aprobacion = Valor Aprobaci�n
+label_resultados_tabla_estado_usuado = Estado usado
+label_resultados_tabla_fecha_solicitud_sijin = Fecha solicitud sijin y tradici�n
+label_resultados_tabla_fecha_tradicion = Fecha resultado  sijin y tradici�n
+label_resultados_tabla_resultado_sijin = Resultado sijin
+label_resultados_tabla_resultado_tradicion = Resultado tradici�n
+label_resultados_tabla_fecha_envio_carpeta = Fecha envio carpeta a COM
+label_resultados_tabla_fecha_recepcion_com = Fecha recepci�n carpeta a COM
+label_resultados_tabla_fecha_envio_traspaso = Fecha de envio a traspaso
+label_resultados_tabla_fecha_recepcion_traspaso = Fecha de recepcion a traspaso
+label_resultados_tabla_resultado_traspaso = Resultado traspaso
+label_resultados_tabla_vr_alistamiento = Valor Alistamiento
+
+#Validaciones
+label_warning_no_filtros=Debe seleccionar un filtro.
+
+#CodigoComa�ia
+parameter_cod_comp = 3
+
+# consultar asesor
+consulta_asesor_title = Consulta de asesores por Login y Nombre
+consulta_asesor_login  = Login:
+consulta_asesor_nit = Nombre:
+consulta_asesor_buscar = Buscar:
+consulta_asesor_resultado_login = Login
+consulta_asesor_resultado_nombre  = Nombre
+consulta_asesor_resultado_seleccione = Seleccione
+
+# consultar perito
+consulta_perito_title = Consulta de peritos por Login y Nombre
+consulta_perito_login  = Login:
+consulta_perito_nit = Nombre:
+consulta_perito_buscar = Buscar:
+consulta_perito_resultado_login = Login
+consulta_perito_resultado_nombre  = Nombre
+consulta_perito_resultado_seleccione = Seleccione
+
+# consultar perito
+consulta_director_title = Consulta de director por Login y Nombre
+consulta_director_login  = Login:
+consulta_director_nit = Nombre:
+consulta_director_buscar = Buscar:
+consulta_director_resultado_login = Login
+consulta_director_resultado_nombre  = Nombre
+
+## ERRORES PANTALLA
+
+label_error_fechaIni_vacia = La fecha inicial no puede ser vacia, porfavor seleccione una fecha
+label_error_fechafin_vacia =  La fecha final no puede ser vacia, porfavor seleccione una fecha
+label_error_fechafinMayorAIni =  La fecha inicial no puede ser menor que la fecha final, porfavor seleccione una fecha valida
+label_error_seleccione_vitrina = Debe Seleccionar una vitrina</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: 18/09/2019, 6:16:52 p.m.</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("properties",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            $(window).load(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 21667888;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

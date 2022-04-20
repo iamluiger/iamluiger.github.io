@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for pom.xml</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="21667888">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_SIGRU_ear.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_SIGRU_ear.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="tattletale_SIGRU_ear.html">
+                        <i class="glyphicon tattletale-nav-logo"></i>
+                      Tattletale
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsSIGRU_ear.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_SIGRU_ear.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Red Hat Application Migration Toolkit found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="21667888">
+                            SIGRU.ear/AdminCU.war/WEB-INF/lib/commons-collections4-4.1.jar/META-INF/maven/org.apache.commons/commons-collections4/pom.xml
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Maven XML</span>
+                                </div>
+
+                                <ul class="classifications">
+                                            <li>
+                                                <div class="title">
+                                                    <em>Maven POM (pom.xml)</em>
+<a title='View Rule: DiscoverMavenProjectsRuleProvider_1' href='windup_ruleproviders.html#DiscoverMavenProjectsRuleProvider_1'><span class='glyphicon glyphicon-link rule-link'></span></a>                                                </div>
+                                                <div class="desc">Maven Project Object Model (POM) File</div>
+                                            </li>
+                                </ul>
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!--
+   Licensed to the Apache Software Foundation (ASF) under one or more
+   contributor license agreements.  See the NOTICE file distributed with
+   this work for additional information regarding copyright ownership.
+   The ASF licenses this file to You under the Apache License, Version 2.0
+   (the &quot;License&quot;); you may not use this file except in compliance with
+   the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+--&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd&quot;&gt;
+  &lt;parent&gt;
+    &lt;groupId&gt;org.apache.commons&lt;/groupId&gt;
+    &lt;artifactId&gt;commons-parent&lt;/artifactId&gt;
+    &lt;version&gt;38&lt;/version&gt;
+  &lt;/parent&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+  &lt;groupId&gt;org.apache.commons&lt;/groupId&gt;
+  &lt;artifactId&gt;commons-collections4&lt;/artifactId&gt;
+  &lt;version&gt;4.1&lt;/version&gt;
+  &lt;name&gt;Apache Commons Collections&lt;/name&gt;
+
+  &lt;inceptionYear&gt;2001&lt;/inceptionYear&gt;
+  &lt;description&gt;The Apache Commons Collections package contains types that extend and augment the Java Collections Framework.&lt;/description&gt;
+
+  &lt;url&gt;http://commons.apache.org/proper/commons-collections/&lt;/url&gt;
+
+  &lt;issueManagement&gt;
+    &lt;system&gt;jira&lt;/system&gt;
+    &lt;url&gt;http://issues.apache.org/jira/browse/COLLECTIONS&lt;/url&gt;
+  &lt;/issueManagement&gt;
+
+  &lt;scm&gt;
+    &lt;connection&gt;scm:svn:http://svn.apache.org/repos/asf/commons/proper/collections/trunk&lt;/connection&gt;
+    &lt;developerConnection&gt;scm:svn:https://svn.apache.org/repos/asf/commons/proper/collections/trunk&lt;/developerConnection&gt;
+    &lt;url&gt;http://svn.apache.org/viewvc/commons/proper/collections/trunk&lt;/url&gt;
+  &lt;/scm&gt;
+
+  &lt;developers&gt;
+    &lt;developer&gt;
+      &lt;name&gt;Matt Benson&lt;/name&gt;
+      &lt;id&gt;mbenson&lt;/id&gt;
+    &lt;/developer&gt;
+    &lt;developer&gt;
+      &lt;name&gt;James Carman&lt;/name&gt;
+      &lt;id&gt;jcarman&lt;/id&gt;
+    &lt;/developer&gt;
+    &lt;developer&gt;
+      &lt;name&gt;Stephen Colebourne&lt;/name&gt;
+      &lt;id&gt;scolebourne&lt;/id&gt;
+    &lt;/developer&gt;
+    &lt;developer&gt;
+      &lt;name&gt;Robert Burrell Donkin&lt;/name&gt;
+      &lt;id&gt;rdonkin&lt;/id&gt;
+    &lt;/developer&gt;
+    &lt;developer&gt;
+      &lt;name&gt;Morgan Delagrange&lt;/name&gt;
+      &lt;id&gt;morgand&lt;/id&gt;
+    &lt;/developer&gt;
+    &lt;developer&gt;
+      &lt;name&gt;Gary D. Gregory&lt;/name&gt;
+      &lt;id&gt;ggregory&lt;/id&gt;
+    &lt;/developer&gt;
+    &lt;developer&gt;
+      &lt;name&gt;Matthew Hawthorne&lt;/name&gt;
+      &lt;id&gt;matth&lt;/id&gt;
+    &lt;/developer&gt;
+    &lt;developer&gt;
+      &lt;name&gt;Dipanjan Laha&lt;/name&gt;
+      &lt;id&gt;dlaha&lt;/id&gt;
+    &lt;/developer&gt;
+    &lt;developer&gt;
+      &lt;name&gt;Geir Magnusson&lt;/name&gt;
+      &lt;id&gt;geirm&lt;/id&gt;
+    &lt;/developer&gt;
+    &lt;developer&gt;
+      &lt;name&gt;Luc Maisonobe&lt;/name&gt;
+      &lt;id&gt;luc&lt;/id&gt;
+    &lt;/developer&gt;
+    &lt;developer&gt;
+      &lt;name&gt;Craig McClanahan&lt;/name&gt;
+      &lt;id&gt;craigmcc&lt;/id&gt;
+    &lt;/developer&gt;
+    &lt;developer&gt;
+      &lt;name&gt;Thomas Neidhart&lt;/name&gt;
+      &lt;id&gt;tn&lt;/id&gt;
+    &lt;/developer&gt;
+    &lt;developer&gt;
+      &lt;name&gt;Adrian Nistor&lt;/name&gt;
+      &lt;id&gt;adriannistor&lt;/id&gt;
+    &lt;/developer&gt;
+    &lt;developer&gt;
+      &lt;name&gt;Phil Steitz&lt;/name&gt;
+      &lt;id&gt;psteitz&lt;/id&gt;
+    &lt;/developer&gt;
+    &lt;developer&gt;
+      &lt;name&gt;Arun M. Thomas&lt;/name&gt;
+      &lt;id&gt;amamment&lt;/id&gt;
+    &lt;/developer&gt;
+    &lt;developer&gt;
+      &lt;name&gt;Rodney Waldhoff&lt;/name&gt;
+      &lt;id&gt;rwaldhoff&lt;/id&gt;
+    &lt;/developer&gt;
+    &lt;developer&gt;
+      &lt;name&gt;Henri Yandell&lt;/name&gt;
+      &lt;id&gt;bayard&lt;/id&gt;
+    &lt;/developer&gt;
+  &lt;/developers&gt;
+
+  &lt;contributors&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Rafael U. C. Afonso&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Max Rydahl Andersen&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Avalon&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Federico Barbieri&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Jeffrey Barnes&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Nicola Ken Barozzi&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Arron Bates&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Sebastian Bazley&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Benjamin Bentmann&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Ola Berg&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Sam Berlin&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Christopher Berry&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Nathan Beyer&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Rune Peter Bjørnstad&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Janek Bogucki&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Maarten Brak&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Dave Bryson&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Chuck Burdick&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Julien Buret&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Josh Cain&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Jonathan Carlson&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Ram Chidambaram&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Steve Clark&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Benoit Corne&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Eric Crampton&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Dimiter Dimitrov&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Peter Donald&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Steve Downey&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Rich Dougherty&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Tom Dunham&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Stefano Fornari&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Andrew Freeman&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Gerhard Froehlich&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Goran Hacek&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;David Hay&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Mario Ivankovits&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Paul Jack&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Eric Johnson&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Kent Johnson&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Marc Johnson&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Roger Kapsi&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Nissim Karpenstein&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Shinobu Kawai&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Stephen Kestle&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Mohan Kishore&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Simon Kitching&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Thomas Knych&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Serge Knystautas&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Peter KoBek&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Jordan Krey&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Olaf Krische&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Guilhem Lavaux&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Paul Legato&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;David Leppik&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Berin Loritsch&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Hendrik Maryns&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Stefano Mazzocchi&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Brian McCallister&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;David Meikle&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Steven Melzer&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Leon Messerschmidt&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Mauricio S. Moura&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Kasper Nielsen&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Stanislaw Osinski&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Alban Peignier&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Mike Pettypiece&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Steve Phelps&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Ilkka Priha&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Jonas Van Poucke&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Will Pugh&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Herve Quiroz&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Daniel Rall&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Robert Ribnitz&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Huw Roberts&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Henning P. Schmiedehausen&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Joerg Schmuecker&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Howard Lewis Ship&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Joe Raysa&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Jeff Rodriguez&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Ashwin S&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Jordane Sarda&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Thomas Schapitz&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Jon Schewe&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Andreas Schlosser&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Christian Siefkes&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Michael Smith&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Stephen Smith&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Jan Sorensen&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Jon S. Stevens&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;James Strachan&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Leo Sutic&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Radford Tam&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Chris Tilden&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Neil O&#39;Toole&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Jeff Turner&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Kazuya Ujihara&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Thomas Vahrst&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Jeff Varszegi&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Ralph Wagner&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Hollis Waite&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;David Weinrich&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Dieter Wimberger&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Serhiy Yevtushenko&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Sai Zhang&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Jason van Zyl&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Geoff Schoeman&lt;/name&gt;
+    &lt;/contributor&gt;
+    &lt;contributor&gt;
+      &lt;name&gt;Goncalo Marques&lt;/name&gt;
+    &lt;/contributor&gt;
+  &lt;/contributors&gt;
+
+  &lt;dependencies&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;junit&lt;/groupId&gt;
+      &lt;artifactId&gt;junit&lt;/artifactId&gt;
+      &lt;version&gt;4.11&lt;/version&gt;
+      &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.easymock&lt;/groupId&gt;
+      &lt;artifactId&gt;easymock&lt;/artifactId&gt;
+      &lt;version&gt;3.2&lt;/version&gt;
+      &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;
+  &lt;/dependencies&gt;
+
+  &lt;distributionManagement&gt;
+    &lt;site&gt;
+      &lt;id&gt;apache.website&lt;/id&gt;
+      &lt;name&gt;Apache Commons Site&lt;/name&gt;
+      &lt;url&gt;${commons.deployment.protocol}://people.apache.org/www/commons.apache.org/${commons.componentid}&lt;/url&gt;
+    &lt;/site&gt;
+  &lt;/distributionManagement&gt;
+
+  &lt;properties&gt;
+    &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+    &lt;project.reporting.outputEncoding&gt;UTF-8&lt;/project.reporting.outputEncoding&gt;
+    &lt;maven.compiler.source&gt;1.6&lt;/maven.compiler.source&gt;
+    &lt;maven.compiler.target&gt;1.6&lt;/maven.compiler.target&gt;
+
+    &lt;!--
+       This is also  used to generate download_xxx file name.
+       To override this when generating the download page:
+
+       mvn commons:download-page -Dcommons.componentid=collections
+
+       The above seems to change the download page name but not any other
+       properties that depend on the componentid.
+    --&gt;
+    &lt;commons.componentid&gt;collections4&lt;/commons.componentid&gt;
+
+    &lt;!-- Current 4.x release series --&gt;
+    &lt;commons.release.version&gt;4.1&lt;/commons.release.version&gt;
+    &lt;commons.release.desc&gt;(Java 6.0+)&lt;/commons.release.desc&gt;
+
+    &lt;!-- Previous 3.x release series --&gt;
+    &lt;commons.release.2.version&gt;3.2.2&lt;/commons.release.2.version&gt;
+    &lt;commons.release.2.desc&gt;(Requires Java 1.3 or later)&lt;/commons.release.2.desc&gt;
+    &lt;!-- Override generated name --&gt;
+    &lt;commons.release.2.name&gt;commons-collections-${commons.release.2.version}&lt;/commons.release.2.name&gt;
+
+    &lt;commons.jira.id&gt;COLLECTIONS&lt;/commons.jira.id&gt;
+    &lt;commons.jira.pid&gt;12310465&lt;/commons.jira.pid&gt;
+    &lt;!-- The RC version used in the staging repository URL. --&gt;
+    &lt;commons.rc.version&gt;RC2&lt;/commons.rc.version&gt;
+    &lt;checkstyle.version&gt;2.9.1&lt;/checkstyle.version&gt;
+
+    &lt;commons.site.path&gt;collections&lt;/commons.site.path&gt;
+    &lt;commons.scmPubUrl&gt;https://svn.apache.org/repos/infra/websites/production/commons/content/proper/commons-collections&lt;/commons.scmPubUrl&gt;
+    &lt;commons.scmPubCheckoutDirectory&gt;site-content&lt;/commons.scmPubCheckoutDirectory&gt;
+
+    &lt;!-- Override javadoc plugin version due to a vulnerability of the generated javadoc
+         see http://jira.codehaus.org/browse/MJAVADOC-370, remove after update to CP 32   --&gt;
+    &lt;commons.javadoc.version&gt;2.9.1&lt;/commons.javadoc.version&gt;
+  &lt;/properties&gt;
+
+
+  &lt;build&gt;
+    &lt;plugins&gt;
+      &lt;plugin&gt;
+        &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+        &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
+          &lt;configuration&gt;
+            &lt;includes&gt;
+              &lt;include&gt;**/*Test.java&lt;/include&gt;
+            &lt;/includes&gt;
+            &lt;excludes&gt;
+              &lt;exclude&gt;**/*$*&lt;/exclude&gt;
+              &lt;exclude&gt;**/TestUtils.java&lt;/exclude&gt;
+              &lt;exclude&gt;**/Abstract*.java&lt;/exclude&gt;
+              &lt;exclude&gt;**/BulkTest.java&lt;/exclude&gt;
+            &lt;/excludes&gt;
+        &lt;/configuration&gt;
+      &lt;/plugin&gt;
+      &lt;plugin&gt;
+        &lt;artifactId&gt;maven-assembly-plugin&lt;/artifactId&gt;
+        &lt;configuration&gt;
+          &lt;descriptors&gt;
+            &lt;descriptor&gt;src/assembly/bin.xml&lt;/descriptor&gt;
+            &lt;descriptor&gt;src/assembly/src.xml&lt;/descriptor&gt;
+          &lt;/descriptors&gt;
+          &lt;tarLongFileMode&gt;gnu&lt;/tarLongFileMode&gt;
+        &lt;/configuration&gt;
+      &lt;/plugin&gt;
+      &lt;plugin&gt;
+        &lt;artifactId&gt;maven-checkstyle-plugin&lt;/artifactId&gt;
+        &lt;version&gt;${checkstyle.version}&lt;/version&gt;
+        &lt;configuration&gt;
+          &lt;configLocation&gt;${basedir}/src/conf/checkstyle.xml&lt;/configLocation&gt;
+          &lt;enableRulesSummary&gt;false&lt;/enableRulesSummary&gt;
+        &lt;/configuration&gt;
+      &lt;/plugin&gt;
+      &lt;plugin&gt;
+        &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+        &lt;artifactId&gt;maven-scm-publish-plugin&lt;/artifactId&gt;
+        &lt;configuration&gt;
+          &lt;ignorePathsToDelete&gt;
+            &lt;ignorePathToDelete&gt;javadocs&lt;/ignorePathToDelete&gt;
+          &lt;/ignorePathsToDelete&gt;
+        &lt;/configuration&gt;
+      &lt;/plugin&gt;
+    &lt;/plugins&gt;
+  &lt;/build&gt;
+
+  &lt;reporting&gt;
+    &lt;plugins&gt;
+      &lt;plugin&gt;
+        &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+        &lt;artifactId&gt;maven-changes-plugin&lt;/artifactId&gt;
+        &lt;version&gt;${commons.changes.version}&lt;/version&gt;
+        &lt;configuration&gt;
+          &lt;issueLinkTemplatePerSystem&gt;
+            &lt;default&gt;%URL%/%ISSUE%&lt;/default&gt;
+          &lt;/issueLinkTemplatePerSystem&gt;
+          &lt;!--  Add sample JIRA report - &#39;mvn changes:jira-report&#39; or &#39;mvn site&#39; --&gt;
+          &lt;onlyCurrentVersion&gt;false&lt;/onlyCurrentVersion&gt;
+          &lt;columnNames&gt;Fix Version,Key,Summary,Type,Resolution,Status&lt;/columnNames&gt;
+          &lt;!-- Sort cols have to be reversed in JIRA 4 --&gt;
+          &lt;sortColumnNames&gt;Key DESC,Type,Fix Version DESC&lt;/sortColumnNames&gt;
+          &lt;resolutionIds&gt;Fixed&lt;/resolutionIds&gt;
+          &lt;statusIds&gt;Resolved,Closed&lt;/statusIds&gt;
+          &lt;!-- Don&#39;t include sub-task --&gt;
+          &lt;typeIds&gt;Bug,New Feature,Task,Improvement,Wish,Test&lt;/typeIds&gt;
+          &lt;fixVersionIds&gt;${commons.release.version}&lt;/fixVersionIds&gt;
+          &lt;maxEntries&gt;500&lt;/maxEntries&gt;
+        &lt;/configuration&gt;
+        &lt;reportSets&gt;
+          &lt;reportSet&gt;
+            &lt;reports&gt;
+              &lt;report&gt;changes-report&lt;/report&gt;
+              &lt;report&gt;jira-report&lt;/report&gt;
+            &lt;/reports&gt;
+          &lt;/reportSet&gt;
+        &lt;/reportSets&gt;
+      &lt;/plugin&gt;
+      &lt;plugin&gt;
+        &lt;artifactId&gt;maven-checkstyle-plugin&lt;/artifactId&gt;
+        &lt;version&gt;${checkstyle.version}&lt;/version&gt;
+        &lt;configuration&gt;
+          &lt;configLocation&gt;${basedir}/src/conf/checkstyle.xml&lt;/configLocation&gt;
+          &lt;enableRulesSummary&gt;false&lt;/enableRulesSummary&gt;
+	      &lt;suppressionsLocation&gt;${basedir}/src/conf/checkstyle-suppressions.xml&lt;/suppressionsLocation&gt;
+        &lt;/configuration&gt;
+	    &lt;reportSets&gt;
+          &lt;reportSet&gt;
+            &lt;reports&gt;
+              &lt;report&gt;checkstyle&lt;/report&gt;
+            &lt;/reports&gt;
+          &lt;/reportSet&gt;
+        &lt;/reportSets&gt;
+      &lt;/plugin&gt;
+      &lt;plugin&gt;
+        &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+        &lt;artifactId&gt;clirr-maven-plugin&lt;/artifactId&gt;
+        &lt;version&gt;${commons.clirr.version}&lt;/version&gt;
+        &lt;configuration&gt;
+          &lt;minSeverity&gt;${minSeverity}&lt;/minSeverity&gt;
+         &lt;/configuration&gt;
+      &lt;/plugin&gt;
+      &lt;plugin&gt;
+        &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+        &lt;artifactId&gt;findbugs-maven-plugin&lt;/artifactId&gt;
+        &lt;version&gt;2.5.5&lt;/version&gt;
+        &lt;configuration&gt;
+          &lt;threshold&gt;Normal&lt;/threshold&gt;
+          &lt;effort&gt;Default&lt;/effort&gt;
+          &lt;excludeFilterFile&gt;${basedir}/src/conf/findbugs-exclude-filter.xml&lt;/excludeFilterFile&gt;
+       &lt;/configuration&gt;
+      &lt;/plugin&gt;
+      &lt;plugin&gt;
+        &lt;artifactId&gt;maven-pmd-plugin&lt;/artifactId&gt;
+        &lt;version&gt;2.7.1&lt;/version&gt;
+        &lt;configuration&gt;
+          &lt;targetJdk&gt;${maven.compiler.target}&lt;/targetJdk&gt;
+        &lt;/configuration&gt;
+        &lt;reportSets&gt;
+          &lt;reportSet&gt;
+            &lt;reports&gt;
+              &lt;report&gt;pmd&lt;/report&gt;
+              &lt;report&gt;cpd&lt;/report&gt;
+            &lt;/reports&gt;
+          &lt;/reportSet&gt;
+        &lt;/reportSets&gt;
+      &lt;/plugin&gt;
+      &lt;plugin&gt;
+        &lt;groupId&gt;org.apache.rat&lt;/groupId&gt;
+        &lt;artifactId&gt;apache-rat-plugin&lt;/artifactId&gt;
+        &lt;configuration&gt;
+          &lt;excludes&gt;
+            &lt;exclude&gt;site-content/**/*&lt;/exclude&gt;
+            &lt;exclude&gt;src/test/resources/data/test/*&lt;/exclude&gt;
+            &lt;exclude&gt;maven-eclipse.xml&lt;/exclude&gt;
+            &lt;exclude&gt;.travis.yml&lt;/exclude&gt;
+          &lt;/excludes&gt;
+        &lt;/configuration&gt;
+      &lt;/plugin&gt;
+    &lt;/plugins&gt;
+  &lt;/reporting&gt;
+
+  &lt;profiles&gt;
+    &lt;profile&gt;
+      &lt;id&gt;setup-checkout&lt;/id&gt;
+      &lt;activation&gt;
+        &lt;file&gt;
+          &lt;missing&gt;site-content&lt;/missing&gt;
+        &lt;/file&gt;
+      &lt;/activation&gt;
+      &lt;build&gt;
+        &lt;plugins&gt;
+          &lt;plugin&gt;
+            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+            &lt;artifactId&gt;maven-antrun-plugin&lt;/artifactId&gt;
+            &lt;version&gt;1.7&lt;/version&gt;
+            &lt;executions&gt;
+              &lt;execution&gt;
+                &lt;id&gt;prepare-checkout&lt;/id&gt;
+                &lt;phase&gt;pre-site&lt;/phase&gt;
+                &lt;goals&gt;
+                  &lt;goal&gt;run&lt;/goal&gt;
+                &lt;/goals&gt;
+                &lt;configuration&gt;
+                  &lt;tasks&gt;
+                    &lt;exec executable=&quot;svn&quot;&gt;
+                      &lt;arg line=&quot;checkout --depth immediates ${commons.scmPubUrl} ${commons.scmPubCheckoutDirectory}&quot; /&gt;
+                    &lt;/exec&gt;
+
+                    &lt;exec executable=&quot;svn&quot;&gt;
+                      &lt;arg line=&quot;update --set-depth exclude ${commons.scmPubCheckoutDirectory}/javadocs&quot; /&gt;
+                    &lt;/exec&gt;
+
+                    &lt;pathconvert pathsep=&quot; &quot; property=&quot;dirs&quot;&gt;
+                      &lt;dirset dir=&quot;${commons.scmPubCheckoutDirectory}&quot; includes=&quot;*&quot; /&gt;
+                    &lt;/pathconvert&gt;
+                    &lt;exec executable=&quot;svn&quot;&gt;
+                      &lt;arg line=&quot;update --set-depth infinity ${dirs}&quot; /&gt;
+                    &lt;/exec&gt;
+                  &lt;/tasks&gt;
+                &lt;/configuration&gt;
+              &lt;/execution&gt;
+            &lt;/executions&gt;
+          &lt;/plugin&gt;
+        &lt;/plugins&gt;
+      &lt;/build&gt;
+    &lt;/profile&gt;
+
+    &lt;profile&gt;
+      &lt;id&gt;travis&lt;/id&gt;
+      &lt;activation&gt;
+        &lt;property&gt;
+          &lt;name&gt;env.TRAVIS&lt;/name&gt;
+          &lt;value&gt;true&lt;/value&gt;
+        &lt;/property&gt;
+      &lt;/activation&gt;
+      &lt;properties&gt;
+        &lt;buildnumber.skip&gt;true&lt;/buildnumber.skip&gt;
+      &lt;/properties&gt;
+      &lt;build&gt;
+        &lt;plugins&gt;
+          &lt;plugin&gt;
+            &lt;groupId&gt;org.jacoco&lt;/groupId&gt;
+            &lt;artifactId&gt;jacoco-maven-plugin&lt;/artifactId&gt;
+            &lt;version&gt;${commons.jacoco.version}&lt;/version&gt;
+            &lt;executions&gt;
+              &lt;execution&gt;
+                &lt;id&gt;prepare-agent&lt;/id&gt;
+                &lt;goals&gt;
+                  &lt;goal&gt;prepare-agent&lt;/goal&gt;
+                &lt;/goals&gt;
+              &lt;/execution&gt;
+            &lt;/executions&gt;
+          &lt;/plugin&gt;
+          &lt;plugin&gt;
+            &lt;groupId&gt;org.eluder.coveralls&lt;/groupId&gt;
+            &lt;artifactId&gt;coveralls-maven-plugin&lt;/artifactId&gt;
+            &lt;version&gt;3.1.0&lt;/version&gt;
+          &lt;/plugin&gt;
+        &lt;/plugins&gt;
+      &lt;/build&gt;
+    &lt;/profile&gt;
+  &lt;/profiles&gt;
+
+&lt;/project&gt;
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: 18/09/2019, 6:17:04 p.m.</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("xml",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            $(window).load(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 21667888;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

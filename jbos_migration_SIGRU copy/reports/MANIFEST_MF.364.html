@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for MANIFEST.MF</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="21667888">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_SIGRU_ear.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_SIGRU_ear.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="tattletale_SIGRU_ear.html">
+                        <i class="glyphicon tattletale-nav-logo"></i>
+                      Tattletale
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsSIGRU_ear.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_SIGRU_ear.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Red Hat Application Migration Toolkit found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="21667888">
+                            SIGRU.ear/SIGRU.war/WEB-INF/lib/p4ml-1.0.0.jar/META-INF/MANIFEST.MF
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Manifest</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+Manifest-Version: 1.0
+Class-Path: ss_css2.jar
+Ant-Version: Apache Ant 1.6.5
+Created-By: yGuard Bytecode Obfuscator 2.0.1
+Main-Class: org.zefer.pd4ml.tools.PD4Browser
+Implementation-Title: PD4ML Pro
+Implementation-Version: 323
+
+Name: org/zefer/html/doc/t.class
+SHA-1-Digest: Iw6zalxnO30NPtdCXLOskU+435w=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: ESBlzmVfmcpC6o587iyDHg==
+
+Name: org/zefer/html/c/f$1.class
+SHA-1-Digest: vsZUb8948tWqUeYwD3Ax2NZI7Oo=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: Mja3Ly6lALE5CfrZ+xe4kQ==
+
+Name: org/zefer/html/doc/y.class
+SHA-1-Digest: PXZ0T2gB4mMB7AGR09SXE8udqOc=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: H68atlk2W9Mw3Tse1vkUeQ==
+
+Name: resources/icons/rb-on-g.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: ho42Y5b/Pqnmo2j3xeppbnxnQ0s=
+MD5-Digest: FFMfHOP9W31uTkg1+QQwvw==
+
+Name: org/zefer/html/c/f$_b.class
+SHA-1-Digest: 6hnSalt9Yx865Ae8kuCPAjQo9x0=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 46boxYrvwuLZPh2M2IHs4w==
+
+Name: org/zefer/html/doc/b.class
+SHA-1-Digest: YSOLaURNNQgnBlGFwaIeeT9g6Vg=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 5s9uehdJTqKKoyVrLQPgbg==
+
+Name: resources/dialogs/options4.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: QkvJsBVVAbKmDm+AaApkUpmzCN0=
+MD5-Digest: nHVTEZAuGyFAhaa6xZKNow==
+
+Name: org/zefer/html/b/b.class
+SHA-1-Digest: u6cDv3n9NuxZj1iNE8zw6VOV5kg=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: rLUWKcjlIFySw+SbbdsRxQ==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$2.class
+SHA-1-Digest: SU8nYZUHOorX2uOfVUXbLRITmGE=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: Mzi0Ca1+S19BGA9YRfC4TA==
+
+Name: org/zefer/pd4ml/pdf/e$_g.class
+SHA-1-Digest: hsNDgM0i3kkZO+oU0mAKlDJLduQ=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: IF2f5m+S7dRKuOyidwnzGw==
+
+Name: org/zefer/html/c/i.class
+SHA-1-Digest: 7WY4+yejlshPeav+yBTsJvsBih4=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: qmJT5VkZjVhoX0XZuMDvpQ==
+
+Name: org/zefer/cache/g$_b.class
+SHA-1-Digest: wiU6L+7Ryu4svjlqnIMLAJWJMjI=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: KUxdbhQzh3czy62aOsrECg==
+
+Name: org/zefer/html/doc/k.class
+SHA-1-Digest: t9kPhRHr0W0icOat5zB0xR4cxVk=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: bd38NuEgd3WQftiTr3F1rQ==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$_c.class
+SHA-1-Digest: zbrFPUhjTIHEAwKSwIPDFwdV2PQ=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: o9VnpiuL3++W79uNRViFyg==
+
+Name: org/zefer/html/doc/b/c.class
+SHA-1-Digest: KRbT9dNbec/4lFN11//k397cUFI=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: Jvdog9+phf/35VnyD+711A==
+
+Name: org/zefer/cache/e.class
+SHA-1-Digest: U5PUdhW1ZLfPDuWrSfiHziv6Q8c=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 10XvmzAjzerHzT02GDRu4w==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$4.class
+SHA-1-Digest: c1lq9lQ8MiD53E8Fei+u1xtU6i0=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: JYS+dKUGdNUnbRF6cIl3vQ==
+
+Name: org/zefer/font/c.class
+SHA-1-Digest: ntBwTvOS8gz9q3jnWSlQBEn3nHk=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: dXhUhDX01f0weUA6sZRNoQ==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$10.class
+SHA-1-Digest: vAvy52+9sAWSN8NaKFn+HRr2ODM=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 1M5x3xOg1co/BsMSNhjJrA==
+
+Name: org/zefer/html/doc/e/e.class
+SHA-1-Digest: FptsBPAU8hJJKY2ijzovw4Ot1tQ=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: dEiF9K9gxSoGFeG9JPghZA==
+
+Name: org/zefer/cache/g.class
+SHA-1-Digest: An2q9O2ojv3RYy1Bn4aTSDCB/xs=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 6zQSNuTfVjxtZVGW2fjT6w==
+
+Name: org/zefer/html/doc/c/c$_b.class
+SHA-1-Digest: EBKmfEDMobNtF3/cPr4lK9d7Umw=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 7UtAztlC9JO808qnp8rSBw==
+
+Name: org/zefer/html/c/b/l.class
+SHA-1-Digest: IC/uqE3niSFvyc8rMxgTsORSeOA=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: gHSe4tiW+uXyNAHPj77wCQ==
+
+Name: org/zefer/html/doc/d/e.class
+SHA-1-Digest: 051rMGYyZznA0/saWQCuuC98d2M=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: BmaCQ2L2eyIKOErE0WidWw==
+
+Name: org/zefer/cache/g$_c.class
+SHA-1-Digest: wtl+3i5ugQ+dKkTHZmcZnJYVPes=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: vy5+LXmcbGEZl+hxoCpcGw==
+
+Name: resources/dialogs/about.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: CyvlbvS/Tf7hdNrUhk4tWHii/xI=
+MD5-Digest: H5zEiwBE5SBaPmmXykw8nQ==
+
+Name: org/zefer/html/doc/l.class
+SHA-1-Digest: fQe+S5+e8Mgq/F7P6YcMkTnpMw4=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: atHg3ONGTit1Hw0aIVRoTA==
+
+Name: org/zefer/html/doc/d.class
+SHA-1-Digest: 7qzrNwgoDBHvffsVl3iZDpDtR38=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: rBFAhNX6aefL0mz+3fGoHQ==
+
+Name: org/zefer/html/doc/r$_b.class
+SHA-1-Digest: OtAcc9agqWiglq/Ggpzn98LPDL0=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 7DV3nFHDd1q9J9xjIZDhOg==
+
+Name: org/zefer/html/c/b/j.class
+SHA-1-Digest: w3zcNbFbYUlzowj/IUaaw9fSy7M=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: TzyiwA81t4qUpDng3hhqIg==
+
+Name: org/zefer/html/doc/s.class
+SHA-1-Digest: iiaiNzTCV6F533FDWf7dwEkCRJg=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: uEqwl/98UyTa60J7qjwdnw==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$IndeterminateOperation.class
+SHA-1-Digest: YWCisu02diJQx+nx483rnfBiLWE=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 6l8l8HDRO/dNuO+Pzhfwdw==
+
+Name: org/zefer/html/doc/e/d.class
+SHA-1-Digest: IbqiSqO3PH+UhgBQsvjr9oPmL2o=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: XGtDw4vmeX+kGwJC9Qk1aw==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$7.class
+SHA-1-Digest: AHxGqnSMyG75qIREOWOFKvJXc+s=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: nLSDkZcCYzGB2kE8NGblaw==
+
+Name: resources/icons/cb-on-big-g.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: 1AGTJmU2fHnR4PrP30kB8c0jkQ4=
+MD5-Digest: y2CWHnau+CLSdID4GyjJ/g==
+
+Name: org/zefer/html/doc/d/d.class
+SHA-1-Digest: bxn3n7VFh9EA38Y24pcB9Fe4OZg=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: N0NuuKiDfoIvuZNiZKxjtg==
+
+Name: org/zefer/html/c/b/h.class
+SHA-1-Digest: +JF5UEg92uhOKfOX1HzCiKPpFME=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: a3XAGqSElPFyM85kCPj+2Q==
+
+Name: resources/dialogs/options2.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: 8GinT0o/moTdLjg7g9GOPhiQ8pw=
+MD5-Digest: VILHFFupT1eUYU+hfggw8g==
+
+Name: resources/icons/cb-off-big-g.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: RBMJwfMtuXUEH5VJZ/AksEBYURY=
+MD5-Digest: 7VYJ6kbSm/L4/LETCKhSKA==
+
+Name: org/zefer/html/doc/b/e$_b.class
+SHA-1-Digest: DJJSri4T3Tjm+KOmv6slZ4ieWRM=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: +C++ke9CPtUQoCgJIp1MNQ==
+
+Name: resources/icons/rb-off.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: 4hHc+RhwWxIe93ydUPUbWjinsjE=
+MD5-Digest: ySRh4O879j/isOojmhFkLw==
+
+Name: resources/icons/graph.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: HrEJoIXKqq0moaihdgmAL9Jp2rk=
+MD5-Digest: BEOwpWtb054BDdoX643USQ==
+
+Name: org/zefer/html/doc/c/c.class
+SHA-1-Digest: /uBcQSrqPLLQetXuUrqesFC0rIM=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: TQIVTKmYec7A4glR+IEn7w==
+
+Name: org/zefer/html/doc/c/b$_c.class
+SHA-1-Digest: N8u3AGmLZkme7I2avdJZOXRmw0g=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: aZmBPOYDudAOUu98awAlLw==
+
+Name: org/zefer/font/d.class
+SHA-1-Digest: ixlUSr5rUY5GfEHWBPTxXzCsJVU=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: Gv6CZzRLxeHN4FvFGNf/uA==
+
+Name: org/zefer/html/doc/c.class
+SHA-1-Digest: PPESkW72wM3DVPjkzHgOpytQR98=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 5x0fsVo3+DwIPOg00LBBqg==
+
+Name: org/zefer/pd4ml/pdf/e$_f.class
+SHA-1-Digest: 0oW5CxdzjFYAUWS/MqPPd927fv0=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 9pEsUpdUwpND85xVQ25/Rw==
+
+Name: org/zefer/pd4ml/pdf/e$_d.class
+SHA-1-Digest: gl3RVPmXVyPM0+SOys0/715BWLI=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: ZWCdut/uI4J0auRu60W96Q==
+
+Name: org/zefer/html/doc/d/c$_b.class
+SHA-1-Digest: Kz5AhurL5karJjbk1twYO6ajbLM=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: kNVtMRR8jveU6vVr2S8nNQ==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$9.class
+SHA-1-Digest: 3PoF1E+lc1rN0xV6UA/zuTa1hfM=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: pfW78cBytT+OYabENVTAbg==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$PD4BrowserAbout.class
+SHA-1-Digest: sWlBfFxDIdsU8Ju1iPxhcobDK24=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: gQAY7k2xL3qfC7HyxsnJoQ==
+
+Name: resources/icons/paperclip.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: b6pHolvykT/dOdpCM1LFkItC6do=
+MD5-Digest: CiU2H7JUn+2QYNNRMGUGxQ==
+
+Name: org/zefer/html/doc/x$_b.class
+SHA-1-Digest: YE0HlC1W5m3clkT0p4lDKXMUXmU=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: iAG6Cmd8D9lpXqMwrc2YtA==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$PD4BrowserOptions.class
+SHA-1-Digest: ZIKMCUi0D26l7EiZlI6NzVB/Ry4=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: BSQjq/90lMUxcmh+NOrs/g==
+
+Name: org/zefer/cache/b$_c.class
+SHA-1-Digest: QVTvF5DbOEhNcY5y7PyUEkSMsXQ=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: T3LTvaMohXX/3B1vclGVKg==
+
+Name: org/zefer/html/doc/c/d$_d.class
+SHA-1-Digest: R1Y4yoLlzUl7YCojAWaJq0VIR0M=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 7ry8JkRg/Nr+E3DaG3gwTQ==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$19.class
+SHA-1-Digest: gdzC+iDVmFD2W+D7kIZLsqk8E1o=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: Ap0LB/jS0YTy4AdWdoCJjQ==
+
+Name: org/zefer/html/doc/d/d$_b.class
+SHA-1-Digest: 9/YZ2xE7+IXmnUxO+2YxeY72RYI=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: lGpGxI4QeNoyv4fczPVsOw==
+
+Name: org/zefer/pd4ml/pdf/e$_b.class
+SHA-1-Digest: fuczZ+OZ2+u2BFTRQ47SpxJEPxc=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 1qYJUi1z+DJvgkZ4gNteCQ==
+
+Name: org/zefer/cache/c$_b.class
+SHA-1-Digest: xWt6NGEDsmcgnsoEX+1UMO4w6Nw=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: F/jG0qYJpzxBikF14qk2sQ==
+
+Name: org/zefer/html/doc/v$_b.class
+SHA-1-Digest: Be0nR32wS9RwSZ+VxRAM94NyWLw=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: YAN1MTLorxn+A/ZNQ5yBVQ==
+
+Name: org/zefer/html/doc/v.class
+SHA-1-Digest: 2GUdpXOYxxVZL5T8Bv0gmaS9LFQ=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: ZTvS2BzqoWtAFDdysVTNYg==
+
+Name: org/zefer/html/doc/n.class
+SHA-1-Digest: XnFNMXeTKEPQjuXP9svzfDXFQyU=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: hg57cekGev+glPK9i+WJfQ==
+
+Name: org/zefer/font/TrueType$2.class
+SHA-1-Digest: ZE22UuMNbxmK7e+gttnO0sSQ9MY=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: JhIppVXTh+pFT3oeA9CpCg==
+
+Name: org/zefer/pd4ml/pdf/e$_c.class
+SHA-1-Digest: uJl4wsrqrZIQMsVri2GTsdte7to=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: qf5fKoyNcFl3FspJni6//g==
+
+Name: resources/icons/tag.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: FciVg05ni9TRwILXJxlpZTL2XJo=
+MD5-Digest: hkqSAFh84UrFpyPeo/Mq0Q==
+
+Name: org/zefer/html/doc/c/d$_f.class
+SHA-1-Digest: Lx/YvTnwb18VhuRwm2O49Q1ocTU=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: kvxa50tESiysx8qdBH+hHw==
+
+Name: resources/icons/cb-off-g.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: plyEykMoNy7wxPcdM/6xossKgyc=
+MD5-Digest: a5S0xfjKP3fI9Yf0Zm5Mrw==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$20.class
+SHA-1-Digest: LQcV+ZCI+DKH88jv+do60QBecRY=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 4P/fzRuej4+S+duZNrvsOQ==
+
+Name: org/zefer/cache/c.class
+SHA-1-Digest: uDm8+mEj/73MmLIDSUMFTrV5J3M=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: +RhUDQ34p+5qGNVsWlVO5A==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$ShadowBorder.class
+SHA-1-Digest: N7UrzCiVTrV+Qa195LqiBc42vbU=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: +LE4T1z1lM3Uh5AXJJnYvw==
+
+Name: org/zefer/html/doc/x.class
+SHA-1-Digest: wCUMR8WcCiX8WnEHU+uadEXdiUE=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 2QHaKN88nOVJ8V9U5o+ksw==
+
+Name: org/zefer/font/d$1.class
+SHA-1-Digest: 6GxzXeeenv8IrJXnaU/9GNMpz08=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 1C80+ML16OPkB2gBL0FHAg==
+
+Name: org/zefer/html/doc/c/d$_b.class
+SHA-1-Digest: oF09fwTu2dvKC3D/BO3U8vraLxw=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: R2IDcsTlQkcvco87C/otVw==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$3.class
+SHA-1-Digest: pykJbBPy9U1DCFxpjpBlSNIjAJk=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: YfekgHSj0R8fMAnfS3sEpw==
+
+Name: org/zefer/pd4ml/pdf/f$2.class
+SHA-1-Digest: A3DZgzG9kL4wifpfrrTeqveBJrg=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: M0+kempF1pjTVjZBcenACQ==
+
+Name: org/zefer/pd4ml/pdf/e$_i.class
+SHA-1-Digest: bQDuyRlHk8SYQ2tQhleYkouBTuQ=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: gwz1Jf3aJbIcowFPJyrBJA==
+
+Name: resources/icons/cb-off-big.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: wYoTzZ30IS+U4adf0NFWR+3n3nM=
+MD5-Digest: o+DRF0wVXX9zs017VPGu6w==
+
+Name: org/zefer/pd4ml/pdf/d.class
+SHA-1-Digest: vP/G077xlxXoblk8uX5SgTKEhRw=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: wbUOHDe/lp+WrKweG/A9VQ==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$17.class
+SHA-1-Digest: IqnZs8kVWhXUAZxlBvVx1jv+RAo=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: z1NJmbRZ32qlFRwvaoyFIQ==
+
+Name: org/zefer/pd4ml/tools/b/b.class
+SHA-1-Digest: 9XsgByS/YX3upMFq89FOsCyOYRs=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: iQ4hYGTtPnIKtTGB56XBQA==
+
+Name: org/zefer/pd4ml/PD4Constants.class
+SHA-1-Digest: y3C2Ebt7ho7Vik0pKTRKryoZznY=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: gjaYF/e4432HjJMidAdErQ==
+
+Name: org/zefer/html/c/b/i.class
+SHA-1-Digest: /H9b0FpE+AfLOwrMHp6DLG/E++8=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 1idUrRdgzuNKvdH/T154ww==
+
+Name: org/zefer/html/c/h.class
+SHA-1-Digest: DB3b2KLHtjHdOtIhhW40T7MArDg=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: koJbDeJx13tMEHuzmtm+Uw==
+
+Name: org/zefer/html/c/b/m.class
+SHA-1-Digest: QlRtz8DRJP3YoD7wfVYlc3zx7mI=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: fuvjkA4OV3+r5yWQ/3bFmw==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$11.class
+SHA-1-Digest: q54lAbDSEnQpybWDFCv7H4a7GxQ=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: KUykOIuVB5SLNNRaI+NqnQ==
+
+Name: resources/icons/rb-on-big-g.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: X3U0XcToRDm+3eTY7EXUkLavuqI=
+MD5-Digest: MDtc24Ze2bDnUDaymewzSA==
+
+Name: org/zefer/html/c/c.class
+SHA-1-Digest: jXTzhxzdIJa1mrs/y0sDAHcACPU=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: vMfg2cWLNCaHSXu29c1/LQ==
+
+Name: org/zefer/html/doc/w.class
+SHA-1-Digest: r3aAncSnesyCYBG26PKo88hBVUE=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: CMnB2FhrTQF8/pMfatGINw==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$21.class
+SHA-1-Digest: ZO0QX+rnpMmHdV6D4g5x2WKP41U=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: OKWTbqCIoBUo3p/IzggRcA==
+
+Name: org/zefer/html/doc/b/g.class
+SHA-1-Digest: F/p6DokN0fch1kGFVrDwm7GTPk0=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: gyLPLn5Bk+fIBB4z0fd/Uw==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$13.class
+SHA-1-Digest: TjRkLtS5qsuSkew+pb/DhZGJKNk=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: U1Y3naQns/XSQ1akGhvQdA==
+
+Name: org/zefer/html/doc/c/b$_b.class
+SHA-1-Digest: WzB2zoqJI/2VO1YaueKbRBNtc5I=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: UcbsvCDlsMV/VnWIMucN+A==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$PD4Panel.class
+SHA-1-Digest: nELsW69jSpSRLJDa4n2S+08rNxY=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: puBKMdg5m5wHZRIvF+56DQ==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$_b.class
+SHA-1-Digest: 4K/GffHT+oJUtlBJfl5HGX+0W2A=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: nPMoXzHsxGL97iu+IcUy3g==
+
+Name: org/zefer/html/doc/c/d$_g.class
+SHA-1-Digest: rL3hnDfli9Znhk36y3vaHsqxUII=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: j6XHdZVSmsoZQuYeu3zkbA==
+
+Name: org/zefer/font/d$_b.class
+SHA-1-Digest: cZFrJPRg5BKRENd1I1aXc60wHOU=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: jLubHGg56RIKOJX1puc/pQ==
+
+Name: org/zefer/pd4ml/tools/b/c.class
+SHA-1-Digest: ggAaaa/bDflcu/GmwXcPn1TcRZY=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 2BibrKxtrFIbzRD4LyH9Hg==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$PD4Converter.class
+SHA-1-Digest: 7oyKeYIw9Kc1sXK4wV+Qoy+Cur4=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: tbzgGNeYgo9hxCC3vSkMqQ==
+
+Name: org/zefer/html/doc/o.class
+SHA-1-Digest: NyYK4Lnkip++MHkAg2d2DXJR62w=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: FfclJR3ZSRbMV4me4I/3SA==
+
+Name: org/zefer/html/doc/b/d.class
+SHA-1-Digest: wLduqRlJikYrLBQxrnJlsf3LAsc=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: RJ2GsQoBiHk1f2X2bJAT1w==
+
+Name: org/zefer/html/c/b.class
+SHA-1-Digest: Wk4CT844Q5CEa32l7PY7vfRtpok=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: CgvLFoQOmcYWrPiYBEhQuw==
+
+Name: org/zefer/pd4ml/pdf/e$_e.class
+SHA-1-Digest: WZR9HzA9hjdLoRcZmPnry7xRm+o=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 6putVAOFl5k5JDll84rrhg==
+
+Name: org/zefer/cache/d.class
+SHA-1-Digest: sKKNpEP3z6H7a7vfLLLlLbAAVBg=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: PlzH8uMdy5NFvd5dj7LDCQ==
+
+Name: org/zefer/pd4ml/PD4ML.class
+SHA-1-Digest: QsMNvGwbCq3Ss+JXMkvUQts3BOE=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: FZqtqhDFnV/0Ya/PjF2MhQ==
+
+Name: org/zefer/html/c/b/k.class
+SHA-1-Digest: Vld2VKYRS5xKY720+54tcFLLyGE=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: KLPOII1zrx4rkfSS9CD/Lg==
+
+Name: org/zefer/font/b$_b.class
+SHA-1-Digest: 7J8ETrZeTHuufwINwPxr5PyAvPI=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: JbMMMOd1ggDfyjsV3ZPINg==
+
+Name: org/zefer/html/doc/d/d$_c.class
+SHA-1-Digest: E0iucp4A4ExdWnH+JENcJy1OFiY=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: Pr/iY6Oq3j6gayvMnICFwQ==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$HtmlFilter.class
+SHA-1-Digest: 8H/itXLdEEAJFKKVwoAYVuvEN1c=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: OTvbuH9l0g/edNLrDa1CYA==
+
+Name: org/zefer/font/e.class
+SHA-1-Digest: pIif/m5oe28VWmUxXuIqFI5tjz0=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: eX37AUVEpB1olMxrtu0OwA==
+
+Name: org/zefer/pd4ml/pdf/f$1.class
+SHA-1-Digest: arhhOeKee/rRMJ2mBejoJqRv5fQ=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: PZpEhyRyV0uy2fwdhuKjtg==
+
+Name: org/zefer/cache/ResourceCache.class
+SHA-1-Digest: YKiaZdEdYoQC6F32RxM/eIhaFTY=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: QE5PE495rjI/R5DpxVmFlw==
+
+Name: org/zefer/html/doc/j.class
+SHA-1-Digest: j1oT03KAP1caKxVbUqcGq8FAfh0=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: qe5EBFZxAXRV7Ud5lHfarA==
+
+Name: org/zefer/font/TrueType$_b.class
+SHA-1-Digest: BisAuTnINec6wLr+R0pzOi3Dggo=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: ekTJhksSNIn32/N9aZ9sEQ==
+
+Name: resources/dialogs/options3.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: FClCnckJ6JWV51RQaDpYmq3kpdw=
+MD5-Digest: /6e5wkW7immLg6ZBr7HEaw==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$18.class
+SHA-1-Digest: LrW49PA4n037uAcuKNMmFvSOiHo=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: gnM6sViE6/kAfop6WByN1Q==
+
+Name: org/zefer/cache/b.class
+SHA-1-Digest: Lp2jXiC5pq6n7HlDydzV6FltcHM=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: Z98MolHxU4dfbmGV+egKfw==
+
+Name: org/zefer/pd4ml/pdf/f.class
+SHA-1-Digest: wJdjVna/IfjsP2hw2DYZhyXaLQ0=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: kT3thte+n3X6OczlMGvvww==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$12.class
+SHA-1-Digest: QYkGfl0k7oEQrPqjkIYLqKzj1Cg=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: LkcybcAUjII4g2uHAimSMA==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$15.class
+SHA-1-Digest: eji1z1YyyNuHnkUg7/SWt+Fq/CE=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 6r80zwr4pfm8NG+L5nyBDw==
+
+Name: org/zefer/html/doc/Document.class
+SHA-1-Digest: OGrzmzx7vs99tewALf1p7SxZpqI=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: MCJ23CNHQ4L2PH5ieQ1UKQ==
+
+Name: resources/icons/cb-on.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: rytQU/c5F4lrQyFaniAsonW5f5s=
+MD5-Digest: hBushcG27Va8++rirwZUSw==
+
+Name: org/zefer/html/doc/d/f.class
+SHA-1-Digest: caDNCXZLJM4+RhyfJKzve16FwaU=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 8H1xg0l7XadfoMZHhKMdZA==
+
+Name: org/zefer/html/doc/e/b.class
+SHA-1-Digest: 8xKWgrxINccJlIqqEazY9Vcb9OA=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: WAH9461iEzWh999Uqcfh0w==
+
+Name: org/zefer/html/c/b/e.class
+SHA-1-Digest: XnXvx2KeK9Vgh1mSKYxdxWrJFAo=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 7TQeN+A507d01GrrCdCOFw==
+
+Name: org/zefer/html/c/b/g.class
+SHA-1-Digest: 20v9IWgmrJkO/g1mSFprUeRznEA=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: grqa9PQQoVgU7iWWCNMjRg==
+
+Name: org/zefer/html/doc/e/b$_b.class
+SHA-1-Digest: mfsgQfaJejG7jNOmIFyE+myknso=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: bv/uyNZu3o0EsfoHyXMYPA==
+
+Name: org/zefer/html/doc/c/d$_c.class
+SHA-1-Digest: 6wkw5hiQG4nz4hKmu090ImMivVc=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: oxLwk7+VlVUz6Ezn0GClLg==
+
+Name: resources/dialogs/options1.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: UTjggm4LspEJZsXGXO4oJnfSk4s=
+MD5-Digest: FLFDF+9guOzysif8IjUYiw==
+
+Name: resources/icons/arrow-up.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: CmvtVM7CyjkY+pz6QCQLuzHmhxI=
+MD5-Digest: vUAbNrxs2XuSFkD2zJhokA==
+
+Name: resources/icons/rb-off-big.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: JIJN0eAP1GBR+i7nszGc/E7Olxw=
+MD5-Digest: wlBsX1RJwPMw0WBoTfDkFw==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$16.class
+SHA-1-Digest: rQ9rE3kpWr98kIJBmTpfWZlxlMw=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 8NiZQfN8DCks1WjQSd1BOw==
+
+Name: org/zefer/html/c/b/c.class
+SHA-1-Digest: cfZt3nafHTXjmZMEGiE2uE4k/Dw=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: Qev7LHSvZmV3yOh+zKymXA==
+
+Name: resources/icons/attachment.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: kwF7g/8bYr56Uky4gUJ6J4Js5VU=
+MD5-Digest: QuPVhmyxlKkDIL4TB5WvIQ==
+
+Name: resources/icons/arrow-dn.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: 9oUZKi+DCFoRGotU1ZqYUpJ/Lic=
+MD5-Digest: ZCO6CKRiJddRc5mNwEs0qA==
+
+Name: org/zefer/html/doc/q.class
+SHA-1-Digest: 9M80vwNRfIiRAGa6+/hXkhUXW+U=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: ic84LdM3+bwyKJXLswb5Qg==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$1.class
+SHA-1-Digest: CEZHcxiyXA4UsJZlR4D4t0I13YE=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: AHFsW/QjqG3myJiRmbjGdg==
+
+Name: org/zefer/html/doc/u.class
+SHA-1-Digest: NX+QPB9XF6EoF1RQMcItCUr3mTo=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: sv39+vKjEAACr4NQ6QdfLQ==
+
+Name: resources/icons/cb-on-big.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: ZzhTJW4/brS+qiN3cSFNmNl4M3I=
+MD5-Digest: CU/cwaUX0WGF8rKxJHKDyA==
+
+Name: org/zefer/html/c/f$_c.class
+SHA-1-Digest: M/q/VmWFDJGOUznAv2iJiUyfSNk=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 5C1Qth7lfwLyyCf09kzp6w==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$ScrollablePicture.class
+SHA-1-Digest: L4uH3t7G0lfLJ2JtvhLzVsCI95s=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: T6JE34n6D4rMUP1Txyq0Hg==
+
+Name: resources/icons/rb-on.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: ORT6etNcCLe2MygzM5gtjsiPWIM=
+MD5-Digest: cgBqtiqulswyRJuLtHLGxA==
+
+Name: org/zefer/font/f.class
+SHA-1-Digest: YZQJ/xEQX79gxvY7TE53IpRybXw=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: ekGc681acES4JZCXo7zbzg==
+
+Name: org/zefer/html/c/b/d.class
+SHA-1-Digest: DRrS/P6xXEYnZVxoPz2okISXCdw=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: EU4RbEbf55v+borfY0jeOA==
+
+Name: org/zefer/font/b.class
+SHA-1-Digest: zrqhJSQ45Rle9v8qctplzBtl1+s=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: Vv7hNU5aOJxEVU01wBWYZQ==
+
+Name: org/zefer/html/doc/m.class
+SHA-1-Digest: fodgDsV7ovx7ea72P4IUr+s1ics=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 4rcaFDLaGr5UP8l2YXLdKA==
+
+Name: resources/icons/spacer.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: 57+5uK1GN2M+sxlvO4ot83qNNnk=
+MD5-Digest: t9/P+dXLz4f9DJTAWJOVsA==
+
+Name: org/zefer/font/TrueType$_d.class
+SHA-1-Digest: SAM5c+RISN3Zq67q3z/tF0PUVpE=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: YYbFPEKIyf4XMNESAgoHlw==
+
+Name: org/zefer/html/doc/d/b.class
+SHA-1-Digest: LrH4nJt7PymiDWXxq871RRr4YKk=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: KzKbiP+iv9r3A2dmAMZmMQ==
+
+Name: org/zefer/html/doc/b/e.class
+SHA-1-Digest: aGoyHdy1LCxcrV1Mrob0LQkXn4Q=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 3WCFk8pDb7cZY6sahLTCDA==
+
+Name: org/zefer/html/doc/PD4MLHtmlParser$_b.class
+SHA-1-Digest: phbZ0X4EhJ/4/ot6kUpT/AZAYeQ=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: nKfpvKmNIMDBgUfWiC0uZg==
+
+Name: resources/icons/pushpin.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: pZ2kk6ytgVQtvyOarl43fQwNY1w=
+MD5-Digest: b1WbH86s9LlvK/4a75AHFw==
+
+Name: org/zefer/html/doc/r.class
+SHA-1-Digest: AhNNJnCj99XXLfDOLGGBMHDZe1s=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: JquMLlcNDXuAi+RdWp3wmg==
+
+Name: org/zefer/pd4ml/PD4PageMark.class
+SHA-1-Digest: 2iY60lWKrzcYFsfpv573zF4nQjs=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 1xcvm04L4IVyGKhqBq2lZA==
+
+Name: org/zefer/cache/CookieManager.class
+SHA-1-Digest: qs3zVSKO7VqsRMbX9Z7swTFhPgM=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: dWTP7qG9EkIoioG4IPmB4A==
+
+Name: org/zefer/html/doc/e/c.class
+SHA-1-Digest: kOhXzDi3GxWVxL9Iybs/iyRyVoA=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: aBhKw+IMpG60w/jOPA6kXw==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$6.class
+SHA-1-Digest: G2ZYjcj1L4spaZnQf/Yx63/xsCM=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: DjiQD/KcXSOFriCgug6GFw==
+
+Name: org/zefer/html/c/f.class
+SHA-1-Digest: Dcnp5i6/VAzd1hgHflbs34ShVt0=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: pMxgP9mwqFuD+1Iz8UEEgg==
+
+Name: org/zefer/html/doc/c/c$_c.class
+SHA-1-Digest: wO3RA4wZNnZqSTFZV4rGtQgvIeE=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: SCdU+m5ptQxMgmW8J2bZGQ==
+
+Name: org/zefer/pd4ml/pdf/e$_h.class
+SHA-1-Digest: 34Y/SpCMYytHPLdmhIGzf+B2ZHg=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: Bi0GCTcZDlfwtH7lIZ+3NQ==
+
+Name: org/zefer/html/doc/i.class
+SHA-1-Digest: rNaN0cvFO9MJNlH0r32RHOW7zQc=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: pXMjWE6B/8pCarPw18mZsQ==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$Rule.class
+SHA-1-Digest: 6d/obwE75KxWwfZGroFXva1qn20=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: P4UcEHYR5JCn1HXjaUXoaQ==
+
+Name: org/zefer/font/TrueType.class
+SHA-1-Digest: i6Oi0/9QEybpsT7QBlquclmPPSU=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 0tysXKfudi/R9VrbMWGZRQ==
+
+Name: resources/icons/cb-on-g.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: zt5dOeZiKz2Pv9z08EX8lctzeTk=
+MD5-Digest: cdq6tDp57BSI/C2lmiFGIQ==
+
+Name: org/zefer/html/doc/p.class
+SHA-1-Digest: ssK5uG/7wPfSYFmxg4t6CQAT9ag=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: sJw66Bgugs9ABSalfRiOog==
+
+Name: resources/icons/rb-off-big-g.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: ImjXeF6q3mp6olp+1hBncETR4dE=
+MD5-Digest: eccS/o4yugzh73+SW1cs6A==
+
+Name: org/zefer/cache/f.class
+SHA-1-Digest: CREAqAEmgz99wuWDR2ZAf1BVPXk=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 2PzsNgY91PJzXAO83BNrhA==
+
+Name: resources/dialogs/options5.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: VtafZVARkonY0yMIEkkUiDxL4l4=
+MD5-Digest: ATLZWQ0DThrKQSulxcWaCg==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$8.class
+SHA-1-Digest: RsFPYNpHsfa0d+QgAjyzaRMv4FY=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: bzsIfKyhzUwwuFT6lUs/mg==
+
+Name: org/zefer/pd4ml/pdf/b$_b.class
+SHA-1-Digest: 7NBjSd3GWH68ZtP0flccJxnTDNU=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: DDuatAxvr7ZO8pucRsDZsg==
+
+Name: org/zefer/html/doc/d/c.class
+SHA-1-Digest: jnSoFeYTDsT8qTEdeAC7bwWdjXA=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: ze4vD+oOrN5iFJ0eM6V02g==
+
+Name: org/zefer/pd4ml/pdf/PD4Device.class
+SHA-1-Digest: W+ysjRnmQ1527WYdPE+FmpiA36k=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: +ndp5VuJMZZNzzTA0B8U+w==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$5.class
+SHA-1-Digest: p1Y3ob+NEA0sJjn8C20J0Sffk/0=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: jlUCS/Eq3aHBRN6atoCarQ==
+
+Name: org/zefer/html/doc/e.class
+SHA-1-Digest: UGftXf9fQAsxydEa4uGC8gDM1qk=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: LxgbnZKHRwPffoouOf5DIA==
+
+Name: org/zefer/html/doc/b/f.class
+SHA-1-Digest: 0Z/qfdpJRPCQ9HytAhf+Fuc3/+g=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: e3M0STOhDbu8AnT9Unr7Kw==
+
+Name: org/zefer/font/TrueType$_c.class
+SHA-1-Digest: 475OxrU40r9+aEjSVPMnaAohg0g=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: UYX0JyE97/zK5ifbYNmalg==
+
+Name: resources/icons/rb-on-big.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: rYd31BD8+h9swerRrXEEeq5gBng=
+MD5-Digest: uLWaYA+mVpPAvSJZJorV8g==
+
+Name: org/zefer/html/doc/c/d$_e.class
+SHA-1-Digest: 3p7UqNcexzEnS9xB004Uk2I8Rv8=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: Am0Xo7dmgxcZI1gjVCxABw==
+
+Name: org/zefer/html/b/c.class
+SHA-1-Digest: FanBsUMEq2tjbQHDhhkWcNV1NrU=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 02gxeSqhIz+jG2uyhHs9cg==
+
+Name: org/zefer/html/doc/g.class
+SHA-1-Digest: Sq4zP5RNx7MyxyYV5J2/Z7g0TW8=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: NPBmh+GeyAGPL7x17dtRgg==
+
+Name: org/zefer/html/c/g.class
+SHA-1-Digest: ehCF2moHQE5Cp6MMUZBu3ApWliQ=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: Q5V0/Ty530Z9N3ngzsbygA==
+
+Name: org/zefer/pd4ml/tools/PD4Browser$14.class
+SHA-1-Digest: ZckeZWrL79Ez9w7cnfQbzsK7vSY=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: cwblHPtN5a1wKpvQqOwmlw==
+
+Name: org/zefer/html/doc/h.class
+SHA-1-Digest: EOSmAsw+Miac5RVgLni1ICq2UyM=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: e0OaOuJL/+8OmDg6T7vgBg==
+
+Name: org/zefer/html/doc/c/b.class
+SHA-1-Digest: yn7qX/nfKmcnL7NfMR4Ivnvk0cA=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: cUMVXxZ7db2/cLxFLiVqDg==
+
+Name: org/zefer/cache/b$_b.class
+SHA-1-Digest: SQ4mMO1BjNHmfUW9IXNz7RTXpis=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: NdCl0kYFiCfv5fkBODhjag==
+
+Name: org/zefer/html/doc/PD4MLHtmlParser.class
+SHA-1-Digest: oJAFvzE5WxCHU0TZL4nOnsbukek=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 6ki0nAr3Cfmw8/Uhj6y75w==
+
+Name: resources/icons/paperclip-big.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: XrYeIydvSZiC4eDekl2mq7/w3Eo=
+MD5-Digest: DhHCuH7kFHWv06N0lPnFNw==
+
+Name: resources/icons/busy.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: 0rKqL1vIGTHJjK7x7H4kbOoTi0g=
+MD5-Digest: nzZRthSeyrAGOL9HTGuMgg==
+
+Name: resources/icons/cb-off.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: Gz3pjV6ydqRY21f3NlIF1Yzltxk=
+MD5-Digest: oAWPoLioRRekovgA0ieYnQ==
+
+Name: org/zefer/html/doc/c/d.class
+SHA-1-Digest: 5hGzbJePhrS7OGbCbeMX8cuyoc4=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 2x4rerqJi4zgjMJyV+V6cg==
+
+Name: org/zefer/html/doc/c/d$1.class
+SHA-1-Digest: bw6Pla5aTWRQUQyk0qNkOcOjR8o=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 32/i+pVhSvCZRN8hg+mLkQ==
+
+Name: org/zefer/html/doc/b/h.class
+SHA-1-Digest: UEVKOykSCIatJCLlHeJnwE8Av/U=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: gbuc8BxlR1xJo+KSiZZzzQ==
+
+Name: org/zefer/html/doc/e/d$_b.class
+SHA-1-Digest: yPi1ffyRtJwx7wbWfIxD8dfJMt4=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 7shPbuSN0Vuz5p/WbMe8iw==
+
+Name: org/zefer/html/c/d.class
+SHA-1-Digest: PRwWK2/qXVdaoF8SsSprt2mHoKo=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: EezY3KSwvZbpIht7JMpnbw==
+
+Name: org/zefer/pd4ml/pdf/b.class
+SHA-1-Digest: 1ip2oFDmXtBYw/QQqPTEPfXEPJw=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 6JkZuzzZQimbgIhozRwpTQ==
+
+Name: org/zefer/html/c/b/f.class
+SHA-1-Digest: ZwjGSZZAx7OBJHF6J4yuX3FOIBI=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: MbIysPi5r9AH6BYpMlF5Fg==
+
+Name: org/zefer/font/TrueType$1.class
+SHA-1-Digest: vzuZFCnO9ebys99r+wMohGdSdMg=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: OvipbSuclOfcC499ju0vJw==
+
+Name: org/zefer/pd4ml/pdf/e.class
+SHA-1-Digest: kGlNTsHczWzbdfxBGnJ6LjvU4+8=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: ziQZl4nAcMvx19ltsTroDw==
+
+Name: org/zefer/pd4ml/pdf/c.class
+SHA-1-Digest: uQPf9ABNgfCVYpb/rFGoNC8LDA0=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: rvrZTher1pc7enNHPamM6A==
+
+Name: resources/icons/rb-off-g.gif
+Digest-Algorithms: SHA MD5 
+SHA-Digest: lHvLoUtJkX+jxOosgzQdhPA/L4Y=
+MD5-Digest: WsIpTcuWbLJpZly5HZfYIw==
+
+Name: org/zefer/html/doc/b/b.class
+SHA-1-Digest: vpKDkfMf/TC+L3MeDFWdhj6muD8=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: X6s6qOR/vk4Tj+vaKI7Dcg==
+
+Name: org/zefer/html/doc/d/b$_b.class
+SHA-1-Digest: J3P30V1880KagzvebCS7fmIAuD8=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: wgA8AyI9fMvqfe681qsZLQ==
+
+Name: org/zefer/html/b/d.class
+SHA-1-Digest: mQ136iGL1DFPVhVR/QvhJ33Ux4w=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: REebJ/q3o9FfaRnTr/VslQ==
+
+Name: org/zefer/pd4ml/tools/PD4Browser.class
+SHA-1-Digest: 0u0fK5oNCsjNUjZ2vDXclNzCD+o=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: TbXNqGLu7poH7BW1DgZs2g==
+
+Name: org/zefer/html/doc/f.class
+SHA-1-Digest: PDjpU+oiyu7eeddH0As2qaP061Y=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 49aN+tVS1K0RfZHiPWrnZA==
+
+Name: org/zefer/html/c/e.class
+SHA-1-Digest: 1ew9Aze+RGLRbkn1WuxmZMO1wmg=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: Z3NhD3JG7uyDFA3f4RJ0rQ==
+
+Name: org/zefer/html/c/b/b.class
+SHA-1-Digest: +AI+hNIWeG74II3TGN2i32irTC0=
+Digest-Algorithms: SHA-1 MD5 
+MD5-Digest: 3RO8+r7pBaXwiR+mBkfFew==
+
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: 18/09/2019, 6:17:04 p.m.</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("manifest",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            $(window).load(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 21667888;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

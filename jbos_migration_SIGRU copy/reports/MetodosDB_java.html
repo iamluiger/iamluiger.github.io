@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for MetodosDB.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="21667888">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_SIGRU_ear.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_SIGRU_ear.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="tattletale_SIGRU_ear.html">
+                        <i class="glyphicon tattletale-nav-logo"></i>
+                      Tattletale
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsSIGRU_ear.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_SIGRU_ear.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Red Hat Application Migration Toolkit found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="21667888">
+                            SIGRU.ear/SIGRU.war/WEB-INF/lib/SIGRUlib-1.jar/com/Dinissan/general/db/MetodosDB.java
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                                        <span class="label label-info" title="classloader">classloader</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package com.Dinissan.general.db;
+
+import com.Dinissan.general.General;
+import com.Dinissan.general.db.util.UtilDB;
+import com.sun.rowset.CachedRowSetImpl;
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Locale;
+import java.util.StringTokenizer;
+import java.util.regex.Pattern;
+
+public class MetodosDB {
+   public Connection myConn = null;
+   public ResultSet myRs = null;
+   public Statement myStmt = null;
+   public Statement myStmt2 = null;
+   public PreparedStatement myPstmt = null;
+   public PreparedStatement myPstmt2 = null;
+   public CallableStatement myCs = null;
+   protected boolean bConexion = false;
+   protected int iFilas = -1;
+   protected int iError = 0;
+   protected String sError = &quot;&quot;;
+   protected String sUserDB = &quot;&quot;;
+   protected String sPassDB = &quot;&quot;;
+   public String sTempTables = &quot;&quot;;
+   private int iRet = 0;
+
+   public boolean validarLogin(String sUser) {
+      return sUser != null &amp;&amp; !sUser.trim().equals(&quot;&quot;) &amp;&amp; !sUser.trim().equals(&quot;null&quot;) &amp;&amp; !sUser.trim().toLowerCase().equals(&quot;comercial&quot;) &amp;&amp; !sUser.trim().toLowerCase().equals(&quot;admsigru&quot;) &amp;&amp; !sUser.trim().toLowerCase().equals(&quot;desarrollo&quot;) &amp;&amp; !sUser.trim().toLowerCase().equals(&quot;usucierr&quot;) &amp;&amp; Pattern.matches(&quot;[a-zA-Z0-9.]+&quot;, sUser);
+   }
+
+   public int SQLInmediate(String sQuery) {
+      boolean var2 = false;
+
+      byte iRet;
+      try {
+         if (this.bConexion) {
+            if (sQuery.toUpperCase().indexOf(&quot;SELECT&quot;) != -1) {
+               this.iFilas = -1;
+               if (this.myRs != null) {
+                  this.myRs.close();
+               }
+
+               if (this.myStmt != null) {
+                  this.myStmt.close();
+               }
+
+               this.myStmt = this.myConn.createStatement(1004, 1007);
+               this.myRs = this.myStmt.executeQuery(sQuery);
+               if (this.myRs != null) {
+                  this.iFilas = this.queryCount(this.myRs);
+                  if (this.iFilas &gt; 0) {
+                     iRet = 1;
+                  } else if (this.iFilas == 0) {
+                     iRet = 0;
+                  } else {
+                     iRet = -4;
+                  }
+               } else {
+                  iRet = 0;
+               }
+            } else {
+               iRet = -3;
+            }
+         } else {
+            iRet = -1;
+         }
+      } catch (SQLException var4) {
+         General.registroError(var4, sQuery, &quot;logDB.log&quot;);
+         int iRet = var4.getErrorCode();
+         if (var4.getErrorCode() == -244) {
+            iRet = 0;
+         } else {
+            iRet = -2;
+         }
+
+         var4.printStackTrace();
+      }
+
+      return iRet;
+   }
+
+   public ResultSet SQLInmediateRs(String sQuery) {
+      CachedRowSetImpl crs = null;
+      ResultSet rs = null;
+      Statement stm = null;
+      this.iRet = 0;
+
+      try {
+         Class c = Class.forName(&quot;com.sun.rowset.CachedRowSetImpl&quot;);
+         Locale.setDefault(Locale.US);
+         crs = (CachedRowSetImpl)c.newInstance();
+         if (this.bConexion &amp;&amp; sQuery.toUpperCase().indexOf(&quot;SELECT&quot;) != -1) {
+            this.iFilas = -1;
+            stm = this.myConn.createStatement(1004, 1007);
+            rs = stm.executeQuery(sQuery);
+            if (rs != null) {
+               this.iFilas = this.queryCount(rs);
+               crs.populate(rs);
+               if (crs.size() &gt; 0) {
+                  crs.first();
+                  crs.previous();
+               }
+            } else {
+               this.iFilas = 0;
+            }
+
+            rs.close();
+            stm.close();
+         }
+      } catch (SQLException var6) {
+         General.registroError(var6, sQuery, &quot;logDB.log&quot;);
+         this.iRet = var6.getErrorCode();
+         if (var6.getErrorCode() == -244) {
+            this.iRet = 0;
+         } else {
+            this.iRet = -2;
+         }
+
+         var6.printStackTrace();
+      } catch (Exception var7) {
+         this.iRet = -2;
+         General.registroError(var7, sQuery, &quot;logDB.log&quot;);
+      }
+
+      return crs;
+   }
+
+   public CachedRowSetImpl returnRS(ResultSet rs) throws SQLException {
+      CachedRowSetImpl crs = null;
+
+      try {
+         Class c = Class.forName(&quot;com.sun.rowset.CachedRowSetImpl&quot;);
+         Locale.setDefault(Locale.US);
+         crs = (CachedRowSetImpl)c.newInstance();
+      } catch (Exception var4) {
+         var4.printStackTrace();
+      }
+
+      if (rs != null) {
+         crs.populate(rs);
+         this.iFilas = this.queryCount(rs);
+         if (crs.size() &gt; 0) {
+            crs.first();
+            crs.previous();
+         }
+      }
+
+      return crs;
+   }
+
+   public int SQLExecute(String sQuery) throws Exception {
+      return this.SQLExecute(sQuery, 0);
+   }
+
+   private int SQLExecute(String sQuery, int intentos) throws Exception {
+      if (intentos &gt; 5) {
+         throw new Exception(&quot;Error ejecutando sentencia: Tabla bloqueada. Intente en 5 minutos...&quot;);
+      } else {
+         boolean var3 = false;
+
+         int iRet;
+         try {
+            if (this.bConexion) {
+               if (this.myRs != null) {
+                  this.myRs.close();
+               }
+
+               if (this.myStmt != null) {
+                  this.myStmt.close();
+               }
+
+               this.myStmt = this.myConn.createStatement();
+               iRet = this.myStmt.executeUpdate(sQuery);
+               if (iRet &gt; 1) {
+                  iRet = 1;
+               }
+            } else {
+               iRet = -1;
+            }
+         } catch (SQLException var5) {
+            if (UtilDB.isTableLocked(var5.getErrorCode())) {
+               return this.SQLExecute(sQuery, intentos + 1);
+            }
+
+            iRet = -2;
+            this.setSError(var5.getMessage());
+            var5.printStackTrace();
+            General.registroError(var5, sQuery, &quot;logDB.log&quot;);
+         }
+
+         return iRet;
+      }
+   }
+
+   public boolean executeQuery(String sQuery) throws Exception {
+      return this.SQLExecute(sQuery) &gt;= 0;
+   }
+
+   public int queryCount(ResultSet rs) {
+      try {
+         rs.last();
+         this.iFilas = rs.getRow();
+         rs.beforeFirst();
+      } catch (Exception var3) {
+         if (rs == null) {
+            this.iFilas = 0;
+         } else {
+            this.iFilas = -1;
+         }
+      }
+
+      return this.iFilas;
+   }
+
+   public int queryColumnLength(ResultSet rs) {
+      int i = 1;
+
+      try {
+         if (rs != null) {
+            try {
+               rs.next();
+
+               while(true) {
+                  rs.getObject(i);
+                  ++i;
+               }
+            } catch (Exception var4) {
+               --i;
+            }
+         } else {
+            i = 0;
+         }
+
+         rs.beforeFirst();
+      } catch (Exception var5) {
+         i = 0;
+      }
+
+      return i;
+   }
+
+   public long consecutivos(String sCia, String sConcepto, String sNivel) throws Exception {
+      String sQuery = &quot;&quot;;
+      int iRet = -1;
+      if (this.bConexion) {
+         boolean iRet;
+         try {
+            sQuery = &quot;select  nvl(nu_ulti_conc, 0) + 1  from  \tgetticon  where \tcd_cia \t\t = &quot; + sCia + &quot; \t  and &quot; + &quot;\tcd_tipo_conc =&#39;&quot; + sConcepto + &quot;&#39; and &quot; + &quot; \tnu_nivel= &quot; + sNivel;
+            iRet = this.SQLInmediate(sQuery);
+            if (iRet &gt; 0) {
+               iRet = this.myRs.getInt(1);
+               this.myRs.close();
+               sQuery = &quot;update getticon  set nu_ulti_conc = &quot; + iRet + &quot; where &quot; + &quot;\tcd_cia \t\t = &quot; + sCia + &quot; \t  and &quot; + &quot;\tcd_tipo_conc =&#39;&quot; + sConcepto + &quot;&#39; and &quot; + &quot; \tnu_nivel= &quot; + sNivel;
+               if (this.SQLExecute(sQuery) != 1) {
+                  iRet = -1;
+               }
+            } else {
+               if (iRet != 0) {
+                  iRet = true;
+                  throw new Exception(&quot;Error al leer getticon. consecutivo &quot; + sConcepto);
+               }
+
+               sQuery = &quot;insert into getticon values(&quot; + sCia + &quot;,&#39;&quot; + sConcepto + &quot;&#39;,&quot; + sNivel + &quot;,&#39;A&#39;,1 )&quot;;
+               if (this.SQLExecute(sQuery) != 1) {
+                  iRet = true;
+                  throw new Exception(&quot;Error creando consecutivo &quot; + sConcepto);
+               }
+
+               iRet = 1;
+            }
+         } catch (Exception var7) {
+            iRet = true;
+            General.registroError(var7, sQuery, &quot;logDB.log&quot;);
+            throw new Exception(&quot;Error en consecutivo &quot; + sConcepto);
+         }
+      }
+
+      return (long)iRet;
+   }
+
+   public int contar(String sTabla, String sCol, String sCondicion) {
+      String sQuery = &quot;&quot;;
+      int iRet = -1;
+      if (this.bConexion) {
+         try {
+            if (sCol.equals(&quot;&quot;)) {
+               sCol = &quot;*&quot;;
+            }
+
+            sQuery = &quot;select count(&quot; + sCol + &quot;) from &quot; + sTabla + (sCondicion != null &amp;&amp; !sCondicion.trim().equals(&quot;&quot;) ? &quot; where &quot; + sCondicion : &quot;&quot;);
+            this.SQLInmediate(sQuery);
+            this.myRs.next();
+            iRet = this.myRs.getInt(1);
+            this.myRs.close();
+         } catch (SQLException var7) {
+            iRet = -2;
+            General.registroError(var7, sQuery, &quot;logDB.log&quot;);
+         }
+      }
+
+      return iRet;
+   }
+
+   public boolean getBConexion() {
+      return this.bConexion;
+   }
+
+   public void setBConexion(boolean conexion) {
+      this.bConexion = conexion;
+   }
+
+   public boolean borrarTemp() {
+      boolean bRet = false;
+      String sSql = &quot;&quot;;
+      if (this.bConexion) {
+         try {
+            if (this.sTempTables.compareToIgnoreCase(&quot;&quot;) != 0) {
+               for(StringTokenizer st = new StringTokenizer(this.sTempTables, &quot;,&quot;); st.hasMoreElements(); this.myStmt.close()) {
+                  sSql = &quot;drop table &quot; + st.nextToken();
+
+                  try {
+                     this.myStmt.execute(sSql);
+                  } catch (SQLException var5) {
+                     bRet = false;
+                  }
+               }
+
+               this.myCs = this.myConn.prepareCall(&quot;CALL borrarTemp()&quot;);
+               this.myCs.execute();
+               this.myCs.close();
+            }
+
+            bRet = true;
+         } catch (Exception var6) {
+            bRet = false;
+         }
+      }
+
+      this.sTempTables = &quot;&quot;;
+      return bRet;
+   }
+
+   public boolean cerrar() {
+      try {
+         if (this.bConexion) {
+            this.borrarTemp();
+         }
+
+         if (this.myRs != null) {
+            this.myRs.close();
+         }
+
+         if (this.myCs != null) {
+            this.myCs.close();
+         }
+
+         if (this.myStmt != null) {
+            this.myStmt.close();
+         }
+
+         if (this.myStmt2 != null) {
+            this.myStmt2.close();
+         }
+
+         if (this.myPstmt != null) {
+            this.myPstmt.close();
+         }
+
+         if (this.myPstmt2 != null) {
+            this.myPstmt2.close();
+         }
+
+         if (this.myConn != null) {
+            this.myConn.close();
+         }
+      } catch (Exception var5) {
+         var5.printStackTrace();
+      } finally {
+         ConnectionFactory.cerrarConexion(this.myConn);
+         this.bConexion = false;
+         this.setSUser(&quot;&quot;);
+      }
+
+      return !this.bConexion;
+   }
+
+   public PreparedStatement preparedStatement(String sQuery) throws SQLException {
+      if (this.myPstmt2 != null) {
+         this.myPstmt2.close();
+      }
+
+      try {
+         this.myPstmt2 = this.myConn.prepareStatement(sQuery, 1004, 1007);
+      } catch (Exception var3) {
+         General.registroError(var3, sQuery, &quot;logDB.log&quot;);
+      }
+
+      return this.myPstmt2;
+   }
+
+   public boolean cerrarRS(ResultSet rs) {
+      try {
+         this.borrarTemp();
+         if (this.myStmt2 != null) {
+            this.myStmt2.close();
+         }
+
+         if (this.myPstmt2 != null) {
+            this.myPstmt2.close();
+         }
+
+         if (rs != null) {
+            rs.close();
+         }
+      } catch (Exception var3) {
+         var3.printStackTrace();
+      }
+
+      return false;
+   }
+
+   public boolean cerrarRS() {
+      try {
+         if (this.bConexion) {
+            this.borrarTemp();
+         }
+
+         if (this.myRs != null) {
+            this.myRs.close();
+         }
+
+         if (this.myCs != null) {
+            this.myCs.close();
+         }
+
+         if (this.myStmt != null) {
+            this.myStmt.close();
+         }
+
+         if (this.myStmt2 != null) {
+            this.myStmt2.close();
+         }
+
+         if (this.myPstmt != null) {
+            this.myPstmt.close();
+         }
+
+         if (this.myPstmt2 != null) {
+            this.myPstmt2.close();
+         }
+      } catch (Exception var2) {
+         var2.printStackTrace();
+      }
+
+      return false;
+   }
+
+   public int getIFilas() {
+      return this.iFilas;
+   }
+
+   public void setIFilas(int filas) {
+      this.iFilas = filas;
+   }
+
+   public int getIError() {
+      return this.iError;
+   }
+
+   public void setIError(int error) {
+      this.iError = error;
+   }
+
+   public String getSError() {
+      return this.sError;
+   }
+
+   public void setSError(String error) {
+      this.sError = error;
+   }
+
+   public String getSUser() {
+      return this.sUserDB;
+   }
+
+   public void setSUser(String user) {
+      this.sUserDB = user;
+   }
+
+   public String getsPass() {
+      return this.sPassDB;
+   }
+
+   public void setsPass(String sPassDB) {
+      this.sPassDB = sPassDB;
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: 18/09/2019, 6:16:53 p.m.</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "95,138" });
+
+            $("<div id='95-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(95)');
+            $("<div id='138-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(138)');
+
+
+$("<a name='49918176' class='windup-file-location'></a><div class='inline-source-comment green tag-classloader'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>Dynamic class instantiation</strong><a title='View Rule: environment-dependent-calls-01000' href='windup_ruleproviders.html#environment-dependent-calls-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The class is dynamically loaded within application. During the migration, multiple classes that are provided on classpath by a different server may not be present anymore.<\/p><p>Please review the class-loading mechanisms and ensure that the dynamically loaded class is available in JBoss EAP.<\/p><ul><li><a href='https://access.redhat.com/solutions/361343' target='_blank'>Article about Classloading in JBoss EAP 6</a></li><li><a href='https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.4/html-single/Development_Guide/index.html#chap-Class_Loading_and_Modules' target='_blank'>Class Loading and Modules in JBoss EAP 6</a></li><li><a href='https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.0/html-single/development_guide/#class_loading_and_modules' target='_blank'>Class Loading and Modules in JBoss EAP 7</a></li></ul></div></div></div>").appendTo('#95-inlines');
+
+$("<a name='99827720' class='windup-file-location'></a><div class='inline-source-comment green tag-classloader'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>Dynamic class instantiation</strong><a title='View Rule: environment-dependent-calls-01000' href='windup_ruleproviders.html#environment-dependent-calls-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The class is dynamically loaded within application. During the migration, multiple classes that are provided on classpath by a different server may not be present anymore.<\/p><p>Please review the class-loading mechanisms and ensure that the dynamically loaded class is available in JBoss EAP.<\/p><ul><li><a href='https://access.redhat.com/solutions/361343' target='_blank'>Article about Classloading in JBoss EAP 6</a></li><li><a href='https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.0/html-single/development_guide/#class_loading_and_modules' target='_blank'>Class Loading and Modules in JBoss EAP 7</a></li><li><a href='https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.4/html-single/Development_Guide/index.html#chap-Class_Loading_and_Modules' target='_blank'>Class Loading and Modules in JBoss EAP 6</a></li></ul></div></div></div>").appendTo('#138-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            $(window).load(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 21667888;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for creaSolicitudGara.properties</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="21667888">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_SIGRU_ear.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_SIGRU_ear.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="tattletale_SIGRU_ear.html">
+                        <i class="glyphicon tattletale-nav-logo"></i>
+                      Tattletale
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsSIGRU_ear.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_SIGRU_ear.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Red Hat Application Migration Toolkit found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="21667888">
+                            SIGRU.ear/SIGRU.war/WEB-INF/classes/com/Dinissan/garantiasV2/view/msj/creaSolicitudGara.properties
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Properties</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+#Panel Principal
+label_titulo_principal=Crear Solicitud de Garant�a Veh�culos Entregados
+label_resultados_ayuda_descripcion=En esta opci�n usted podr� crear solicitudes de Garant�a de un veh�culo entregado con una cotizaci�n creada previamente
+label_panel_filtros_consulta=Par�metros de consulta
+label_panel_taller=Taller:
+label_panel_orden_trabajo=N�mero de OT:
+label_button_consultar_ot=Consultar OT
+label_tittle_button_consultar_ot=Consultar una Cotizaci�n
+label_tittle_button_enviar_solicitud=Enviar Solicitud al Analista de Garant�as
+label_button_enviar_solicitud=Enviar Solicitud
+label_tittle_button_guardar_solicitud=Guardar la Solicitud para continuar posteriormente
+label_button_guardar_solicitud=Guardar Solicitud
+label_tittle_button_historial_vehiculo=Ver el Historial de OTs del Veh�culo
+label_button_historial_vehiculo=Hist. Veh�culo
+
+#Panel de informaci�n de veh�culo
+label_tittle_info_vehiculo=Informaci�n del Veh�culo
+label_panel_vin=VIN:
+label_panel_no_inventario=N�mero de Inventario:
+label_panel_marca=Marca:
+label_panel_numero_motor=N�mero de Motor:
+label_panel_modelo_tasa=Modelo TASA:
+label_panel_ano_modelo=A�o Modelo:
+label_panel_color=Color:
+label_info_vehiculo_button_tittle_zoom_cotizacion=Ver detalle cotizaci�n
+
+#Panel de informaci�n de la Orden de Trabajo
+label_tittle_info_ot=Informaci�n de la Orden de Trabajo
+label_panel_kilometraje=Kilometraje:
+label_panel_fecha_entrega=Fecha de Entrega:
+label_panel_cumple_parametros=Cumple Par�metros:
+label_panel_entregado_hace=Entregado Hace:
+label_button_relacionar_codigo_subcontrato=C�digos de Subcontrato
+label_tittle_button_relacionar_codigo_subcontrato=Relacionar Materiales y MO con C�digos de Subcontrato
+label_button_continuar_reclamos=Continuar
+label_tittle_button_continuar_reclamos=Continuar con reclamos
+
+#Dialog informaci�n de cotizaci�n
+label_tittle_detalle_cotizacion=Detalle Cotizaci�n
+label_tittle_button_cerrar=Cerrar Ventana
+label_button_cerrar=Cerrar
+
+#Dialog relaci�n codigos subcontrato
+label_info_resultados_table_relacion_cod_subcontrato=Relaci�n de Materiales y MO con C�digos de Subcontrato
+label_info_categoria=Categor�a
+label_info_subcategoria=Subcategor�a
+label_info_cod_subcontrato=C�digo Subcontrato
+label_button_guardar=Guardar
+label_tittle_button_guardar=Guardar Asignaci�n de C�digos de Subcontrato
+
+#Dialog informaci�n de cotizaci�n (Encabezado)
+label_tittle_info_cotizacion=Informaci�n de la Cotizaci�n
+label_panel_sucursal=Sucursal:
+label_panel_numero_cotizacion=N�mero Cotizaci�n:
+label_panel_tipo_cotizacion=Tipo Cotizaci�n:
+label_panel_nit_cliente=Nit Cliente:
+label_panel_nombre_cliente=Nombre Cliente:
+label_panel_numero_chasis=N�mero Chasis:
+label_panel_nit_asesor=Nit Asesor:
+label_panel_nombre_asesor=Nombre Asesor:
+label_panel_fecha_cotizacion=Fecha Cotizaci�n:
+label_panel_numero_siniestro=N�mero Siniestro:
+label_panel_observaciones=Observaciones:
+label_panel_valor_materiales=Vr Materiales:
+label_panel_descuento_materiales=Dscto Materiales:
+label_panel_valor_repuestos=Vr Repuestos:
+label_panel_descuento_repuestos=Dscto Repuestos:
+label_panel_impuesto_repuestos=Impto Repuestos:
+label_panel_valor_mano_obra=Vr Mano de Obra:
+label_panel_descuento_mano_obra=Vr Dscto MO:
+label_panel_impuesto_mano_obra=Vr Impto MO:
+label_panel_total_valor=Total Vr:
+label_panel_total_descuento=Total Dscto:
+label_panel_total_impuesto=Total Impto:
+label_info_tipo_detalle=Tipo
+label_info_codigo_referencia=C�digo Referencia
+label_info_descripcion=Descripci�n
+label_info_cantidad=Cantidad
+label_info_valor=Valor
+
+#Panel de Fallas y S�ntomas
+label_tittle_fallas_sintomas=Fallas y S�ntomas
+label_panel_reclamo=Reclamo
+label_panel_reclamo_cliente=Reclamo del Cliente:
+label_panel_pfp_cotizado=�Este reclamo tiene PFP Cotizado?
+label_panel_pfp=PFP:
+label_tittle_button_consultar_pfp=Consultar PFP Gen�ricos
+label_panel_grupo=Grupo:
+label_panel_sintoma=S�ntoma:
+label_panel_falla=Falla:
+label_panel_asociar_items=Asociar �tems de la cotizaci�n al reclamo
+label_panel_repuestos=Repuestos
+label_panel_mano_obra=Mano de Obra
+label_panel_materiales=Materiales
+label_panel_repuesto_referencia=Referencia:
+label_panel_repuesto_cantidad=Cant:
+label_panel_mano_obra_referencia=Trabajo:
+label_panel_mano_obra_cantidad=Cant:
+label_panel_materiales_referencia=Referencia:
+label_panel_materiales_cantidad=Cant:
+label_tittle_button_consultar_sintoma=Consultar S�ntomas
+label_tittle_button_consultar_falla=Consultar Fallas
+label_tittle_button_agregar_item=Agregar �tems
+label_tittle_button_eliminar_item=Eliminar �tems
+
+#Dialog Consulta de S�ntomas
+label_tittle_consultar_sintoma=Consulta de S�ntomas (C�digos CS)
+label_info_cons_sintoma_grupo=Grupo:
+label_info_cons_sintoma_descripcion=Descripci�n:
+label_info_cons_sintoma_button_tittle_consultar_sintoma=Consultar S�ntomas
+label_button_consultar=Consultar
+label_info_sintoma_grupo=Grupo
+label_info_sintoma_codigo=C�digo
+label_info_sintoma_descripcion=Descripci�n
+label_info_sintoma_opciones=Opciones
+label_info_sintoma_tittle_seleccionar=Seleccionar
+
+#Dialog Consulta de Fallas
+label_tittle_consultar_falla=Consultar de Fallas (C�digos CT)
+label_cons_falla_codigo_cs=C�digo CS:
+label_cons_falla_desc_falla=Desc. Falla:
+label_info_cons_falla_button_tittle_consultar_falla=Consultar Fallas
+label_info_falla_codigo_cs=C�digo CS
+label_info_falla_codigo_ct=C�digo
+label_info_falla_descripcion=Descripci�n
+label_info_falla_opciones=Opciones
+label_info_falla_tittle_seleccionar=Seleccionar
+
+#Dialog Evidencias
+label_tittle_subir_evidencias=Subir archivos de evidencias
+label_tittle_button_agregar_evidencias=Subir Evidencias
+label_button_agregar_evidencias=Evidencias
+label_tittle_fotos=Fotos
+label_tittle_video=Videos
+label_tittle_pdf=Archivos PDF
+label_tittle_txt=Archivos TXT
+label_tittle_tipo_imagen=Tipo de Imagen:
+label_tittle_desc_imagen=Descripci�n de Imagen:
+label_tittle_tipo_video=Tipo de Video:
+label_tittle_desc_video=Descripci�n de Video:
+label_tittle_tipo_pdf=Tipo de PDF:
+label_tittle_desc_pdf=Descripci�n de PDF:
+label_tittle_tipo_txt=Tipo de TXT:
+label_tittle_desc_txt=Descripci�n de TXT:
+
+
+#Dialog Historial de OTs
+label_tittle_historial_ots=Historial de OTs
+label_panel_historial_modelo_tasa=Modelo Tasa
+label_panel_historial_numero_chasis=Numero Chasis
+label_panel_historial_numero_motor=Numero Motor
+label_info_ot_numero_ot=Numero de OT
+label_info_ot_taller=Taller
+label_info_ot_fecha_servicio=Fecha de Servicio
+label_info_ot_kilometraje=Kilometraje
+label_info_ot_tipo_ot=Tipo de OT
+label_info_ot_opciones=Opciones
+label_info_tittle_ot_ver_detalle=Ver Detalle de la OT
+
+#Dialog Detalle OT
+label_tittle_ver_detalle_ot=Ver Detalle de OT
+label_info_ot_numero_requisicion=Numero Requisici�n
+label_info_ot_tipo_referencia=Tipo Referencia
+label_info_ot_codigo_referencia=C�digo
+label_info_ot_desc_referencia=Descripci�n
+label_info_ot_cantidad=Cantidad
+
+#Dialog PFP Generico
+label_tittle_consultar_pfp=Consulta de PFP Gen�rico
+label_info_pfp_categoria=Categor�a
+label_info_pfp_item=�tem
+label_info_pfp_codigo=C�digo PFP
+label_info_pfp_comentario=Comentario
+label_info_pfp_opciones=Opciones
+label_info_pfp_tittle_seleccionar=Seleccionar
+
+#Validaciones OT
+label_warning_existe_solicitud=Ya existe una solicitud con el numero de orden de trabajo seleccionada.
+label_warning_cotizacion_no_encontrada=No existe una cotizaci�n con la sucursal y el numero digitado.
+
+#Validaciones Orden de Trabajo
+label_warning_bodega_no_seleccionada=El taller de la OT es obligatoria. Por favor seleccione uno.
+label_warning_numero_ot_vacio=El numero de OT es obligatorio. Por favor digite uno.
+label_warning_orden_trabajo_no_existe=No existe una orden de trabajo en el taller con el numero digitado.
+label_warning_diagnosticos_sin_terminar=Aun faltan por crear diagn�sticos a las fallas y s�ntomas de la OT. El t�cnico debe realizarlas y el jefe de taller debe aprobarlas antes de crear una solicitud de garant�a.
+label_warning_sin_referencias_por_asignar=No hay mas referencias por asignar. Por favor env�e la solicitud usando el bot�n enviar.
+label_warning_cod_subcontratos_no_asignados=No se han asignado todos los c�digos de subcontrato. Por favor seleccione uno para cada Material y MO cotizado.
+
+#Validaciones Panel Fallas / S�ntomas
+label_warning_repuesto_no_seleccionado=Existe mas de un repuesto cotizado sin relacionar con un reclamo. Por favor seleccione uno.
+label_warning_mano_obra_no_seleccionado=Existe mas de una mano de obra cotizada sin relacionar con un reclamo. Por favor seleccione una.
+label_warning_material_no_seleccionado=Existe mas de un material cotizado sin relacionar con un reclamo. Por favor seleccione uno.
+label_warning_sin_ninguna_referencia=Debe asignar al menos un repuesto o material o mano de obra para crear un reclamo.
+label_warning_reclamo_cliente_vacio=Debe ingresar el reclamo del cliente. Por favor dig�telo.
+label_warning_reclamo_cliente_caracteres_invalidos=El reclamo del cliente contiene caracteres inv�lidos. Por favor digite solo n�meros y letras.
+label_warning_sintoma_no_seleccionado=Debe seleccionar un s�ntoma (C�digo CS) para el reclamo. Por favor seleccione uno, usando la consulta de C�digos CS.
+label_warning_falla_no_seleccionado=Debe seleccionar una falla (C�digo CT) para el reclamo. Por favor seleccione uno usando la consulta de C�digos CT.
+
+#Evidencias
+label_warning_vista_45_no_seleccionada=La evidencia (Foto) de la vista general a 45 grados es obligatoria. Por favor suba una imagen.
+label_warning_frontal_no_seleccionada=La evidencia (Foto) frontal del veh�culo es obligatoria. Por favor suba una imagen.
+label_warning_odometro_no_seleccionado=La evidencia (Foto) del od�metro es obligatoria. Por favor suba una imagen.
+label_warning_tipo_imagen_vacio=El tipo de la imagen es obligatorio. Por favor seleccione uno.
+label_warning_descripcion_imagen_vacio=La descripci�n de la imagen es obligatoria. Por ingrese una.
+label_warning_descripcion_imagen_caracteres_invalidos=La descripci�n de la imagen contiene caracteres inv�lidos. Por favor ingrese solo n�meros y letras.
+
+#Evidencias fs
+label_warning_sistema_completo_no_seleccionada=La evidencia (Foto) del sistema completo es obligatoria en cada reclamo. Por favor suba una imagen.
+label_warning_detalle_pfp_no_seleccionada=La evidencia (Foto) del detalle de la pfp es obligatoria. Por favor suba una imagen.
+label_warning_referencias_sin_asignar=Aun quedan referencias por asignar. Por favor asigne todas las referencias cotizadas a los reclamos creados.
+label_info_solicitud_creada=Se ha creado la solicitud de garant�a exitosamente.
+label_error_creacion_solicitud=No se han actualizado las rutas de las evidencias.
+label_info_creacion_solicitud_prev_exitosa=Se ha guardado la solicitud de garant�a previa exitosamente.
+
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: 18/09/2019, 6:16:58 p.m.</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("properties",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            $(window).load(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 21667888;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

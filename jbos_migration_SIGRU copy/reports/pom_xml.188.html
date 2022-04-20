@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for pom.xml</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="21667888">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_SIGRU_ear.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_SIGRU_ear.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="tattletale_SIGRU_ear.html">
+                        <i class="glyphicon tattletale-nav-logo"></i>
+                      Tattletale
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsSIGRU_ear.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_SIGRU_ear.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_SIGRU_ear.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Red Hat Application Migration Toolkit found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="21667888">
+                            SIGRU.ear/AdminCU.war/WEB-INF/lib/jakarta.xml.bind-api-2.3.2.jar/META-INF/maven/jakarta.xml.bind/jakarta.xml.bind-api/pom.xml
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Maven XML</span>
+                                </div>
+
+                                <ul class="classifications">
+                                            <li>
+                                                <div class="title">
+                                                    <em>Maven POM (pom.xml)</em>
+<a title='View Rule: DiscoverMavenProjectsRuleProvider_1' href='windup_ruleproviders.html#DiscoverMavenProjectsRuleProvider_1'><span class='glyphicon glyphicon-link rule-link'></span></a>                                                </div>
+                                                <div class="desc">Maven Project Object Model (POM) File</div>
+                                            </li>
+                                </ul>
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!--
+
+    Copyright (c) 2018 Oracle and/or its affiliates. All rights reserved.
+
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Distribution License v. 1.0, which is available at
+    http://www.eclipse.org/org/documents/edl-v10.php.
+
+    SPDX-License-Identifier: BSD-3-Clause
+
+--&gt;
+
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;parent&gt;
+        &lt;artifactId&gt;jakarta.xml.bind-api-parent&lt;/artifactId&gt;
+        &lt;groupId&gt;jakarta.xml.bind&lt;/groupId&gt;
+        &lt;version&gt;2.3.2&lt;/version&gt;
+    &lt;/parent&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;artifactId&gt;jakarta.xml.bind-api&lt;/artifactId&gt;
+    &lt;packaging&gt;jar&lt;/packaging&gt;
+
+    &lt;properties&gt;
+        &lt;config.dir&gt;${project.basedir}/../etc/config&lt;/config.dir&gt;
+        &lt;legal.doc.source&gt;${project.basedir}/..&lt;/legal.doc.source&gt;
+    &lt;/properties&gt;
+
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;jakarta.activation&lt;/groupId&gt;
+            &lt;artifactId&gt;jakarta.activation-api&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+
+    &lt;build&gt;
+
+        &lt;pluginManagement&gt;
+            &lt;plugins&gt;
+                &lt;plugin&gt;
+                    &lt;artifactId&gt;maven-enforcer-plugin&lt;/artifactId&gt;
+                    &lt;configuration&gt;
+                        &lt;rules&gt;
+                            &lt;requireJavaVersion&gt;
+                                &lt;version&gt;[1.8,)&lt;/version&gt;
+                            &lt;/requireJavaVersion&gt;
+                            &lt;requireMavenVersion&gt;
+                                &lt;version&gt;[3.0.3,)&lt;/version&gt;
+                            &lt;/requireMavenVersion&gt;
+                            &lt;DependencyConvergence /&gt;
+                        &lt;/rules&gt;
+                    &lt;/configuration&gt;
+                &lt;/plugin&gt;
+                &lt;plugin&gt;
+                    &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+                    &lt;artifactId&gt;cobertura-maven-plugin&lt;/artifactId&gt;
+                    &lt;version&gt;2.7&lt;/version&gt;
+                    &lt;configuration&gt;
+                        &lt;formats&gt;
+                            &lt;format&gt;xml&lt;/format&gt;
+                        &lt;/formats&gt;
+                        &lt;check&gt;
+                            &lt;totalLineRate&gt;45&lt;/totalLineRate&gt;
+                            &lt;packageLineRate&gt;45&lt;/packageLineRate&gt;
+                            &lt;haltOnFailure&gt;true&lt;/haltOnFailure&gt;
+                        &lt;/check&gt;
+                    &lt;/configuration&gt;
+                &lt;/plugin&gt;
+                &lt;plugin&gt;
+                    &lt;groupId&gt;org.glassfish.copyright&lt;/groupId&gt;
+                    &lt;artifactId&gt;glassfish-copyright-maven-plugin&lt;/artifactId&gt;
+                    &lt;configuration&gt;
+                        &lt;templateFile&gt;${project.basedir}/copyright.txt&lt;/templateFile&gt;
+                        &lt;excludeFile&gt;${project.basedir}/copyright-exclude&lt;/excludeFile&gt;
+                        &lt;!-- skip files not under SCM--&gt;
+                        &lt;scmOnly&gt;true&lt;/scmOnly&gt;
+                        &lt;!-- turn off warnings --&gt;
+                        &lt;warn&gt;true&lt;/warn&gt;
+                        &lt;!-- for use with repair --&gt;
+                        &lt;update&gt;false&lt;/update&gt;
+                        &lt;!-- check that year is correct --&gt;
+                        &lt;ignoreYear&gt;false&lt;/ignoreYear&gt;
+                    &lt;/configuration&gt;
+                &lt;/plugin&gt;
+                &lt;plugin&gt;
+                    &lt;artifactId&gt;maven-jar-plugin&lt;/artifactId&gt;
+                    &lt;version&gt;3.1.0&lt;/version&gt;
+                    &lt;configuration&gt;
+                        &lt;archive&gt;
+                            &lt;manifestFile&gt;${project.build.outputDirectory}/META-INF/MANIFEST.MF&lt;/manifestFile&gt;
+                        &lt;/archive&gt;
+                    &lt;/configuration&gt;
+                &lt;/plugin&gt;
+                &lt;plugin&gt;
+                    &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+                    &lt;artifactId&gt;buildnumber-maven-plugin&lt;/artifactId&gt;
+                    &lt;version&gt;1.4&lt;/version&gt;
+                    &lt;configuration&gt;
+                        &lt;getRevisionOnlyOnce&gt;true&lt;/getRevisionOnlyOnce&gt;
+                        &lt;timestampFormat&gt;{0,date,yyyy-MM-dd&#39;T&#39;HH:mm:ssZ}&lt;/timestampFormat&gt;
+                        &lt;shortRevisionLength&gt;7&lt;/shortRevisionLength&gt;
+                        &lt;revisionOnScmFailure&gt;false&lt;/revisionOnScmFailure&gt;
+                    &lt;/configuration&gt;
+                &lt;/plugin&gt;
+                &lt;plugin&gt;
+                    &lt;groupId&gt;org.apache.felix&lt;/groupId&gt;
+                    &lt;artifactId&gt;maven-bundle-plugin&lt;/artifactId&gt;
+                    &lt;version&gt;3.5.1&lt;/version&gt;
+                    &lt;configuration&gt;
+                        &lt;archive&gt;
+                            &lt;manifestFile&gt;${project.build.outputDirectory}/META-INF/MANIFEST.MF&lt;/manifestFile&gt;
+                        &lt;/archive&gt;
+                        &lt;instructions&gt;
+                            &lt;_noee&gt;true&lt;/_noee&gt;
+                            &lt;Bundle-Version&gt;${project.version}&lt;/Bundle-Version&gt;  &lt;!-- 2.2.99.bnull --&gt;
+                            &lt;Extension-Name&gt;${extension.name}&lt;/Extension-Name&gt;
+                            &lt;Implementation-Version&gt;${spec.version}.${impl.version}&lt;/Implementation-Version&gt;
+                            &lt;Specification-Version&gt;${spec.version}&lt;/Specification-Version&gt;
+                            &lt;Export-Package&gt;${api.package}.*; version=${spec.version}.${impl.version}&lt;/Export-Package&gt;
+                            &lt;Import-Package&gt;
+                                javax.activation;version=!,
+                                javax.xml.bind;version=&quot;[${spec.version},3)&quot;,
+                                javax.xml.bind.annotation;version=&quot;[${spec.version},3)&quot;,
+                                javax.xml.bind.annotation.adapters;version=&quot;[${spec.version},3)&quot;,
+                                javax.xml.bind.attachment;version=&quot;[${spec.version},3)&quot;,
+                                javax.xml.bind.helpers;version=&quot;[${spec.version},3)&quot;,
+                                javax.xml.bind.util;version=&quot;[${spec.version},3)&quot;,
+                                javax.xml.datatype,
+                                javax.xml.namespace,
+                                javax.xml.parsers,
+                                javax.xml.stream,
+                                javax.xml.transform,
+                                javax.xml.transform.dom,
+                                javax.xml.transform.sax,
+                                javax.xml.transform.stream,
+                                javax.xml.validation,
+                                org.w3c.dom,
+                                org.xml.sax,
+                                org.xml.sax.ext,
+                                org.xml.sax.helpers
+                            &lt;/Import-Package&gt;
+                            &lt;Bundle-SymbolicName&gt;${extension.name}-api&lt;/Bundle-SymbolicName&gt;
+                            &lt;DynamicImport-Package&gt;org.glassfish.hk2.osgiresourcelocator&lt;/DynamicImport-Package&gt;
+                            &lt;Specification-Vendor&gt;${vendor.name}&lt;/Specification-Vendor&gt;
+                            &lt;Implementation-Build-Id&gt;${scmBranch}-${buildNumber}, ${timestamp}&lt;/Implementation-Build-Id&gt;
+                            &lt;Multi-Release&gt;true&lt;/Multi-Release&gt;
+                        &lt;/instructions&gt;
+                    &lt;/configuration&gt;
+                &lt;/plugin&gt;
+                &lt;plugin&gt;
+                    &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+                    &lt;artifactId&gt;findbugs-maven-plugin&lt;/artifactId&gt;
+                    &lt;version&gt;3.0.5&lt;/version&gt;
+                    &lt;configuration&gt;
+                        &lt;skip&gt;${findbugs.skip}&lt;/skip&gt;
+                        &lt;threshold&gt;${findbugs.threshold}&lt;/threshold&gt;
+                        &lt;findbugsXmlWithMessages&gt;true&lt;/findbugsXmlWithMessages&gt;
+                        &lt;excludeFilterFile&gt;
+                            ${findbugs.exclude}
+                        &lt;/excludeFilterFile&gt;
+                        &lt;fork&gt;true&lt;/fork&gt;
+                        &lt;jvmArgs&gt;-Xms64m -Xmx256m&lt;/jvmArgs&gt;
+                    &lt;/configuration&gt;
+                    &lt;dependencies&gt;
+                        &lt;dependency&gt;
+                            &lt;groupId&gt;org.glassfish.findbugs&lt;/groupId&gt;
+                            &lt;artifactId&gt;findbugs&lt;/artifactId&gt;
+                            &lt;version&gt;1.0&lt;/version&gt;
+                        &lt;/dependency&gt;
+                    &lt;/dependencies&gt;
+                &lt;/plugin&gt;
+                &lt;plugin&gt;
+                    &lt;artifactId&gt;maven-javadoc-plugin&lt;/artifactId&gt;
+                    &lt;configuration&gt;
+                        &lt;doclint&gt;none&lt;/doclint&gt;
+                        &lt;nodeprecated&gt;false&lt;/nodeprecated&gt;
+                        &lt;use&gt;false&lt;/use&gt;
+                        &lt;author&gt;true&lt;/author&gt;
+                        &lt;version&gt;true&lt;/version&gt;
+                        &lt;doctitle&gt;&lt;![CDATA[&lt;br&gt;
+JAXB ${project.version} API Library&lt;/h2&gt;
+${project.name} specification, ${release.spec.date}&lt;br&gt;
+Comments to: &lt;i&gt;&lt;a href=&#39;mailto:${release.spec.feedback}&#39;&gt;${release.spec.feedback}&lt;/a&gt;&lt;/i&gt;&lt;br&gt;
+More information at: &lt;i&gt;&lt;a target=&#39;_top&#39;
+href=&#39;https://projects.eclipse.org/projects/ee4j.jaxb&#39;&gt;https://projects.eclipse.org/projects/ee4j.jaxb&lt;/a&gt;&lt;/i&gt;&lt;br&gt;
+&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;&lt;hr width=&#39;65%&#39;&gt;&lt;h1&gt;${project.name}&lt;/h1&gt;&lt;hr width=&#39;75%&#39;&gt;
+&lt;br&gt;&amp;nbsp;&lt;br&gt;]]&gt;
+                        &lt;/doctitle&gt;
+                        &lt;header&gt;&lt;![CDATA[JAXB&lt;br&gt;v${project.version}]]&gt;
+                        &lt;/header&gt;
+                        &lt;bottom&gt;
+                        &lt;![CDATA[&lt;br&gt;Copyright &amp;#169; {inceptionYear}&amp;#x2013;{currentYear} Oracle and/or its affiliates.
+                        All rights reserved.&lt;br&gt;Comments to : &lt;a href=&quot;mailto:${release.spec.feedback}&quot;&gt;${release.spec.feedback}&lt;/a&gt;.]]&gt;
+                        &lt;/bottom&gt;
+                        &lt;detectJavaApiLink&gt;false&lt;/detectJavaApiLink&gt;
+                        &lt;tags&gt;
+                            &lt;tag&gt;
+                                &lt;name&gt;apiNote&lt;/name&gt;
+                                &lt;!-- todo tag for all places --&gt;
+                                &lt;placement&gt;a&lt;/placement&gt;
+                                &lt;head&gt;API Note:&lt;/head&gt;
+                            &lt;/tag&gt;
+                            &lt;tag&gt;
+                                &lt;name&gt;implSpec&lt;/name&gt;
+                                &lt;!-- todo tag for all places --&gt;
+                                &lt;placement&gt;a&lt;/placement&gt;
+                                &lt;head&gt;Implementation Requirements:&lt;/head&gt;
+                            &lt;/tag&gt;
+                            &lt;tag&gt;
+                                &lt;name&gt;implNote&lt;/name&gt;
+                                &lt;!-- todo tag for all places --&gt;
+                                &lt;placement&gt;a&lt;/placement&gt;
+                                &lt;head&gt;Implementation Note:&lt;/head&gt;
+                            &lt;/tag&gt;
+                        &lt;/tags&gt;
+                    &lt;/configuration&gt;
+                &lt;/plugin&gt;
+            &lt;/plugins&gt;
+        &lt;/pluginManagement&gt;
+
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+                &lt;artifactId&gt;build-helper-maven-plugin&lt;/artifactId&gt;
+                &lt;executions&gt;
+                    &lt;execution&gt;
+                        &lt;id&gt;add-legal-resource&lt;/id&gt;
+                        &lt;phase&gt;generate-resources&lt;/phase&gt;
+                        &lt;goals&gt;
+                            &lt;goal&gt;add-resource&lt;/goal&gt;
+                        &lt;/goals&gt;
+                        &lt;configuration&gt;
+                            &lt;resources&gt;
+                                &lt;resource&gt;
+                                    &lt;directory&gt;${legal.doc.source}&lt;/directory&gt;
+                                    &lt;includes&gt;
+                                        &lt;include&gt;NOTICE.md&lt;/include&gt;
+                                        &lt;include&gt;LICENSE.md&lt;/include&gt;
+                                    &lt;/includes&gt;
+                                    &lt;targetPath&gt;META-INF&lt;/targetPath&gt;
+                                &lt;/resource&gt;
+                            &lt;/resources&gt;
+                        &lt;/configuration&gt;
+                    &lt;/execution&gt;
+                    &lt;execution&gt;
+                        &lt;id&gt;add-mr-resource&lt;/id&gt;
+                        &lt;phase&gt;prepare-package&lt;/phase&gt;
+                        &lt;goals&gt;
+                            &lt;goal&gt;add-resource&lt;/goal&gt;
+                        &lt;/goals&gt;
+                        &lt;configuration&gt;
+                            &lt;resources&gt;
+                                &lt;resource&gt;
+                                    &lt;directory&gt;${project.basedir}/src/main/mr-jar&lt;/directory&gt;
+                                    &lt;targetPath&gt;META-INF/versions/9&lt;/targetPath&gt;
+                                &lt;/resource&gt;
+                            &lt;/resources&gt;
+                        &lt;/configuration&gt;
+                    &lt;/execution&gt;
+                &lt;/executions&gt;
+            &lt;/plugin&gt;
+            &lt;plugin&gt;
+                &lt;artifactId&gt;maven-enforcer-plugin&lt;/artifactId&gt;
+                &lt;executions&gt;
+                    &lt;execution&gt;
+                        &lt;id&gt;enforce-versions&lt;/id&gt;
+                        &lt;goals&gt;
+                            &lt;goal&gt;enforce&lt;/goal&gt;
+                        &lt;/goals&gt;
+                    &lt;/execution&gt;
+                &lt;/executions&gt;
+            &lt;/plugin&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+                &lt;artifactId&gt;buildnumber-maven-plugin&lt;/artifactId&gt;
+                &lt;executions&gt;
+                    &lt;execution&gt;
+                        &lt;id&gt;validate&lt;/id&gt;
+                        &lt;phase&gt;validate&lt;/phase&gt;
+                        &lt;goals&gt;
+                            &lt;goal&gt;create&lt;/goal&gt;
+                        &lt;/goals&gt;
+                    &lt;/execution&gt;
+                &lt;/executions&gt;
+            &lt;/plugin&gt;
+            &lt;plugin&gt;
+                &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+                &lt;executions&gt;
+                    &lt;execution&gt;
+                        &lt;id&gt;default-compile&lt;/id&gt;
+                        &lt;configuration&gt;
+                            &lt;release&gt;8&lt;/release&gt;
+                            &lt;excludes&gt;
+                                &lt;exclude&gt;module-info.java&lt;/exclude&gt;
+                            &lt;/excludes&gt;
+                        &lt;/configuration&gt;
+                    &lt;/execution&gt;
+                    &lt;execution&gt;
+                        &lt;id&gt;module-info-compile&lt;/id&gt;
+                        &lt;goals&gt;
+                            &lt;goal&gt;compile&lt;/goal&gt;
+                        &lt;/goals&gt;
+                        &lt;configuration&gt;
+                            &lt;release&gt;9&lt;/release&gt;
+                            &lt;includes&gt;
+                                &lt;include&gt;module-info.java&lt;/include&gt;
+                            &lt;/includes&gt;
+                        &lt;/configuration&gt;
+                    &lt;/execution&gt;
+                    &lt;execution&gt;
+                        &lt;id&gt;default-compile-mr&lt;/id&gt;
+                        &lt;goals&gt;
+                            &lt;goal&gt;compile&lt;/goal&gt;
+                        &lt;/goals&gt;
+                        &lt;configuration&gt;
+                            &lt;release&gt;9&lt;/release&gt;
+                            &lt;compileSourceRoots&gt;
+                                &lt;compileSourceRoot&gt;${project.basedir}/src/main/mr-jar&lt;/compileSourceRoot&gt;
+                            &lt;/compileSourceRoots&gt;
+                            &lt;outputDirectory&gt;${project.build.outputDirectory}/META-INF/versions/9&lt;/outputDirectory&gt;
+                        &lt;/configuration&gt;
+                    &lt;/execution&gt;
+                &lt;/executions&gt;
+            &lt;/plugin&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.apache.felix&lt;/groupId&gt;
+                &lt;artifactId&gt;maven-bundle-plugin&lt;/artifactId&gt;
+                &lt;executions&gt;
+                    &lt;execution&gt;
+                        &lt;id&gt;bundle-manifest&lt;/id&gt;
+                        &lt;phase&gt;process-classes&lt;/phase&gt;
+                        &lt;goals&gt;
+                            &lt;goal&gt;manifest&lt;/goal&gt;
+                        &lt;/goals&gt;
+                    &lt;/execution&gt;
+                &lt;/executions&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+&lt;/project&gt;
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: 18/09/2019, 6:17:04 p.m.</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("xml",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            $(window).load(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 21667888;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

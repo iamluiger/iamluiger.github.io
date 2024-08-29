@@ -4,7 +4,8 @@ nav:
     - Mi Blog: 
         - Año Nuevo: blog/2020/0101/nuevo.md
         - Como sacar el pasaporte en el Tachira: blog/2022/2603/pasaporte.md
-        - La magia de la vida: blog/2023/0811/lamagiadelcambio.md
+        # - La magia de la vida: blog/2023/0811/lamagiadelcambio.md
+        -  La AI como parte de nuestro aprendizaje: blog/2024/0809/ai.md
     - Mis articulos:
         - Microservicios: articulos/2019/MicroSOA/micro2soa.md
     - Acerca de mi: about.md

@@ -11,12 +11,12 @@ Pero como todo en la vida no es trabajo (la verdad yo no veo esto como trabajo :
 
 # **Mi ultimos articulos**
 
-## [Microservicios, la palabra de moda](../articulos/2019/MicroSOA/micro2soa)
+## [2026: El año en que debemos estudiar más que nunca](blog/2025/1225/estudiar2025)
 
-[*En nuestro mundo cada semana tenemos una palabra de **moda** y definitivamente en los últimos 4 años las palabras de moda pasaron por: DevOps, Transformación Digital, Contenedores, Microservicios entre otras. De las tendencias que anteriormente enumeramos me atrevería a decir que una de las que mas ha generado interés en los equipos de desarrollo es el de microservicios.*](../articulos/2019/MicroSOA/micro2soa)
+[*A medida que nos acercamos a un nuevo año, es momento de reflexionar sobre nuestras prioridades y compromisos. Si hay algo que he aprendido en mis más de 20 años en la industria tecnológica, es que el aprendizaje continuo no es opcional, es fundamental. El 2026 debe ser el año en que todos nos comprometamos a estudiar más, a profundizar en nuestros conocimientos y a expandir nuestras habilidades.*](blog/2025/1225/estudiar2025)
 
 
-[*Y cuando uno comienza a investigar el por que el  súbito interés por este tema, muchos de mis colegas me manifiestan  que en sus organizaciones grandes iniciativas de SOA vienen fracasando unas tras otras.....*](../articulos/2019/MicroSOA/micro2soa)
+[*El mundo está cambiando a una velocidad sin precedentes, y solo aquellos que se mantengan en constante aprendizaje podrán no solo sobrevivir, sino prosperar en este nuevo panorama.....*](blog/2025/1225/estudiar2025)
 
 
 

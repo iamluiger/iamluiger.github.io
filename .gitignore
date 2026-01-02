@@ -1,1 +1,5 @@
 site/
+
+# Archivos de documentación para IA (no sincronizar)
+CLAUDE.md
+gemini.md

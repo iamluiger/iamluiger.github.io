@@ -2,6 +2,7 @@ site_name: Luiger Pages
 nav:
     - Inicio: index.md
     - Mi Blog:
+        - La Importancia del Descanso: blog/2026/0201/descanso.md
         - Año Nuevo: blog/2020/0101/nuevo.md
         - Como sacar el pasaporte en el Tachira: blog/2022/2603/pasaporte.md
         # - La magia de la vida: blog/2023/0811/lamagiadelcambio.md

@@ -11,12 +11,18 @@ Pero como todo en la vida no es trabajo (la verdad yo no veo esto como trabajo :
 
 # **Mi ultimos articulos**
 
-## [2026: El año en que debemos estudiar más que nunca](blog/2025/1225/estudiar2025)
+## [La Importancia del Descanso: Tu Mejor Aliado Contra el Burnout](blog/2026/0201/descanso.md)
 
-[*A medida que nos acercamos a un nuevo año, es momento de reflexionar sobre nuestras prioridades y compromisos. Si hay algo que he aprendido en mis más de 20 años en la industria tecnológica, es que el aprendizaje continuo no es opcional, es fundamental. El 2026 debe ser el año en que todos nos comprometamos a estudiar más, a profundizar en nuestros conocimientos y a expandir nuestras habilidades.*](blog/2025/1225/estudiar2025)
+[*En un mundo donde la productividad parece medirse por las horas frente a la pantalla y la disponibilidad 24/7, hemos olvidado una verdad fundamental: el descanso no es el enemigo de la productividad, es su mejor aliado. El burnout no es una medalla de honor que demuestra tu dedicación, es una señal de alarma que indica que estamos ignorando nuestras necesidades básicas.*](blog/2026/0201/descanso.md)
+
+[*El verdadero secreto de la productividad sostenible está en encontrar el equilibrio. Descansar adecuadamente, desconectar cuando es necesario y respetar nuestros límites no solo previene el burnout, sino que nos permite regresar a nuestras tareas con energía renovada, mayor creatividad y mejor capacidad de resolución de problemas.....*](blog/2026/0201/descanso.md)
+
+## [2026: El año en que debemos estudiar más que nunca](blog/2025/1225/estudiar2025.md)
+
+[*A medida que nos acercamos a un nuevo año, es momento de reflexionar sobre nuestras prioridades y compromisos. Si hay algo que he aprendido en mis más de 20 años en la industria tecnológica, es que el aprendizaje continuo no es opcional, es fundamental. El 2026 debe ser el año en que todos nos comprometamos a estudiar más, a profundizar en nuestros conocimientos y a expandir nuestras habilidades.*](blog/2025/1225/estudiar2025.md)
 
 
-[*El mundo está cambiando a una velocidad sin precedentes, y solo aquellos que se mantengan en constante aprendizaje podrán no solo sobrevivir, sino prosperar en este nuevo panorama.....*](blog/2025/1225/estudiar2025)
+[*El mundo está cambiando a una velocidad sin precedentes, y solo aquellos que se mantengan en constante aprendizaje podrán no solo sobrevivir, sino prosperar en este nuevo panorama.....*](blog/2025/1225/estudiar2025.md)
 
 
 

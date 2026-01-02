@@ -13,9 +13,9 @@ Pero como todo en la vida no es trabajo (la verdad yo no veo esto como trabajo :
 
 ## [La Importancia del Descanso: Tu Mejor Aliado Contra el Burnout](blog/2026/0201/descanso.md)
 
-[*En un mundo donde la productividad parece medirse por las horas frente a la pantalla y la disponibilidad 24/7, hemos olvidado una verdad fundamental: el descanso no es el enemigo de la productividad, es su mejor aliado. El burnout no es una medalla de honor que demuestra tu dedicación, es una señal de alarma que indica que estamos ignorando nuestras necesidades básicas.*](blog/2026/0201/descanso.md)
+[*Hoy quiero compartir con ustedes algo que he aprendido de la manera difícil en mis más de 20 años en la industria tecnológica: el descanso no es el enemigo de la productividad, es su mejor aliado. Durante años, creí que trabajar sin parar era la clave del éxito, que estar disponible 24/7 demostraba mi compromiso profesional.*](blog/2026/0201/descanso.md)
 
-[*El verdadero secreto de la productividad sostenible está en encontrar el equilibrio. Descansar adecuadamente, desconectar cuando es necesario y respetar nuestros límites no solo previene el burnout, sino que nos permite regresar a nuestras tareas con energía renovada, mayor creatividad y mejor capacidad de resolución de problemas.....*](blog/2026/0201/descanso.md)
+[*En la industria tecnológica, el ritmo es implacable. Kubernetes no espera, los contenedores no se pausan, y las alertas de producción no respetan horarios. Pero he aprendido que el verdadero secreto de la productividad sostenible está en encontrar el equilibrio, en saber cuándo hacer una pausa.....*](blog/2026/0201/descanso.md)
 
 ## [2026: El año en que debemos estudiar más que nunca](blog/2025/1225/estudiar2025.md)
 

@@ -17,29 +17,13 @@ En este año que paso me sirvió a construir una muy buena relación con grandes
 Sin duda lo mas interesante es abordar a manejar el mercado medio. Siempre he tenido mucha afinidad con el trabajo con canales y aquí siento que he podido  potenciarlo de esto les comentare en otra entrada.
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-11347245-2"></script>
+<div id="disqus_thread"></div>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-11347245-2');
-</script>
-
- <div id="disqus_thread"></div>
-<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
 var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    this.page.url = 'https://iamluiger.github.io/blog/2020/0101/nuevo/';
+    this.page.identifier = 'blog/2020/0101/nuevo/';
 };
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
+(function() {
 var d = document, s = d.createElement('script');
 s.src = 'https://luiger-github-io.disqus.com/embed.js';
 s.setAttribute('data-timestamp', +new Date());

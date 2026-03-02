@@ -22,6 +22,10 @@ El conocimiento se construye con estudio constante, pero la sabiduría se cultiv
 
 <div id="disqus_thread"></div>
 <script>
+var disqus_config = function () {
+    this.page.url = 'https://iamluiger.github.io/blog/2026/0201/descanso/';
+    this.page.identifier = 'blog/2026/0201/descanso/';
+};
 (function() {
 var d = document, s = d.createElement('script');
 s.src = 'https://luiger-github-io.disqus.com/embed.js';

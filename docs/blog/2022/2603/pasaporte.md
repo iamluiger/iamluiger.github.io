@@ -19,21 +19,15 @@ Para cruzar el puente lo mas recomendable es hacerlo con uno de los carretillero
 
 Definitivamente lo primero que se debe hacer es buscar un hotel (si requerirá por lo menos 2 días hacer todo) yo recomiendo uno llamado Kariven que dejare la foto pues tiene plata y por lo menos eso te garantiza luz y un internet que te va a ayudar algo.
 
-![](https://raw.githubusercontent.com/iamluiger/iamluiger.github.io/master/docs/img/kariven.jpg)
+![Hotel Kariven en San Antonio del Táchira](https://raw.githubusercontent.com/iamluiger/iamluiger.github.io/master/docs/img/kariven.jpg)
 
 <div id="disqus_thread"></div>
 <script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
 var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    this.page.url = 'https://iamluiger.github.io/blog/2022/2603/pasaporte/';
+    this.page.identifier = 'blog/2022/2603/pasaporte/';
 };
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
+(function() {
 var d = document, s = d.createElement('script');
 s.src = 'https://luiger-github-io.disqus.com/embed.js';
 s.setAttribute('data-timestamp', +new Date());

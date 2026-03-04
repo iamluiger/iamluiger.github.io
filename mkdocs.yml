@@ -2,6 +2,7 @@ site_name: Luiger Pages
 nav:
     - Inicio: index.md
     - Mi Blog:
+        - La Dureza Necesaria - El Desafío de Ser Objetivo Cuando Eres Empático: blog/2026/0304/empatia-objetividad.md
         - La Importancia del Descanso: blog/2026/0201/descanso.md
         - 2026 El año en que debemos estudiar más: blog/2025/1225/estudiar2025.md
         - La AI como parte de nuestro aprendizaje: blog/2024/0809/ai.md

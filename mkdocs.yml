@@ -13,5 +13,4 @@ nav:
     - Acerca de mi: about.md
     
 theme:
-    name: simple-blog
-    
+    name: material

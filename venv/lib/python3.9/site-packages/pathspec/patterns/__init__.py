@@ -3,8 +3,8 @@ The *pathspec.patterns* package contains the pattern matching implementations.
 """
 
 # Load pattern implementations.
-from .gitignore import basic as _
-from .gitignore import spec as _
+from .gitignore import basic as _0
+from .gitignore import spec as _1
 
 # DEPRECATED: Deprecated since 0.11.0 (from 2023-01-24). Expose the
 # GitWildMatchPattern class in this module for backward compatibility with

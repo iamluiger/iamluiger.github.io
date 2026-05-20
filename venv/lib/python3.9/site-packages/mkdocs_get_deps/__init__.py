@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-__version__ = "0.2.0"
+__version__ = "0.2.2"
 
 import dataclasses
 import datetime
@@ -10,7 +10,8 @@ import logging
 import os
 import sys
 import urllib.parse
-from typing import IO, Any, BinaryIO, Collection, Mapping, Sequence
+from collections.abc import Collection, Mapping, Sequence
+from typing import IO, Any, BinaryIO
 
 import yaml
 
@@ -23,7 +24,26 @@ DEFAULT_PROJECTS_FILE = "https://raw.githubusercontent.com/mkdocs/catalog/main/p
 
 BUILTIN_THEMES = {"mkdocs", "readthedocs"}
 BUILTIN_PLUGINS = {"search"}
-_BUILTIN_EXTENSIONS = "abbr admonition attr_list codehilite def_list extra fenced_code footnotes md_in_html meta nl2br sane_lists smarty tables toc wikilinks legacy_attrs legacy_em".split()
+_BUILTIN_EXTENSIONS = [
+    "abbr",
+    "admonition",
+    "attr_list",
+    "codehilite",
+    "def_list",
+    "extra",
+    "fenced_code",
+    "footnotes",
+    "md_in_html",
+    "meta",
+    "nl2br",
+    "sane_lists",
+    "smarty",
+    "tables",
+    "toc",
+    "wikilinks",
+    "legacy_attrs",
+    "legacy_em",
+]
 BUILTIN_EXTENSIONS = {
     *_BUILTIN_EXTENSIONS,
     *(f"markdown.extensions.{e}" for e in _BUILTIN_EXTENSIONS),
@@ -63,7 +83,7 @@ def _strings(obj) -> Sequence[str]:
         return tuple(obj)
 
 
-@functools.lru_cache(maxsize=None)
+@functools.cache
 def _entry_points(group: str) -> Mapping[str, Any]:
     if sys.version_info >= (3, 10):
         from importlib.metadata import entry_points
@@ -159,7 +179,7 @@ def get_deps(
     if projects_file is None:
         projects_file = get_projects_file()
     with projects_file:
-        projects = yaml.load(projects_file, Loader=yaml_util.SafeLoader)["projects"]
+        projects = yaml.load(projects_file, Loader=yaml_util.SafeLoader)["projects"]  # noqa: S506
 
     for project in projects:
         for kind, wanted in wanted_plugins:

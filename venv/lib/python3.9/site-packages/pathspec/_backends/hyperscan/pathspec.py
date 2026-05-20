@@ -16,7 +16,7 @@ from typing import (
 try:
 	import hyperscan
 except ModuleNotFoundError:
-	hyperscan = None
+	hyperscan = None  # type: ignore[assignment]
 
 from pathspec.backend import (
 	_Backend)
@@ -57,6 +57,7 @@ class HyperscanPsBackend(_Backend):
 		compiled patterns.
 		"""
 		if hyperscan is None:
+			assert hyperscan_error is not None, (hyperscan, hyperscan_error)
 			raise hyperscan_error
 
 		if patterns and not isinstance(patterns[0], RegexPattern):
@@ -81,7 +82,7 @@ class HyperscanPsBackend(_Backend):
 			db = None
 			expr_data = []
 
-		self._db: Optional[hyperscan.Database] = db
+		self._db: Optional[hyperscan.Database] = db  # type: ignore
 		"""
 		*_db* (:class:`hyperscan.Database`) is the Hyperscan database.
 		"""
@@ -115,7 +116,7 @@ class HyperscanPsBackend(_Backend):
 
 	@staticmethod
 	def _init_db(
-		db: hyperscan.Database,
+		db: hyperscan.Database,  # type: ignore
 		debug: bool,
 		patterns: list[tuple[int, RegexPattern]],
 		sort_ids: Optional[Callable[[list[int]], None]],
@@ -147,6 +148,7 @@ class HyperscanPsBackend(_Backend):
 		exprs: list[bytes] = []
 		for pattern_index, pattern in patterns:
 			assert pattern.include is not None, (pattern_index, pattern)
+			assert pattern.regex is not None, (pattern_index, pattern)
 
 			# Encode regex.
 			assert isinstance(pattern, RegexPattern), pattern
@@ -204,7 +206,7 @@ class HyperscanPsBackend(_Backend):
 		# NOTICE: According to benchmarking, a method callback is 20% faster than
 		# using a closure here.
 		db = self._db
-		if self._db is None:
+		if db is None:
 			# Database was not initialized because there were no patterns. Return no
 			# match.
 			return (None, None)
@@ -212,6 +214,7 @@ class HyperscanPsBackend(_Backend):
 		self._out = (None, -1)
 		db.scan(file.encode('utf8'), match_event_handler=self.__on_match)
 
+		out_index: Optional[int]
 		out_include, out_index = self._out
 		if out_index == -1:
 			out_index = None
@@ -219,12 +222,13 @@ class HyperscanPsBackend(_Backend):
 		return (out_include, out_index)
 
 	@staticmethod
-	def _make_db() -> hyperscan.Database:
+	def _make_db() -> hyperscan.Database:  # type: ignore
 		"""
 		Create the Hyperscan database.
 
 		Returns the database (:class:`hyperscan.Database`).
 		"""
+		assert hyperscan is not None, (hyperscan, hyperscan_error)
 		return hyperscan.Database(mode=hyperscan.HS_MODE_BLOCK)
 
 	def __on_match(
@@ -249,3 +253,5 @@ class HyperscanPsBackend(_Backend):
 		prev_index = self._out[1]
 		if index > prev_index:
 			self._out = (expr_dat.include, index)
+
+		return None

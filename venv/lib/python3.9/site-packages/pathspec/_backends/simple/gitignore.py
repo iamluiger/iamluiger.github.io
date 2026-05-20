@@ -28,7 +28,7 @@ class SimpleGiBackend(SimplePsBackend):
 	"""
 
 	# Change type hint.
-	_patterns: list[tuple[int, RegexPattern]]
+	_patterns: list[tuple[int, RegexPattern]]  # type: ignore[assignment]
 
 	def __init__(
 		self,

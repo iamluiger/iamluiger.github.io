@@ -17,7 +17,7 @@ from typing import (
 try:
 	import hyperscan
 except ModuleNotFoundError:
-	hyperscan = None
+	hyperscan = None  # type: ignore[assignment]
 
 from pathspec.pattern import (
 	RegexPattern)
@@ -45,7 +45,7 @@ class HyperscanGiBackend(HyperscanPsBackend):
 	"""
 
 	# Change type hint.
-	_out: tuple[Optional[bool], int, int]
+	_out: tuple[Optional[bool], int, int]  # type: ignore[assignment]
 
 	def __init__(
 		self,
@@ -76,7 +76,7 @@ class HyperscanGiBackend(HyperscanPsBackend):
 	@override
 	@staticmethod
 	def _init_db(
-		db: hyperscan.Database,
+		db: hyperscan.Database,  # type: ignore
 		debug: bool,
 		patterns: list[tuple[int, RegexPattern]],
 		sort_ids: Optional[Callable[[list[int]], None]],
@@ -108,6 +108,7 @@ class HyperscanGiBackend(HyperscanPsBackend):
 		exprs: list[bytes] = []
 		for pattern_index, pattern in patterns:
 			assert pattern.include is not None, (pattern_index, pattern)
+			assert pattern.regex is not None, (pattern_index, pattern)
 
 			# Encode regex.
 			assert isinstance(pattern, RegexPattern), pattern
@@ -119,7 +120,7 @@ class HyperscanGiBackend(HyperscanPsBackend):
 				# Hyperscan does not support capture groups. Handle this scenario.
 				regex_str: str
 				if isinstance(regex, str):
-					regex_str: str = regex
+					regex_str = regex
 				else:
 					assert isinstance(regex, bytes), regex
 					regex_str = regex.decode(_BYTES_ENCODING)
@@ -193,7 +194,7 @@ class HyperscanGiBackend(HyperscanPsBackend):
 		# NOTICE: According to benchmarking, a method callback is 13% faster than
 		# using a closure here.
 		db = self._db
-		if self._db is None:
+		if db is None:
 			# Database was not initialized because there were no patterns. Return no
 			# match.
 			return (None, None)
@@ -201,6 +202,7 @@ class HyperscanGiBackend(HyperscanPsBackend):
 		self._out = (None, -1, 0)
 		db.scan(file.encode('utf8'), match_event_handler=self.__on_match)
 
+		out_index: Optional[int]
 		out_include, out_index = self._out[:2]
 		if out_index == -1:
 			out_index = None
@@ -242,4 +244,7 @@ class HyperscanGiBackend(HyperscanPsBackend):
 			or (priority == prev_priority and index > prev_index)
 			or priority > prev_priority
 		):
-			self._out = (include, expr_dat.index, priority)
+			out_tup = (include, expr_dat.index, priority)
+			self._out = out_tup  # type: ignore
+
+		return None

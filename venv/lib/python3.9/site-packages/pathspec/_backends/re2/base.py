@@ -12,7 +12,7 @@ from typing import (
 from ._base import (
 	re2_error)
 
-re2_error: Optional[Exception]
+re2_error: Optional[Exception]  # type: ignore[no-redef]
 """
 *re2_error* (:class:`Exception` or :data:`None`) is the re2 import error.
 """

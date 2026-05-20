@@ -39,7 +39,7 @@ from fnmatch import fnmatch
 from hashlib import sha1
 from html import unescape
 from io import BytesIO
-from jinja2 import Environment
+from jinja2.sandbox import SandboxedEnvironment
 from jinja2.meta import find_undeclared_variables
 from mkdocs.config.base import Config
 from mkdocs.config.defaults import MkDocsConfig
@@ -151,7 +151,7 @@ class SocialPlugin(BasePlugin[SocialConfig]):
         self.card_variables: dict[str, list[list[str]]] = {}
 
         # Initialize card environment
-        self.card_env = Environment()
+        self.card_env = SandboxedEnvironment()
         self.card_env.filters["x"] = x_filter
 
         # Always print a warning when debug mode is active
@@ -955,7 +955,7 @@ def _digest(data: object):
 # -----------------------------------------------------------------------------
 
 # Extract all variables recursively
-def _extract(data: any, env: Environment, config: MkDocsConfig):
+def _extract(data: any, env: SandboxedEnvironment, config: MkDocsConfig):
 
     # Traverse configuration or dictionary
     if isinstance(data, (Config, dict)):
@@ -980,7 +980,9 @@ def _extract(data: any, env: Environment, config: MkDocsConfig):
     return []
 
 # Replace all variables recursively and return a copy of the given data
-def _replace(data: any, env: Environment, config: MkDocsConfig, **kwargs):
+def _replace(
+    data: any, env: SandboxedEnvironment, config: MkDocsConfig, **kwargs
+):
 
     # Traverse configuration or dictionary
     if isinstance(data, (Config, dict)):
@@ -1006,7 +1008,7 @@ def _replace(data: any, env: Environment, config: MkDocsConfig, **kwargs):
 
 # Compile template and cache it indefinitely
 @functools.lru_cache(maxsize = None)
-def _compile(data: str, env: Environment):
+def _compile(data: str, env: SandboxedEnvironment):
     return env.from_string(html.unescape(data))
 
 # Compute absolute path to internal templates directory,

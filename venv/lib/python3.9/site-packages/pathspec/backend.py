@@ -5,13 +5,24 @@ matching backends. The exact structure of the backends is not solidified and is
 subject to change.
 """
 
+from collections.abc import (
+	Sequence)
 from typing import (
+	Callable,  # Replaced by `collections.abc.Callable` in 3.9.2.
 	Literal,
-	Optional)
+	Optional)  # Replaced by `X | None` in 3.10.
+
+from .pattern import (
+	Pattern)
 
 BackendNamesHint = Literal['best', 'hyperscan', 're2', 'simple']
 """
 The supported backend values.
+"""
+
+_TestBackendFactoryHint = Optional[Callable[[Sequence[Pattern]], '_Backend']]
+"""
+Type hint for the test backend factory argument.
 """
 
 

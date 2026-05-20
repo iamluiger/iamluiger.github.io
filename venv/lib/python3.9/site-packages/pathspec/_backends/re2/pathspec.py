@@ -15,7 +15,7 @@ from typing import (
 try:
 	import re2
 except ModuleNotFoundError:
-	re2 = None
+	re2 = None  # type: ignore[assignment]
 
 from pathspec.backend import (
 	_Backend)
@@ -88,7 +88,7 @@ class Re2PsBackend(_Backend):
 		(:class:`Re2RegexDat`).
 		"""
 
-		self._set: re2.Set = regex_set
+		self._set: re2.Set = regex_set  # type: ignore
 		"""
 		*_set* (:class:`re2.Set`) is the re2 regex set.
 		"""
@@ -97,7 +97,7 @@ class Re2PsBackend(_Backend):
 	def _init_set(
 		debug: bool,
 		patterns: dict[int, RegexPattern],
-		regex_set: re2.Set,
+		regex_set: re2.Set,  # type: ignore
 		sort_indices: Optional[Callable[[list[int]], None]],
 	) -> list[Re2RegexDat]:
 		"""
@@ -130,6 +130,7 @@ class Re2PsBackend(_Backend):
 			if pattern.include is None:
 				continue
 
+			assert pattern.regex is not None, pattern
 			assert isinstance(pattern, RegexPattern), pattern
 			regex = pattern.regex.pattern
 
@@ -154,12 +155,13 @@ class Re2PsBackend(_Backend):
 		return regex_data
 
 	@staticmethod
-	def _make_set() -> re2.Set:
+	def _make_set() -> re2.Set:  # type: ignore
 		"""
 		Create the re2 regex set.
 
 		Returns the set (:class:`re2.Set`).
 		"""
+		assert re2 is not None, (re2, re2_error)
 		return re2.Set.SearchSet(RE2_OPTIONS)
 
 	@override
@@ -177,7 +179,7 @@ class Re2PsBackend(_Backend):
 		# - WARNING: According to the documentation on `RE2::Set::Match()`, there is
 		#   no guarantee matches will be produced in order! Later expressions have
 		#   higher priority.
-		match_ids: Optional[list[int]] = self._set.Match(file)
+		match_ids: Optional[list[int]] = self._set.Match(file)  # type: ignore[assignment]
 		if not match_ids:
 			return (None, None)
 

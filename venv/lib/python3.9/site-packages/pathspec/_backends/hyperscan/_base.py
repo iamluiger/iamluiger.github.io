@@ -15,12 +15,12 @@ from typing import (
 try:
 	import hyperscan
 except ModuleNotFoundError:
-	hyperscan = None
+	hyperscan = None  # type: ignore[assignment]
 	HS_FLAGS = 0
 else:
 	HS_FLAGS = hyperscan.HS_FLAG_SINGLEMATCH | hyperscan.HS_FLAG_UTF8
 
-HS_FLAGS: int
+HS_FLAGS: int  # type: ignore[no-redef]
 """
 The hyperscan flags to use:
 

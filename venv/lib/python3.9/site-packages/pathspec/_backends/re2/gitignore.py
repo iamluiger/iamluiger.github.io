@@ -14,7 +14,7 @@ from typing import (
 try:
 	import re2
 except ModuleNotFoundError:
-	re2 = None
+	re2 = None  # type: ignore[assignment]
 
 from pathspec.pattern import (
 	RegexPattern)
@@ -44,7 +44,7 @@ class Re2GiBackend(Re2PsBackend):
 	def _init_set(
 		debug: bool,
 		patterns: dict[int, RegexPattern],
-		regex_set: re2.Set,
+		regex_set: re2.Set,  # type: ignore
 		sort_indices: Optional[Callable[[list[int]], None]],
 	) -> list[Re2RegexDat]:
 		"""
@@ -77,6 +77,7 @@ class Re2GiBackend(Re2PsBackend):
 			if pattern.include is None:
 				continue
 
+			assert pattern.regex is not None, pattern
 			assert isinstance(pattern, RegexPattern), pattern
 			regex = pattern.regex.pattern
 
@@ -124,7 +125,7 @@ class Re2GiBackend(Re2PsBackend):
 						is_dir_pattern=is_dir_pattern,
 					))
 
-				regex_set.Add(regex)
+				regex_set.Add(regex)  # type: ignore[type-var]
 
 		# Compile patterns.
 		regex_set.Compile()
@@ -142,7 +143,7 @@ class Re2GiBackend(Re2PsBackend):
 		:data:`None`).
 		"""
 		# Find best match.
-		match_ids: Optional[list[int]] = self._set.Match(file)
+		match_ids: Optional[list[int]] = self._set.Match(file)  # type: ignore[assignment]
 		if not match_ids:
 			return (None, None)
 

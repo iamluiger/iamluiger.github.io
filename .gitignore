@@ -3,3 +3,8 @@ site/
 # Archivos de documentación para IA (no sincronizar)
 CLAUDE.md
 gemini.md
+
+# Entorno virtual local y archivos de sistema
+venv/
+.DS_Store
+*.swp

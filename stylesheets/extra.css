@@ -1,0 +1,20 @@
+/* Lectura cómoda: texto más grande, buen interlineado y ancho de línea acotado */
+.md-typeset {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--md-typeset-color);
+}
+.md-content__inner { max-width: 46rem; margin-inline: auto; }
+.md-typeset p, .md-typeset li { margin-bottom: 0.9em; }
+.md-typeset h1 { font-weight: 700; letter-spacing: -0.01em; margin-bottom: 1.2em; }
+.md-typeset h2 { font-weight: 600; margin-top: 2em; padding-bottom: 0.2em;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest); }
+.md-typeset h3 { font-weight: 600; margin-top: 1.6em; }
+.md-typeset a { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.md-typeset blockquote { border-left: 4px solid var(--md-accent-fg-color);
+  padding: 0.2em 1em; color: var(--md-default-fg-color--light); }
+.md-typeset img { border-radius: 8px; }
+.md-typeset code { font-size: 0.85em; border-radius: 4px; }
+.md-typeset pre > code { line-height: 1.55; }
+[data-md-color-scheme="slate"] { --md-default-bg-color: #16191d; --md-typeset-color: #e4e7ea; }
+@media (min-width: 76.25em) { .md-typeset { font-size: 1.02rem; } }

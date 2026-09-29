@@ -1,4 +1,5 @@
 site_name: Luiger Pages
+site_description: Blog y artículos de Luiger sobre tecnología, DevOps, nube híbrida e IA
 nav:
     - Inicio: index.md
     - Mi Blog:
@@ -11,6 +12,43 @@ nav:
     - Mis articulos:
         - Microservicios: articulos/2019/MicroSOA/micro2soa.md
     - Acerca de mi: about.md
-    
+
 theme:
     name: material
+    language: es
+    font:
+        text: Source Sans 3
+        code: JetBrains Mono
+    palette:
+        - media: "(prefers-color-scheme: light)"
+          scheme: default
+          primary: blue grey
+          accent: teal
+          toggle:
+              icon: material/weather-night
+              name: Cambiar a modo oscuro
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          primary: blue grey
+          accent: teal
+          toggle:
+              icon: material/weather-sunny
+              name: Cambiar a modo claro
+    features:
+        - navigation.tabs
+        - navigation.top
+        - navigation.indexes
+        - toc.follow
+        - content.code.copy
+        - search.highlight
+
+extra_css:
+    - stylesheets/extra.css
+
+markdown_extensions:
+    - admonition
+    - attr_list
+    - toc:
+          permalink: true
+    - pymdownx.highlight
+    - pymdownx.superfences
